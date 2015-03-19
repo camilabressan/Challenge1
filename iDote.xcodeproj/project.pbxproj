@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A05773AD1ABB45B70069D5CB /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = A05773AC1ABB45B70069D5CB /* User.m */; };
 		A06184C01AB8A08D00363539 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184BB1AB8A08D00363539 /* Bolts.framework */; };
 		A06184C11AB8A08D00363539 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184BC1AB8A08D00363539 /* Parse.framework */; };
 		A06184C21AB8A08D00363539 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184BD1AB8A08D00363539 /* ParseCrashReporting.framework */; };
@@ -45,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A05773AB1ABB45B70069D5CB /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = iDote/User.h; sourceTree = "<group>"; };
+		A05773AC1ABB45B70069D5CB /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = iDote/User.m; sourceTree = "<group>"; };
 		A06184BB1AB8A08D00363539 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Frameworks/Bolts.framework; sourceTree = "<group>"; };
 		A06184BC1AB8A08D00363539 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Frameworks/Parse.framework; sourceTree = "<group>"; };
 		A06184BD1AB8A08D00363539 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = Frameworks/ParseCrashReporting.framework; sourceTree = "<group>"; };
@@ -114,6 +117,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A05773AA1ABB45240069D5CB /* model */ = {
+			isa = PBXGroup;
+			children = (
+				A05773AB1ABB45B70069D5CB /* User.h */,
+				A05773AC1ABB45B70069D5CB /* User.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
 		AB4F88241AB89CB2006DA324 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +154,7 @@
 		B96024851AB89728008C211C = {
 			isa = PBXGroup;
 			children = (
+				A05773AA1ABB45240069D5CB /* model */,
 				AB4F88241AB89CB2006DA324 /* Frameworks */,
 				B96024901AB89729008C211C /* iDote */,
 				B96024AA1AB89729008C211C /* iDoteTests */,
@@ -300,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A05773AD1ABB45B70069D5CB /* User.m in Sources */,
 				B960249A1AB89729008C211C /* ViewController.m in Sources */,
 				B96024971AB89729008C211C /* AppDelegate.m in Sources */,
 				B96024941AB89729008C211C /* main.m in Sources */,

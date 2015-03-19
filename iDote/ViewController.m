@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   // Do any additional setup after loading the view, typically from a nib.
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,4 +26,13 @@
   // Dispose of any resources that can be recreated.
 }
 
+//pega os dados inseridos pelo usuario na tela de login e verifica os mesmos
+- (IBAction)checkData:(id)sender {
+    self.usuario = [[User alloc] init];
+    self.usuario.email = self.emailTextField.text;
+    self.usuario.senha = self.senhaTextField.text;
+    NSLog(@"Email: %@ \nSenha: %@", self.usuario.email, self.usuario.senha);
+    
+    
+}
 @end

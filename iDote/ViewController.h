@@ -7,8 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "User.h"
 
 @interface ViewController : UIViewController
+
+@property User *usuario;
+@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
+@property (weak, nonatomic) IBOutlet UITextField *senhaTextField;
+
+- (IBAction)checkData:(id)sender;
 
 
 @end
