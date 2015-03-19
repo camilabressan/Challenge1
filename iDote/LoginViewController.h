@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "User.h"
 
-@interface ViewController : UIViewController
+@interface LoginViewController : UIViewController
 
 @property User *usuario;
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;

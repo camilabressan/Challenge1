@@ -6,18 +6,23 @@
 //  Copyright (c) 2015 Bepid. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "LoginViewController.h"
 
-@interface ViewController ()
-
-@end
-
-@implementation ViewController
+@implementation LoginViewController
 
 - (void)viewDidLoad {
   [super viewDidLoad];
   // Do any additional setup after loading the view, typically from a nib.
+  if ([PFUser currentUser] != nil) {
+    //TODO: Login Automatico
+  }
+  
+  PFUser *user = [[PFUser alloc] init];
+  user.username = @"teste@teste.com";
+  user.password = @"teste1234";
+  [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
     
+  }];
     
 }
 
@@ -28,10 +33,12 @@
 
 //pega os dados inseridos pelo usuario na tela de login e verifica os mesmos
 - (IBAction)checkData:(id)sender {
-    self.usuario = [[User alloc] init];
-    self.usuario.email = self.emailTextField.text;
-    self.usuario.senha = self.senhaTextField.text;
-    NSLog(@"Email: %@ \nSenha: %@", self.usuario.email, self.usuario.senha);
+    _usuario = [[User alloc] init];
+    _usuario.email = _emailTextField.text;
+    _usuario.senha = _senhaTextField.text;
+  
+  [_usuario login];
+  
     
     
 }

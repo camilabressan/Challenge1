@@ -7,11 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
 
 @interface User : NSObject
+@property PFUser *object;
 
 @property NSString *nome;
 @property NSString *email;
 @property NSString *senha;
 
+- (void) login;
+- (void) cadastrar;
 @end
