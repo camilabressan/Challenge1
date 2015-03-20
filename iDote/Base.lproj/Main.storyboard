@@ -268,14 +268,17 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Cadastro" id="8Ez-U0-HkG">
-                                        <barButtonItem key="leftBarButtonItem" title="&lt; Voltar" id="aAn-d2-Xgo">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="aAn-d2-Xgo">
                                             <color key="tintColor" red="0.30439296459999998" green="0.29684875160000002" blue="0.25823014799999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="iAQ-sy-u78"/>
+                                                <segue destination="oxU-Bf-4sZ" kind="unwind" unwindAction="backFromRegisterScreen:" id="zis-yd-1SP"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="B3g-IY-Rkf">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="B3g-IY-Rkf">
                                             <color key="tintColor" red="0.30439296459999998" green="0.29684875160000002" blue="0.25823014799999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="saveButtonClick:" destination="INb-Vz-wMu" id="fRn-2N-O47"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -336,9 +339,11 @@
                         <outlet property="txtFieldName" destination="01F-cy-G5t" id="lsj-VZ-IlX"/>
                         <outlet property="txtFieldPassword" destination="GRB-bz-CNc" id="k1i-hR-88k"/>
                         <outlet property="txtFieldPhoneNumber" destination="Ggb-y8-FQW" id="diU-JM-I3h"/>
+                        <segue destination="oxU-Bf-4sZ" kind="unwind" identifier="registerNewUserSegue" unwindAction="saveFromRegisterScreen:" id="gPr-5u-Nvt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Km7-uA-MD5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="oxU-Bf-4sZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="953" y="48"/>
         </scene>
@@ -365,28 +370,28 @@
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ruq-Wf-jc8">
                                 <rect key="frame" x="56" y="81" width="124" height="113"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="+">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zro-RF-apl">
                                 <rect key="frame" x="236" y="102" width="81" height="72"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="+">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SeZ-1c-TeX">
                                 <rect key="frame" x="356" y="103" width="81" height="71"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="+">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Mv-mD-1oB">
                                 <rect key="frame" x="476" y="102" width="81" height="73"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="+">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>

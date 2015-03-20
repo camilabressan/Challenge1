@@ -81,13 +81,16 @@
             
             if (succeeded) {
                 // usuário registrado! falta criar a segue para mudar de tela
-                //[self performSegueWithIdentifier:@"UnwindLoginSegue" sender:nil];
+                [self performSegueWithIdentifier:@"registerNewUserSegue" sender:nil];
                 return;
             }
         }];
 
     }
     
+}
+- (IBAction)saveButtonClick:(id)sender {
+    [self registerUser];
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField

@@ -56,7 +56,17 @@
     
             }];
    }
+
 - (IBAction)returnKeyboard:(id)sender {
     [self.view endEditing:YES];
 }
+
+-(IBAction)backFromRegisterScreen:(UIStoryboardSegue *)sender {
+    
+}
+
+-(IBAction)saveFromRegisterScreen:(UIStoryboardSegue *)sender {
+    
+}
+
 @end
