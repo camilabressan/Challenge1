@@ -258,6 +258,12 @@
                                     <navigationItem title="Cadastro" id="8Ez-U0-HkG">
                                         <barButtonItem key="leftBarButtonItem" title="Voltar" id="aAn-d2-Xgo">
                                             <color key="tintColor" red="0.30439296459999998" green="0.29684875160000002" blue="0.25823014799999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="iAQ-sy-u78"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="B3g-IY-Rkf">
+                                            <color key="tintColor" red="0.30439296459999998" green="0.29684875160000002" blue="0.25823014799999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
