@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		90A2E86D1ABB6C470007602B /* 7001065-kitty-whiskers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 90A2E86C1ABB6C470007602B /* 7001065-kitty-whiskers.jpg */; };
-		90A2E86F1ABC46720007602B /* edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 90A2E86E1ABC46720007602B /* edit.png */; };
 		A05773AD1ABB45B70069D5CB /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = A05773AC1ABB45B70069D5CB /* User.m */; };
 		A06184C01AB8A08D00363539 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184BB1AB8A08D00363539 /* Bolts.framework */; };
 		A06184C11AB8A08D00363539 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184BC1AB8A08D00363539 /* Parse.framework */; };
@@ -48,8 +46,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		90A2E86C1ABB6C470007602B /* 7001065-kitty-whiskers.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "7001065-kitty-whiskers.jpg"; sourceTree = "<group>"; };
-		90A2E86E1ABC46720007602B /* edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edit.png; sourceTree = "<group>"; };
 		A05773AB1ABB45B70069D5CB /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = iDote/User.h; sourceTree = "<group>"; };
 		A05773AC1ABB45B70069D5CB /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = iDote/User.m; sourceTree = "<group>"; };
 		A06184BB1AB8A08D00363539 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Frameworks/Bolts.framework; sourceTree = "<group>"; };
@@ -183,8 +179,6 @@
 				A05773AA1ABB45240069D5CB /* Model */,
 				B96024951AB89729008C211C /* AppDelegate.h */,
 				B96024961AB89729008C211C /* AppDelegate.m */,
-				90A2E86C1ABB6C470007602B /* 7001065-kitty-whiskers.jpg */,
-				90A2E86E1ABC46720007602B /* edit.png */,
 				B96024911AB89729008C211C /* Supporting Files */,
 			);
 			path = iDote;
@@ -318,10 +312,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B960249D1AB89729008C211C /* Main.storyboard in Resources */,
-				90A2E86F1ABC46720007602B /* edit.png in Resources */,
 				B96024A21AB89729008C211C /* LaunchScreen.xib in Resources */,
 				B960249F1AB89729008C211C /* Images.xcassets in Resources */,
-				90A2E86D1ABB6C470007602B /* 7001065-kitty-whiskers.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

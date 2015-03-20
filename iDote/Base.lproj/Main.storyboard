@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="edit.png" translatesAutoresizingMaskIntoConstraints="NO" id="iyC-j7-KoN">
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="edit" translatesAutoresizingMaskIntoConstraints="NO" id="iyC-j7-KoN">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="iyC-j7-KoN" secondAttribute="height" multiplier="1:1" id="nrN-YW-87b"/>
@@ -196,20 +196,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lvz-uA-PFw">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                <color key="barTintColor" red="0.81610640010448421" green="0.79783596753723007" blue="0.70007267611557811" alpha="1" colorSpace="calibratedRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" red="0.27450980390000002" green="0.57254901960000004" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Cadastro" id="8Ez-U0-HkG">
-                                        <barButtonItem key="leftBarButtonItem" title="Voltar" id="aAn-d2-Xgo">
-                                            <color key="tintColor" red="0.30439296459999998" green="0.29684875160000002" blue="0.25823014799999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m5r-4I-3S7">
                                 <rect key="frame" x="0.0" y="146" width="600" height="30"/>
                                 <constraints>
@@ -259,10 +245,28 @@
                                     </mask>
                                 </variation>
                             </textField>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lvz-uA-PFw">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="uBU-0F-Ks4"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.81610640010448421" green="0.79783596753723007" blue="0.70007267611557811" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.27450980390000002" green="0.57254901960000004" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Cadastro" id="8Ez-U0-HkG">
+                                        <barButtonItem key="leftBarButtonItem" title="Voltar" id="aAn-d2-Xgo">
+                                            <color key="tintColor" red="0.30439296459999998" green="0.29684875160000002" blue="0.25823014799999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.27450980392156865" green="0.5725490196078431" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="epX-0T-sB5" firstAttribute="top" secondItem="GRB-bz-CNc" secondAttribute="bottom" constant="16" id="7VJ-4h-IVp"/>
+                            <constraint firstItem="lvz-uA-PFw" firstAttribute="top" secondItem="ki0-Vw-I6F" secondAttribute="bottom" constant="-20" id="8vB-Z5-EMU"/>
                             <constraint firstAttribute="centerX" secondItem="epX-0T-sB5" secondAttribute="centerX" id="DJq-Ks-cLb"/>
                             <constraint firstAttribute="centerX" secondItem="GRB-bz-CNc" secondAttribute="centerX" id="DTP-do-YGm"/>
                             <constraint firstItem="lvz-uA-PFw" firstAttribute="height" secondItem="mVK-p7-pZv" secondAttribute="height" id="EHA-FR-QYs"/>
@@ -278,7 +282,7 @@
                             <constraint firstAttribute="centerX" secondItem="lvz-uA-PFw" secondAttribute="centerX" id="aq5-7D-z5F"/>
                             <constraint firstItem="Ggb-y8-FQW" firstAttribute="top" secondItem="m5r-4I-3S7" secondAttribute="bottom" constant="16" id="ehd-Pg-aju"/>
                             <constraint firstItem="GRB-bz-CNc" firstAttribute="top" secondItem="Ggb-y8-FQW" secondAttribute="bottom" constant="16" id="hLo-zh-lTd"/>
-                            <constraint firstItem="01F-cy-G5t" firstAttribute="top" secondItem="lvz-uA-PFw" secondAttribute="bottom" constant="56" id="jf6-3k-jhz"/>
+                            <constraint firstItem="01F-cy-G5t" firstAttribute="top" secondItem="lvz-uA-PFw" secondAttribute="bottom" constant="40" id="jf6-3k-jhz"/>
                             <constraint firstItem="01F-cy-G5t" firstAttribute="width" secondItem="mVK-p7-pZv" secondAttribute="width" id="jgn-iu-1vH"/>
                             <constraint firstItem="lvz-uA-PFw" firstAttribute="top" secondItem="ki0-Vw-I6F" secondAttribute="bottom" constant="-20" id="lXh-Du-805"/>
                             <constraint firstItem="GRB-bz-CNc" firstAttribute="width" secondItem="mVK-p7-pZv" secondAttribute="width" id="lbH-Nv-ngA"/>
@@ -290,6 +294,7 @@
                             <mask key="constraints">
                                 <exclude reference="EHA-FR-QYs"/>
                                 <exclude reference="Hap-qE-JQ3"/>
+                                <exclude reference="lXh-Du-805"/>
                                 <exclude reference="wA7-u7-8y4"/>
                                 <exclude reference="OTX-BY-Z5k"/>
                                 <exclude reference="VRp-1p-bLy"/>
@@ -303,6 +308,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="edit.png" width="1920" height="1200"/>
+        <image name="edit" width="960" height="600"/>
     </resources>
 </document>
