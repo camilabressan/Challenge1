@@ -16,13 +16,6 @@
   if ([PFUser currentUser] != nil) {
     //TODO: Login Automatico
   }
-  
-  PFUser *user = [[PFUser alloc] init];
-  user.username = @"teste@teste.com";
-  user.password = @"teste1234";
-  [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-    
-  }];
     
 }
 
@@ -31,13 +24,28 @@
   // Dispose of any resources that can be recreated.
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+  if ([segue.identifier isEqualToString:@"MainSegue"] ) {
+    //TODO: Enviar Usuario Para Lista
+  }
+}
+
 //pega os dados inseridos pelo usuario na tela de login e verifica os mesmos
 - (IBAction)checkData:(id)sender {
-    _usuario = [[User alloc] init];
-    _usuario.email = _emailTextField.text;
-    _usuario.senha = _senhaTextField.text;
   
-  [_usuario login];
+  
+  _usuario = [[User alloc] init];
+  _usuario.email = _emailTextField.text;
+  _usuario.senha = _senhaTextField.text;
+  [PFUser logInWithUsernameInBackground:_usuario.email password:_usuario.senha
+            block:^(PFUser *user, NSError *error) {
+              if (!error) {
+                _usuario.object = user;
+                [self performSegueWithIdentifier:@"MainSegue" sender:sender];
+              } else {
+                //TODO: Tratar erro
+              }
+  }];
   
     
     

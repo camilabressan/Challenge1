@@ -24,14 +24,7 @@
 }
 
 - (void) login {
-  [PFUser logInWithUsernameInBackground:_email password:_senha
-          block:^(PFUser *user, NSError *error) {
-            if (!error) {
-              _object = user;
-            } else {
-              //TODO: Tratar erro
-            }
-  }];
+
 
 }
 
