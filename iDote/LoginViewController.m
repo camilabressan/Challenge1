@@ -8,7 +8,13 @@
 
 #import "LoginViewController.h"
 
-@implementation LoginViewController
+@interface LoginViewController ()
+
+@end
+
+@implementation LoginViewController {
+
+}
 
 - (void)viewDidLoad {
   [super viewDidLoad];
@@ -43,11 +49,11 @@
                 _usuario.object = user;
                 [self performSegueWithIdentifier:@"MainSegue" sender:sender];
               } else {
-                //TODO: Tratar erro
+                  UIAlertView *alertFailLogin = [[UIAlertView alloc] initWithTitle:nil message:@"Seus dados estão incorretos" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                  
+                  [alertFailLogin show];
               }
-  }];
-  
     
-    
-}
+            }];
+   }
 @end
