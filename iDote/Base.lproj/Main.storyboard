@@ -15,7 +15,7 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -157,6 +157,9 @@
                                 <exclude reference="vka-0t-zbQ"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <action selector="returnKeyboard:" destination="BYZ-38-t0r" eventType="touchDown" id="KXl-sp-vFB"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="QFf-4W-31g" id="MZK-We-bCb"/>
@@ -194,7 +197,7 @@
                         <viewControllerLayoutGuide type="top" id="ki0-Vw-I6F"/>
                         <viewControllerLayoutGuide type="bottom" id="Nej-5S-tXq"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="mVK-p7-pZv">
+                    <view key="view" contentMode="scaleToFill" id="mVK-p7-pZv" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -323,6 +326,9 @@
                                 <exclude reference="VRp-1p-bLy"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <action selector="returnKeyboard:" destination="INb-Vz-wMu" eventType="touchDown" id="Oy5-iR-jDM"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="txtFieldConfirmPassword" destination="epX-0T-sB5" id="drx-uT-jGy"/>
