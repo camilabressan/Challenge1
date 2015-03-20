@@ -19,6 +19,20 @@
 
 @implementation SignUpViewController
 
+- (BOOL) validateEmail: (NSString *) candidate {
+    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    
+    if ([emailTest evaluateWithObject:candidate] == YES)
+        return YES;
+    else
+    {
+        UIAlertView *alertIncorrectEmail = [[UIAlertView alloc] initWithTitle:@"Email incorreto" message:@"Por favor, insira um e-mail válido." delegate: self cancelButtonTitle:@"OK"otherButtonTitles: nil];
+        [alertIncorrectEmail show];
+        return NO;
+    }
+}
+
 -(BOOL) emptyTextFieldExistent
 {
     if ([_txtFieldName.text length] == 0 ||
@@ -46,9 +60,11 @@
     }
 }
 
+
 -(void) registerUser
 {
-    if ([self emptyTextFieldExistent] == NO &&
+    if ([self validateEmail: _txtFieldEmail.text] == YES &&
+        [self emptyTextFieldExistent] == NO &&
          [self passwordsDoMatch] == YES)
     {
         _user = [PFUser user];
