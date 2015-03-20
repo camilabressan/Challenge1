@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface SignUpViewController : UIViewController
+@property PFUser *user;
 
 @end

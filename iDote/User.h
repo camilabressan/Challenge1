@@ -12,9 +12,9 @@
 @interface User : NSObject
 @property PFUser *object;
 
-@property NSString *nome;
+@property NSString *username;
 @property NSString *email;
-@property NSString *senha;
+@property NSString *password;
 
 - (void) login;
 - (void) cadastrar;

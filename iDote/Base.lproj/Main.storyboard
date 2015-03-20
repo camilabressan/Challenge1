@@ -228,14 +228,6 @@
                                     <outlet property="delegate" destination="INb-Vz-wMu" id="Rdd-Mg-Jl5"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GRB-bz-CNc">
-                                <rect key="frame" x="0.0" y="238" width="600" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
-                                <connections>
-                                    <outlet property="delegate" destination="INb-Vz-wMu" id="eZn-Px-ZOD"/>
-                                </connections>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmar Senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="epX-0T-sB5">
                                 <rect key="frame" x="0.0" y="284" width="600" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -283,6 +275,14 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GRB-bz-CNc">
+                                <rect key="frame" x="0.0" y="238" width="600" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="INb-Vz-wMu" id="eZn-Px-ZOD"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.27450980392156865" green="0.5725490196078431" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>

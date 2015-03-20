@@ -13,7 +13,7 @@
 - (void) cadastrar {
   _object = [[PFUser alloc] init];
   _object.username = _email;
-  _object.password = _senha;
+  _object.password = _password;
   [_object signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
     if (succeeded) {
     
