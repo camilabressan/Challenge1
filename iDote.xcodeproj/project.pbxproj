@@ -26,6 +26,7 @@
 		AB4F88401AB89D8B006DA324 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4F883F1AB89D8B006DA324 /* SystemConfiguration.framework */; };
 		AB4F88421AB89D97006DA324 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4F88411AB89D96006DA324 /* libz.dylib */; };
 		AB4F88441AB89DA8006DA324 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4F88431AB89DA8006DA324 /* libsqlite3.dylib */; };
+		ABCDBA6F1ABC939C00BF49C1 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCDBA6E1ABC939C00BF49C1 /* SignUpViewController.m */; };
 		B96024941AB89729008C211C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B96024931AB89729008C211C /* main.m */; };
 		B96024971AB89729008C211C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B96024961AB89729008C211C /* AppDelegate.m */; };
 		B960249A1AB89729008C211C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B96024991AB89729008C211C /* LoginViewController.m */; };
@@ -66,6 +67,8 @@
 		AB4F883F1AB89D8B006DA324 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AB4F88411AB89D96006DA324 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		AB4F88431AB89DA8006DA324 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		ABCDBA6D1ABC939C00BF49C1 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		ABCDBA6E1ABC939C00BF49C1 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		B960248E1AB89729008C211C /* iDote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B96024921AB89729008C211C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B96024931AB89729008C211C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -216,6 +219,8 @@
 			children = (
 				B96024981AB89729008C211C /* LoginViewController.h */,
 				B96024991AB89729008C211C /* LoginViewController.m */,
+				ABCDBA6D1ABC939C00BF49C1 /* SignUpViewController.h */,
+				ABCDBA6E1ABC939C00BF49C1 /* SignUpViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -332,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A05773AD1ABB45B70069D5CB /* User.m in Sources */,
+				ABCDBA6F1ABC939C00BF49C1 /* SignUpViewController.m in Sources */,
 				B960249A1AB89729008C211C /* LoginViewController.m in Sources */,
 				B96024971AB89729008C211C /* AppDelegate.m in Sources */,
 				B96024941AB89729008C211C /* main.m in Sources */,

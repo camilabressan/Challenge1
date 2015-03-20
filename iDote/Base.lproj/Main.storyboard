@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -32,7 +32,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YFb-g5-VT2">
                                 <rect key="frame" x="300" y="265" width="300" height="30"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="303" id="DO4-rZ-qUn"/>
                                     <constraint firstAttribute="height" constant="30" id="EPz-DE-W9c"/>
@@ -74,13 +74,13 @@
                                     <constraint firstAttribute="width" secondItem="QFf-4W-31g" secondAttribute="height" multiplier="20:1" id="Bsh-DH-b2a"/>
                                     <constraint firstAttribute="height" constant="30" id="McN-Pg-fEk"/>
                                 </constraints>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i4z-zo-3Bf">
                                 <rect key="frame" x="0.0" y="222" width="600" height="30"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.77734375" green="0.77734375" blue="0.77734375" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="AiF-38-JGf"/>
@@ -96,7 +96,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPm-ca-nST">
                                 <rect key="frame" x="0.0" y="265" width="300" height="30"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="296" id="E9d-XD-Nk7"/>
                                     <constraint firstAttribute="width" constant="296" id="JQX-J8-AXT"/>
@@ -187,7 +187,7 @@
         <!--Cadastro-->
         <scene sceneID="QQj-zQ-B7J">
             <objects>
-                <viewController title="Cadastro" id="INb-Vz-wMu" sceneMemberID="viewController">
+                <viewController title="Cadastro" id="INb-Vz-wMu" customClass="SignUpViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ki0-Vw-I6F"/>
                         <viewControllerLayoutGuide type="bottom" id="Nej-5S-tXq"/>
@@ -202,12 +202,15 @@
                                     <constraint firstAttribute="width" constant="600" id="d41-6o-uJb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="d41-6o-uJb"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="INb-Vz-wMu" id="WxO-bn-My0"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefone" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ggb-y8-FQW">
                                 <rect key="frame" x="0.0" y="192" width="600" height="30"/>
@@ -215,22 +218,31 @@
                                     <constraint firstAttribute="width" constant="600" id="Lyd-hW-6Qf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="Lyd-hW-6Qf"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="INb-Vz-wMu" id="Rdd-Mg-Jl5"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GRB-bz-CNc">
                                 <rect key="frame" x="0.0" y="238" width="600" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="INb-Vz-wMu" id="eZn-Px-ZOD"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmar Senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="epX-0T-sB5">
                                 <rect key="frame" x="0.0" y="284" width="600" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="INb-Vz-wMu" id="t0Q-uR-FtH"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome Completo" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="01F-cy-G5t">
                                 <rect key="frame" x="0.0" y="100" width="600" height="30"/>
@@ -238,12 +250,15 @@
                                     <constraint firstAttribute="width" constant="600" id="hO3-P9-wKs"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="hO3-P9-wKs"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="INb-Vz-wMu" id="b76-L3-e2p"/>
+                                </connections>
                             </textField>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lvz-uA-PFw">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
@@ -307,6 +322,13 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="txtFieldConfirmPassword" destination="epX-0T-sB5" id="drx-uT-jGy"/>
+                        <outlet property="txtFieldEmail" destination="m5r-4I-3S7" id="iMV-ct-3SQ"/>
+                        <outlet property="txtFieldName" destination="01F-cy-G5t" id="lsj-VZ-IlX"/>
+                        <outlet property="txtFieldPassword" destination="GRB-bz-CNc" id="k1i-hR-88k"/>
+                        <outlet property="txtFieldPhoneNumber" destination="Ggb-y8-FQW" id="diU-JM-I3h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Km7-uA-MD5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
