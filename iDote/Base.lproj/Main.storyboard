@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VBf-wy-7od">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -350,7 +350,7 @@
         <!--CadastroAnimal-->
         <scene sceneID="1n7-5i-R8n">
             <objects>
-                <viewController title="CadastroAnimal" id="VBf-wy-7od" sceneMemberID="viewController">
+                <viewController title="CadastroAnimal" id="VBf-wy-7od" customClass="CadastroAnimalViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lH1-Wf-68k"/>
                         <viewControllerLayoutGuide type="bottom" id="htp-ku-PUX"/>
@@ -410,34 +410,49 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Jva-oz-heb">
                                 <rect key="frame" x="57" y="297" width="123" height="29"/>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="Fêmea"/>
+                                    <segment title="Macho"/>
                                 </segments>
+                                <connections>
+                                    <action selector="checkGenero" destination="VBf-wy-7od" eventType="valueChanged" id="iHC-Kz-kAI"/>
+                                </connections>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="11R-Zj-ib8">
                                 <rect key="frame" x="26" y="374" width="236" height="29"/>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
-                                    <segment title=""/>
+                                    <segment title="Pequeno"/>
+                                    <segment title="Médio"/>
+                                    <segment title="Grande"/>
                                 </segments>
+                                <connections>
+                                    <action selector="checkPorte" destination="VBf-wy-7od" eventType="valueChanged" id="3tc-04-gXg"/>
+                                </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5v-rg-4DF">
-                                <rect key="frame" x="447" y="368" width="42" height="21"/>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="n2N-Cn-STz">
+                                <rect key="frame" x="414" y="326" width="118" height="31"/>
+                                <connections>
+                                    <action selector="changeAge" destination="VBf-wy-7od" eventType="valueChanged" id="In1-U4-eOa"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Idade: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5v-rg-4DF">
+                                <rect key="frame" x="356" y="297" width="174" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="n2N-Cn-STz">
-                                <rect key="frame" x="414" y="328" width="118" height="31"/>
-                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="labelIdade" destination="V5v-rg-4DF" id="bzJ-KK-dH6"/>
+                        <outlet property="segmentedGenero" destination="Jva-oz-heb" id="0NI-2x-quV"/>
+                        <outlet property="segmentedPorte" destination="11R-Zj-ib8" id="qjN-yf-jBV"/>
+                        <outlet property="slider" destination="n2N-Cn-STz" id="yH3-WL-K8j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XDb-bX-kMA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1188" y="859"/>
+            <point key="canvasLocation" x="1046" y="782"/>
         </scene>
     </scenes>
     <resources>

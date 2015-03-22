@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A04FEAB41ABE451500177ADF /* CadastroAnimalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A04FEAB31ABE451500177ADF /* CadastroAnimalViewController.m */; };
 		A05773AD1ABB45B70069D5CB /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = A05773AC1ABB45B70069D5CB /* User.m */; };
 		A06184C01AB8A08D00363539 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184BB1AB8A08D00363539 /* Bolts.framework */; };
 		A06184C11AB8A08D00363539 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184BC1AB8A08D00363539 /* Parse.framework */; };
@@ -48,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A04FEAB21ABE451500177ADF /* CadastroAnimalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CadastroAnimalViewController.h; sourceTree = "<group>"; };
+		A04FEAB31ABE451500177ADF /* CadastroAnimalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CadastroAnimalViewController.m; sourceTree = "<group>"; };
 		A05773AB1ABB45B70069D5CB /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = iDote/User.h; sourceTree = "<group>"; };
 		A05773AC1ABB45B70069D5CB /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = iDote/User.m; sourceTree = "<group>"; };
 		A06184BB1AB8A08D00363539 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Frameworks/Bolts.framework; sourceTree = "<group>"; };
@@ -222,6 +225,8 @@
 		B96024B71ABB58B7008C211C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A04FEAB21ABE451500177ADF /* CadastroAnimalViewController.h */,
+				A04FEAB31ABE451500177ADF /* CadastroAnimalViewController.m */,
 				B96024981AB89729008C211C /* LoginViewController.h */,
 				B96024991AB89729008C211C /* LoginViewController.m */,
 				ABCDBA6D1ABC939C00BF49C1 /* SignUpViewController.h */,
@@ -288,7 +293,7 @@
 				TargetAttributes = {
 					B960248D1AB89728008C211C = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 9468LRW88W;
+						DevelopmentTeam = 9KS6X927VF;
 					};
 					B96024A61AB89729008C211C = {
 						CreatedOnToolsVersion = 6.2;
@@ -341,6 +346,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A04FEAB41ABE451500177ADF /* CadastroAnimalViewController.m in Sources */,
 				A05773AD1ABB45B70069D5CB /* User.m in Sources */,
 				ABCDBA6F1ABC939C00BF49C1 /* SignUpViewController.m in Sources */,
 				B960249A1AB89729008C211C /* LoginViewController.m in Sources */,
@@ -471,6 +477,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -479,6 +486,7 @@
 				INFOPLIST_FILE = iDote/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -487,6 +495,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -495,6 +504,7 @@
 				INFOPLIST_FILE = iDote/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
