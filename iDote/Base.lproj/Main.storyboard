@@ -379,7 +379,7 @@
         <!--CadastroAnimal-->
         <scene sceneID="1n7-5i-R8n">
             <objects>
-                <viewController title="CadastroAnimal" id="VBf-wy-7od" customClass="CadastroAnimalViewController" sceneMemberID="viewController">
+                <viewController title="CadastroAnimal" id="VBf-wy-7od" customClass="RegisterAnimalDataController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lH1-Wf-68k"/>
                         <viewControllerLayoutGuide type="bottom" id="htp-ku-PUX"/>
@@ -476,7 +476,7 @@
         <!--FotosCadastroAnimal-->
         <scene sceneID="uhT-Tb-Ksm">
             <objects>
-                <viewController id="5yw-tI-rVJ" userLabel="FotosCadastroAnimal" sceneMemberID="viewController">
+                <viewController id="5yw-tI-rVJ" userLabel="FotosCadastroAnimal" customClass="RegisterAnimalPhotoController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wzZ-db-Aws"/>
                         <viewControllerLayoutGuide type="bottom" id="qvr-NB-3eV"/>
