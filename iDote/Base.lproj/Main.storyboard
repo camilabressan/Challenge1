@@ -174,14 +174,14 @@
                     <connections>
                         <outlet property="emailTextField" destination="QFf-4W-31g" id="MZK-We-bCb"/>
                         <outlet property="senhaTextField" destination="i4z-zo-3Bf" id="i1c-G0-PTi"/>
-                        <segue destination="MrU-mM-gzA" kind="show" identifier="MainSegue" id="dAB-2Z-uUf"/>
+                        <segue destination="oy0-qS-wYj" kind="presentation" identifier="MainSegue" id="1QQ-Is-dCN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="81" y="-112"/>
         </scene>
-        <!--Item-->
+        <!--Animais para Adoção-->
         <scene sceneID="Mj4-Vq-gQv">
             <objects>
                 <viewController id="pXW-7c-6Fq" sceneMemberID="viewController">
@@ -192,16 +192,24 @@
                     <view key="view" contentMode="scaleToFill" id="bjj-TT-VXu">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5fh-Aa-PgO">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="UUF-VR-3kr"/>
-                    <navigationItem key="navigationItem" id="xLU-yc-OZN">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="dSn-4O-TGc"/>
+                    <navigationItem key="navigationItem" title="Animais para Adoção" id="Kty-jo-mGg">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="CXK-K0-bnx">
+                            <connections>
+                                <segue destination="5yw-tI-rVJ" kind="show" id="lvf-6M-XfT"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VA2-VK-nn3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1752" y="1109"/>
+            <point key="canvasLocation" x="2564" y="1109"/>
         </scene>
         <!--Cadastro-->
         <scene sceneID="QQj-zQ-B7J">
@@ -380,23 +388,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EEm-xz-pnv">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="Z5j-P9-Ssv"/>
-                                </constraints>
-                                <color key="barTintColor" red="0.37647058823529411" green="0.5725490196078431" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
-                                <items>
-                                    <navigationItem title="Cadastro Pets" id="XNu-gL-QO5">
-                                        <barButtonItem key="leftBarButtonItem" title="Voltar" id="kfB-6B-yz3">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="dPd-eg-hvd">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Jva-oz-heb">
                                 <rect key="frame" x="34" y="235" width="213" height="29"/>
                                 <segments>
@@ -418,14 +409,8 @@
                                     <action selector="checkPorte" destination="VBf-wy-7od" eventType="valueChanged" id="3tc-04-gXg"/>
                                 </connections>
                             </segmentedControl>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="n2N-Cn-STz">
-                                <rect key="frame" x="77" y="302" width="197" height="31"/>
-                                <connections>
-                                    <action selector="changeAge" destination="VBf-wy-7od" eventType="valueChanged" id="In1-U4-eOa"/>
-                                </connections>
-                            </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Idade: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5v-rg-4DF">
-                                <rect key="frame" x="257" y="306" width="174" height="21"/>
+                                <rect key="frame" x="16" y="311" width="174" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -446,14 +431,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="n2N-Cn-STz">
+                                <rect key="frame" x="202" y="307" width="197" height="31"/>
+                                <connections>
+                                    <action selector="changeAge" destination="VBf-wy-7od" eventType="valueChanged" id="In1-U4-eOa"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="EEm-xz-pnv" firstAttribute="top" secondItem="lH1-Wf-68k" secondAttribute="bottom" constant="-20" id="t7e-kE-T0J"/>
-                            <constraint firstItem="EEm-xz-pnv" firstAttribute="width" secondItem="4rZ-y9-DIy" secondAttribute="width" id="vWx-uM-xtA"/>
-                            <constraint firstAttribute="centerX" secondItem="EEm-xz-pnv" secondAttribute="centerX" id="vYU-fa-7k4"/>
-                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Cadastro: Animal" id="ysS-xb-pLm">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="VTY-iJ-B3e"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="labelIdade" destination="V5v-rg-4DF" id="bzJ-KK-dH6"/>
                         <outlet property="segmentedGenero" destination="Jva-oz-heb" id="0NI-2x-quV"/>
@@ -463,7 +452,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XDb-bX-kMA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3371" y="846"/>
+            <point key="canvasLocation" x="4183" y="846"/>
         </scene>
         <!--Instituições-->
         <scene sceneID="xDH-Jj-Emi">
@@ -532,62 +521,20 @@
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="33"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z2J-SP-X5X">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="Gnm-yQ-8hD"/>
-                                    <constraint firstAttribute="width" constant="600" id="crm-sJ-i8K"/>
-                                </constraints>
-                                <color key="barTintColor" red="0.37647058823529411" green="0.5725490196078431" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
-                                <items>
-                                    <navigationItem title="Cadastro Pets" id="SjX-fS-yL6">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Spv-WU-U0u">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Avançar" id="Ts1-kx-PfC" userLabel="Avançar">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="crm-sJ-i8K"/>
-                                    </mask>
-                                </variation>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="z2J-SP-X5X" secondAttribute="width" id="3SA-dv-MPc"/>
-                            <constraint firstAttribute="centerX" secondItem="z2J-SP-X5X" secondAttribute="centerX" id="KMH-70-sUp"/>
-                            <constraint firstItem="z2J-SP-X5X" firstAttribute="top" secondItem="wzZ-db-Aws" secondAttribute="bottom" constant="-20" id="P9d-1n-7ce"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <segue destination="VBf-wy-7od" kind="show" id="aUm-Tu-ZO2"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="Cadastro: Animal" id="HWo-du-gXO">
+                        <barButtonItem key="rightBarButtonItem" title="Avançar" id="4lg-bR-C7o">
+                            <connections>
+                                <segue destination="VBf-wy-7od" kind="show" id="s2j-LI-KmP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gx0-cJ-CmY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2702" y="856"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="36T-pB-d1y">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MrU-mM-gzA" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4tG-1g-dXt">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="oy0-qS-wYj" kind="relationship" relationship="rootViewController" id="Xjw-pe-gOs"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CvE-BE-SnF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="564" y="1045"/>
+            <point key="canvasLocation" x="3514" y="856"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="eiW-pa-9sj">
@@ -601,13 +548,32 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="pXW-7c-6Fq" kind="relationship" relationship="viewControllers" id="Xmd-UB-xm9"/>
+                        <segue destination="brb-JW-A0O" kind="relationship" relationship="viewControllers" id="Xmd-UB-xm9"/>
                         <segue destination="rlH-IA-5lt" kind="relationship" relationship="viewControllers" id="aln-9e-C0H"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="avx-7S-aiM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2072" y="57"/>
+            <point key="canvasLocation" x="320" y="807"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="frS-7Z-my1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="brb-JW-A0O" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="GBc-q8-3rf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hGM-vh-30N">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pXW-7c-6Fq" kind="relationship" relationship="rootViewController" id="iiz-W6-6eC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nu9-r4-g8V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1752" y="1109"/>
         </scene>
     </scenes>
     <resources>
