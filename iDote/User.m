@@ -11,16 +11,17 @@
 @implementation User
 
 - (void) cadastrar {
-  _object = [[PFUser alloc] init];
-  _object.username = _email;
-  _object.password = _password;
-  [_object signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-    if (succeeded) {
-    
-    } else {
-      //TODO: erro cadastro
-    }
-  }];
+    _object = [[PFUser alloc] init];
+    _object.username = _email;
+    _object.password = _password;
+    _object[@"Name"] = _name;
+    [_object signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            
+        } else {
+            //TODO: erro cadastro
+        }
+    }];
 }
 
 - (void) login {

@@ -174,14 +174,14 @@
                     <connections>
                         <outlet property="emailTextField" destination="QFf-4W-31g" id="MZK-We-bCb"/>
                         <outlet property="senhaTextField" destination="i4z-zo-3Bf" id="i1c-G0-PTi"/>
-                        <segue destination="pXW-7c-6Fq" kind="show" identifier="MainSegue" id="dAB-2Z-uUf"/>
+                        <segue destination="MrU-mM-gzA" kind="show" identifier="MainSegue" id="dAB-2Z-uUf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="81" y="-112"/>
         </scene>
-        <!--View Controller-->
+        <!--Item-->
         <scene sceneID="Mj4-Vq-gQv">
             <objects>
                 <viewController id="pXW-7c-6Fq" sceneMemberID="viewController">
@@ -194,10 +194,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="UUF-VR-3kr"/>
+                    <navigationItem key="navigationItem" id="xLU-yc-OZN">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="dSn-4O-TGc"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VA2-VK-nn3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="76" y="795"/>
+            <point key="canvasLocation" x="1752" y="1109"/>
         </scene>
         <!--Cadastro-->
         <scene sceneID="QQj-zQ-B7J">
@@ -384,7 +388,7 @@
                                 <color key="barTintColor" red="0.37647058823529411" green="0.5725490196078431" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem title="Cadastro Pets" id="XNu-gL-QO5">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="kfB-6B-yz3">
+                                        <barButtonItem key="leftBarButtonItem" title="Voltar" id="kfB-6B-yz3">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="dPd-eg-hvd">
@@ -459,7 +463,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XDb-bX-kMA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1909" y="778"/>
+            <point key="canvasLocation" x="3371" y="846"/>
+        </scene>
+        <!--Instituições-->
+        <scene sceneID="xDH-Jj-Emi">
+            <objects>
+                <viewController id="rlH-IA-5lt" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EZV-Pk-XyT"/>
+                        <viewControllerLayoutGuide type="bottom" id="ulA-ve-QXq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sIL-0Q-bfy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Instituições" id="YTA-Lz-2Oa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FaH-qY-ldb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2861" y="40"/>
         </scene>
         <!--FotosCadastroAnimal-->
         <scene sceneID="uhT-Tb-Ksm">
@@ -477,7 +500,7 @@
                                 <rect key="frame" x="164" y="149" width="286" height="243"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="+">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zro-RF-apl">
@@ -500,7 +523,7 @@
                                 <rect key="frame" x="410" y="425" width="162" height="132"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="+">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -518,7 +541,7 @@
                                 <color key="barTintColor" red="0.37647058823529411" green="0.5725490196078431" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem title="Cadastro Pets" id="SjX-fS-yL6">
-                                        <barButtonItem key="leftBarButtonItem" title="&lt; Voltar" id="Spv-WU-U0u">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Spv-WU-U0u">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Avançar" id="Ts1-kx-PfC" userLabel="Avançar">
@@ -540,10 +563,51 @@
                             <constraint firstItem="z2J-SP-X5X" firstAttribute="top" secondItem="wzZ-db-Aws" secondAttribute="bottom" constant="-20" id="P9d-1n-7ce"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="VBf-wy-7od" kind="show" id="aUm-Tu-ZO2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gx0-cJ-CmY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1110" y="778"/>
+            <point key="canvasLocation" x="2702" y="856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="36T-pB-d1y">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MrU-mM-gzA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4tG-1g-dXt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oy0-qS-wYj" kind="relationship" relationship="rootViewController" id="Xjw-pe-gOs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CvE-BE-SnF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="564" y="1045"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="eiW-pa-9sj">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="oy0-qS-wYj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="GcC-lW-Cc2"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="SUA-d5-GfO">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="pXW-7c-6Fq" kind="relationship" relationship="viewControllers" id="Xmd-UB-xm9"/>
+                        <segue destination="rlH-IA-5lt" kind="relationship" relationship="viewControllers" id="aln-9e-C0H"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="avx-7S-aiM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2072" y="57"/>
         </scene>
     </scenes>
     <resources>
