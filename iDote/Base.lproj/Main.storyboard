@@ -128,7 +128,7 @@
                                 </variation>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.96078431372549022" green="0.65098039215686276" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.37647058823529411" green="0.5725490196078431" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="YFb-g5-VT2" firstAttribute="width" secondItem="aPm-ca-nST" secondAttribute="width" id="6dP-8l-VB5"/>
                             <constraint firstItem="QFf-4W-31g" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="338" id="72s-TV-Shf"/>
@@ -374,7 +374,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Km7-uA-MD5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="oxU-Bf-4sZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1121" y="-48"/>
+            <point key="canvasLocation" x="813" y="-760"/>
         </scene>
         <!--CadastroAnimal-->
         <scene sceneID="1n7-5i-R8n">
@@ -440,7 +440,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Cadastro: Animal" id="ysS-xb-pLm">
+                    <navigationItem key="navigationItem" title="Cadastro Pets" id="ysS-xb-pLm">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="VTY-iJ-B3e"/>
                     </navigationItem>
                     <connections>
@@ -467,11 +467,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Instituições" id="YTA-Lz-2Oa"/>
+                    <tabBarItem key="tabBarItem" title="Instituições" image="IconOngs" id="YTA-Lz-2Oa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FaH-qY-ldb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2861" y="40"/>
+            <point key="canvasLocation" x="1529" y="180"/>
         </scene>
         <!--FotosCadastroAnimal-->
         <scene sceneID="uhT-Tb-Ksm">
@@ -524,7 +524,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Cadastro: Animal" id="HWo-du-gXO">
+                    <navigationItem key="navigationItem" title="Cadastro Pets" id="HWo-du-gXO">
                         <barButtonItem key="rightBarButtonItem" title="Avançar" id="4lg-bR-C7o">
                             <connections>
                                 <segue destination="VBf-wy-7od" kind="show" id="s2j-LI-KmP"/>
@@ -545,22 +545,80 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="SUA-d5-GfO">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="barTintColor" red="0.37647058823529411" green="0.5725490196078431" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" cocoaTouchSystemColor="darkTextColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="brb-JW-A0O" kind="relationship" relationship="viewControllers" id="Xmd-UB-xm9"/>
                         <segue destination="rlH-IA-5lt" kind="relationship" relationship="viewControllers" id="aln-9e-C0H"/>
+                        <segue destination="X7G-FL-hRh" kind="relationship" relationship="viewControllers" id="TSV-FB-cCU"/>
+                        <segue destination="X5C-4G-xhf" kind="relationship" relationship="viewControllers" id="Qw7-JR-LT5"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="avx-7S-aiM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="320" y="807"/>
         </scene>
-        <!--Item-->
+        <!--Eventos-->
+        <scene sceneID="VjZ-Fy-7si">
+            <objects>
+                <viewController id="X7G-FL-hRh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ySl-l3-wkv"/>
+                        <viewControllerLayoutGuide type="bottom" id="2PM-td-XVl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZSt-AP-eki">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="d5c-eK-gA1">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="QrA-kr-SIJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QrA-kr-SIJ" id="mge-Ci-e0H">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Eventos" image="Fill 149" id="rb1-ud-Tch" userLabel="Eventos"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jFp-pr-uO7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-271" y="1556"/>
+        </scene>
+        <!--Pessoal-->
+        <scene sceneID="i4c-v9-dSA">
+            <objects>
+                <viewController id="X5C-4G-xhf" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KmQ-n8-k6y"/>
+                        <viewControllerLayoutGuide type="bottom" id="oXl-3s-ccf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ziS-yq-Gzc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Pessoal" image="People" id="ifj-wy-Y7L" userLabel="Pessoal"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tg7-Fp-brn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="764" y="1549"/>
+        </scene>
+        <!--Adoção-->
         <scene sceneID="frS-7Z-my1">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="brb-JW-A0O" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="GBc-q8-3rf"/>
+                    <tabBarItem key="tabBarItem" title="Adoção" image="pata" id="GBc-q8-3rf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hGM-vh-30N">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -573,10 +631,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nu9-r4-g8V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1752" y="1109"/>
+            <point key="canvasLocation" x="1666" y="1109"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Fill 149" width="23" height="22"/>
+        <image name="IconOngs" width="24" height="24"/>
         <image name="Image2" width="400" height="325"/>
+        <image name="People" width="25" height="25"/>
+        <image name="pata" width="24" height="21"/>
     </resources>
 </document>
