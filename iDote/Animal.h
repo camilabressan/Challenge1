@@ -7,14 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
+#import "FXForms.h"
 
-@interface Animal : NSObject
+@interface Animal : NSObject <FXForm>
 
 @property NSString *nome;
 @property NSInteger idade;
 @property NSString *porte;
 @property NSString *genero;
 @property NSString *descricao;
-
 
 @end

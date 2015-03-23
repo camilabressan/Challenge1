@@ -18,6 +18,7 @@
 		A06B93C41ABCA0BE00B3F59E /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = A06B93C31ABCA0BE00B3F59E /* Animal.m */; };
 		AB1781331AC090C6007621F0 /* RegisterAnimalDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB1781321AC090C6007621F0 /* RegisterAnimalDataController.m */; };
 		AB1781361AC090EE007621F0 /* RegisterAnimalPhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB1781351AC090EE007621F0 /* RegisterAnimalPhotoController.m */; };
+		AB17813F1AC0A32B007621F0 /* FXForms.m in Sources */ = {isa = PBXBuildFile; fileRef = AB17813E1AC0A32B007621F0 /* FXForms.m */; };
 		AB4F88301AB89D59006DA324 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4F882F1AB89D59006DA324 /* AudioToolbox.framework */; };
 		AB4F88321AB89D5E006DA324 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4F88311AB89D5E006DA324 /* CFNetwork.framework */; };
 		AB4F88341AB89D67006DA324 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4F88331AB89D67006DA324 /* CoreGraphics.framework */; };
@@ -65,6 +66,8 @@
 		AB1781321AC090C6007621F0 /* RegisterAnimalDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterAnimalDataController.m; sourceTree = "<group>"; };
 		AB1781341AC090EE007621F0 /* RegisterAnimalPhotoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterAnimalPhotoController.h; sourceTree = "<group>"; };
 		AB1781351AC090EE007621F0 /* RegisterAnimalPhotoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterAnimalPhotoController.m; sourceTree = "<group>"; };
+		AB17813D1AC0A32B007621F0 /* FXForms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXForms.h; sourceTree = "<group>"; };
+		AB17813E1AC0A32B007621F0 /* FXForms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXForms.m; sourceTree = "<group>"; };
 		AB4F882F1AB89D59006DA324 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		AB4F88311AB89D5E006DA324 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		AB4F88331AB89D67006DA324 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -141,9 +144,19 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		AB1781401AC0A330007621F0 /* FXForms */ = {
+			isa = PBXGroup;
+			children = (
+				AB17813D1AC0A32B007621F0 /* FXForms.h */,
+				AB17813E1AC0A32B007621F0 /* FXForms.m */,
+			);
+			name = FXForms;
+			sourceTree = "<group>";
+		};
 		AB4F88241AB89CB2006DA324 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AB1781401AC0A330007621F0 /* FXForms */,
 				AB4F88431AB89DA8006DA324 /* libsqlite3.dylib */,
 				A06184C71AB8A40400363539 /* FBAudienceNetwork.framework */,
 				A06184C51AB8A3E900363539 /* FacebookSDK.framework */,
@@ -352,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A05773AD1ABB45B70069D5CB /* User.m in Sources */,
+				AB17813F1AC0A32B007621F0 /* FXForms.m in Sources */,
 				AB1781331AC090C6007621F0 /* RegisterAnimalDataController.m in Sources */,
 				ABCDBA6F1ABC939C00BF49C1 /* SignUpViewController.m in Sources */,
 				B960249A1AB89729008C211C /* LoginViewController.m in Sources */,
