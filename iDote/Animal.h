@@ -12,11 +12,18 @@
 
 @interface Animal : NSObject <FXForm>
 
+@property PFObject *object;
+
+@property UIImage *mainImage;
 @property NSString *nome;
 @property NSInteger idade;
 @property NSString *tipo;
 @property NSString *porte;
 @property NSString *genero;
 @property NSString *descricao;
+
+
+- (void) save;
+
 
 @end
