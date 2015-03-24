@@ -17,6 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    FXFormViewController *controller = [[FXFormViewController alloc] init];
+    controller.formController.form = [[Animal alloc] init];
+    [self presentViewController:controller animated:YES completion:nil];
+    
     self.checkGenero; //inicializa visualmente o genero do animal
     self.checkPorte; //inicializa visualmente o porte do animal
     self.changeAge; //inicializa visualmente a idade do animal
