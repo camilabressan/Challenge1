@@ -15,6 +15,7 @@
 		A06184C41AB8A08D00363539 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184BF1AB8A08D00363539 /* ParseUI.framework */; };
 		A06184C61AB8A3E900363539 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184C51AB8A3E900363539 /* FacebookSDK.framework */; };
 		A06184C81AB8A40400363539 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184C71AB8A40400363539 /* FBAudienceNetwork.framework */; };
+		A06A3F571AC1C4D600D885EE /* CadastroAnimalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A06A3F561AC1C4D600D885EE /* CadastroAnimalViewController.m */; };
 		A06B93C41ABCA0BE00B3F59E /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = A06B93C31ABCA0BE00B3F59E /* Animal.m */; };
 		AB1781331AC090C6007621F0 /* RegisterAnimalDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB1781321AC090C6007621F0 /* RegisterAnimalDataController.m */; };
 		AB1781361AC090EE007621F0 /* RegisterAnimalPhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB1781351AC090EE007621F0 /* RegisterAnimalPhotoController.m */; };
@@ -60,6 +61,8 @@
 		A06184BF1AB8A08D00363539 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = Frameworks/ParseUI.framework; sourceTree = "<group>"; };
 		A06184C51AB8A3E900363539 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		A06184C71AB8A40400363539 /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
+		A06A3F551AC1C4D600D885EE /* CadastroAnimalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CadastroAnimalViewController.h; sourceTree = "<group>"; };
+		A06A3F561AC1C4D600D885EE /* CadastroAnimalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CadastroAnimalViewController.m; sourceTree = "<group>"; };
 		A06B93C21ABCA0BE00B3F59E /* Animal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Animal.h; path = iDote/Animal.h; sourceTree = "<group>"; };
 		A06B93C31ABCA0BE00B3F59E /* Animal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Animal.m; path = iDote/Animal.m; sourceTree = "<group>"; };
 		AB1781311AC090C6007621F0 /* RegisterAnimalDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterAnimalDataController.h; sourceTree = "<group>"; };
@@ -249,6 +252,8 @@
 				AB1781321AC090C6007621F0 /* RegisterAnimalDataController.m */,
 				AB1781341AC090EE007621F0 /* RegisterAnimalPhotoController.h */,
 				AB1781351AC090EE007621F0 /* RegisterAnimalPhotoController.m */,
+				A06A3F551AC1C4D600D885EE /* CadastroAnimalViewController.h */,
+				A06A3F561AC1C4D600D885EE /* CadastroAnimalViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -373,6 +378,7 @@
 				AB1781361AC090EE007621F0 /* RegisterAnimalPhotoController.m in Sources */,
 				B96024971AB89729008C211C /* AppDelegate.m in Sources */,
 				B96024941AB89729008C211C /* main.m in Sources */,
+				A06A3F571AC1C4D600D885EE /* CadastroAnimalViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
