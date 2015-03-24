@@ -8,6 +8,10 @@
 
 #import "RegisterAnimalPhotoController.h"
 
+@interface RegisterAnimalPhotoController ()
+@property UIButton *imageHolder;
+@end
+
 @implementation RegisterAnimalPhotoController
 
 - (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker{
@@ -16,13 +20,14 @@
 
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
     UIImage *image = [info valueForKey:UIImagePickerControllerOriginalImage];
-    [_mainImage setBackgroundImage:image forState:UIControlStateNormal];
-    [_mainImage setTitle:@"" forState:nil];
+    [_imageHolder setBackgroundImage:image forState:UIControlStateNormal];
+    [_imageHolder setTitle:@"" forState:nil];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (IBAction)setFirstImage:(id)sender {
-    
+
+- (IBAction)setFirstImage:(UIButton *)sender {
+    _imageHolder = sender;
     UIImagePickerController *imagePickerControllerMain = [[UIImagePickerController alloc] init];
     imagePickerControllerMain.modalPresentationStyle = UIModalPresentationCurrentContext;
     imagePickerControllerMain.delegate = self;
