@@ -12,19 +12,53 @@
 
 @end
 
-@implementation RegisterAnimalDataController
+@implementation RegisterAnimalDataController {
+    UINavigationController *_navController;
+    Animal *_animal;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     FXFormViewController *controller = [[FXFormViewController alloc] init];
     controller.formController.form = [[Animal alloc] init];
-    [self presentViewController:controller animated:YES completion:nil];
+    
+    _navController = [[UINavigationController alloc] initWithRootViewController:controller];
+    
+    controller.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Voltar" style:UIBarButtonItemStylePlain target:self action:@selector(dismiss:)];
+    controller.navigationItem.title = @"Dados do Animal";
+    controller.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Salvar" style:UIBarButtonItemStyleDone target:self action:@selector(save:)];
+    
+    [self presentViewController:_navController animated:NO completion:nil];
+    
     
     self.checkGenero; //inicializa visualmente o genero do animal
     self.checkPorte; //inicializa visualmente o porte do animal
     self.changeAge; //inicializa visualmente a idade do animal
     
+}
+
+- (void)dismiss:(id)sender {
+    
+}
+
+- (void)save:(id)sender {
+    
+    [_navController dismissViewControllerAnimated:YES completion:^{
+        FXFormViewController *formQueVoltou = (FXFormViewController*)_navController.topViewController;
+        _animal = formQueVoltou.formController.form;
+    }];
+    [self performSegueWithIdentifier:@"segueBackFromRegisterAnimal" sender:sender];
+    
+
+}
+
+- (IBAction)saveClick:(id)sender {
+    [_navController dismissViewControllerAnimated:YES completion:^{
+        FXFormViewController *formQueVoltou = (FXFormViewController*)_navController.topViewController;
+        _animal = formQueVoltou.formController.form;
+        NSLog(@"%@", _animal.nome);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,15 +67,15 @@
 }
 
 - (IBAction) checkGenero {
-    Animal *animal = [[Animal alloc] init];
+    Animal *animalTESTE = [[Animal alloc] init];
     
     if (_segmentedGenero.selectedSegmentIndex == 0) {
-        animal.genero = @"femea";
-        NSLog(@"%@", animal.genero);
+        _animal.genero = @"femea";
+//        NSLog(@"%@", animal.genero);
     }
     if (_segmentedGenero.selectedSegmentIndex == 1) {
-        animal.genero = @"macho";
-        NSLog(@"%@", animal.genero);
+        _animal.genero = @"macho";
+//        NSLog(@"%@", animal.genero);
     }
 }
 
@@ -87,6 +121,10 @@
             animal.idade = idade;
             break;
     }
+}
+
+- (IBAction)clickBackground:(id)sender {
+    [self.view endEditing:YES];
 }
 
 @end
