@@ -34,37 +34,7 @@
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
-    
-    [[UITabBar appearance] setTintColor: [UIColor colorWithRed:64/255.0 green:46/255.0 blue:36/255.0 alpha:1]]; //MUDANDO A COR DO ICONE DA TAB BAR PRESSIONADO
-    
-    [[UIBarButtonItem appearance] setTintColor: [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1]]; //MUDA A COR DOS ICONES DA NAVEGATION
 
-    [[UINavigationBar appearance] setBarTintColor: [UIColor colorWithRed:96/255.0 green:146/255.0 blue:166/255.0 alpha:1]]; // MUDA A COR DA NAVEGATION
-    
-    [[UITabBar appearance] setBarTintColor: [UIColor colorWithRed:96/255.0 green:146/255.0 blue:166/255.0 alpha:1]]; // MUDA A COR DA TAB BAR
-
-    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:(255.0/255.0)
-    green:(255.0/255.0) blue:(255.0/255.0) alpha:1]];
-     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-    //MUDANDO A COR DO BOTAO PADRAO DA NAVEGATION
-  
-    
-    // set the selected colors
-    [self.tabBar setTintColor:[UIColor whiteColor]];
-    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIColor whiteColor], NSForegroundColorAttributeName, nil] forState:UIControlStateSelected];
-    
-    
-    UIColor * unselectedColor = [UIColor colorWithRed:184/255.0f green:224/255.0f blue:242/255.0f alpha:1.0f];
-    
-    // set color of unselected text
-    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:unselectedColor, NSForegroundColorAttributeName, nil]
-                                             forState:UIControlStateNormal];
-    
-    // generate a tinted unselected image based on image passed via the storyboard
-    for(UITabBarItem *item in self.tabBar.items) {
-        // use the UIImage category code for the imageWithColor: method
-        item.image = [[item.selectedImage imageWithColor:unselectedColor] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    }
     
     
     return YES;

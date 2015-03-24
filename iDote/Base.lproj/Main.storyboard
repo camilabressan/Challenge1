@@ -184,12 +184,12 @@
         <!--Animais para Adoção-->
         <scene sceneID="Mj4-Vq-gQv">
             <objects>
-                <viewController id="pXW-7c-6Fq" sceneMemberID="viewController">
+                <viewController id="pXW-7c-6Fq" customClass="AnimalsShowViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="J3S-So-jie"/>
                         <viewControllerLayoutGuide type="bottom" id="Bdd-VU-vKN"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="bjj-TT-VXu">
+                    <view key="view" contentMode="scaleToFill" id="bjj-TT-VXu" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -408,71 +408,21 @@
                         <viewControllerLayoutGuide type="top" id="lH1-Wf-68k"/>
                         <viewControllerLayoutGuide type="bottom" id="htp-ku-PUX"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="4rZ-y9-DIy">
+                    <view key="view" contentMode="scaleToFill" id="4rZ-y9-DIy" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Jva-oz-heb">
-                                <rect key="frame" x="34" y="235" width="213" height="29"/>
-                                <segments>
-                                    <segment title="Fêmea"/>
-                                    <segment title="Macho"/>
-                                </segments>
-                                <connections>
-                                    <action selector="checkGenero" destination="VBf-wy-7od" eventType="valueChanged" id="iHC-Kz-kAI"/>
-                                </connections>
-                            </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="11R-Zj-ib8">
-                                <rect key="frame" x="314" y="235" width="225" height="29"/>
-                                <segments>
-                                    <segment title="Pequeno"/>
-                                    <segment title="Médio"/>
-                                    <segment title="Grande"/>
-                                </segments>
-                                <connections>
-                                    <action selector="checkPorte" destination="VBf-wy-7od" eventType="valueChanged" id="3tc-04-gXg"/>
-                                </connections>
-                            </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Idade: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5v-rg-4DF">
-                                <rect key="frame" x="16" y="311" width="174" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do Pet" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uI7-pd-DMc">
-                                <rect key="frame" x="0.0" y="149" width="600" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Dados" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P6a-y2-yPQ">
-                                <rect key="frame" x="252" y="78" width="97" height="30"/>
-                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="33"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Descrição" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rUf-wu-4ia">
-                                <rect key="frame" x="79" y="393" width="436" height="187"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="n2N-Cn-STz">
-                                <rect key="frame" x="202" y="307" width="197" height="31"/>
-                                <connections>
-                                    <action selector="changeAge" destination="VBf-wy-7od" eventType="valueChanged" id="In1-U4-eOa"/>
-                                </connections>
-                            </slider>
-                        </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                        <connections>
+                            <action selector="clickBackground:" destination="VBf-wy-7od" eventType="touchDown" id="edW-3T-CNC"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Cadastro Pets" id="ysS-xb-pLm">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="VTY-iJ-B3e"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="VTY-iJ-B3e">
+                            <connections>
+                                <action selector="saveClick:" destination="VBf-wy-7od" id="HZ5-kq-bp9"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="labelIdade" destination="V5v-rg-4DF" id="bzJ-KK-dH6"/>
-                        <outlet property="segmentedGenero" destination="Jva-oz-heb" id="0NI-2x-quV"/>
-                        <outlet property="segmentedPorte" destination="11R-Zj-ib8" id="qjN-yf-jBV"/>
-                        <outlet property="slider" destination="n2N-Cn-STz" id="yH3-WL-K8j"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XDb-bX-kMA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -516,7 +466,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="setFirstImage:" destination="5yw-tI-rVJ" eventType="touchUpInside" id="5zp-ee-uCJ"/>
+                                    <action selector="setFirstImage:" destination="5yw-tI-rVJ" eventType="touchUpInside" id="uaB-eM-LOI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zro-RF-apl">
@@ -526,6 +476,9 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="setFirstImage:" destination="5yw-tI-rVJ" eventType="touchUpInside" id="Q8p-id-PMZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SeZ-1c-TeX">
                                 <rect key="frame" x="219" y="425" width="162" height="132"/>
@@ -534,6 +487,9 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="setFirstImage:" destination="5yw-tI-rVJ" eventType="touchUpInside" id="mfe-Y0-GYv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Mv-mD-1oB">
                                 <rect key="frame" x="410" y="425" width="162" height="132"/>
@@ -542,6 +498,9 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="setFirstImage:" destination="5yw-tI-rVJ" eventType="touchUpInside" id="sZd-9b-PRM"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Fotos" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tIQ-YO-Vpi">
                                 <rect key="frame" x="197" y="73" width="221" height="48"/>
@@ -566,10 +525,10 @@
             </objects>
             <point key="canvasLocation" x="3514" y="856"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="eiW-pa-9sj">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="oy0-qS-wYj" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="oy0-qS-wYj" customClass="TabBarViewController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="GcC-lW-Cc2"/>
                     <nil key="simulatedBottomBarMetrics"/>
