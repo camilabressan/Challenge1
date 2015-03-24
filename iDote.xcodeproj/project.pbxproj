@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9032E0F21AC0C54D001E11DF /* CalendarioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9032E0F11AC0C54D001E11DF /* CalendarioViewController.m */; };
 		A05773AD1ABB45B70069D5CB /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = A05773AC1ABB45B70069D5CB /* User.m */; };
 		A06184C01AB8A08D00363539 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184BB1AB8A08D00363539 /* Bolts.framework */; };
 		A06184C11AB8A08D00363539 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184BC1AB8A08D00363539 /* Parse.framework */; };
@@ -50,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9032E0F01AC0C54D001E11DF /* CalendarioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarioViewController.h; sourceTree = "<group>"; };
+		9032E0F11AC0C54D001E11DF /* CalendarioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarioViewController.m; sourceTree = "<group>"; };
 		A05773AB1ABB45B70069D5CB /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = iDote/User.h; sourceTree = "<group>"; };
 		A05773AC1ABB45B70069D5CB /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = iDote/User.m; sourceTree = "<group>"; };
 		A06184BB1AB8A08D00363539 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Frameworks/Bolts.framework; sourceTree = "<group>"; };
@@ -236,6 +239,8 @@
 				AB1781321AC090C6007621F0 /* RegisterAnimalDataController.m */,
 				AB1781341AC090EE007621F0 /* RegisterAnimalPhotoController.h */,
 				AB1781351AC090EE007621F0 /* RegisterAnimalPhotoController.m */,
+				9032E0F01AC0C54D001E11DF /* CalendarioViewController.h */,
+				9032E0F11AC0C54D001E11DF /* CalendarioViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -351,6 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9032E0F21AC0C54D001E11DF /* CalendarioViewController.m in Sources */,
 				A05773AD1ABB45B70069D5CB /* User.m in Sources */,
 				AB1781331AC090C6007621F0 /* RegisterAnimalDataController.m in Sources */,
 				ABCDBA6F1ABC939C00BF49C1 /* SignUpViewController.m in Sources */,
