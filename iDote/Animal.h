@@ -17,6 +17,7 @@
 @property UIImage *mainImage;
 @property NSString *nome;
 @property NSInteger idade;
+@property NSString *tipo;
 @property NSString *porte;
 @property NSString *genero;
 @property NSString *descricao;

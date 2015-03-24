@@ -13,6 +13,9 @@
 @end
 
 @implementation RegisterAnimalPhotoController
+- (IBAction)backFromRegisterAnimal:(UIStoryboardSegue *)segue {
+    
+}
 
 - (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker{
     [self dismissViewControllerAnimated:YES completion:nil];
