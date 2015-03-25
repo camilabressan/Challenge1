@@ -23,6 +23,10 @@
     
     [super viewDidLoad];
     
+    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:(255.0/255.0) green:(255.0/255.0) blue:(255.0/255.0) alpha:1]];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    //MUDANDO A COR DO BOTAO PADRAO DA NAVIGATION
+    
 }
 
 - (BOOL) validateEmail: (NSString *) candidate {
