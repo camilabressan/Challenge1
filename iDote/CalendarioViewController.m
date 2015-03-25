@@ -61,6 +61,21 @@
 }
 
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    // Configure the cell...
+    NSString *sectionTitle = [tabelacalendario objectAtIndex:indexPath.section];
+    NSArray *tabelacalendario = [meses objectForKey:sectionTitle];
+    NSString *meses = [tabelacalendario objectAtIndex:indexPath.row];
+    cell.textLabel.text = meses;
+    //cell.imageView.image = [UIImage imageNamed:[self getImageFilename:meses]];
+    
+    return cell;
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

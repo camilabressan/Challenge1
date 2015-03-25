@@ -16,7 +16,9 @@
 
 @end
 
+
 @implementation AppDelegate
+
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -32,7 +34,11 @@
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
-  return YES;
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Arial" size:19.0],NSForegroundColorAttributeName:[UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1.0]}]; //MUDANDO COR E FONTE DO TITULO DA NAVIGATION
+
+    
+    
+    return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

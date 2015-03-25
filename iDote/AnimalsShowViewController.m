@@ -9,6 +9,10 @@
 #import "AnimalsShowViewController.h"
 
 @implementation AnimalsShowViewController
+-(void)viewDidLoad {
+    [super viewDidLoad];
+    
 
+}
 
 @end
