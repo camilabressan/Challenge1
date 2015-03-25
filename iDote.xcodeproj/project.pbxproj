@@ -36,6 +36,9 @@
 		B960249F1AB89729008C211C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B960249E1AB89729008C211C /* Images.xcassets */; };
 		B96024A21AB89729008C211C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B96024A01AB89729008C211C /* LaunchScreen.xib */; };
 		B96024AE1AB89729008C211C /* iDoteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B96024AD1AB89729008C211C /* iDoteTests.m */; };
+		E32C9EE91AC07C8500439C9B /* RegisterInstitutionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E32C9EE81AC07C8500439C9B /* RegisterInstitutionViewController.m */; };
+		E32C9EEB1AC095BC00439C9B /* teste.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E32C9EEA1AC095BC00439C9B /* teste.storyboard */; };
+		E3B9C1CB1ABF2E960083A0F6 /* Institution.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B9C1CA1ABF2E960083A0F6 /* Institution.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +91,11 @@
 		B96024A71AB89729008C211C /* iDoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iDoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B96024AC1AB89729008C211C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B96024AD1AB89729008C211C /* iDoteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iDoteTests.m; sourceTree = "<group>"; };
+		E32C9EE71AC07C8500439C9B /* RegisterInstitutionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterInstitutionViewController.h; sourceTree = "<group>"; };
+		E32C9EE81AC07C8500439C9B /* RegisterInstitutionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterInstitutionViewController.m; sourceTree = "<group>"; };
+		E32C9EEA1AC095BC00439C9B /* teste.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = teste.storyboard; sourceTree = "<group>"; };
+		E3B9C1C91ABF2E960083A0F6 /* Institution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Institution.h; sourceTree = "<group>"; };
+		E3B9C1CA1ABF2E960083A0F6 /* Institution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Institution.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +141,8 @@
 				A05773AC1ABB45B70069D5CB /* User.m */,
 				A06B93C21ABCA0BE00B3F59E /* Animal.h */,
 				A06B93C31ABCA0BE00B3F59E /* Animal.m */,
+				E3B9C1C91ABF2E960083A0F6 /* Institution.h */,
+				E3B9C1CA1ABF2E960083A0F6 /* Institution.m */,
 			);
 			name = Model;
 			path = ..;
@@ -231,6 +241,8 @@
 				B96024991AB89729008C211C /* LoginViewController.m */,
 				ABCDBA6D1ABC939C00BF49C1 /* SignUpViewController.h */,
 				ABCDBA6E1ABC939C00BF49C1 /* SignUpViewController.m */,
+				E32C9EE71AC07C8500439C9B /* RegisterInstitutionViewController.h */,
+				E32C9EE81AC07C8500439C9B /* RegisterInstitutionViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -240,6 +252,7 @@
 			children = (
 				B960249B1AB89729008C211C /* Main.storyboard */,
 				B96024A01AB89729008C211C /* LaunchScreen.xib */,
+				E32C9EEA1AC095BC00439C9B /* teste.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -293,11 +306,11 @@
 				TargetAttributes = {
 					B960248D1AB89728008C211C = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 9KS6X927VF;
+						DevelopmentTeam = 6W5C2N8Y53;
 					};
 					B96024A61AB89729008C211C = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 9468LRW88W;
+						DevelopmentTeam = 6W5C2N8Y53;
 						TestTargetID = B960248D1AB89728008C211C;
 					};
 				};
@@ -326,6 +339,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E32C9EEB1AC095BC00439C9B /* teste.storyboard in Resources */,
 				B960249D1AB89729008C211C /* Main.storyboard in Resources */,
 				B96024A21AB89729008C211C /* LaunchScreen.xib in Resources */,
 				B960249F1AB89729008C211C /* Images.xcassets in Resources */,
@@ -348,8 +362,10 @@
 			files = (
 				A04FEAB41ABE451500177ADF /* CadastroAnimalViewController.m in Sources */,
 				A05773AD1ABB45B70069D5CB /* User.m in Sources */,
+				E3B9C1CB1ABF2E960083A0F6 /* Institution.m in Sources */,
 				ABCDBA6F1ABC939C00BF49C1 /* SignUpViewController.m in Sources */,
 				B960249A1AB89729008C211C /* LoginViewController.m in Sources */,
+				E32C9EE91AC07C8500439C9B /* RegisterInstitutionViewController.m in Sources */,
 				A06B93C41ABCA0BE00B3F59E /* Animal.m in Sources */,
 				B96024971AB89729008C211C /* AppDelegate.m in Sources */,
 				B96024941AB89729008C211C /* main.m in Sources */,
