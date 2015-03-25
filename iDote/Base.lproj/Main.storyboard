@@ -65,12 +65,15 @@
                                     <constraint firstAttribute="height" constant="45" id="Qus-hF-CPa"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="McN-Pg-fEk"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="imm-59-Pox"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPm-ca-nST">
                                 <rect key="frame" x="72" y="459" width="187" height="55"/>
@@ -102,7 +105,7 @@
                                     <action selector="checkData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jGj-Ff-wM2"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group" translatesAutoresizingMaskIntoConstraints="NO" id="xvQ-da-KKk">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="iDote" translatesAutoresizingMaskIntoConstraints="NO" id="xvQ-da-KKk">
                                 <rect key="frame" x="116" y="70" width="361" height="136"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="xvQ-da-KKk" secondAttribute="height" multiplier="421:294" id="3Eb-Tj-QC1"/>
@@ -127,7 +130,7 @@
                                     <constraint firstAttribute="height" constant="45" id="Mzy-3q-Rx5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="join" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="AiF-38-JGf"/>
@@ -135,6 +138,9 @@
                                         <exclude reference="LBA-80-kSu"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Axj-Dq-dxV"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.43529411764705883" green="0.066666666666666666" blue="0.1764705882352941" alpha="1" colorSpace="calibratedRGB"/>
@@ -188,6 +194,8 @@
                     <connections>
                         <outlet property="emailTextField" destination="QFf-4W-31g" id="MZK-We-bCb"/>
                         <outlet property="senhaTextField" destination="i4z-zo-3Bf" id="i1c-G0-PTi"/>
+                        <outlet property="txtFieldEmail" destination="QFf-4W-31g" id="dgD-cR-oJj"/>
+                        <outlet property="txtFieldPassword" destination="i4z-zo-3Bf" id="0ee-fQ-Mx2"/>
                         <segue destination="oy0-qS-wYj" kind="presentation" identifier="MainSegue" id="1QQ-Is-dCN"/>
                     </connections>
                 </viewController>
