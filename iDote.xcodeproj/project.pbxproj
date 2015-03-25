@@ -162,13 +162,10 @@
 				A05773AC1ABB45B70069D5CB /* User.m */,
 				A06B93C21ABCA0BE00B3F59E /* Animal.h */,
 				A06B93C31ABCA0BE00B3F59E /* Animal.m */,
-<<<<<<< HEAD
 				90727EE01AC2F6B800D48518 /* Evento.h */,
 				90727EE11AC2F6B800D48518 /* Evento.m */,
-=======
 				E3B9C1C91ABF2E960083A0F6 /* Institution.h */,
 				E3B9C1CA1ABF2E960083A0F6 /* Institution.m */,
->>>>>>> origin/master
 			);
 			name = Model;
 			path = ..;
@@ -298,12 +295,9 @@
 			children = (
 				B960249B1AB89729008C211C /* Main.storyboard */,
 				B96024A01AB89729008C211C /* LaunchScreen.xib */,
-<<<<<<< HEAD
 				90727EE31AC321DF00D48518 /* UIImageTabBarColor.h */,
 				90727EE41AC321DF00D48518 /* UIImageTabBarColor.m */,
-=======
 				E32C9EEA1AC095BC00439C9B /* teste.storyboard */,
->>>>>>> origin/master
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -425,12 +419,9 @@
 				ABAED8541AC1ECD4008322FF /* AnimalsShowViewController.m in Sources */,
 				B96024971AB89729008C211C /* AppDelegate.m in Sources */,
 				B96024941AB89729008C211C /* main.m in Sources */,
-<<<<<<< HEAD
 				90727EE51AC321DF00D48518 /* UIImageTabBarColor.m in Sources */,
 				90727EE21AC2F6B800D48518 /* Evento.m in Sources */,
 				A06A3F571AC1C4D600D885EE /* CadastroAnimalViewController.m in Sources */,
-=======
->>>>>>> origin/master
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
