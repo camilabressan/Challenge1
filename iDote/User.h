@@ -15,6 +15,7 @@
 @property NSString *username;
 @property NSString *email;
 @property NSString *password;
+@property NSString *name;
 
 - (void) login;
 - (void) cadastrar;
