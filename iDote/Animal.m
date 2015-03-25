@@ -21,20 +21,17 @@
              @{FXFormFieldHeader: @"Tipo",
                FXFormFieldKey: @"tipo",
                FXFormFieldTitle: @"",
-               FXFormFieldPlaceholder: @"Cachorro",
-               FXFormFieldOptions: @[@"Gato", @"Outro"],
+               FXFormFieldOptions: @[@"Cachorro", @"Gato", @"Outro"],
                FXFormFieldCell: [FXFormOptionSegmentsCell class]},
              @{FXFormFieldHeader: @"Gênero",
                FXFormFieldKey: @"genero",
                FXFormFieldTitle: @"",
-               FXFormFieldPlaceholder: @"Macho",
-               FXFormFieldOptions: @[@"Fêmea", @"Indefinido"],
+               FXFormFieldOptions: @[@"Macho", @"Fêmea", @"Indefinido"],
                FXFormFieldCell: [FXFormOptionSegmentsCell class]},
              @{FXFormFieldHeader: @"Porte",
                FXFormFieldKey: @"porte",
                FXFormFieldTitle: @"",
-               FXFormFieldPlaceholder: @"Pequeno",
-               FXFormFieldOptions: @[@"Médio", @"Grande"],
+               FXFormFieldOptions: @[@"Pequeno", @"Médio", @"Grande"],
                FXFormFieldCell: [FXFormOptionSegmentsCell class]}];
 }
 

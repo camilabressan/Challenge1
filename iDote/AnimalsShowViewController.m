@@ -9,10 +9,13 @@
 #import "AnimalsShowViewController.h"
 
 @implementation AnimalsShowViewController
+
 -(void)viewDidLoad {
     [super viewDidLoad];
-    
+}
 
+-(IBAction)backFromRegisterAnimal:(UIStoryboardSegue *)sender {
+    
 }
 
 @end

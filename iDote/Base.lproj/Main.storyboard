@@ -83,7 +83,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group" translatesAutoresizingMaskIntoConstraints="NO" id="xvQ-da-KKk">
-                                <rect key="frame" x="115.5" y="70" width="361" height="136"/>
+                                <rect key="frame" x="116" y="70" width="361" height="136"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="xvQ-da-KKk" secondAttribute="height" multiplier="421:294" id="3Eb-Tj-QC1"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="361" id="5Rf-jg-gaE"/>
@@ -518,15 +518,17 @@
                     <navigationItem key="navigationItem" title="Cadastro Pets" id="HWo-du-gXO">
                         <barButtonItem key="rightBarButtonItem" title="Avançar" id="4lg-bR-C7o">
                             <connections>
-                                <segue destination="VBf-wy-7od" kind="show" id="s2j-LI-KmP"/>
+                                <action selector="clickButtonNext:" destination="5yw-tI-rVJ" id="XcK-GU-wSK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="mainImage" destination="Ruq-Wf-jc8" id="ecN-4Z-i12"/>
+                        <segue destination="Ync-gB-zL1" kind="unwind" identifier="segueReturnFromRegisterAnimal" unwindAction="backFromRegisterAnimal:" id="zti-qn-E4N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gx0-cJ-CmY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Ync-gB-zL1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3390" y="1952"/>
         </scene>

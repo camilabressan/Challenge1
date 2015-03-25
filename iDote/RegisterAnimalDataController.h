@@ -11,10 +11,4 @@
 
 @interface RegisterAnimalDataController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UISlider *slider;
-@property (weak, nonatomic) IBOutlet UILabel *labelIdade;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedGenero;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedPorte;
-
-
 @end
