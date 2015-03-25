@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Q08-sF-rpb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -127,7 +127,7 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Axj-Dq-dxV"/>
                                 </connections>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Group" translatesAutoresizingMaskIntoConstraints="NO" id="xvQ-da-KKk">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="iDote" translatesAutoresizingMaskIntoConstraints="NO" id="xvQ-da-KKk">
                                 <rect key="frame" x="120" y="70" width="361" height="136"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="xvQ-da-KKk" secondAttribute="height" multiplier="421:294" id="3Eb-Tj-QC1"/>
@@ -747,9 +747,9 @@
         <image name="Cadastrar" width="255" height="80"/>
         <image name="Entrar" width="255" height="80"/>
         <image name="Fill 149" width="23" height="22"/>
-        <image name="Group" width="255" height="80"/>
         <image name="IconOngs" width="24" height="24"/>
         <image name="People" width="25" height="25"/>
+        <image name="iDote" width="474" height="193"/>
         <image name="pata" width="24" height="21"/>
     </resources>
 </document>
