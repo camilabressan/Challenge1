@@ -8,7 +8,9 @@
 
 #import "LoginViewController.h"
 
-@interface LoginViewController ()
+@interface LoginViewController () <UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *txtFieldEmail;
+@property (weak, nonatomic) IBOutlet UITextField *txtFieldPassword;
 
 @end
 
@@ -67,6 +69,16 @@
 
 -(IBAction)saveFromRegisterScreen:(UIStoryboardSegue *)sender {
     
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    if([textField isEqual: _txtFieldEmail])
+        [_txtFieldPassword becomeFirstResponder];
+    else if ([textField isEqual: _txtFieldPassword])
+        [self checkData:self];
+        
+    return YES;
 }
 
 @end

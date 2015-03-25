@@ -1,0 +1,21 @@
+//
+//  EventoViewController.h
+//  iDote
+//
+//  Created by Camila Bressan Inácio on 25/03/15.
+//  Copyright (c) 2015 Bepid. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "Evento.h"
+
+@interface EventoViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UITextField *nomeEvento;
+@property (weak, nonatomic) IBOutlet UITextField *endereco;
+@property (weak, nonatomic) IBOutlet UIDatePicker *data;
+@property (weak, nonatomic) IBOutlet UITextView *detalhes;
+
+
+
+@end

@@ -10,6 +10,8 @@
 		9032E0F21AC0C54D001E11DF /* CalendarioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9032E0F11AC0C54D001E11DF /* CalendarioViewController.m */; };
 		90727EDF1AC1F7D300D48518 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90727EDE1AC1F7D300D48518 /* TabBarViewController.m */; };
 		90727EE21AC2F6B800D48518 /* Evento.m in Sources */ = {isa = PBXBuildFile; fileRef = 90727EE11AC2F6B800D48518 /* Evento.m */; };
+		90727EE51AC321DF00D48518 /* UIImageTabBarColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 90727EE41AC321DF00D48518 /* UIImageTabBarColor.m */; };
+		90B232051AC32E23000B58CD /* EventoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B232041AC32E23000B58CD /* EventoViewController.m */; };
 		A05773AD1ABB45B70069D5CB /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = A05773AC1ABB45B70069D5CB /* User.m */; };
 		A06184C01AB8A08D00363539 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184BB1AB8A08D00363539 /* Bolts.framework */; };
 		A06184C11AB8A08D00363539 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184BC1AB8A08D00363539 /* Parse.framework */; };
@@ -67,6 +69,10 @@
 		90727EDE1AC1F7D300D48518 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		90727EE01AC2F6B800D48518 /* Evento.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Evento.h; path = iDote/Evento.h; sourceTree = "<group>"; };
 		90727EE11AC2F6B800D48518 /* Evento.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Evento.m; path = iDote/Evento.m; sourceTree = "<group>"; };
+		90727EE31AC321DF00D48518 /* UIImageTabBarColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageTabBarColor.h; sourceTree = "<group>"; };
+		90727EE41AC321DF00D48518 /* UIImageTabBarColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageTabBarColor.m; sourceTree = "<group>"; };
+		90B232031AC32E23000B58CD /* EventoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventoViewController.h; sourceTree = "<group>"; };
+		90B232041AC32E23000B58CD /* EventoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventoViewController.m; sourceTree = "<group>"; };
 		A05773AB1ABB45B70069D5CB /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = iDote/User.h; sourceTree = "<group>"; };
 		A05773AC1ABB45B70069D5CB /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = iDote/User.m; sourceTree = "<group>"; };
 		A06184BB1AB8A08D00363539 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Frameworks/Bolts.framework; sourceTree = "<group>"; };
@@ -300,6 +306,8 @@
 				9032E0F11AC0C54D001E11DF /* CalendarioViewController.m */,
 				90727EDD1AC1F7D300D48518 /* TabBarViewController.h */,
 				90727EDE1AC1F7D300D48518 /* TabBarViewController.m */,
+				90B232031AC32E23000B58CD /* EventoViewController.h */,
+				90B232041AC32E23000B58CD /* EventoViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -367,7 +375,7 @@
 				TargetAttributes = {
 					B960248D1AB89728008C211C = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 6W5C2N8Y53;
+						DevelopmentTeam = P2V4W6VMHY;
 					};
 					B96024A61AB89729008C211C = {
 						CreatedOnToolsVersion = 6.2;
@@ -426,6 +434,7 @@
 				A05773AD1ABB45B70069D5CB /* User.m in Sources */,
 				E3B9C1CB1ABF2E960083A0F6 /* Institution.m in Sources */,
 				90727EDF1AC1F7D300D48518 /* TabBarViewController.m in Sources */,
+				90B232051AC32E23000B58CD /* EventoViewController.m in Sources */,
 				AB17813F1AC0A32B007621F0 /* FXForms.m in Sources */,
 				AB1781331AC090C6007621F0 /* RegisterAnimalDataController.m in Sources */,
 				ABCDBA6F1ABC939C00BF49C1 /* SignUpViewController.m in Sources */,

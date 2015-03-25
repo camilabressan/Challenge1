@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TabelaCalendario.h"
+#import "Animal.h"
+
 
 @interface RegisterAnimalPhotoController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *mainImage;

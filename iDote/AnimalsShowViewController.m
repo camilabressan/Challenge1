@@ -17,6 +17,7 @@
 @end
 
 @implementation AnimalsShowViewController
+
 -(void)viewDidLoad {
     [super viewDidLoad];    
     
@@ -29,9 +30,10 @@
                                                                       action:@selector(swipeRightHandler:)];
     [_swipeRightRecognizer setDirection:UISwipeGestureRecognizerDirectionRight];
     [self.view addGestureRecognizer:_swipeRightRecognizer];
-    
-    
+}
 
+-(IBAction)backFromRegisterAnimal:(UIStoryboardSegue *)sender {
+    
 }
 
 - (void) swipeLeftHandler:(UISwipeGestureRecognizer *)gesture {

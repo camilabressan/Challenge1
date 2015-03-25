@@ -21,20 +21,17 @@
              @{FXFormFieldHeader: @"Tipo",
                FXFormFieldKey: @"tipo",
                FXFormFieldTitle: @"",
-               FXFormFieldPlaceholder: @"Cachorro",
-               FXFormFieldOptions: @[@"Gato", @"Outro"],
+               FXFormFieldOptions: @[@"Cachorro", @"Gato", @"Outro"],
                FXFormFieldCell: [FXFormOptionSegmentsCell class]},
              @{FXFormFieldHeader: @"Gênero",
                FXFormFieldKey: @"genero",
                FXFormFieldTitle: @"",
-               FXFormFieldPlaceholder: @"Macho",
-               FXFormFieldOptions: @[@"Fêmea", @"Indefinido"],
+               FXFormFieldOptions: @[@"Macho", @"Fêmea", @"Indefinido"],
                FXFormFieldCell: [FXFormOptionSegmentsCell class]},
              @{FXFormFieldHeader: @"Porte",
                FXFormFieldKey: @"porte",
                FXFormFieldTitle: @"",
-               FXFormFieldPlaceholder: @"Pequeno",
-               FXFormFieldOptions: @[@"Médio", @"Grande"],
+               FXFormFieldOptions: @[@"Pequeno", @"Médio", @"Grande"],
                FXFormFieldCell: [FXFormOptionSegmentsCell class]}];
 }
 
@@ -47,9 +44,9 @@
     
     
     
-    NSURL *urlImage = [[NSURL alloc] initWithString:@"http://lorempixel.com/300/300/animals/"];
-    NSData *imageData = [[NSData alloc] initWithContentsOfURL:urlImage];
-    //NSData *imageData = UIImageJPEGRepresentation(_mainImage, 0.7f);
+    //NSURL *urlImage = [[NSURL alloc] initWithString:@"http://lorempixel.com/300/300/animals/"];
+   // NSData *imageData = [[NSData alloc] initWithContentsOfURL:urlImage];
+    NSData *imageData = UIImageJPEGRepresentation(_mainImage, 0.7f);
     PFFile *imageFile = [PFFile fileWithName:@"Profileimage.png" data:imageData];
     [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
