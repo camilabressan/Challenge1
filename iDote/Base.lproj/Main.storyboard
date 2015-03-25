@@ -220,8 +220,12 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="HHk-uH-2dY" kind="unwind" identifier="segueBackFromRegisterAnimalData" unwindAction="backFromRegisterAnimalData:" id="c2f-wW-EMe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VA2-VK-nn3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="HHk-uH-2dY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3376" y="1109"/>
         </scene>
@@ -414,7 +418,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xSM-YL-gzV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4075" y="140"/>
+            <point key="canvasLocation" x="2591" y="-8"/>
         </scene>
         <!--CadastroAnimal-->
         <scene sceneID="1n7-5i-R8n">
@@ -435,14 +439,15 @@
                     <navigationItem key="navigationItem" title="Cadastro Pets" id="ysS-xb-pLm">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="VTY-iJ-B3e">
                             <connections>
-                                <action selector="saveClick:" destination="VBf-wy-7od" id="HZ5-kq-bp9"/>
+                                <segue destination="vdH-0r-evX" kind="unwind" unwindAction="backFromRegisterAnimalData:" id="LTh-UC-baT"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XDb-bX-kMA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="vdH-0r-evX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4111" y="1952"/>
+            <point key="canvasLocation" x="4419" y="856"/>
         </scene>
         <!--Instituições-->
         <scene sceneID="xDH-Jj-Emi">

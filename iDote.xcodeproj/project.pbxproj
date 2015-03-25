@@ -19,7 +19,6 @@
 		A06184C41AB8A08D00363539 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184BF1AB8A08D00363539 /* ParseUI.framework */; };
 		A06184C61AB8A3E900363539 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184C51AB8A3E900363539 /* FacebookSDK.framework */; };
 		A06184C81AB8A40400363539 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184C71AB8A40400363539 /* FBAudienceNetwork.framework */; };
-		A06A3F571AC1C4D600D885EE /* CadastroAnimalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A06A3F561AC1C4D600D885EE /* CadastroAnimalViewController.m */; };
 		A06B93C41ABCA0BE00B3F59E /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = A06B93C31ABCA0BE00B3F59E /* Animal.m */; };
 		AB1781331AC090C6007621F0 /* RegisterAnimalDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB1781321AC090C6007621F0 /* RegisterAnimalDataController.m */; };
 		AB1781361AC090EE007621F0 /* RegisterAnimalPhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB1781351AC090EE007621F0 /* RegisterAnimalPhotoController.m */; };
@@ -44,6 +43,9 @@
 		B960249F1AB89729008C211C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B960249E1AB89729008C211C /* Images.xcassets */; };
 		B96024A21AB89729008C211C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B96024A01AB89729008C211C /* LaunchScreen.xib */; };
 		B96024AE1AB89729008C211C /* iDoteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B96024AD1AB89729008C211C /* iDoteTests.m */; };
+		E32C9EE91AC07C8500439C9B /* RegisterInstitutionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E32C9EE81AC07C8500439C9B /* RegisterInstitutionViewController.m */; };
+		E32C9EEB1AC095BC00439C9B /* teste.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E32C9EEA1AC095BC00439C9B /* teste.storyboard */; };
+		E3B9C1CB1ABF2E960083A0F6 /* Institution.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B9C1CA1ABF2E960083A0F6 /* Institution.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,8 +76,6 @@
 		A06184BF1AB8A08D00363539 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = Frameworks/ParseUI.framework; sourceTree = "<group>"; };
 		A06184C51AB8A3E900363539 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		A06184C71AB8A40400363539 /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
-		A06A3F551AC1C4D600D885EE /* CadastroAnimalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CadastroAnimalViewController.h; sourceTree = "<group>"; };
-		A06A3F561AC1C4D600D885EE /* CadastroAnimalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CadastroAnimalViewController.m; sourceTree = "<group>"; };
 		A06B93C21ABCA0BE00B3F59E /* Animal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Animal.h; path = iDote/Animal.h; sourceTree = "<group>"; };
 		A06B93C31ABCA0BE00B3F59E /* Animal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Animal.m; path = iDote/Animal.m; sourceTree = "<group>"; };
 		AB1781311AC090C6007621F0 /* RegisterAnimalDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterAnimalDataController.h; sourceTree = "<group>"; };
@@ -112,6 +112,11 @@
 		B96024A71AB89729008C211C /* iDoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iDoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B96024AC1AB89729008C211C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B96024AD1AB89729008C211C /* iDoteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iDoteTests.m; sourceTree = "<group>"; };
+		E32C9EE71AC07C8500439C9B /* RegisterInstitutionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterInstitutionViewController.h; sourceTree = "<group>"; };
+		E32C9EE81AC07C8500439C9B /* RegisterInstitutionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterInstitutionViewController.m; sourceTree = "<group>"; };
+		E32C9EEA1AC095BC00439C9B /* teste.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = teste.storyboard; sourceTree = "<group>"; };
+		E3B9C1C91ABF2E960083A0F6 /* Institution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Institution.h; sourceTree = "<group>"; };
+		E3B9C1CA1ABF2E960083A0F6 /* Institution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Institution.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,8 +162,13 @@
 				A05773AC1ABB45B70069D5CB /* User.m */,
 				A06B93C21ABCA0BE00B3F59E /* Animal.h */,
 				A06B93C31ABCA0BE00B3F59E /* Animal.m */,
+<<<<<<< HEAD
 				90727EE01AC2F6B800D48518 /* Evento.h */,
 				90727EE11AC2F6B800D48518 /* Evento.m */,
+=======
+				E3B9C1C91ABF2E960083A0F6 /* Institution.h */,
+				E3B9C1CA1ABF2E960083A0F6 /* Institution.m */,
+>>>>>>> origin/master
 			);
 			name = Model;
 			path = ..;
@@ -265,6 +275,8 @@
 				B96024991AB89729008C211C /* LoginViewController.m */,
 				ABCDBA6D1ABC939C00BF49C1 /* SignUpViewController.h */,
 				ABCDBA6E1ABC939C00BF49C1 /* SignUpViewController.m */,
+				E32C9EE71AC07C8500439C9B /* RegisterInstitutionViewController.h */,
+				E32C9EE81AC07C8500439C9B /* RegisterInstitutionViewController.m */,
 				AB1781311AC090C6007621F0 /* RegisterAnimalDataController.h */,
 				AB1781321AC090C6007621F0 /* RegisterAnimalDataController.m */,
 				AB1781341AC090EE007621F0 /* RegisterAnimalPhotoController.h */,
@@ -286,8 +298,12 @@
 			children = (
 				B960249B1AB89729008C211C /* Main.storyboard */,
 				B96024A01AB89729008C211C /* LaunchScreen.xib */,
+<<<<<<< HEAD
 				90727EE31AC321DF00D48518 /* UIImageTabBarColor.h */,
 				90727EE41AC321DF00D48518 /* UIImageTabBarColor.m */,
+=======
+				E32C9EEA1AC095BC00439C9B /* teste.storyboard */,
+>>>>>>> origin/master
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -341,11 +357,11 @@
 				TargetAttributes = {
 					B960248D1AB89728008C211C = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 9468LRW88W;
+						DevelopmentTeam = 6W5C2N8Y53;
 					};
 					B96024A61AB89729008C211C = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 9468LRW88W;
+						DevelopmentTeam = 6W5C2N8Y53;
 						TestTargetID = B960248D1AB89728008C211C;
 					};
 				};
@@ -374,6 +390,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E32C9EEB1AC095BC00439C9B /* teste.storyboard in Resources */,
 				B960249D1AB89729008C211C /* Main.storyboard in Resources */,
 				B96024A21AB89729008C211C /* LaunchScreen.xib in Resources */,
 				B960249F1AB89729008C211C /* Images.xcassets in Resources */,
@@ -396,19 +413,24 @@
 			files = (
 				9032E0F21AC0C54D001E11DF /* CalendarioViewController.m in Sources */,
 				A05773AD1ABB45B70069D5CB /* User.m in Sources */,
+				E3B9C1CB1ABF2E960083A0F6 /* Institution.m in Sources */,
 				90727EDF1AC1F7D300D48518 /* TabBarViewController.m in Sources */,
 				AB17813F1AC0A32B007621F0 /* FXForms.m in Sources */,
 				AB1781331AC090C6007621F0 /* RegisterAnimalDataController.m in Sources */,
 				ABCDBA6F1ABC939C00BF49C1 /* SignUpViewController.m in Sources */,
 				B960249A1AB89729008C211C /* LoginViewController.m in Sources */,
+				E32C9EE91AC07C8500439C9B /* RegisterInstitutionViewController.m in Sources */,
 				A06B93C41ABCA0BE00B3F59E /* Animal.m in Sources */,
 				AB1781361AC090EE007621F0 /* RegisterAnimalPhotoController.m in Sources */,
 				ABAED8541AC1ECD4008322FF /* AnimalsShowViewController.m in Sources */,
 				B96024971AB89729008C211C /* AppDelegate.m in Sources */,
 				B96024941AB89729008C211C /* main.m in Sources */,
+<<<<<<< HEAD
 				90727EE51AC321DF00D48518 /* UIImageTabBarColor.m in Sources */,
 				90727EE21AC2F6B800D48518 /* Evento.m in Sources */,
 				A06A3F571AC1C4D600D885EE /* CadastroAnimalViewController.m in Sources */,
+=======
+>>>>>>> origin/master
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
