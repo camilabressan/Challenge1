@@ -15,7 +15,7 @@
 
 @property NSString *nomeEvento;
 @property NSString *endereco;
-@property NSString *date;
+@property NSDate *date;
 @property NSString *horario;
 @property NSString *descricao;
 

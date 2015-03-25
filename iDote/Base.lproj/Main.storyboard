@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Q08-sF-rpb">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -621,13 +621,13 @@
         <!--Novo Evento-->
         <scene sceneID="xK2-Sf-Tgx">
             <objects>
-                <viewController id="Q08-sF-rpb" userLabel="Novo Evento" sceneMemberID="viewController">
+                <viewController id="Q08-sF-rpb" userLabel="Novo Evento" customClass="EventoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Q5b-uU-jUU"/>
                         <viewControllerLayoutGuide type="bottom" id="1kM-ZA-p02"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ZDF-7A-lMk">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="900"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do Evento" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nfr-Pj-XLm">
@@ -640,18 +640,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Data" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xIb-jv-gKp">
-                                <rect key="frame" x="42" y="230" width="235" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Horário" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L7M-Js-xIh">
-                                <rect key="frame" x="323" y="230" width="235" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="yRe-gf-7GU" userLabel="Horario">
+                                <rect key="frame" x="235" y="245" width="149" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="448999634.80797797">
+                                    <!--2015-03-25 18:07:14 +0000-->
+                                </date>
+                            </datePicker>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Detalhes" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WuW-hj-UC5">
-                                <rect key="frame" x="108" y="311" width="384" height="211"/>
+                                <rect key="frame" x="141" y="492" width="384" height="211"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -661,13 +657,25 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Novo Evento" id="lPm-6o-KRN" userLabel="NovoEvento">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Gq3-3M-Hmd"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Gq3-3M-Hmd">
+                            <connections>
+                                <action selector="save:" destination="Q08-sF-rpb" id="Ndd-Z1-j38"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="900"/>
+                    <connections>
+                        <outlet property="data" destination="yRe-gf-7GU" id="jaA-lf-WpM"/>
+                        <outlet property="detalhes" destination="WuW-hj-UC5" id="6o6-f8-XHg"/>
+                        <outlet property="endereco" destination="pbT-fw-OfT" id="RZu-ro-DiK"/>
+                        <outlet property="nomeEvento" destination="Nfr-Pj-XLm" id="FX9-Ru-F07"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wfg-va-XQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-31" y="2359"/>
+            <point key="canvasLocation" x="-31" y="2368"/>
         </scene>
         <!--Pessoal-->
         <scene sceneID="i4c-v9-dSA">
