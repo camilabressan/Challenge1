@@ -16,7 +16,5 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedGenero;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedPorte;
 
-- (IBAction)checkGenero;
-- (IBAction)checkPorte;
 
 @end
