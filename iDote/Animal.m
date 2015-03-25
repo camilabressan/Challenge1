@@ -44,9 +44,9 @@
     
     
     
-    NSURL *urlImage = [[NSURL alloc] initWithString:@"http://lorempixel.com/300/300/animals/"];
-    NSData *imageData = [[NSData alloc] initWithContentsOfURL:urlImage];
-    //NSData *imageData = UIImageJPEGRepresentation(_mainImage, 0.7f);
+    //NSURL *urlImage = [[NSURL alloc] initWithString:@"http://lorempixel.com/300/300/animals/"];
+   // NSData *imageData = [[NSData alloc] initWithContentsOfURL:urlImage];
+    NSData *imageData = UIImageJPEGRepresentation(_mainImage, 0.7f);
     PFFile *imageFile = [PFFile fileWithName:@"Profileimage.png" data:imageData];
     [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
