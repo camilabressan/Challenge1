@@ -20,7 +20,6 @@
 @implementation AppDelegate
 
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     // [Optional] Power your app with Local Datastore. For more info, go to
@@ -37,6 +36,7 @@
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Arial" size:19.0],NSForegroundColorAttributeName:[UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1.0]}]; //MUDANDO COR E FONTE DO TITULO DA NAVIGATION
 
     
+    [[UINavigationBar appearance] setBarTintColor: [UIColor colorWithRed:111/255.0 green:17/255.0 blue:45/255.0 alpha:1]]; // MUDA A COR DA NAVIGATION
     
     return YES;
 }

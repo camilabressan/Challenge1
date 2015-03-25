@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+
     self.checkGenero; //inicializa visualmente o genero do animal
     self.checkPorte; //inicializa visualmente o porte do animal
     self.changeAge; //inicializa visualmente a idade do animal

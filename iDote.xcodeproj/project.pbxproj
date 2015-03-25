@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9032E0F21AC0C54D001E11DF /* CalendarioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9032E0F11AC0C54D001E11DF /* CalendarioViewController.m */; };
 		90727EDF1AC1F7D300D48518 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90727EDE1AC1F7D300D48518 /* TabBarViewController.m */; };
+		90727EE21AC2F6B800D48518 /* Evento.m in Sources */ = {isa = PBXBuildFile; fileRef = 90727EE11AC2F6B800D48518 /* Evento.m */; };
+		90727EE51AC321DF00D48518 /* UIImageTabBarColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 90727EE41AC321DF00D48518 /* UIImageTabBarColor.m */; };
 		A05773AD1ABB45B70069D5CB /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = A05773AC1ABB45B70069D5CB /* User.m */; };
 		A06184C01AB8A08D00363539 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184BB1AB8A08D00363539 /* Bolts.framework */; };
 		A06184C11AB8A08D00363539 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184BC1AB8A08D00363539 /* Parse.framework */; };
@@ -59,6 +61,10 @@
 		9032E0F11AC0C54D001E11DF /* CalendarioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarioViewController.m; sourceTree = "<group>"; };
 		90727EDD1AC1F7D300D48518 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		90727EDE1AC1F7D300D48518 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
+		90727EE01AC2F6B800D48518 /* Evento.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Evento.h; path = iDote/Evento.h; sourceTree = "<group>"; };
+		90727EE11AC2F6B800D48518 /* Evento.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Evento.m; path = iDote/Evento.m; sourceTree = "<group>"; };
+		90727EE31AC321DF00D48518 /* UIImageTabBarColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageTabBarColor.h; sourceTree = "<group>"; };
+		90727EE41AC321DF00D48518 /* UIImageTabBarColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageTabBarColor.m; sourceTree = "<group>"; };
 		A05773AB1ABB45B70069D5CB /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = iDote/User.h; sourceTree = "<group>"; };
 		A05773AC1ABB45B70069D5CB /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = iDote/User.m; sourceTree = "<group>"; };
 		A06184BB1AB8A08D00363539 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Frameworks/Bolts.framework; sourceTree = "<group>"; };
@@ -151,6 +157,8 @@
 				A05773AC1ABB45B70069D5CB /* User.m */,
 				A06B93C21ABCA0BE00B3F59E /* Animal.h */,
 				A06B93C31ABCA0BE00B3F59E /* Animal.m */,
+				90727EE01AC2F6B800D48518 /* Evento.h */,
+				90727EE11AC2F6B800D48518 /* Evento.m */,
 			);
 			name = Model;
 			path = ..;
@@ -278,6 +286,8 @@
 			children = (
 				B960249B1AB89729008C211C /* Main.storyboard */,
 				B96024A01AB89729008C211C /* LaunchScreen.xib */,
+				90727EE31AC321DF00D48518 /* UIImageTabBarColor.h */,
+				90727EE41AC321DF00D48518 /* UIImageTabBarColor.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -396,6 +406,8 @@
 				ABAED8541AC1ECD4008322FF /* AnimalsShowViewController.m in Sources */,
 				B96024971AB89729008C211C /* AppDelegate.m in Sources */,
 				B96024941AB89729008C211C /* main.m in Sources */,
+				90727EE51AC321DF00D48518 /* UIImageTabBarColor.m in Sources */,
+				90727EE21AC2F6B800D48518 /* Evento.m in Sources */,
 				A06A3F571AC1C4D600D885EE /* CadastroAnimalViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

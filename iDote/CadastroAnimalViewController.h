@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Animal.h"
+#import "TabBarViewController.h"
 
 @interface CadastroAnimalViewController : UIViewController
 
@@ -15,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelIdade;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedGenero;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedPorte;
+
 
 - (IBAction)checkGenero;
 - (IBAction)checkPorte;
