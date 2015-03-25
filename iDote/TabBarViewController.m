@@ -7,6 +7,7 @@
 //
 
 #import "TabBarViewController.h"
+#import "UIImage+Extension.h"
 
 @interface TabBarViewController ()
 
@@ -37,16 +38,17 @@
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIColor whiteColor], NSForegroundColorAttributeName, nil] forState:UIControlStateSelected];
     
     
-    UIColor * unselectedColor = [UIColor colorWithRed:184/255.0f green:224/255.0f blue:242/255.0f alpha:1.0f];
+    UIColor * unselectedColor = [UIColor colorWithRed:0/255.0f green:0/255.0f blue:0/255.0f alpha:1];
     
     
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:unselectedColor, NSForegroundColorAttributeName, nil]
                                              forState:UIControlStateNormal];
     
     // generate a tinted unselected image based on image passed via the storyboard
-    //for(UITabBarItem *item in self.tabBar.items) {
+    for(UITabBarItem *item in self.tabBar.items) {
         // use the UIImage category code for the imageWithColor: method
-        //item.image = [[item.selectedImage imageWithColor:unselectedColor] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];}
+        // item.image = [[item.selectedImage [UIImage imageWithColor:unselectedColor]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

@@ -10,7 +10,6 @@
 		9032E0F21AC0C54D001E11DF /* CalendarioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9032E0F11AC0C54D001E11DF /* CalendarioViewController.m */; };
 		90727EDF1AC1F7D300D48518 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90727EDE1AC1F7D300D48518 /* TabBarViewController.m */; };
 		90727EE21AC2F6B800D48518 /* Evento.m in Sources */ = {isa = PBXBuildFile; fileRef = 90727EE11AC2F6B800D48518 /* Evento.m */; };
-		90727EE51AC321DF00D48518 /* UIImageTabBarColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 90727EE41AC321DF00D48518 /* UIImageTabBarColor.m */; };
 		A05773AD1ABB45B70069D5CB /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = A05773AC1ABB45B70069D5CB /* User.m */; };
 		A06184C01AB8A08D00363539 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184BB1AB8A08D00363539 /* Bolts.framework */; };
 		A06184C11AB8A08D00363539 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184BC1AB8A08D00363539 /* Parse.framework */; };
@@ -36,6 +35,9 @@
 		AB4F88441AB89DA8006DA324 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4F88431AB89DA8006DA324 /* libsqlite3.dylib */; };
 		ABAED8541AC1ECD4008322FF /* AnimalsShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAED8531AC1ECD4008322FF /* AnimalsShowViewController.m */; };
 		ABCDBA6F1ABC939C00BF49C1 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCDBA6E1ABC939C00BF49C1 /* SignUpViewController.m */; };
+		B937CC141AC32C2800B8C1E1 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = B937CC131AC32C2800B8C1E1 /* UIImage+Extension.m */; };
+		B937CC191AC339A500B8C1E1 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = B937CC161AC339A500B8C1E1 /* CardView.m */; };
+		B937CC1A1AC339A500B8C1E1 /* SwipeCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = B937CC181AC339A500B8C1E1 /* SwipeCardView.m */; };
 		B96024941AB89729008C211C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B96024931AB89729008C211C /* main.m */; };
 		B96024971AB89729008C211C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B96024961AB89729008C211C /* AppDelegate.m */; };
 		B960249A1AB89729008C211C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B96024991AB89729008C211C /* LoginViewController.m */; };
@@ -65,8 +67,6 @@
 		90727EDE1AC1F7D300D48518 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		90727EE01AC2F6B800D48518 /* Evento.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Evento.h; path = iDote/Evento.h; sourceTree = "<group>"; };
 		90727EE11AC2F6B800D48518 /* Evento.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Evento.m; path = iDote/Evento.m; sourceTree = "<group>"; };
-		90727EE31AC321DF00D48518 /* UIImageTabBarColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageTabBarColor.h; sourceTree = "<group>"; };
-		90727EE41AC321DF00D48518 /* UIImageTabBarColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageTabBarColor.m; sourceTree = "<group>"; };
 		A05773AB1ABB45B70069D5CB /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = iDote/User.h; sourceTree = "<group>"; };
 		A05773AC1ABB45B70069D5CB /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = iDote/User.m; sourceTree = "<group>"; };
 		A06184BB1AB8A08D00363539 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Frameworks/Bolts.framework; sourceTree = "<group>"; };
@@ -99,6 +99,12 @@
 		ABAED8531AC1ECD4008322FF /* AnimalsShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimalsShowViewController.m; sourceTree = "<group>"; };
 		ABCDBA6D1ABC939C00BF49C1 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		ABCDBA6E1ABC939C00BF49C1 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		B937CC121AC32C2800B8C1E1 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		B937CC131AC32C2800B8C1E1 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		B937CC151AC339A500B8C1E1 /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
+		B937CC161AC339A500B8C1E1 /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
+		B937CC171AC339A500B8C1E1 /* SwipeCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeCardView.h; sourceTree = "<group>"; };
+		B937CC181AC339A500B8C1E1 /* SwipeCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeCardView.m; sourceTree = "<group>"; };
 		B960248E1AB89729008C211C /* iDote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B96024921AB89729008C211C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B96024931AB89729008C211C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -206,6 +212,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B937CC111AC32B6D00B8C1E1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B937CC121AC32C2800B8C1E1 /* UIImage+Extension.h */,
+				B937CC131AC32C2800B8C1E1 /* UIImage+Extension.m */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		B96024851AB89728008C211C = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +243,7 @@
 		B96024901AB89729008C211C /* iDote */ = {
 			isa = PBXGroup;
 			children = (
+				B937CC111AC32B6D00B8C1E1 /* Extensions */,
 				B96024B81ABB58C8008C211C /* View */,
 				B96024B71ABB58B7008C211C /* Controller */,
 				A05773AA1ABB45240069D5CB /* Model */,
@@ -282,8 +298,6 @@
 				ABAED8531AC1ECD4008322FF /* AnimalsShowViewController.m */,
 				9032E0F01AC0C54D001E11DF /* CalendarioViewController.h */,
 				9032E0F11AC0C54D001E11DF /* CalendarioViewController.m */,
-				A06A3F551AC1C4D600D885EE /* CadastroAnimalViewController.h */,
-				A06A3F561AC1C4D600D885EE /* CadastroAnimalViewController.m */,
 				90727EDD1AC1F7D300D48518 /* TabBarViewController.h */,
 				90727EDE1AC1F7D300D48518 /* TabBarViewController.m */,
 			);
@@ -293,10 +307,12 @@
 		B96024B81ABB58C8008C211C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B937CC151AC339A500B8C1E1 /* CardView.h */,
+				B937CC161AC339A500B8C1E1 /* CardView.m */,
+				B937CC171AC339A500B8C1E1 /* SwipeCardView.h */,
+				B937CC181AC339A500B8C1E1 /* SwipeCardView.m */,
 				B960249B1AB89729008C211C /* Main.storyboard */,
 				B96024A01AB89729008C211C /* LaunchScreen.xib */,
-				90727EE31AC321DF00D48518 /* UIImageTabBarColor.h */,
-				90727EE41AC321DF00D48518 /* UIImageTabBarColor.m */,
 				E32C9EEA1AC095BC00439C9B /* teste.storyboard */,
 			);
 			name = View;
@@ -406,12 +422,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9032E0F21AC0C54D001E11DF /* CalendarioViewController.m in Sources */,
+				B937CC1A1AC339A500B8C1E1 /* SwipeCardView.m in Sources */,
 				A05773AD1ABB45B70069D5CB /* User.m in Sources */,
 				E3B9C1CB1ABF2E960083A0F6 /* Institution.m in Sources */,
 				90727EDF1AC1F7D300D48518 /* TabBarViewController.m in Sources */,
 				AB17813F1AC0A32B007621F0 /* FXForms.m in Sources */,
 				AB1781331AC090C6007621F0 /* RegisterAnimalDataController.m in Sources */,
 				ABCDBA6F1ABC939C00BF49C1 /* SignUpViewController.m in Sources */,
+				B937CC141AC32C2800B8C1E1 /* UIImage+Extension.m in Sources */,
 				B960249A1AB89729008C211C /* LoginViewController.m in Sources */,
 				E32C9EE91AC07C8500439C9B /* RegisterInstitutionViewController.m in Sources */,
 				A06B93C41ABCA0BE00B3F59E /* Animal.m in Sources */,
@@ -419,9 +437,8 @@
 				ABAED8541AC1ECD4008322FF /* AnimalsShowViewController.m in Sources */,
 				B96024971AB89729008C211C /* AppDelegate.m in Sources */,
 				B96024941AB89729008C211C /* main.m in Sources */,
-				90727EE51AC321DF00D48518 /* UIImageTabBarColor.m in Sources */,
+				B937CC191AC339A500B8C1E1 /* CardView.m in Sources */,
 				90727EE21AC2F6B800D48518 /* Evento.m in Sources */,
-				A06A3F571AC1C4D600D885EE /* CadastroAnimalViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

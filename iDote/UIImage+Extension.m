@@ -1,17 +1,16 @@
 //
-//  UIImageColor.m
+//  UIImage+Extension.m
 //  iDote
 //
-//  Created by Camila Bressan Inácio on 25/03/15.
+//  Created by Adriano Soares on 25/03/15.
 //  Copyright (c) 2015 Bepid. All rights reserved.
 //
 
-#import "UIImageTabBarColor.h"
+#import "UIImage+Extension.h"
 
-@implementation UIImageTabBarColor
+@implementation UIImage (Extension)
 
-
-+ (UIImage *)imageWithColor:(UIColor *)color
+- (UIImage *)imageWithColor:(UIColor *)color
 {
     CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
     UIGraphicsBeginImageContext(rect.size);
