@@ -21,8 +21,9 @@ Institution *institution;
 
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
     UIImage *image = [info valueForKey:UIImagePickerControllerOriginalImage];
-    [_addInstPic setBackgroundImage:image forState:UIControlStateNormal];
-    [_addInstPic setTitle:@"" forState:nil];
+    
+    _addInstPic.image = image;
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -34,8 +35,8 @@ Institution *institution;
     
     [self presentViewController:imagePickerControllerMain animated:NO completion:nil];
 }
-    
-    
+
+
 - (BOOL) validateEmail: (NSString *) candidate {
     NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
@@ -86,38 +87,42 @@ Institution *institution;
     if ([self validateEmail: _txtFieldInstitutionEmail.text] == YES &&
         [self emptyTextFieldExistent] == NO){
     
-    NSString *email = [NSString stringWithFormat:@"Nome: %@\nTelefone: %@\nEmail: %@\nResponsável: %@\nEndereço: %@\nDescrição: %@", _txtFieldInstitutionName.text, _txtFieldInstitutionPhone.text, _txtFieldInstitutionEmail.text,_txtFieldInstitutionResponsible.text, _txtFieldInstitutionAddress.text, _txtViewInstitutionDescription.text];
-
-    NSLog(@"%@", email);
+    //string that receives text that will go into the message body in email
+    NSString *email = [NSString stringWithFormat:@"Nome: %@<br>Telefone: %@<br>Email: %@<br>Responsável: %@<br>Endereço: %@<br>Descrição: %@<br><br>", _txtFieldInstitutionName.text, _txtFieldInstitutionPhone.text, _txtFieldInstitutionEmail.text,_txtFieldInstitutionResponsible.text, _txtFieldInstitutionAddress.text, _txtViewInstitutionDescription.text];
+    
+    
+    //compose email
+     
     if([MFMailComposeViewController canSendMail]) {
         MFMailComposeViewController *mailCont = [[MFMailComposeViewController alloc] init];
         mailCont.mailComposeDelegate = self;
-        [mailCont setSubject:@"Cadastro de Instituições"];
-        [mailCont setToRecipients:[NSArray arrayWithObject:@"idoteteam@gmail.com"]];
+        
+      //  NSString *file;
+        NSData *pngData = UIImagePNGRepresentation(_addInstPic.image);
+        NSString *picString = [pngData base64EncodedString];
+        
+        [mailCont setSubject:@"Cadastro de Instituição"];
+       
+        // Set up recipients
+        NSArray *toRecipients = [NSArray arrayWithObject:@"idoteteam@gmail.com"];
+        [mailCont setToRecipients:toRecipients];
     
-       
-        [mailCont setMessageBody:[NSString stringWithFormat:@"Verifique seu cadastro antes de enviar!\n\n %@", email]  isHTML:NO];
-        [self presentViewController:mailCont animated:YES completion:nil];
+        NSMutableString *htmlMsg = [NSMutableString string];
+        [htmlMsg appendString:@"<html><body>"];
+        [htmlMsg appendString:[NSString stringWithFormat: @"Verifique se o seu cadastro está correto antes de enviar!<br><br> %@ Aguarde até 48h úteis para receber um retorno da nossa equipe.<br>iDote Team agradece o seu interesse!", email]];
         
+        [htmlMsg appendString:[NSString stringWithFormat:@"<img style='width:20%%, height:20%%;' src='data:image/png;base64,%@‘/></body></html>", picString]];
         
-        UIImage *institutionImage = [UIImage imageNamed:@"anImage"];
-        NSData *myData = UIImageJPEGRepresentation(institutionImage, 1.0);
-        
-        
-        [mailCont addAttachmentData:myData mimeType:@"image/jpeg" fileName:@"anImage.jpg"];
-        
-        //DESCOBRIR COMO IMPORTAR A DANADA DA IMAGEM!
-       
-     /*   // Determine the file name and extension
-        NSArray *filepart = [email componentsSeparatedByString:@"."];
+        /* //Determine the file name and extension
+        NSArray *filepart = [file componentsSeparatedByString:@"."];
         NSString *filename = [filepart objectAtIndex:0];
         NSString *extension = [filepart objectAtIndex:1];
         
         // Get the resource path and read the file using NSData
-     //   NSString *filePath = [[NSBundle mainBundle] pathForResource:filename ofType:extension];
-        //NSData *fileData = [NSData dataWithContentsOfFile:filePath];
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:filename ofType:extension];
+        NSData *fileData = [NSData dataWithContentsOfFile:filePath];
         
-        Determine the MIME type
+        // Determine the MIME type
         NSString *mimeType;
         if ([extension isEqualToString:@"jpg"]) {
             mimeType = @"image/jpeg";
@@ -125,18 +130,18 @@ Institution *institution;
             mimeType = @"image/png";}
         
         // Add attachment
-        [mailCont addAttachmentData:myData mimeType:mimeType fileName:filename];
+        [mailCont addAttachmentData:fileData mimeType:mimeType fileName:filename];*/
         
-        // Present mail view controller on screen
-        [self presentViewController:mailCont animated:YES completion:NULL];*/
-    
-    
-    
-    }
+        [mailCont setMessageBody:htmlMsg isHTML:YES];
         
         
-    }
 
+        //[mailCont setMessageBody:[NSString stringWithFormat: @"Verifique seu cadastro antes de enviar!\n\n %@\n\nAguarde até 48h úteis para receber um retorno da nossa equipe.\niDote Team agradece o seu interesse!", email]  isHTML:NO];
+        
+        
+        [self presentViewController:mailCont animated:YES completion:nil];}
+        
+        }
 }
 
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {

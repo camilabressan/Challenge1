@@ -53,6 +53,7 @@
 		B96024AE1AB89729008C211C /* iDoteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B96024AD1AB89729008C211C /* iDoteTests.m */; };
 		E32C9EE91AC07C8500439C9B /* RegisterInstitutionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E32C9EE81AC07C8500439C9B /* RegisterInstitutionViewController.m */; };
 		E32C9EEB1AC095BC00439C9B /* teste.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E32C9EEA1AC095BC00439C9B /* teste.storyboard */; };
+		E32C9EED1AC3386B00439C9B /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = E32C9EEC1AC3386B00439C9B /* Base64.m */; };
 		E3B9C1CB1ABF2E960083A0F6 /* Institution.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B9C1CA1ABF2E960083A0F6 /* Institution.m */; };
 /* End PBXBuildFile section */
 
@@ -138,6 +139,8 @@
 		E32C9EE71AC07C8500439C9B /* RegisterInstitutionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterInstitutionViewController.h; sourceTree = "<group>"; };
 		E32C9EE81AC07C8500439C9B /* RegisterInstitutionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterInstitutionViewController.m; sourceTree = "<group>"; };
 		E32C9EEA1AC095BC00439C9B /* teste.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = teste.storyboard; sourceTree = "<group>"; };
+		E32C9EEC1AC3386B00439C9B /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Base64.m; path = iDote/Base64.m; sourceTree = "<group>"; };
+		E32C9EEE1AC3387200439C9B /* Base64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Base64.h; path = iDote/Base64.h; sourceTree = "<group>"; };
 		E3B9C1C91ABF2E960083A0F6 /* Institution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Institution.h; sourceTree = "<group>"; };
 		E3B9C1CA1ABF2E960083A0F6 /* Institution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Institution.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -206,6 +209,7 @@
 		AB4F88241AB89CB2006DA324 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E32C9EEF1AC3398000439C9B /* Base 64 */,
 				AB1781401AC0A330007621F0 /* FXForms */,
 				AB4F88431AB89DA8006DA324 /* libsqlite3.dylib */,
 				A06184C71AB8A40400363539 /* FBAudienceNetwork.framework */,
@@ -346,6 +350,15 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		E32C9EEF1AC3398000439C9B /* Base 64 */ = {
+			isa = PBXGroup;
+			children = (
+				E32C9EEE1AC3387200439C9B /* Base64.h */,
+				E32C9EEC1AC3386B00439C9B /* Base64.m */,
+			);
+			name = "Base 64";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -462,6 +475,7 @@
 				A0C83CC01AC38C000013A386 /* InstitutionTableViewCell.m in Sources */,
 				B937CC141AC32C2800B8C1E1 /* UIImage+Extension.m in Sources */,
 				B960249A1AB89729008C211C /* LoginViewController.m in Sources */,
+				E32C9EED1AC3386B00439C9B /* Base64.m in Sources */,
 				E32C9EE91AC07C8500439C9B /* RegisterInstitutionViewController.m in Sources */,
 				A0C83CBD1AC389EE0013A386 /* ShowInstitutionViewController.m in Sources */,
 				A06B93C41ABCA0BE00B3F59E /* Animal.m in Sources */,
