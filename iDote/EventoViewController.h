@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "Evento.h"
+#import "Institution.h
 
 @interface EventoViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *nomeEvento;
 @property (weak, nonatomic) IBOutlet UITextField *endereco;
-@property (weak, nonatomic) IBOutlet UIDatePicker *data;
 @property (weak, nonatomic) IBOutlet UITextView *detalhes;
 
 
