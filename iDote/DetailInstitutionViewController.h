@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Institution.h"
 
 @interface DetailInstitutionViewController : UIViewController
+
+@property Institution *inst;
 
 @property (weak, nonatomic) IBOutlet UILabel *nameDetail;
 @property (weak, nonatomic) IBOutlet UILabel *phoneDetail;
