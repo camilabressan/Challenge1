@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9026648F1AC43D55003AD572 /* Camila.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9026648E1AC43D55003AD572 /* Camila.storyboard */; };
 		9032E0F21AC0C54D001E11DF /* CalendarioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9032E0F11AC0C54D001E11DF /* CalendarioViewController.m */; };
 		90727EDF1AC1F7D300D48518 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90727EDE1AC1F7D300D48518 /* TabBarViewController.m */; };
 		90727EE21AC2F6B800D48518 /* Evento.m in Sources */ = {isa = PBXBuildFile; fileRef = 90727EE11AC2F6B800D48518 /* Evento.m */; };
-		90727EE51AC321DF00D48518 /* UIImageTabBarColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 90727EE41AC321DF00D48518 /* UIImageTabBarColor.m */; };
+		90727EE51AC321DF00D48518 /* UIImage+TabBarColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 90727EE41AC321DF00D48518 /* UIImage+TabBarColor.m */; };
 		90B232051AC32E23000B58CD /* EventoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B232041AC32E23000B58CD /* EventoViewController.m */; };
 		A05773AD1ABB45B70069D5CB /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = A05773AC1ABB45B70069D5CB /* User.m */; };
 		A06184C01AB8A08D00363539 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184BB1AB8A08D00363539 /* Bolts.framework */; };
@@ -60,14 +61,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9026648E1AC43D55003AD572 /* Camila.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Camila.storyboard; sourceTree = "<group>"; };
 		9032E0F01AC0C54D001E11DF /* CalendarioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarioViewController.h; sourceTree = "<group>"; };
 		9032E0F11AC0C54D001E11DF /* CalendarioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarioViewController.m; sourceTree = "<group>"; };
 		90727EDD1AC1F7D300D48518 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		90727EDE1AC1F7D300D48518 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		90727EE01AC2F6B800D48518 /* Evento.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Evento.h; path = iDote/Evento.h; sourceTree = "<group>"; };
 		90727EE11AC2F6B800D48518 /* Evento.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Evento.m; path = iDote/Evento.m; sourceTree = "<group>"; };
-		90727EE31AC321DF00D48518 /* UIImageTabBarColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageTabBarColor.h; sourceTree = "<group>"; };
-		90727EE41AC321DF00D48518 /* UIImageTabBarColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageTabBarColor.m; sourceTree = "<group>"; };
+		90727EE31AC321DF00D48518 /* UIImage+TabBarColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TabBarColor.h"; sourceTree = "<group>"; };
+		90727EE41AC321DF00D48518 /* UIImage+TabBarColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TabBarColor.m"; sourceTree = "<group>"; };
 		90B232031AC32E23000B58CD /* EventoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventoViewController.h; sourceTree = "<group>"; };
 		90B232041AC32E23000B58CD /* EventoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventoViewController.m; sourceTree = "<group>"; };
 		A05773AB1ABB45B70069D5CB /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = iDote/User.h; sourceTree = "<group>"; };
@@ -298,9 +300,10 @@
 			children = (
 				B960249B1AB89729008C211C /* Main.storyboard */,
 				B96024A01AB89729008C211C /* LaunchScreen.xib */,
-				90727EE31AC321DF00D48518 /* UIImageTabBarColor.h */,
-				90727EE41AC321DF00D48518 /* UIImageTabBarColor.m */,
+				90727EE31AC321DF00D48518 /* UIImage+TabBarColor.h */,
+				90727EE41AC321DF00D48518 /* UIImage+TabBarColor.m */,
 				E32C9EEA1AC095BC00439C9B /* teste.storyboard */,
+				9026648E1AC43D55003AD572 /* Camila.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -354,11 +357,11 @@
 				TargetAttributes = {
 					B960248D1AB89728008C211C = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = P2V4W6VMHY;
+						DevelopmentTeam = 9468LRW88W;
 					};
 					B96024A61AB89729008C211C = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 6W5C2N8Y53;
+						DevelopmentTeam = 9468LRW88W;
 						TestTargetID = B960248D1AB89728008C211C;
 					};
 				};
@@ -387,6 +390,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9026648F1AC43D55003AD572 /* Camila.storyboard in Resources */,
 				E32C9EEB1AC095BC00439C9B /* teste.storyboard in Resources */,
 				B960249D1AB89729008C211C /* Main.storyboard in Resources */,
 				B96024A21AB89729008C211C /* LaunchScreen.xib in Resources */,
@@ -423,7 +427,7 @@
 				ABAED8541AC1ECD4008322FF /* AnimalsShowViewController.m in Sources */,
 				B96024971AB89729008C211C /* AppDelegate.m in Sources */,
 				B96024941AB89729008C211C /* main.m in Sources */,
-				90727EE51AC321DF00D48518 /* UIImageTabBarColor.m in Sources */,
+				90727EE51AC321DF00D48518 /* UIImage+TabBarColor.m in Sources */,
 				90727EE21AC2F6B800D48518 /* Evento.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

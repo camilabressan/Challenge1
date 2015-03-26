@@ -6,14 +6,13 @@
 //  Copyright (c) 2015 Bepid. All rights reserved.
 //
 
-#import "UIImageTabBarColor.h"
+#import "UIImage+TabBarColor.h"
 
-@implementation UIImageTabBarColor
+@implementation UIImage (TabBarColor)
 
-
-+ (UIImage *)imageWithColor:(UIColor *)color
+- (UIImage *)imageWithColor:(UIColor *)color
 {
-    CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+    CGRect rect = CGRectMake(1.0f, 0.0f, 1.0f, 1.0f);
     UIGraphicsBeginImageContext(rect.size);
     CGContextRef context = UIGraphicsGetCurrentContext();
     

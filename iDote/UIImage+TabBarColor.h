@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIImageTabBarColor : UIImage
+@interface UIImage (TabBarColor)
 
-+ (UIImage *)imageWithColor:(UIColor *)color;
+- (UIImage *)imageWithColor:(UIColor *)color;
 
 
 @end

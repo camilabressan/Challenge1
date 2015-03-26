@@ -313,8 +313,12 @@
                                     <outlet property="delegate" destination="INb-Vz-wMu" id="eZn-Px-ZOD"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="REt-KJ-spq">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="REt-KJ-spq">
                                 <rect key="frame" x="206" y="119" width="188" height="117"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="188" id="6dg-2t-Ufx"/>
+                                    <constraint firstAttribute="height" constant="117" id="rBy-aB-bLg"/>
+                                </constraints>
                                 <state key="normal" title="FOTO DO USUARIO">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -322,13 +326,29 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <connections>
-                            <action selector="returnKeyboard:" destination="INb-Vz-wMu" eventType="touchDown" id="Oy5-iR-jDM"/>
-                        </connections>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="REt-KJ-spq" secondAttribute="centerX" id="CNW-JO-caV"/>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" secondItem="REt-KJ-spq" secondAttribute="width" id="IeO-52-JwM"/>
+                            <constraint firstItem="REt-KJ-spq" firstAttribute="top" secondItem="ki0-Vw-I6F" secondAttribute="bottom" constant="55" id="eq7-9x-Z3s"/>
+                            <constraint firstAttribute="centerY" secondItem="REt-KJ-spq" secondAttribute="centerY" constant="122.5" id="ybD-Db-V2k"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="IeO-52-JwM"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Cadastro" id="yH6-2x-aPP">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="i6V-eZ-Rfy"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="nNI-1S-OqU"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="i6V-eZ-Rfy">
+                            <connections>
+                                <action selector="returnKeyboard:" destination="INb-Vz-wMu" id="R9F-zf-43V"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="nNI-1S-OqU">
+                            <connections>
+                                <action selector="saveButtonClick:" destination="INb-Vz-wMu" id="Xy3-hl-lhS"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="600"/>
@@ -596,7 +616,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="yRe-gf-7GU" userLabel="Horario">
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRe-gf-7GU" userLabel="Horario">
                                 <rect key="frame" x="235" y="211" width="149" height="162"/>
                                 <date key="date" timeIntervalSinceReferenceDate="448999634.80797797">
                                     <!--2015-03-25 18:07:14 +0000-->
@@ -668,7 +688,6 @@
         <!--Eventos-->
         <scene sceneID="c7x-fq-ZI2">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CbI-rq-32m" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vdk-RY-xDp" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Eventos" image="Fill 149" id="rb1-ud-Tch" userLabel="Eventos"/>
                     <toolbarItems/>
@@ -681,13 +700,13 @@
                         <segue destination="X7G-FL-hRh" kind="relationship" relationship="rootViewController" id="cue-Tp-bcA"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CbI-rq-32m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-829" y="1617"/>
         </scene>
         <!--Instituições-->
         <scene sceneID="XZj-zO-LIs">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Vjf-8P-EeJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dle-Ms-LDm" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Instituições" image="IconOngs" id="YTA-Lz-2Oa"/>
                     <toolbarItems/>
@@ -700,13 +719,13 @@
                         <segue destination="rlH-IA-5lt" kind="relationship" relationship="rootViewController" id="FUy-aZ-qHB"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vjf-8P-EeJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1811" y="1626"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wJI-ee-XsN">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3qk-6O-lDb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Eyo-GR-Rra" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vJm-lr-gRf">
@@ -718,6 +737,7 @@
                         <segue destination="INb-Vz-wMu" kind="relationship" relationship="rootViewController" id="Aj5-fp-1xn"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3qk-6O-lDb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="978" y="-816"/>
         </scene>
