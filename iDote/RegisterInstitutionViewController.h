@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Base64.h"
 #import "Institution.h"
 
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
+#import <AssetsLibrary/AssetsLibrary.h>
 
 @interface RegisterInstitutionViewController : UIViewController <MFMailComposeViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldInstitutionName;
@@ -20,7 +22,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldInstitutionAddress;
 @property (weak, nonatomic) IBOutlet UITextView *txtViewInstitutionDescription;
 @property (nonatomic, weak) NSString *email;
-@property (weak, nonatomic) IBOutlet UIButton *addInstPic;
+@property (weak, nonatomic) IBOutlet UIImageView *addInstPic;
 
 
 

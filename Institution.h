@@ -7,8 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
 
 @interface Institution : NSObject
+
+@property PFObject *object;
 
 @property NSString *institutionName;
 @property NSString *institutionPhone;
@@ -16,6 +19,10 @@
 @property NSString *institutionResponsible;
 @property NSString *institutionAddress;
 @property NSString *institutionDescription;
+@property BOOL *ativo;
+
+-(void) save;
++(NSMutableArray* ) loadInstitution;
 
 
 @end
