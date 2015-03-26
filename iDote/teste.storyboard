@@ -56,18 +56,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l12-E8-Wjg">
-                                <rect key="frame" x="28" y="378" width="240" height="128"/>
-                                <gestureRecognizers/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keQ-iE-42J">
+                                <rect key="frame" x="61" y="378" width="151" height="100"/>
+                                <state key="normal" title="fotinho">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Abk-U7-NmW" appends="YES" id="UX5-HX-T04"/>
+                                    <action selector="setFirstImage:" destination="eFW-u8-pXT" eventType="touchUpInside" id="Mlc-bg-ICw"/>
                                 </connections>
-                            </imageView>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="addInstPic" destination="l12-E8-Wjg" id="x6A-7e-o8H"/>
+                        <outlet property="addInstPic" destination="keQ-iE-42J" id="OS5-Bt-3Cw"/>
                         <outlet property="txtFieldInstitutionAddress" destination="xbs-Bh-JLg" id="WmE-sU-yIi"/>
                         <outlet property="txtFieldInstitutionEmail" destination="FwA-j6-4yn" id="tnz-Wo-iZd"/>
                         <outlet property="txtFieldInstitutionName" destination="zY2-xa-xou" id="9Vn-UG-P1b"/>
@@ -77,11 +79,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Kr-Uu-Sct" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="Abk-U7-NmW">
-                    <connections>
-                        <action selector="setFirstImage:" destination="eFW-u8-pXT" id="zvD-hf-mgh"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="389" y="247"/>
         </scene>
