@@ -779,7 +779,7 @@
                         <viewControllerLayoutGuide type="top" id="Q5b-uU-jUU"/>
                         <viewControllerLayoutGuide type="bottom" id="1kM-ZA-p02"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ZDF-7A-lMk">
+                    <view key="view" contentMode="scaleToFill" id="ZDF-7A-lMk" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -806,6 +806,9 @@
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <action selector="clickOnBackground:" destination="Q08-sF-rpb" eventType="touchDown" id="BeD-8V-Q9i"/>
+                        </connections>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Novo Evento" id="lPm-6o-KRN" userLabel="NovoEvento">

@@ -46,6 +46,9 @@
     criarEvento.descricao = _detalhes.text;
 }
 
+- (IBAction)clickOnBackground:(id)sender {
+    [self.view endEditing:YES];
+}
 
 
 /*
