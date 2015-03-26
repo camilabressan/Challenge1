@@ -22,6 +22,7 @@
 @property NSString *genero;
 @property NSString *descricao;
 
++ (NSMutableArray *) loadAnimals;
 
 - (void) save;
 

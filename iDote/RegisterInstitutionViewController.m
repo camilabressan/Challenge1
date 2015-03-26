@@ -96,42 +96,10 @@ Institution *institution;
         [mailCont setToRecipients:[NSArray arrayWithObject:@"idoteteam@gmail.com"]];
     
        
-        [mailCont setMessageBody:[NSString stringWithFormat:@"Verifique seu cadastro antes de enviar!\n\n %@", email]  isHTML:NO];
+        [mailCont setMessageBody:[NSString stringWithFormat:@"Verifique seu cadastro antes de enviar!\n\n %@ \n\nPor favor, aguarde até 48h úteis para receber um retorno da nossa equipe.\niDote Team agradece o seu interesse!", email]  isHTML:NO];
         [self presentViewController:mailCont animated:YES completion:nil];
-        
-        
-        UIImage *institutionImage = [UIImage imageNamed:@"anImage"];
-        NSData *myData = UIImageJPEGRepresentation(institutionImage, 1.0);
-        
-        
-        [mailCont addAttachmentData:myData mimeType:@"image/jpeg" fileName:@"anImage.jpg"];
-        
-        //DESCOBRIR COMO IMPORTAR A DANADA DA IMAGEM!
-       
-     /*   // Determine the file name and extension
-        NSArray *filepart = [email componentsSeparatedByString:@"."];
-        NSString *filename = [filepart objectAtIndex:0];
-        NSString *extension = [filepart objectAtIndex:1];
-        
-        // Get the resource path and read the file using NSData
-     //   NSString *filePath = [[NSBundle mainBundle] pathForResource:filename ofType:extension];
-        //NSData *fileData = [NSData dataWithContentsOfFile:filePath];
-        
-        Determine the MIME type
-        NSString *mimeType;
-        if ([extension isEqualToString:@"jpg"]) {
-            mimeType = @"image/jpeg";
-        } else if ([extension isEqualToString:@"png"]) {
-            mimeType = @"image/png";}
-        
-        // Add attachment
-        [mailCont addAttachmentData:myData mimeType:mimeType fileName:filename];
-        
-        // Present mail view controller on screen
-        [self presentViewController:mailCont animated:YES completion:NULL];*/
     
-    
-    
+        
     }
         
         
