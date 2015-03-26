@@ -802,34 +802,36 @@
                         <viewControllerLayoutGuide type="top" id="Q5b-uU-jUU"/>
                         <viewControllerLayoutGuide type="bottom" id="1kM-ZA-p02"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ZDF-7A-lMk">
+                    <view key="view" contentMode="scaleToFill" id="ZDF-7A-lMk" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do Evento" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nfr-Pj-XLm">
                                 <rect key="frame" x="0.0" y="126" width="600" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Endereço" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pbT-fw-OfT">
                                 <rect key="frame" x="0.0" y="173" width="600" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Data" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XEc-J1-Tg5">
+                                <rect key="frame" x="0.0" y="211" width="600" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Detalhes" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WuW-hj-UC5">
-                                <rect key="frame" x="108" y="389" width="384" height="211"/>
+                                <rect key="frame" x="108" y="249" width="384" height="211"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="yRe-gf-7GU" userLabel="Horario">
-                                <rect key="frame" x="235" y="211" width="149" height="162"/>
-                                <date key="date" timeIntervalSinceReferenceDate="448999634.80797797">
-                                    <!--2015-03-25 18:07:14 +0000-->
-                                </date>
-                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <action selector="clickOnBackground:" destination="Q08-sF-rpb" eventType="touchDown" id="BeD-8V-Q9i"/>
+                        </connections>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Novo Evento" id="lPm-6o-KRN" userLabel="NovoEvento">
@@ -843,10 +845,10 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="600"/>
                     <connections>
-                        <outlet property="data" destination="yRe-gf-7GU" id="jaA-lf-WpM"/>
                         <outlet property="detalhes" destination="WuW-hj-UC5" id="6o6-f8-XHg"/>
                         <outlet property="endereco" destination="pbT-fw-OfT" id="RZu-ro-DiK"/>
                         <outlet property="nomeEvento" destination="Nfr-Pj-XLm" id="FX9-Ru-F07"/>
+                        <outlet property="txtFieldEventDate" destination="XEc-J1-Tg5" id="7iF-rd-YjP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wfg-va-XQM" userLabel="First Responder" sceneMemberID="firstResponder"/>

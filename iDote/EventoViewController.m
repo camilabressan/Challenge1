@@ -9,14 +9,25 @@
 #import "EventoViewController.h"
 
 @interface EventoViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *txtFieldEventDate;
 
 @end
 
 @implementation EventoViewController
 
+-(void)updateTextField:(id)sender
+{
+    UIDatePicker *picker = (UIDatePicker*)self.txtFieldEventDate.inputView;
+    self.txtFieldEventDate.text = [NSString stringWithFormat:@"%@",picker.date];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    UIDatePicker *datePicker = [[UIDatePicker alloc]init];
+    [datePicker setDate:[NSDate date]];
+    [datePicker addTarget:self action:@selector(updateTextField:) forControlEvents:UIControlEventValueChanged];
+    [self.txtFieldEventDate setInputView:datePicker];
 }
 
 
@@ -31,10 +42,13 @@
     
     criarEvento.nomeEvento = _nomeEvento.text;
     criarEvento.endereco = _endereco.text;
-    criarEvento.date = _data.date;
+    //criarEvento.date = _data.date;
     criarEvento.descricao = _detalhes.text;
 }
 
+- (IBAction)clickOnBackground:(id)sender {
+    [self.view endEditing:YES];
+}
 
 
 /*

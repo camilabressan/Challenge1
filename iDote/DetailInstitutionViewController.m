@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _nameDetail.text = _inst.institutionName;
 }
 
 
