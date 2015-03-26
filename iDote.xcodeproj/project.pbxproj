@@ -22,6 +22,9 @@
 		A06184C61AB8A3E900363539 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184C51AB8A3E900363539 /* FacebookSDK.framework */; };
 		A06184C81AB8A40400363539 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184C71AB8A40400363539 /* FBAudienceNetwork.framework */; };
 		A06B93C41ABCA0BE00B3F59E /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = A06B93C31ABCA0BE00B3F59E /* Animal.m */; };
+		A0C83CBD1AC389EE0013A386 /* ShowInstitutionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C83CBC1AC389EE0013A386 /* ShowInstitutionViewController.m */; };
+		A0C83CC01AC38C000013A386 /* InstitutionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C83CBF1AC38C000013A386 /* InstitutionTableViewCell.m */; };
+		A0C83CC61AC399420013A386 /* DetailInstitutionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C83CC51AC399420013A386 /* DetailInstitutionViewController.m */; };
 		AB1781331AC090C6007621F0 /* RegisterAnimalDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB1781321AC090C6007621F0 /* RegisterAnimalDataController.m */; };
 		AB1781361AC090EE007621F0 /* RegisterAnimalPhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB1781351AC090EE007621F0 /* RegisterAnimalPhotoController.m */; };
 		AB17813F1AC0A32B007621F0 /* FXForms.m in Sources */ = {isa = PBXBuildFile; fileRef = AB17813E1AC0A32B007621F0 /* FXForms.m */; };
@@ -38,6 +41,9 @@
 		AB4F88441AB89DA8006DA324 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4F88431AB89DA8006DA324 /* libsqlite3.dylib */; };
 		ABAED8541AC1ECD4008322FF /* AnimalsShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAED8531AC1ECD4008322FF /* AnimalsShowViewController.m */; };
 		ABCDBA6F1ABC939C00BF49C1 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCDBA6E1ABC939C00BF49C1 /* SignUpViewController.m */; };
+		B937CC141AC32C2800B8C1E1 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = B937CC131AC32C2800B8C1E1 /* UIImage+Extension.m */; };
+		B937CC191AC339A500B8C1E1 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = B937CC161AC339A500B8C1E1 /* CardView.m */; };
+		B937CC1A1AC339A500B8C1E1 /* SwipeCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = B937CC181AC339A500B8C1E1 /* SwipeCardView.m */; };
 		B96024941AB89729008C211C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B96024931AB89729008C211C /* main.m */; };
 		B96024971AB89729008C211C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B96024961AB89729008C211C /* AppDelegate.m */; };
 		B960249A1AB89729008C211C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B96024991AB89729008C211C /* LoginViewController.m */; };
@@ -83,6 +89,12 @@
 		A06184C71AB8A40400363539 /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
 		A06B93C21ABCA0BE00B3F59E /* Animal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Animal.h; path = iDote/Animal.h; sourceTree = "<group>"; };
 		A06B93C31ABCA0BE00B3F59E /* Animal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Animal.m; path = iDote/Animal.m; sourceTree = "<group>"; };
+		A0C83CBB1AC389EE0013A386 /* ShowInstitutionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowInstitutionViewController.h; sourceTree = "<group>"; };
+		A0C83CBC1AC389EE0013A386 /* ShowInstitutionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowInstitutionViewController.m; sourceTree = "<group>"; };
+		A0C83CBE1AC38C000013A386 /* InstitutionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstitutionTableViewCell.h; sourceTree = "<group>"; };
+		A0C83CBF1AC38C000013A386 /* InstitutionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstitutionTableViewCell.m; sourceTree = "<group>"; };
+		A0C83CC41AC399420013A386 /* DetailInstitutionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailInstitutionViewController.h; sourceTree = "<group>"; };
+		A0C83CC51AC399420013A386 /* DetailInstitutionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailInstitutionViewController.m; sourceTree = "<group>"; };
 		AB1781311AC090C6007621F0 /* RegisterAnimalDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterAnimalDataController.h; sourceTree = "<group>"; };
 		AB1781321AC090C6007621F0 /* RegisterAnimalDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterAnimalDataController.m; sourceTree = "<group>"; };
 		AB1781341AC090EE007621F0 /* RegisterAnimalPhotoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterAnimalPhotoController.h; sourceTree = "<group>"; };
@@ -104,6 +116,12 @@
 		ABAED8531AC1ECD4008322FF /* AnimalsShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimalsShowViewController.m; sourceTree = "<group>"; };
 		ABCDBA6D1ABC939C00BF49C1 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		ABCDBA6E1ABC939C00BF49C1 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		B937CC121AC32C2800B8C1E1 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		B937CC131AC32C2800B8C1E1 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		B937CC151AC339A500B8C1E1 /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
+		B937CC161AC339A500B8C1E1 /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
+		B937CC171AC339A500B8C1E1 /* SwipeCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeCardView.h; sourceTree = "<group>"; };
+		B937CC181AC339A500B8C1E1 /* SwipeCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeCardView.m; sourceTree = "<group>"; };
 		B960248E1AB89729008C211C /* iDote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B96024921AB89729008C211C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B96024931AB89729008C211C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -211,6 +229,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B937CC111AC32B6D00B8C1E1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B937CC121AC32C2800B8C1E1 /* UIImage+Extension.h */,
+				B937CC131AC32C2800B8C1E1 /* UIImage+Extension.m */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		B96024851AB89728008C211C = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +260,7 @@
 		B96024901AB89729008C211C /* iDote */ = {
 			isa = PBXGroup;
 			children = (
+				B937CC111AC32B6D00B8C1E1 /* Extensions */,
 				B96024B81ABB58C8008C211C /* View */,
 				B96024B71ABB58B7008C211C /* Controller */,
 				A05773AA1ABB45240069D5CB /* Model */,
@@ -281,6 +309,8 @@
 				E32C9EE81AC07C8500439C9B /* RegisterInstitutionViewController.m */,
 				AB1781311AC090C6007621F0 /* RegisterAnimalDataController.h */,
 				AB1781321AC090C6007621F0 /* RegisterAnimalDataController.m */,
+				A0C83CC41AC399420013A386 /* DetailInstitutionViewController.h */,
+				A0C83CC51AC399420013A386 /* DetailInstitutionViewController.m */,
 				AB1781341AC090EE007621F0 /* RegisterAnimalPhotoController.h */,
 				AB1781351AC090EE007621F0 /* RegisterAnimalPhotoController.m */,
 				ABAED8521AC1ECD4008322FF /* AnimalsShowViewController.h */,
@@ -291,6 +321,10 @@
 				90727EDE1AC1F7D300D48518 /* TabBarViewController.m */,
 				90B232031AC32E23000B58CD /* EventoViewController.h */,
 				90B232041AC32E23000B58CD /* EventoViewController.m */,
+				A0C83CBB1AC389EE0013A386 /* ShowInstitutionViewController.h */,
+				A0C83CBC1AC389EE0013A386 /* ShowInstitutionViewController.m */,
+				A0C83CBE1AC38C000013A386 /* InstitutionTableViewCell.h */,
+				A0C83CBF1AC38C000013A386 /* InstitutionTableViewCell.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -298,6 +332,10 @@
 		B96024B81ABB58C8008C211C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B937CC151AC339A500B8C1E1 /* CardView.h */,
+				B937CC161AC339A500B8C1E1 /* CardView.m */,
+				B937CC171AC339A500B8C1E1 /* SwipeCardView.h */,
+				B937CC181AC339A500B8C1E1 /* SwipeCardView.m */,
 				B960249B1AB89729008C211C /* Main.storyboard */,
 				B96024A01AB89729008C211C /* LaunchScreen.xib */,
 				90727EE31AC321DF00D48518 /* UIImage+TabBarColor.h */,
@@ -413,6 +451,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9032E0F21AC0C54D001E11DF /* CalendarioViewController.m in Sources */,
+				B937CC1A1AC339A500B8C1E1 /* SwipeCardView.m in Sources */,
 				A05773AD1ABB45B70069D5CB /* User.m in Sources */,
 				E3B9C1CB1ABF2E960083A0F6 /* Institution.m in Sources */,
 				90727EDF1AC1F7D300D48518 /* TabBarViewController.m in Sources */,
@@ -420,14 +459,19 @@
 				AB17813F1AC0A32B007621F0 /* FXForms.m in Sources */,
 				AB1781331AC090C6007621F0 /* RegisterAnimalDataController.m in Sources */,
 				ABCDBA6F1ABC939C00BF49C1 /* SignUpViewController.m in Sources */,
+				A0C83CC01AC38C000013A386 /* InstitutionTableViewCell.m in Sources */,
+				B937CC141AC32C2800B8C1E1 /* UIImage+Extension.m in Sources */,
 				B960249A1AB89729008C211C /* LoginViewController.m in Sources */,
 				E32C9EE91AC07C8500439C9B /* RegisterInstitutionViewController.m in Sources */,
+				A0C83CBD1AC389EE0013A386 /* ShowInstitutionViewController.m in Sources */,
 				A06B93C41ABCA0BE00B3F59E /* Animal.m in Sources */,
 				AB1781361AC090EE007621F0 /* RegisterAnimalPhotoController.m in Sources */,
+				A0C83CC61AC399420013A386 /* DetailInstitutionViewController.m in Sources */,
 				ABAED8541AC1ECD4008322FF /* AnimalsShowViewController.m in Sources */,
 				B96024971AB89729008C211C /* AppDelegate.m in Sources */,
 				B96024941AB89729008C211C /* main.m in Sources */,
 				90727EE51AC321DF00D48518 /* UIImage+TabBarColor.m in Sources */,
+				B937CC191AC339A500B8C1E1 /* CardView.m in Sources */,
 				90727EE21AC2F6B800D48518 /* Evento.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

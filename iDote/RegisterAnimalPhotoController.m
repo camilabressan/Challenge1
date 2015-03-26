@@ -43,18 +43,34 @@
     [self presentViewController:imagePickerControllerMain animated:NO completion:nil];
 }
 
+- (BOOL) mainPhotoDoesExist
+{
+     if ([_mainImage backgroundImageForState:UIControlStateNormal] == nil)
+         return NO;
+    else
+        return YES;
+}
+
 - (IBAction)clickButtonNext:(id)sender {
     
-    FXFormViewController *controller = [[FXFormViewController alloc] init];
-    controller.formController.form = [[Animal alloc] init];
-    
-    _navController = [[UINavigationController alloc] initWithRootViewController:controller];
-    
-    controller.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Voltar" style:UIBarButtonItemStylePlain target:self action:@selector(dismiss:)];
-    controller.navigationItem.title = @"Dados do Animal";
-    controller.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Salvar" style:UIBarButtonItemStyleDone target:self action:@selector(save:)];
-    
-    [self presentViewController:_navController animated:YES completion:nil];
+    if ([self mainPhotoDoesExist] == YES)
+    {
+        FXFormViewController *controller = [[FXFormViewController alloc] init];
+        controller.formController.form = [[Animal alloc] init];
+        
+        _navController = [[UINavigationController alloc] initWithRootViewController:controller];
+        
+        controller.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Voltar" style:UIBarButtonItemStylePlain target:self action:@selector(dismiss:)];
+        controller.navigationItem.title = @"Dados do Animal";
+        controller.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Salvar" style:UIBarButtonItemStyleDone target:self action:@selector(save:)];
+        
+        [self presentViewController:_navController animated:YES completion:nil];
+    }
+    else
+    {
+        UIAlertView *alertPhotoDoesnExist = [[UIAlertView alloc] initWithTitle:@"Selecione uma foto" message:@"Por favor, selecione uma foto do animal" delegate: self cancelButtonTitle:@"OK"otherButtonTitles: nil];
+        [alertPhotoDoesnExist show];
+    }
 }
 
 - (void)dismiss:(id)sender {
@@ -85,6 +101,7 @@
     
     if ([self emptyTextFieldExistent] == NO){
         [_navController dismissViewControllerAnimated:YES completion:^{
+            _animal.mainImage = [_mainImage backgroundImageForState:UIControlStateNormal];
             [_animal save];
         }];
         [self performSegueWithIdentifier:@"segueReturnFromRegisterAnimal" sender:sender];
