@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Evento.h"
-#import "Institution.h
+#import "Institution.h"
 
 @interface EventoViewController : UIViewController
 
