@@ -35,6 +35,22 @@
                FXFormFieldCell: [FXFormOptionSegmentsCell class]}];
 }
 
++ (NSMutableArray *)loadAnimals {
+    NSMutableArray *list = [[NSMutableArray alloc] init];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Animal"];
+    
+    NSMutableArray *queryResult = [NSMutableArray arrayWithArray:[query findObjects]];
+    for (PFObject *obj in queryResult) {
+        Animal *animal = [[Animal alloc] init];
+        
+        
+        [list addObject:animal];
+    }
+
+    return list;
+}
+
 -(void)save {
     PFObject *object = [PFObject objectWithClassName:@"Animal"];
     

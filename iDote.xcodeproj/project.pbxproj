@@ -11,6 +11,9 @@
 		90727EDF1AC1F7D300D48518 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90727EDE1AC1F7D300D48518 /* TabBarViewController.m */; };
 		90727EE21AC2F6B800D48518 /* Evento.m in Sources */ = {isa = PBXBuildFile; fileRef = 90727EE11AC2F6B800D48518 /* Evento.m */; };
 		90B232051AC32E23000B58CD /* EventoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B232041AC32E23000B58CD /* EventoViewController.m */; };
+		A0435D061AC48DBA00822BC1 /* DetailInstitutionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0435D051AC48DBA00822BC1 /* DetailInstitutionViewController.m */; };
+		A0435D091AC48DCE00822BC1 /* InstitutionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0435D081AC48DCE00822BC1 /* InstitutionTableViewCell.m */; };
+		A0435D0C1AC48DE000822BC1 /* ShowInstitutionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0435D0B1AC48DE000822BC1 /* ShowInstitutionViewController.m */; };
 		A05773AD1ABB45B70069D5CB /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = A05773AC1ABB45B70069D5CB /* User.m */; };
 		A06184C01AB8A08D00363539 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184BB1AB8A08D00363539 /* Bolts.framework */; };
 		A06184C11AB8A08D00363539 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184BC1AB8A08D00363539 /* Parse.framework */; };
@@ -71,6 +74,12 @@
 		90727EE11AC2F6B800D48518 /* Evento.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Evento.m; path = iDote/Evento.m; sourceTree = "<group>"; };
 		90B232031AC32E23000B58CD /* EventoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventoViewController.h; sourceTree = "<group>"; };
 		90B232041AC32E23000B58CD /* EventoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventoViewController.m; sourceTree = "<group>"; };
+		A0435D041AC48D8800822BC1 /* DetailInstitutionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailInstitutionViewController.h; sourceTree = "<group>"; };
+		A0435D051AC48DBA00822BC1 /* DetailInstitutionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailInstitutionViewController.m; sourceTree = "<group>"; };
+		A0435D071AC48DCE00822BC1 /* InstitutionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstitutionTableViewCell.h; sourceTree = "<group>"; };
+		A0435D081AC48DCE00822BC1 /* InstitutionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstitutionTableViewCell.m; sourceTree = "<group>"; };
+		A0435D0A1AC48DE000822BC1 /* ShowInstitutionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowInstitutionViewController.h; sourceTree = "<group>"; };
+		A0435D0B1AC48DE000822BC1 /* ShowInstitutionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowInstitutionViewController.m; sourceTree = "<group>"; };
 		A05773AB1ABB45B70069D5CB /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = iDote/User.h; sourceTree = "<group>"; };
 		A05773AC1ABB45B70069D5CB /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = iDote/User.m; sourceTree = "<group>"; };
 		A06184BB1AB8A08D00363539 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Frameworks/Bolts.framework; sourceTree = "<group>"; };
@@ -306,7 +315,13 @@
 				ABCDBA6E1ABC939C00BF49C1 /* SignUpViewController.m */,
 				E32C9EE71AC07C8500439C9B /* RegisterInstitutionViewController.h */,
 				E32C9EE81AC07C8500439C9B /* RegisterInstitutionViewController.m */,
+				A0435D041AC48D8800822BC1 /* DetailInstitutionViewController.h */,
+				A0435D051AC48DBA00822BC1 /* DetailInstitutionViewController.m */,
+				A0435D0A1AC48DE000822BC1 /* ShowInstitutionViewController.h */,
+				A0435D0B1AC48DE000822BC1 /* ShowInstitutionViewController.m */,
 				AB1781311AC090C6007621F0 /* RegisterAnimalDataController.h */,
+				A0435D071AC48DCE00822BC1 /* InstitutionTableViewCell.h */,
+				A0435D081AC48DCE00822BC1 /* InstitutionTableViewCell.m */,
 				AB1781321AC090C6007621F0 /* RegisterAnimalDataController.m */,
 				AB1781341AC090EE007621F0 /* RegisterAnimalPhotoController.h */,
 				AB1781351AC090EE007621F0 /* RegisterAnimalPhotoController.m */,
@@ -389,7 +404,7 @@
 					};
 					B96024A61AB89729008C211C = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 6W5C2N8Y53;
+						DevelopmentTeam = P2V4W6VMHY;
 						TestTargetID = B960248D1AB89728008C211C;
 					};
 				};
@@ -444,8 +459,10 @@
 				A05773AD1ABB45B70069D5CB /* User.m in Sources */,
 				E3B9C1CB1ABF2E960083A0F6 /* Institution.m in Sources */,
 				90727EDF1AC1F7D300D48518 /* TabBarViewController.m in Sources */,
+				A0435D061AC48DBA00822BC1 /* DetailInstitutionViewController.m in Sources */,
 				90B232051AC32E23000B58CD /* EventoViewController.m in Sources */,
 				AB17813F1AC0A32B007621F0 /* FXForms.m in Sources */,
+				A0435D091AC48DCE00822BC1 /* InstitutionTableViewCell.m in Sources */,
 				AB1781331AC090C6007621F0 /* RegisterAnimalDataController.m in Sources */,
 				ABCDBA6F1ABC939C00BF49C1 /* SignUpViewController.m in Sources */,
 				B937CC141AC32C2800B8C1E1 /* UIImage+Extension.m in Sources */,
@@ -456,6 +473,7 @@
 				AB1781361AC090EE007621F0 /* RegisterAnimalPhotoController.m in Sources */,
 				ABAED8541AC1ECD4008322FF /* AnimalsShowViewController.m in Sources */,
 				B96024971AB89729008C211C /* AppDelegate.m in Sources */,
+				A0435D0C1AC48DE000822BC1 /* ShowInstitutionViewController.m in Sources */,
 				B96024941AB89729008C211C /* main.m in Sources */,
 				B937CC191AC339A500B8C1E1 /* CardView.m in Sources */,
 				90727EE21AC2F6B800D48518 /* Evento.m in Sources */,
