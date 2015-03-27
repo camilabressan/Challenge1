@@ -85,8 +85,8 @@ Institution *institution;
 
 - (IBAction)emailButtonPushed:(id)sender {
     
-    if ([self validateEmail: _txtFieldInstitutionEmail.text] == YES &&
-        [self emptyTextFieldExistent] == NO){
+    if ([self emptyTextFieldExistent] == NO  &&
+        [self validateEmail: _txtFieldInstitutionEmail.text] == YES){
     
     NSString *email = [NSString stringWithFormat:@"Nome: %@\nTelefone: %@\nEmail: %@\nResponsável: %@\nEndereço: %@\nDescrição: %@", _txtFieldInstitutionName.text, _txtFieldInstitutionPhone.text, _txtFieldInstitutionEmail.text,_txtFieldInstitutionResponsible.text, _txtFieldInstitutionAddress.text, _txtViewInstitutionDescription.text];
 
