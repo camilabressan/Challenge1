@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -295,6 +295,7 @@
                     </navigationItem>
                     <connections>
                         <segue destination="HHk-uH-2dY" kind="unwind" identifier="segueBackFromRegisterAnimalData" unwindAction="backFromRegisterAnimalData:" id="c2f-wW-EMe"/>
+                        <segue destination="gfO-nZ-Zlv" kind="show" identifier="ShowAnimalSegue" id="hCT-ZE-Ko2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VA2-VK-nn3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1094,6 +1095,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tg7-Fp-brn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="204" y="2385"/>
+        </scene>
+        <!--Animal-->
+        <scene sceneID="zBe-8n-Mg6">
+            <objects>
+                <viewController title="Animal" id="gfO-nZ-Zlv" customClass="AnimalDetailsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wh2-Fk-xAI"/>
+                        <viewControllerLayoutGuide type="bottom" id="tZB-iw-nZi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mIw-Zj-UBP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="76j-X2-hHE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="204" y="3160"/>
         </scene>
         <!--Adoção-->
         <scene sceneID="frS-7Z-my1">
