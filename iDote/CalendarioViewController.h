@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CalendarioViewController.h"
+#import "Evento.h"
 
 @interface CalendarioViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
 

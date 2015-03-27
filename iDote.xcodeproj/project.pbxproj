@@ -23,7 +23,6 @@
 		A06184C61AB8A3E900363539 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184C51AB8A3E900363539 /* FacebookSDK.framework */; };
 		A06184C81AB8A40400363539 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184C71AB8A40400363539 /* FBAudienceNetwork.framework */; };
 		A06B93C41ABCA0BE00B3F59E /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = A06B93C31ABCA0BE00B3F59E /* Animal.m */; };
-		AB1781331AC090C6007621F0 /* RegisterAnimalDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB1781321AC090C6007621F0 /* RegisterAnimalDataController.m */; };
 		AB1781361AC090EE007621F0 /* RegisterAnimalPhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB1781351AC090EE007621F0 /* RegisterAnimalPhotoController.m */; };
 		AB17813F1AC0A32B007621F0 /* FXForms.m in Sources */ = {isa = PBXBuildFile; fileRef = AB17813E1AC0A32B007621F0 /* FXForms.m */; };
 		AB4F88301AB89D59006DA324 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4F882F1AB89D59006DA324 /* AudioToolbox.framework */; };
@@ -33,7 +32,6 @@
 		AB4F88381AB89D75006DA324 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4F88371AB89D75006DA324 /* MobileCoreServices.framework */; };
 		AB4F883A1AB89D7B006DA324 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4F88391AB89D7B006DA324 /* QuartzCore.framework */; };
 		AB4F883C1AB89D82006DA324 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4F883B1AB89D82006DA324 /* Security.framework */; };
-		AB4F883E1AB89D87006DA324 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4F883D1AB89D87006DA324 /* StoreKit.framework */; };
 		AB4F88401AB89D8B006DA324 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4F883F1AB89D8B006DA324 /* SystemConfiguration.framework */; };
 		AB4F88421AB89D97006DA324 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4F88411AB89D96006DA324 /* libz.dylib */; };
 		AB4F88441AB89DA8006DA324 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4F88431AB89DA8006DA324 /* libsqlite3.dylib */; };
@@ -91,8 +89,6 @@
 		A06184C71AB8A40400363539 /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
 		A06B93C21ABCA0BE00B3F59E /* Animal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Animal.h; path = iDote/Animal.h; sourceTree = "<group>"; };
 		A06B93C31ABCA0BE00B3F59E /* Animal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Animal.m; path = iDote/Animal.m; sourceTree = "<group>"; };
-		AB1781311AC090C6007621F0 /* RegisterAnimalDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterAnimalDataController.h; sourceTree = "<group>"; };
-		AB1781321AC090C6007621F0 /* RegisterAnimalDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterAnimalDataController.m; sourceTree = "<group>"; };
 		AB1781341AC090EE007621F0 /* RegisterAnimalPhotoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterAnimalPhotoController.h; sourceTree = "<group>"; };
 		AB1781351AC090EE007621F0 /* RegisterAnimalPhotoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterAnimalPhotoController.m; sourceTree = "<group>"; };
 		AB17813D1AC0A32B007621F0 /* FXForms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXForms.h; sourceTree = "<group>"; };
@@ -104,7 +100,6 @@
 		AB4F88371AB89D75006DA324 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		AB4F88391AB89D7B006DA324 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		AB4F883B1AB89D82006DA324 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		AB4F883D1AB89D87006DA324 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		AB4F883F1AB89D8B006DA324 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AB4F88411AB89D96006DA324 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		AB4F88431AB89DA8006DA324 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -149,7 +144,6 @@
 				AB4F88421AB89D97006DA324 /* libz.dylib in Frameworks */,
 				AB4F88401AB89D8B006DA324 /* SystemConfiguration.framework in Frameworks */,
 				A06184C01AB8A08D00363539 /* Bolts.framework in Frameworks */,
-				AB4F883E1AB89D87006DA324 /* StoreKit.framework in Frameworks */,
 				A06184C21AB8A08D00363539 /* ParseCrashReporting.framework in Frameworks */,
 				A06184C41AB8A08D00363539 /* ParseUI.framework in Frameworks */,
 				AB4F883C1AB89D82006DA324 /* Security.framework in Frameworks */,
@@ -216,7 +210,6 @@
 				A06184BF1AB8A08D00363539 /* ParseUI.framework */,
 				AB4F88411AB89D96006DA324 /* libz.dylib */,
 				AB4F883F1AB89D8B006DA324 /* SystemConfiguration.framework */,
-				AB4F883D1AB89D87006DA324 /* StoreKit.framework */,
 				AB4F883B1AB89D82006DA324 /* Security.framework */,
 				AB4F88391AB89D7B006DA324 /* QuartzCore.framework */,
 				AB4F88371AB89D75006DA324 /* MobileCoreServices.framework */,
@@ -321,8 +314,6 @@
 				A0435D0B1AC48DE000822BC1 /* ShowInstitutionViewController.m */,
 				A0435D071AC48DCE00822BC1 /* InstitutionTableViewCell.h */,
 				A0435D081AC48DCE00822BC1 /* InstitutionTableViewCell.m */,
-				AB1781311AC090C6007621F0 /* RegisterAnimalDataController.h */,
-				AB1781321AC090C6007621F0 /* RegisterAnimalDataController.m */,
 				AB1781341AC090EE007621F0 /* RegisterAnimalPhotoController.h */,
 				AB1781351AC090EE007621F0 /* RegisterAnimalPhotoController.m */,
 				ABAED8521AC1ECD4008322FF /* AnimalsShowViewController.h */,
@@ -401,6 +392,11 @@
 					B960248D1AB89728008C211C = {
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = P2V4W6VMHY;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 					B96024A61AB89729008C211C = {
 						CreatedOnToolsVersion = 6.2;
@@ -463,7 +459,6 @@
 				90B232051AC32E23000B58CD /* EventoViewController.m in Sources */,
 				AB17813F1AC0A32B007621F0 /* FXForms.m in Sources */,
 				A0435D091AC48DCE00822BC1 /* InstitutionTableViewCell.m in Sources */,
-				AB1781331AC090C6007621F0 /* RegisterAnimalDataController.m in Sources */,
 				ABCDBA6F1ABC939C00BF49C1 /* SignUpViewController.m in Sources */,
 				B937CC141AC32C2800B8C1E1 /* UIImage+Extension.m in Sources */,
 				ABE82B101AC47B9D00F26A09 /* VMaskTextField.m in Sources */,

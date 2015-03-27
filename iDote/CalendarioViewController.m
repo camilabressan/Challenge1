@@ -9,20 +9,27 @@
 #import "CalendarioViewController.h"
 
 
-@interface CalendarioViewController (){
-    
+@interface CalendarioViewController () <UITableViewDataSource, UITableViewDelegate>
+{
     NSDictionary *meses; //criando dicionario
     NSArray *tabelacalendario; //criando array
+    
+    NSMutableArray *monthArray;
 }
 @property (weak, nonatomic) IBOutlet UITableView *tableViewEvents;
 
 
 @end
 
-@implementation CalendarioViewController
+@implementation CalendarioViewController{
+    NSArray *allEvents;
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+
     
     self.navigationItem.backBarButtonItem.tintColor = [UIColor whiteColor];
     
@@ -38,6 +45,22 @@
                          @"Outubro",
                          @"Novembro",
                          @"Dezembro"];
+    
+    monthArray = [[NSMutableArray alloc] init];
+    for (int i = 0; i< tabelacalendario.count; i++) {
+        [monthArray addObject:[[NSMutableArray alloc] init]];
+    }
+    
+    allEvents = [Evento loadEvents];
+    
+    
+    NSCalendar* calendar = [NSCalendar currentCalendar];
+    for (Evento *event in allEvents) {
+        NSDateComponents* components = [calendar components:NSCalendarUnitMonth fromDate:event.date]; // Get necessary date components
+        
+
+        [monthArray[[components month]-1] addObject:event];
+    }
     
 }
 
@@ -55,24 +78,25 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    NSString *sectionTitle = [tabelacalendario objectAtIndex:section];
-    NSArray *sectionMeses = [meses objectForKey:sectionTitle];
-    return [sectionMeses count];
+    return [monthArray[section] count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+
+    static NSString *simpleTableIdentifier = @"identificador";
     
-    // Configure the cell...
-    NSString *sectionTitle = [tabelacalendario objectAtIndex:indexPath.section];
-    NSArray *tabelacalendario = [meses objectForKey:sectionTitle];
-    NSString *meses = [tabelacalendario objectAtIndex:indexPath.row];
-    cell.textLabel.text = meses;
-    //cell.imageView.image = [UIImage imageNamed:[self getImageFilename:meses]];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    }
+    
+    Evento *e = [monthArray[indexPath.section] objectAtIndex:indexPath.row];
+    cell.textLabel.text = e.nomeEvento;
+    
+    //[tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
     return cell;
 }
 

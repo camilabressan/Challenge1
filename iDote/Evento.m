@@ -26,4 +26,26 @@
     }];
 }
 
++ (NSMutableArray *)loadEvents {
+    NSMutableArray *list = [[NSMutableArray alloc] init];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Event"];
+    
+    NSMutableArray *queryResult = [NSMutableArray arrayWithArray:[query findObjects]];
+    
+    for (PFObject *obj in queryResult) {
+        Evento *event = [[Evento alloc] init];
+        event.object = obj;
+        
+        event.nomeEvento = [obj objectForKey:@"nome"];
+        event.date = [obj objectForKey: @"date"];
+        event.descricao = [obj objectForKey:@"descricao"];
+        event.endereco =[obj objectForKey:@"endereco"];
+        
+        [list addObject:event];
+    }
+    
+    return list;
+}
+
 @end
