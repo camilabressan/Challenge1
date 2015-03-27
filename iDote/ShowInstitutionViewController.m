@@ -53,7 +53,9 @@
     
     if ([segue.identifier isEqualToString:@"segueDetailInstitution"]) {
         DetailInstitutionViewController *detail = (DetailInstitutionViewController *)segue.destinationViewController;
+        
         detail.inst = _list[0];
+        detail.inst = _list[1];
     }
 
 }
