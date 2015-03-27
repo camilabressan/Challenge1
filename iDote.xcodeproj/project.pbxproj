@@ -33,7 +33,6 @@
 		AB4F88381AB89D75006DA324 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4F88371AB89D75006DA324 /* MobileCoreServices.framework */; };
 		AB4F883A1AB89D7B006DA324 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4F88391AB89D7B006DA324 /* QuartzCore.framework */; };
 		AB4F883C1AB89D82006DA324 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4F883B1AB89D82006DA324 /* Security.framework */; };
-		AB4F883E1AB89D87006DA324 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4F883D1AB89D87006DA324 /* StoreKit.framework */; };
 		AB4F88401AB89D8B006DA324 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4F883F1AB89D8B006DA324 /* SystemConfiguration.framework */; };
 		AB4F88421AB89D97006DA324 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4F88411AB89D96006DA324 /* libz.dylib */; };
 		AB4F88441AB89DA8006DA324 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4F88431AB89DA8006DA324 /* libsqlite3.dylib */; };
@@ -50,6 +49,7 @@
 		B960249F1AB89729008C211C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B960249E1AB89729008C211C /* Images.xcassets */; };
 		B96024A21AB89729008C211C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B96024A01AB89729008C211C /* LaunchScreen.xib */; };
 		B96024AE1AB89729008C211C /* iDoteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B96024AD1AB89729008C211C /* iDoteTests.m */; };
+		B9FBEE301AC5A1B300279EFD /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = B9FBEE2F1AC5A1B300279EFD /* UIImage+Resize.m */; };
 		E32C9EE91AC07C8500439C9B /* RegisterInstitutionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E32C9EE81AC07C8500439C9B /* RegisterInstitutionViewController.m */; };
 		E32C9EEB1AC095BC00439C9B /* teste.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E32C9EEA1AC095BC00439C9B /* teste.storyboard */; };
 		E3B9C1CB1ABF2E960083A0F6 /* Institution.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B9C1CA1ABF2E960083A0F6 /* Institution.m */; };
@@ -104,7 +104,6 @@
 		AB4F88371AB89D75006DA324 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		AB4F88391AB89D7B006DA324 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		AB4F883B1AB89D82006DA324 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		AB4F883D1AB89D87006DA324 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		AB4F883F1AB89D8B006DA324 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AB4F88411AB89D96006DA324 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		AB4F88431AB89DA8006DA324 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -133,6 +132,8 @@
 		B96024A71AB89729008C211C /* iDoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iDoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B96024AC1AB89729008C211C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B96024AD1AB89729008C211C /* iDoteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iDoteTests.m; sourceTree = "<group>"; };
+		B9FBEE2E1AC5A1B300279EFD /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		B9FBEE2F1AC5A1B300279EFD /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
 		E32C9EE71AC07C8500439C9B /* RegisterInstitutionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterInstitutionViewController.h; sourceTree = "<group>"; };
 		E32C9EE81AC07C8500439C9B /* RegisterInstitutionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterInstitutionViewController.m; sourceTree = "<group>"; };
 		E32C9EEA1AC095BC00439C9B /* teste.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = teste.storyboard; sourceTree = "<group>"; };
@@ -149,7 +150,6 @@
 				AB4F88421AB89D97006DA324 /* libz.dylib in Frameworks */,
 				AB4F88401AB89D8B006DA324 /* SystemConfiguration.framework in Frameworks */,
 				A06184C01AB8A08D00363539 /* Bolts.framework in Frameworks */,
-				AB4F883E1AB89D87006DA324 /* StoreKit.framework in Frameworks */,
 				A06184C21AB8A08D00363539 /* ParseCrashReporting.framework in Frameworks */,
 				A06184C41AB8A08D00363539 /* ParseUI.framework in Frameworks */,
 				AB4F883C1AB89D82006DA324 /* Security.framework in Frameworks */,
@@ -216,7 +216,6 @@
 				A06184BF1AB8A08D00363539 /* ParseUI.framework */,
 				AB4F88411AB89D96006DA324 /* libz.dylib */,
 				AB4F883F1AB89D8B006DA324 /* SystemConfiguration.framework */,
-				AB4F883D1AB89D87006DA324 /* StoreKit.framework */,
 				AB4F883B1AB89D82006DA324 /* Security.framework */,
 				AB4F88391AB89D7B006DA324 /* QuartzCore.framework */,
 				AB4F88371AB89D75006DA324 /* MobileCoreServices.framework */,
@@ -242,6 +241,8 @@
 			children = (
 				B937CC121AC32C2800B8C1E1 /* UIImage+Extension.h */,
 				B937CC131AC32C2800B8C1E1 /* UIImage+Extension.m */,
+				B9FBEE2E1AC5A1B300279EFD /* UIImage+Resize.h */,
+				B9FBEE2F1AC5A1B300279EFD /* UIImage+Resize.m */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -400,11 +401,16 @@
 				TargetAttributes = {
 					B960248D1AB89728008C211C = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = P2V4W6VMHY;
+						DevelopmentTeam = M7SM6673Q8;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 					B96024A61AB89729008C211C = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = P2V4W6VMHY;
+						DevelopmentTeam = M7SM6673Q8;
 						TestTargetID = B960248D1AB89728008C211C;
 					};
 				};
@@ -471,6 +477,7 @@
 				E32C9EE91AC07C8500439C9B /* RegisterInstitutionViewController.m in Sources */,
 				A06B93C41ABCA0BE00B3F59E /* Animal.m in Sources */,
 				AB1781361AC090EE007621F0 /* RegisterAnimalPhotoController.m in Sources */,
+				B9FBEE301AC5A1B300279EFD /* UIImage+Resize.m in Sources */,
 				ABAED8541AC1ECD4008322FF /* AnimalsShowViewController.m in Sources */,
 				B96024971AB89729008C211C /* AppDelegate.m in Sources */,
 				A0435D0C1AC48DE000822BC1 /* ShowInstitutionViewController.m in Sources */,
