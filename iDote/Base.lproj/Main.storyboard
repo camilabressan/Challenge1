@@ -727,7 +727,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Cadastro da Instituição" id="nnP-VU-GxJ">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="giJ-D2-Yhc"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="giJ-D2-Yhc">
+                            <connections>
+                                <action selector="emailButtonPushed:" destination="5H3-lK-ob0" id="DJY-zW-CFR"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -934,6 +938,31 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NnZ-Vi-BIy" id="qzR-ON-SJz">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCell" id="g3u-HQ-Ri0" customClass="eventTableViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g3u-HQ-Ri0" id="Oha-lo-fyH">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sZ-dr-JN5">
+                                                    <rect key="frame" x="18" y="7" width="153" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhr-e8-DYV">
+                                                    <rect key="frame" x="116" y="8" width="293" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labelEventDate" destination="6sZ-dr-JN5" id="6tq-e2-m0v"/>
+                                            <outlet property="labelEventName" destination="Nhr-e8-DYV" id="pbH-ym-Mco"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

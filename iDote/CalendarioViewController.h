@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CalendarioViewController.h"
 #import "Evento.h"
+#import "eventTableViewCell.h"
 
 @interface CalendarioViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
 

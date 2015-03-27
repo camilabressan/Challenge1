@@ -35,6 +35,7 @@
 		AB4F88401AB89D8B006DA324 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4F883F1AB89D8B006DA324 /* SystemConfiguration.framework */; };
 		AB4F88421AB89D97006DA324 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4F88411AB89D96006DA324 /* libz.dylib */; };
 		AB4F88441AB89DA8006DA324 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4F88431AB89DA8006DA324 /* libsqlite3.dylib */; };
+		AB50C46B1AC5E32A00DC6EC6 /* eventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB50C46A1AC5E32A00DC6EC6 /* eventTableViewCell.m */; };
 		ABAED8541AC1ECD4008322FF /* AnimalsShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAED8531AC1ECD4008322FF /* AnimalsShowViewController.m */; };
 		ABCDBA6F1ABC939C00BF49C1 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCDBA6E1ABC939C00BF49C1 /* SignUpViewController.m */; };
 		ABE82B101AC47B9D00F26A09 /* VMaskTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE82B0F1AC47B9D00F26A09 /* VMaskTextField.m */; };
@@ -105,6 +106,8 @@
 		AB4F883F1AB89D8B006DA324 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AB4F88411AB89D96006DA324 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		AB4F88431AB89DA8006DA324 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		AB50C4691AC5E32A00DC6EC6 /* eventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventTableViewCell.h; sourceTree = "<group>"; };
+		AB50C46A1AC5E32A00DC6EC6 /* eventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventTableViewCell.m; sourceTree = "<group>"; };
 		ABAED8521AC1ECD4008322FF /* AnimalsShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimalsShowViewController.h; sourceTree = "<group>"; };
 		ABAED8531AC1ECD4008322FF /* AnimalsShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimalsShowViewController.m; sourceTree = "<group>"; };
 		ABCDBA6D1ABC939C00BF49C1 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
@@ -480,6 +483,7 @@
 				ABAED8541AC1ECD4008322FF /* AnimalsShowViewController.m in Sources */,
 				B96024971AB89729008C211C /* AppDelegate.m in Sources */,
 				A0435D0C1AC48DE000822BC1 /* ShowInstitutionViewController.m in Sources */,
+				AB50C46B1AC5E32A00DC6EC6 /* eventTableViewCell.m in Sources */,
 				B96024941AB89729008C211C /* main.m in Sources */,
 				B937CC191AC339A500B8C1E1 /* CardView.m in Sources */,
 				90727EE21AC2F6B800D48518 /* Evento.m in Sources */,

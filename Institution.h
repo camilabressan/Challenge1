@@ -19,6 +19,7 @@
 @property NSString *institutionResponsible;
 @property NSString *institutionAddress;
 @property NSString *institutionDescription;
+@property UIImage *mainImage;
 @property BOOL *ativo;
 
 -(void) save;
