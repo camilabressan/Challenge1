@@ -16,7 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     _nameDetail.text = _inst.institutionName;
+    _phoneDetail.text = _inst.institutionPhone;
+    _emailDetail.text = @"dsd";
 }
 
 
