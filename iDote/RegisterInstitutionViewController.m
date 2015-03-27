@@ -15,6 +15,7 @@
 
 Institution *institution;
 
+
 - (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -106,6 +107,9 @@ Institution *institution;
         
     }
 
+}
+- (IBAction)clickOnBackground:(id)sender {
+    [self.view endEditing:YES];
 }
 
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {

@@ -603,7 +603,7 @@
                         <viewControllerLayoutGuide type="top" id="K3I-30-gle"/>
                         <viewControllerLayoutGuide type="bottom" id="mDk-j1-oGU"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ogO-Sj-c5X">
+                    <view key="view" contentMode="scaleToFill" id="ogO-Sj-c5X" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -707,6 +707,7 @@
                             </mask>
                         </variation>
                         <connections>
+                            <action selector="clickOnBackground:" destination="5H3-lK-ob0" eventType="touchDown" id="WLZ-dR-YnJ"/>
                             <outletCollection property="gestureRecognizers" destination="8E0-6z-ivY" appends="YES" id="zqo-U3-SiS"/>
                         </connections>
                     </view>
