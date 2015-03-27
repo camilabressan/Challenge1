@@ -2,16 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "CatAndDogHeart.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "Image2.png"
+      "filename" : "CatAndDogHeart@2x.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "CatAndDogHeart@3x.png"
     }
   ],
   "info" : {
