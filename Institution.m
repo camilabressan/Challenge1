@@ -35,7 +35,7 @@
     PFObject *object = [PFObject objectWithClassName:@"Institution"];
     //strings são as colunas da tabela do parse
     object[@"nome"] = _institutionName;
-    //    object[@"telefone"] = _institutionPhone;
+    object[@"telefone"] = _institutionPhone;
     //    object[@"email"] = _institutionEmail;
     //    object[@"responsavel"] = _institutionResponsible;
     //    object[@"endereco"] = _institutionAddress;

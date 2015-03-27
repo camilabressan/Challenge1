@@ -302,7 +302,7 @@
                         <viewControllerLayoutGuide type="top" id="ki0-Vw-I6F"/>
                         <viewControllerLayoutGuide type="bottom" id="Nej-5S-tXq"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="mVK-p7-pZv" customClass="VMaskTextField">
+                    <view key="view" contentMode="scaleToFill" id="mVK-p7-pZv" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -324,7 +324,7 @@
                                     <outlet property="delegate" destination="INb-Vz-wMu" id="WxO-bn-My0"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefone" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ggb-y8-FQW">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefone" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ggb-y8-FQW" customClass="VMaskTextField">
                                 <rect key="frame" x="0.0" y="367" width="600" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="600" id="Lyd-hW-6Qf"/>
@@ -444,12 +444,21 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Cadastro" id="yH6-2x-aPP">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="i6V-eZ-Rfy"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="nNI-1S-OqU"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="i6V-eZ-Rfy">
+                            <connections>
+                                <segue destination="oxU-Bf-4sZ" kind="unwind" unwindAction="backFromRegisterScreen:" id="eGB-sQ-mRf"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="nNI-1S-OqU">
+                            <connections>
+                                <action selector="saveButtonClick:" destination="INb-Vz-wMu" id="rRh-Ku-nQ1"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="600"/>
                     <connections>
+                        <outlet property="maskTextFieldTelephone" destination="Ggb-y8-FQW" id="Vfy-l0-Jm4"/>
                         <outlet property="txtFieldConfirmPassword" destination="epX-0T-sB5" id="drx-uT-jGy"/>
                         <outlet property="txtFieldEmail" destination="m5r-4I-3S7" id="iMV-ct-3SQ"/>
                         <outlet property="txtFieldName" destination="01F-cy-G5t" id="lsj-VZ-IlX"/>
