@@ -33,7 +33,6 @@
 		AB4F88381AB89D75006DA324 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4F88371AB89D75006DA324 /* MobileCoreServices.framework */; };
 		AB4F883A1AB89D7B006DA324 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4F88391AB89D7B006DA324 /* QuartzCore.framework */; };
 		AB4F883C1AB89D82006DA324 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4F883B1AB89D82006DA324 /* Security.framework */; };
-		AB4F883E1AB89D87006DA324 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4F883D1AB89D87006DA324 /* StoreKit.framework */; };
 		AB4F88401AB89D8B006DA324 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4F883F1AB89D8B006DA324 /* SystemConfiguration.framework */; };
 		AB4F88421AB89D97006DA324 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4F88411AB89D96006DA324 /* libz.dylib */; };
 		AB4F88441AB89DA8006DA324 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4F88431AB89DA8006DA324 /* libsqlite3.dylib */; };
@@ -104,7 +103,6 @@
 		AB4F88371AB89D75006DA324 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		AB4F88391AB89D7B006DA324 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		AB4F883B1AB89D82006DA324 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		AB4F883D1AB89D87006DA324 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		AB4F883F1AB89D8B006DA324 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AB4F88411AB89D96006DA324 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		AB4F88431AB89DA8006DA324 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -149,7 +147,6 @@
 				AB4F88421AB89D97006DA324 /* libz.dylib in Frameworks */,
 				AB4F88401AB89D8B006DA324 /* SystemConfiguration.framework in Frameworks */,
 				A06184C01AB8A08D00363539 /* Bolts.framework in Frameworks */,
-				AB4F883E1AB89D87006DA324 /* StoreKit.framework in Frameworks */,
 				A06184C21AB8A08D00363539 /* ParseCrashReporting.framework in Frameworks */,
 				A06184C41AB8A08D00363539 /* ParseUI.framework in Frameworks */,
 				AB4F883C1AB89D82006DA324 /* Security.framework in Frameworks */,
@@ -216,7 +213,6 @@
 				A06184BF1AB8A08D00363539 /* ParseUI.framework */,
 				AB4F88411AB89D96006DA324 /* libz.dylib */,
 				AB4F883F1AB89D8B006DA324 /* SystemConfiguration.framework */,
-				AB4F883D1AB89D87006DA324 /* StoreKit.framework */,
 				AB4F883B1AB89D82006DA324 /* Security.framework */,
 				AB4F88391AB89D7B006DA324 /* QuartzCore.framework */,
 				AB4F88371AB89D75006DA324 /* MobileCoreServices.framework */,
@@ -401,6 +397,11 @@
 					B960248D1AB89728008C211C = {
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = 6W5C2N8Y53;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 					B96024A61AB89729008C211C = {
 						CreatedOnToolsVersion = 6.2;
@@ -610,7 +611,7 @@
 				INFOPLIST_FILE = iDote/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "b06c1df4-8401-4264-a276-921cbb145a48";
 			};
 			name = Debug;
 		};
@@ -628,7 +629,7 @@
 				INFOPLIST_FILE = iDote/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "b06c1df4-8401-4264-a276-921cbb145a48";
 			};
 			name = Release;
 		};
