@@ -337,6 +337,8 @@
 				90B232041AC32E23000B58CD /* EventoViewController.m */,
 				B98486B21AC5EDE3008F0BD1 /* AnimalDetailsViewController.h */,
 				B98486B31AC5EDE3008F0BD1 /* AnimalDetailsViewController.m */,
+				AB50C4691AC5E32A00DC6EC6 /* eventTableViewCell.h */,
+				AB50C46A1AC5E32A00DC6EC6 /* eventTableViewCell.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
