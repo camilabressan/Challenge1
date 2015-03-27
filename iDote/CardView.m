@@ -25,10 +25,7 @@
     if (!self) return nil;
     _currentIndex = 0;
     _swipeCardsArray = [[NSMutableArray alloc] initWithCapacity:3];
-    _data = [[NSMutableArray alloc] initWithCapacity:5];
-    for (int i = 0; i < 5; i++) {
-        [_data addObject:[NSNull null]];
-    }
+    _data = [Animal loadAnimals];
     
     for (int i = 0; i < 3; i++) {
         [_swipeCardsArray addObject:[NSNull null]];
@@ -45,14 +42,12 @@
 - (void)loadCustomView
 {
     
-    [_swipeCardsArray insertObject:[[SwipeCardView alloc] init] atIndex:1];
+    [_swipeCardsArray insertObject:[[SwipeCardView alloc] initWithData:_data[0]] atIndex:1];
     ((SwipeCardView *)_swipeCardsArray[1]).position = SwipeCardPositionCenter;
-    ((SwipeCardView *)_swipeCardsArray[1]).data = _data[0];
     [self addSubview:_swipeCardsArray[1]];
     
-    [_swipeCardsArray insertObject:[[SwipeCardView alloc] init] atIndex:2];
+    [_swipeCardsArray insertObject:[[SwipeCardView alloc] initWithData:_data[1]] atIndex:2];
     ((SwipeCardView *)_swipeCardsArray[2]).position = SwipeCardPositionRight;
-    ((SwipeCardView *)_swipeCardsArray[2]).data = _data[1];
     [self addSubview:_swipeCardsArray[2]];
 }
 
@@ -65,7 +60,7 @@
             card.frame = CGRectMake(0,
                                     0,
                                     self.frame.size.width *0.75,
-                                    self.frame.size.width *0.75);
+                                    self.frame.size.width *0.90);
             
             switch (card.position) {
                 case SwipeCardPositionLeft:
@@ -96,9 +91,8 @@
             if (i >= 1) {
                 _swipeCardsArray[i-1] = card;
                 if (i == _swipeCardsArray.count - 1 && _currentIndex < [_data count] -2) {
-                    SwipeCardView *newCard = [[SwipeCardView alloc] init];
+                    SwipeCardView *newCard = [[SwipeCardView alloc] initWithData:_data[_currentIndex+2]];
                     _swipeCardsArray[i] = newCard;
-                    newCard.data = _data[_currentIndex+2];
                     newCard.position = SwipeCardPositionRight;
                     [self addSubview:newCard];
                 }
@@ -120,9 +114,8 @@
             if (i <= _swipeCardsArray.count - 2) {
                 _swipeCardsArray[i+1] = card;
                 if (i == 0 && _currentIndex > 1) {
-                    SwipeCardView *newCard = [[SwipeCardView alloc] init];
+                    SwipeCardView *newCard = [[SwipeCardView alloc] initWithData:_data[_currentIndex-2]];
                     _swipeCardsArray[i] = newCard;
-                    newCard.data = _data[_currentIndex-2];
                     newCard.position = SwipeCardPositionLeft;
                     [self addSubview:newCard];
                 }

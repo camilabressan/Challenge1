@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Animal.h"
 
 typedef NS_ENUM(NSInteger, SwipeCardPosition) {
   SwipeCardPositionLeft,
@@ -20,7 +21,9 @@ typedef NS_ENUM(NSInteger, SwipeCardPosition) {
 
 
 @property SwipeCardPosition position;
-@property id data;
+@property Animal *data;
+
+- (id)initWithData:(Animal *)data;
 
 - (void) moveLeft;
 - (void) moveRight;

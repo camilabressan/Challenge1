@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Animal.h"
 
 @interface CardView : UIView
 
