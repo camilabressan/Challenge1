@@ -444,8 +444,16 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Cadastro" id="yH6-2x-aPP">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="i6V-eZ-Rfy"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="nNI-1S-OqU"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="i6V-eZ-Rfy">
+                            <connections>
+                                <segue destination="oxU-Bf-4sZ" kind="unwind" unwindAction="backFromRegisterScreen:" id="eGB-sQ-mRf"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="nNI-1S-OqU">
+                            <connections>
+                                <action selector="saveButtonClick:" destination="INb-Vz-wMu" id="rRh-Ku-nQ1"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="600"/>
