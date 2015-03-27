@@ -14,7 +14,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldPhoneNumber;
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldPassword;
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldConfirmPassword;
-@property (weak,nonatomic) IBOutlet VMaskTextField * maskTextFieldTelephone;
+
+@property (weak, nonatomic) IBOutlet VMaskTextField *maskTextFieldTelephone;
 
 @end
 
