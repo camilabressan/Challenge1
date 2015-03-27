@@ -396,7 +396,7 @@
 				TargetAttributes = {
 					B960248D1AB89728008C211C = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = P2V4W6VMHY;
+						DevelopmentTeam = 9468LRW88W;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 0;
@@ -405,7 +405,7 @@
 					};
 					B96024A61AB89729008C211C = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 6W5C2N8Y53;
+						DevelopmentTeam = 9468LRW88W;
 						TestTargetID = B960248D1AB89728008C211C;
 					};
 				};
@@ -611,7 +611,7 @@
 				INFOPLIST_FILE = iDote/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b06c1df4-8401-4264-a276-921cbb145a48";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -629,7 +629,7 @@
 				INFOPLIST_FILE = iDote/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b06c1df4-8401-4264-a276-921cbb145a48";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

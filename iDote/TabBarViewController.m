@@ -21,12 +21,12 @@
     
     // Do any additional setup after loading the view.
     
-    [[UITabBar appearance] setTintColor: [UIColor colorWithRed:241/255.0 green:59/255.0 blue:125/255.0 alpha:1]];
+    [[UITabBar appearance] setTintColor: [UIColor colorWithRed:240/255.0 green:167/255.0 blue:59/255.0 alpha:1]];
     //MUDANDO A COR DO ICONE DA TAB BAR PRESSIONADO
     
     [[UIBarButtonItem appearance] setTintColor: [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1]]; //MUDA A COR DOS ICONES DA NAVIGATION
     
-    [[UITabBar appearance] setBarTintColor: [UIColor colorWithRed:111/255.0 green:17/255.0 blue:45/255.0 alpha:1]]; // MUDA A COR DA TAB BAR
+    [[UITabBar appearance] setBarTintColor: [UIColor colorWithRed:57/255.0 green:24/255.0 blue:53/255.0 alpha:1]]; // MUDA A COR DA TAB BAR
     
     [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:(255.0/255.0) green:(255.0/255.0) blue:(255.0/255.0) alpha:1]];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
@@ -38,11 +38,11 @@
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIColor whiteColor], NSForegroundColorAttributeName, nil] forState:UIControlStateSelected];
     
     
-    UIColor * unselectedColor = [UIColor colorWithRed:0/255.0f green:0/255.0f blue:0/255.0f alpha:1];
+    //UIColor * unselectedColor = [UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:1];
     
     
-    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:unselectedColor, NSForegroundColorAttributeName, nil]
-                                             forState:UIControlStateNormal];
+    //[[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:unselectedColor, NSForegroundColorAttributeName, nil]
+                                            // forState:UIControlStateNormal];
     
     // generate a tinted unselected image based on image passed via the storyboard
     for(UITabBarItem *item in self.tabBar.items) {
