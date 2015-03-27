@@ -58,12 +58,13 @@
     _labelName = [[UILabel alloc] init];
     _labelName.text = _data.nome;
     _labelName.textColor = [UIColor darkTextColor];
+    _labelName.font = [UIFont systemFontOfSize:14];
     
     [_labelView addSubview:_labelName];
     
     [self.layer setBorderColor:[UIColor lightGrayColor].CGColor];
-    [self.layer setBorderWidth:1.0f];
-    self.layer.cornerRadius = 8;
+    [self.layer setBorderWidth:0.5f];
+    self.layer.cornerRadius = 0.5;
     self.layer.shadowOffset = CGSizeMake(7, 7);
     self.layer.shadowRadius = 5;
     self.layer.shadowOpacity = 0.5;
@@ -139,10 +140,21 @@
     _labelView.clipsToBounds = YES;
     _labelView.frame = CGRectMake(0, self.frame.size.width, self.frame.size.width, self.frame.size.height*0.20);
     
-    _labelName.frame = CGRectMake(_labelView.superview.frame.size.width  *0.1,
-                                  _labelView.superview.frame.size.height *0.4,
-                                  _labelView.superview.frame.size.width  *0.9,
-                                  _labelView.superview.frame.size.height *0.6);
+    NSDictionary *fontAtrtibutes = @{NSFontAttributeName: [UIFont systemFontOfSize:14]};
+
+    CGRect rect = [_labelName.text
+                   boundingRectWithSize:CGSizeMake(_labelView.superview.frame.size.width*0.8, CGFLOAT_MAX)
+                   options:NSStringDrawingUsesLineFragmentOrigin
+                   attributes:fontAtrtibutes
+                   context:nil];
+    
+    _labelName.frame = CGRectMake(_labelName.superview.frame.size.width * 0.05,
+                                  _labelName.superview.frame.size.height *0.1,
+                                  rect.size.width,
+                                  rect.size.height);
+    
+    _labelName.center = CGPointMake(_labelName.superview.center.x, _labelName.center.y);
+   // _labelName.center = _label
     
 }
 - (void)dealloc {
