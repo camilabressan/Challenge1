@@ -30,11 +30,22 @@
                                                                       action:@selector(swipeRightHandler:)];
     [_swipeRightRecognizer setDirection:UISwipeGestureRecognizerDirectionRight];
     [self.view addGestureRecognizer:_swipeRightRecognizer];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(tapCenter:)
+                                                 name:@"TapCenter"
+                                               object:nil];
 }
 
 -(IBAction)backFromRegisterAnimal:(UIStoryboardSegue *)sender {
     
 }
+
+- (void) tapCenter:(NSNotification *) notification {
+    Animal *animal = (Animal *)notification.object;
+    [self performSegueWithIdentifier:@"ShowAnimalSegue" sender:animal];
+}
+
 
 - (void) swipeLeftHandler:(UISwipeGestureRecognizer *)gesture {
     NSLog(@"Swipe Left");
@@ -43,6 +54,13 @@
 - (void) swipeRightHandler:(UISwipeGestureRecognizer *)gesture {
     NSLog(@"Swipe Right");
     [_cardView swipeRight];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"ShowAnimalSegue"]) {
+        
+    }
+
 }
 
 - (void)viewWillAppear:(BOOL)animated {

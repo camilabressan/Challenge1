@@ -85,16 +85,29 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
-    static NSString *simpleTableIdentifier = @"identificador";
+    static NSString *simpleTableIdentifier = @"eventCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    eventTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+        cell = [[eventTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
     Evento *e = [monthArray[indexPath.section] objectAtIndex:indexPath.row];
-    cell.textLabel.text = e.nomeEvento;
+    //cell.textLabel.text = e.nomeEvento;
+    cell.labelEventName.text = e.nomeEvento;
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateStyle: NSDateFormatterShortStyle];
+    [formatter setDateFormat: @"dd"];
+    NSString *eventDay = [formatter stringFromDate:e.date];
+    cell.labelEventDay.text = eventDay;
+    
+    NSDateFormatter *formatterWeekDay = [[NSDateFormatter alloc] init];
+    [formatterWeekDay setDateStyle: NSDateFormatterShortStyle];
+    [formatterWeekDay setDateFormat: @"EE"];
+    NSString *eventWeekDay = [formatterWeekDay stringFromDate:e.date];
+    cell.labelEventWeekDay.text = eventWeekDay;
     
     //[tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
     return cell;
