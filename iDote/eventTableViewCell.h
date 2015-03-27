@@ -10,7 +10,8 @@
 
 @interface eventTableViewCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *labelEventDate;
+@property (weak, nonatomic) IBOutlet UILabel *labelEventDay;
 @property (weak, nonatomic) IBOutlet UILabel *labelEventName;
+@property (weak, nonatomic) IBOutlet UILabel *labelEventWeekDay;
 
 @end

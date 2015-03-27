@@ -96,11 +96,18 @@
     Evento *e = [monthArray[indexPath.section] objectAtIndex:indexPath.row];
     //cell.textLabel.text = e.nomeEvento;
     cell.labelEventName.text = e.nomeEvento;
+    
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateStyle: NSDateFormatterShortStyle];
-    [formatter setDateFormat: @"dd-MM-yyyy"];
-    NSString *eventDate = [formatter stringFromDate:e.date];
-    cell.labelEventDate.text = eventDate;
+    [formatter setDateFormat: @"dd"];
+    NSString *eventDay = [formatter stringFromDate:e.date];
+    cell.labelEventDay.text = eventDay;
+    
+    NSDateFormatter *formatterWeekDay = [[NSDateFormatter alloc] init];
+    [formatterWeekDay setDateStyle: NSDateFormatterShortStyle];
+    [formatterWeekDay setDateFormat: @"EE"];
+    NSString *eventWeekDay = [formatterWeekDay stringFromDate:e.date];
+    cell.labelEventWeekDay.text = eventWeekDay;
     
     //[tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
     return cell;
