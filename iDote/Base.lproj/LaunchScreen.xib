@@ -10,14 +10,14 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iDote" translatesAutoresizingMaskIntoConstraints="NO" id="jVL-tW-JnB">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iDote-1" translatesAutoresizingMaskIntoConstraints="NO" id="jVL-tW-JnB">
                     <rect key="frame" x="109" y="57" width="263" height="116"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="116" id="ayV-XT-qtZ"/>
                         <constraint firstAttribute="width" constant="263" id="h5t-T9-7t4"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icone2" translatesAutoresizingMaskIntoConstraints="NO" id="UFk-1b-1ze">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="UFk-1b-1ze">
                     <rect key="frame" x="91" y="215" width="299" height="207"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="299" id="M17-Ee-o85"/>
@@ -25,7 +25,7 @@
                     </constraints>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" red="0.43529411759999997" green="0.066666666669999999" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.22352941179999999" green="0.094117647060000004" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="centerX" secondItem="UFk-1b-1ze" secondAttribute="centerX" constant="-0.5" id="TV4-XK-TRG"/>
                 <constraint firstAttribute="centerY" secondItem="UFk-1b-1ze" secondAttribute="centerY" constant="-78.5" id="bKE-TB-pDH"/>
@@ -39,7 +39,7 @@
         </view>
     </objects>
     <resources>
-        <image name="iDote" width="474" height="193"/>
-        <image name="icone2" width="224" height="159"/>
+        <image name="ImageIcon" width="714" height="504"/>
+        <image name="iDote-1" width="521" height="213"/>
     </resources>
 </document>

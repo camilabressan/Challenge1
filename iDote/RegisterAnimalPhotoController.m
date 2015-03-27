@@ -7,6 +7,7 @@
 //
 
 #import "RegisterAnimalPhotoController.h"
+#import "UIImage+Resize.h"
 
 @interface RegisterAnimalPhotoController ()
 
@@ -28,17 +29,19 @@
 }
 
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
-    UIImage *image = [info valueForKey:UIImagePickerControllerOriginalImage];
+    UIImage *image = info[@"UIImagePickerControllerOriginalImage"]; //[UIImage cropImageWithInfo:info];
     [_imageHolder setBackgroundImage:image forState:UIControlStateNormal];
     [_imageHolder setTitle:@"" forState:nil];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-
 - (IBAction)setFirstImage:(UIButton *)sender {
     _imageHolder = sender;
     UIImagePickerController *imagePickerControllerMain = [[UIImagePickerController alloc] init];
-    imagePickerControllerMain.modalPresentationStyle = UIModalPresentationCurrentContext;
+    //imagePickerControllerMain.allowsEditing = YES;
+    [imagePickerControllerMain.editButtonItem setTitle:@"Teste"];
+    
+    imagePickerControllerMain.modalPresentationStyle = UIModalPresentationFullScreen;
     imagePickerControllerMain.delegate = self;
     [self presentViewController:imagePickerControllerMain animated:NO completion:nil];
 }
