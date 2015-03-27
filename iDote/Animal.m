@@ -41,9 +41,13 @@
     PFQuery *query = [PFQuery queryWithClassName:@"Animal"];
     
     NSMutableArray *queryResult = [NSMutableArray arrayWithArray:[query findObjects]];
+    
     for (PFObject *obj in queryResult) {
         Animal *animal = [[Animal alloc] init];
+        animal.object = obj;
         
+        animal.nome = [obj objectForKey:@"name"];
+        animal.mainImageURL = [(PFFile *)[obj objectForKey:@"mainPhoto"] url];
         
         [list addObject:animal];
     }
@@ -55,13 +59,9 @@
     PFObject *object = [PFObject objectWithClassName:@"Animal"];
     
     object[@"name"] = _nome;
-    //object[@"gender"] = _genero;
-    //object[@"age"] = [NSNumber numberWithInt:(int)_idade];
+    object[@"gender"] = _genero;
+    object[@"age"] = [NSNumber numberWithInt:(int)_idade];
     
-    
-    
-    //NSURL *urlImage = [[NSURL alloc] initWithString:@"http://lorempixel.com/300/300/animals/"];
-   // NSData *imageData = [[NSData alloc] initWithContentsOfURL:urlImage];
     NSData *imageData = UIImageJPEGRepresentation(_mainImage, 0.7f);
     PFFile *imageFile = [PFFile fileWithName:@"Profileimage.png" data:imageData];
     [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
