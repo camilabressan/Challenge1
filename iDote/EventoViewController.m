@@ -8,12 +8,16 @@
 
 #import "EventoViewController.h"
 
-@interface EventoViewController ()
+@interface EventoViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldEventDate;
+@property (weak, nonatomic) IBOutlet UITextView *txtViewDescription;
 
 @end
 
-@implementation EventoViewController
+@implementation EventoViewController{
+    NSDateFormatter *dateFormat;
+    UIDatePicker *datePicker;
+}
 
 -(void)updateTextField:(id)sender
 {
@@ -21,35 +25,89 @@
     self.txtFieldEventDate.text = [NSString stringWithFormat:@"%@",picker.date];
 }
 
+- (void)setBordersToDescriptiomTextView{
+    CALayer *imageLayer = _txtViewDescription.layer;
+    [imageLayer setCornerRadius:10];
+    [imageLayer setBorderWidth:1];
+    imageLayer.borderColor=[[UIColor lightGrayColor] CGColor];
+}
+
+- (void) createDatePicker{
+    datePicker = [[UIDatePicker alloc]init];
+    [datePicker setDate:[NSDate date]];
+    [datePicker addTarget:self
+                action:@selector(updateTextField:)
+                forControlEvents:UIControlEventValueChanged];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UIDatePicker *datePicker = [[UIDatePicker alloc]init];
-    [datePicker setDate:[NSDate date]];
-    [datePicker addTarget:self action:@selector(updateTextField:) forControlEvents:UIControlEventValueChanged];
+    //dateFormat = [[NSDateFormatter alloc] init];
+    //[dateFormat setDateFormat:@"'dd'/'MM'"];
+    //[dateFormat setDateStyle:NSDateFormatterFullStyle];
+    
+    [self createDatePicker];
     [self.txtFieldEventDate setInputView:datePicker];
+    
+    [self setBordersToDescriptiomTextView];
 }
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+- (BOOL) emptyFieldDoesExist{
+    if ([_nomeEvento.text  length] == 0 ||
+        [_endereco.text length] == 0 ||
+        [_txtFieldEventDate.text length] == 0 ||
+        [_detalhes.text length] == 0)
+    {
+        UIAlertView *alertEmptyFields = [[UIAlertView alloc] initWithTitle:@"Campos incompletos" message:@"Por favor, preencha todos os campos." delegate: self cancelButtonTitle:@"OK"otherButtonTitles: nil];
+        [alertEmptyFields show];
+        return YES;
+    }
+    return NO;
+}
+
+- (void) createNewEvent{
+    if([self emptyFieldDoesExist] == NO)
+    {
+        Evento *newEvent = [[Evento alloc] init];
+        
+        newEvent.nomeEvento = _nomeEvento.text;
+        newEvent.endereco = _endereco.text;
+        newEvent.date = datePicker.date;
+        newEvent.descricao = _detalhes.text;
+        
+        [newEvent save];
+        
+        [self performSegueWithIdentifier:@"segueBackFromRegisterEvent" sender:nil];
+    }
+}
+
 - (IBAction)save:(id)sender {
-    Evento *criarEvento = [[Evento alloc] init];
-    
-    criarEvento.nomeEvento = _nomeEvento.text;
-    criarEvento.endereco = _endereco.text;
-    //criarEvento.date = _data.date;
-    criarEvento.descricao = _detalhes.text;
+    [self createNewEvent];
 }
 
 - (IBAction)clickOnBackground:(id)sender {
     [self.view endEditing:YES];
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    if ([textField isEqual:_nomeEvento])
+        [_endereco becomeFirstResponder];
+    else if ([textField isEqual: _endereco])
+        [_txtFieldEventDate becomeFirstResponder];
+    else if ([textField isEqual: _txtFieldEventDate])
+        [_txtViewDescription becomeFirstResponder];
+    else if ([textField isEqual:_txtViewDescription])
+        [self createNewEvent];
+    
+    return YES;
+}
 
 /*
 #pragma mark - Navigation

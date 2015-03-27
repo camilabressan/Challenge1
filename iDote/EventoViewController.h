@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+ #import <QuartzCore/QuartzCore.h>
 #import "Evento.h"
 #import "Institution.h"
 
@@ -15,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *nomeEvento;
 @property (weak, nonatomic) IBOutlet UITextField *endereco;
 @property (weak, nonatomic) IBOutlet UITextView *detalhes;
+@property PFObject *event;
 
 
 

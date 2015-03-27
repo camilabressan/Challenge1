@@ -81,6 +81,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(IBAction)backFromRegisterEventScreen:(UIStoryboardSegue *)sender {
+    
+}
+
 /*
 #pragma mark - Navigation
 
