@@ -674,6 +674,9 @@
                                 <state key="normal" title="Adicionar Foto">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="setFirstImage:" destination="5H3-lK-ob0" eventType="touchUpInside" id="JFb-f1-DE7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -718,6 +721,7 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="addInstPic" destination="bPc-vD-mIi" id="R0G-PD-XmE"/>
                         <outlet property="txtFieldInstitutionAddress" destination="gYy-Ad-Xmj" id="H5y-VE-07a"/>
                         <outlet property="txtFieldInstitutionEmail" destination="aXs-YZ-zvl" id="eNH-L0-7zd"/>
                         <outlet property="txtFieldInstitutionName" destination="97J-VA-otQ" id="kho-2h-4YL"/>

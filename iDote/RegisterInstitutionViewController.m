@@ -22,8 +22,8 @@ Institution *institution;
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
     UIImage *image = [info valueForKey:UIImagePickerControllerOriginalImage];
    
-  //  [_addInstPic setBackgroundImage:image forState:UIControlStateNormal];
-  //  [_addInstPic setTitle:@"" forState:nil];
+    [_addInstPic setBackgroundImage:image forState:UIControlStateNormal];
+    [_addInstPic setTitle:@"" forState:nil];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
