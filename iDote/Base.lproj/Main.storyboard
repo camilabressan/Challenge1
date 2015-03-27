@@ -568,7 +568,7 @@
                                             <outlet property="imageInstitution" destination="VNs-fl-NXH" id="jgh-uP-EVc"/>
                                             <outlet property="nameInstitution" destination="2pg-xL-41O" id="4K3-G4-fqB"/>
                                             <outlet property="phoneInstitution" destination="kHe-ym-4z5" id="x2c-6M-7i4"/>
-                                            <segue destination="FKU-dO-8rU" kind="show" id="0nR-5A-DDk"/>
+                                            <segue destination="FKU-dO-8rU" kind="show" identifier="segueDetailInstitution" id="0nR-5A-DDk"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -598,7 +598,7 @@
         <!--Cadastro da Instituição-->
         <scene sceneID="eTT-nd-OO5">
             <objects>
-                <viewController title="Cadastro da Instituição" id="5H3-lK-ob0" sceneMemberID="viewController">
+                <viewController title="Cadastro da Instituição" id="5H3-lK-ob0" customClass="RegisterInstitutionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="K3I-30-gle"/>
                         <viewControllerLayoutGuide type="bottom" id="mDk-j1-oGU"/>
@@ -607,7 +607,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ai0-Ji-y3n">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ai0-Ji-y3n">
                                 <rect key="frame" x="160" y="72" width="281" height="151"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="151" id="cAY-8m-ekp"/>
@@ -671,6 +671,7 @@
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="ai0-Ji-y3n" secondAttribute="centerY" constant="152.5" id="0Eo-5L-Meb"/>
                             <constraint firstItem="aXs-YZ-zvl" firstAttribute="leading" secondItem="ogO-Sj-c5X" secondAttribute="leadingMargin" constant="-16" id="5Nf-1O-vcV"/>
@@ -705,9 +706,24 @@
                                 <exclude reference="hZB-hr-VX0"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="8E0-6z-ivY" appends="YES" id="zqo-U3-SiS"/>
+                        </connections>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="addInstPic" destination="ai0-Ji-y3n" id="CcQ-kQ-9BX"/>
+                        <outlet property="txtFieldInstitutionAddress" destination="gYy-Ad-Xmj" id="H5y-VE-07a"/>
+                        <outlet property="txtFieldInstitutionEmail" destination="aXs-YZ-zvl" id="eNH-L0-7zd"/>
+                        <outlet property="txtFieldInstitutionName" destination="97J-VA-otQ" id="kho-2h-4YL"/>
+                        <outlet property="txtFieldInstitutionPhone" destination="S9y-TN-PgK" id="BkJ-4D-q6X"/>
+                        <outlet property="txtFieldInstitutionResponsible" destination="LA2-rj-t5Q" id="vWR-1q-6rc"/>
+                        <outlet property="txtViewInstitutionDescription" destination="E7F-NL-Iwn" id="ZoU-Zq-tAZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yry-cW-hEs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="8E0-6z-ivY"/>
             </objects>
             <point key="canvasLocation" x="2584" y="2369"/>
         </scene>
@@ -965,7 +981,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Detalhes:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rdw-nM-w8i">
                                 <rect key="frame" x="16" y="249" width="85" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WuW-hj-UC5">
