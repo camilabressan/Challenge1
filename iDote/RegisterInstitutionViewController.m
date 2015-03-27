@@ -21,8 +21,9 @@ Institution *institution;
 
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
     UIImage *image = [info valueForKey:UIImagePickerControllerOriginalImage];
-    [_addInstPic setBackgroundImage:image forState:UIControlStateNormal];
-    [_addInstPic setTitle:@"" forState:nil];
+   
+  //  [_addInstPic setBackgroundImage:image forState:UIControlStateNormal];
+  //  [_addInstPic setTitle:@"" forState:nil];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -56,7 +57,7 @@ Institution *institution;
         [_txtFieldInstitutionPhone.text length] == 0 ||
         [_txtFieldInstitutionEmail.text length] == 0 ||
         [_txtFieldInstitutionResponsible.text length] == 0 ||
-        [_txtFieldInstitutionAddress.text length] == 0 ||
+        //[_txtFieldInstitutionAddress.text length] == 0 ||
         [_txtViewInstitutionDescription.text length] == 0)
     {
         UIAlertView *alertEmptyFields = [[UIAlertView alloc] initWithTitle:@"Campos incompletos" message:@"Por favor, preencha todos os campos." delegate: self cancelButtonTitle:@"OK"otherButtonTitles: nil];

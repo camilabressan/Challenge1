@@ -29,13 +29,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     InstitutionTableViewCell *cell = (InstitutionTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    //NSString *ndxName = [NSString stringWithFormat:@"Nome: %li", indexPath.row + 1];
-    //cell.nameInstitution.text = ndxName;
+    
     cell.nameInstitution.text = [(Institution *)_list[indexPath.row] institutionName];
     cell.phoneInstitution.text = [(Institution *)_list[indexPath.row] institutionPhone];
     
-    //NSString *ndxPhone = [NSString stringWithFormat:@"Phone: %li", indexPath.row + 1];
-    //cell.phoneInstitution.text = ndxPhone;
+    cell.institution = _list[indexPath.row];
+    
     return cell;
 }
 
@@ -43,24 +42,14 @@
     return _list.count;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-}
-
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    //capturar o indexPath da cell e enviar para o detailInstitution
-    
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(InstitutionTableViewCell *)sender{
     
     if ([segue.identifier isEqualToString:@"segueDetailInstitution"]) {
         DetailInstitutionViewController *detail = (DetailInstitutionViewController *)segue.destinationViewController;
         
-        detail.inst = _list[0];
-        detail.inst = _list[1];
+        detail.inst = sender.institution;
     }
 
 }
-
-
-
 
 @end

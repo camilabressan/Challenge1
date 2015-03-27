@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldInstitutionAddress;
 @property (weak, nonatomic) IBOutlet UITextView *txtViewInstitutionDescription;
 @property (nonatomic, weak) NSString *email;
+
 @property (weak, nonatomic) IBOutlet UIButton *addInstPic;
 
 
