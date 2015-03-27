@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Institution.h"
 
 @interface InstitutionTableViewCell : UITableViewCell
+
+@property Institution *institution;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageInstitution;
 @property (weak, nonatomic) IBOutlet UILabel *nameInstitution;
