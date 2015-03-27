@@ -9,7 +9,7 @@
 #import "AnimalsShowViewController.h"
 #import "CardView.h"
 
-@interface AnimalsShowViewController ()
+@interface AnimalsShowViewController () <UITextFieldDelegate>
 @property (nonatomic) UISwipeGestureRecognizer *swipeLeftRecognizer;
 @property (nonatomic) UISwipeGestureRecognizer *swipeRightRecognizer;
 
@@ -51,7 +51,10 @@
     _cardView.frame = self.view.frame;
     [self.view addSubview:_cardView];
     
-    
+}
+
+- (IBAction)touchDownBackground:(id)sender {
+    [self.view endEditing:YES];
 }
 
 @end
