@@ -14,7 +14,9 @@
 
 @property PFObject *object;
 
+@property NSString *mainImageURL;
 @property UIImage *mainImage;
+
 @property NSString *nome;
 @property NSInteger idade;
 @property NSString *tipo;

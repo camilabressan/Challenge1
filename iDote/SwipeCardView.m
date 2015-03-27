@@ -10,19 +10,21 @@
 
 @interface SwipeCardView()
 @property UIImageView *imageView;
+@property UIView *labelView;
+@property UILabel *labelName;
 @end
 
 
 @implementation SwipeCardView
 
 
-- (id)init
+- (id)initWithData:(Animal *)data
 {
     self = [super init];
     if (!self) return nil;
     
     animationTime = 0.2;
-    
+    _data = data;
     self.backgroundColor = [UIColor greenColor];
     self.clipsToBounds = YES;
     self.autoresizesSubviews = YES;
@@ -35,7 +37,7 @@
 
 - (void)loadImageAndStyle
 {
-    NSURL *imageURL = [[NSURL alloc] initWithString:@"http://lorempixel.com/300/300/animals/"];
+    NSURL *imageURL = [[NSURL alloc] initWithString:_data.mainImageURL];
     _imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"300"]];
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
     dispatch_async(queue, ^{
@@ -47,6 +49,20 @@
     });
     
     [self addSubview:_imageView];
+    
+    _labelView = [[UIView alloc] init];
+    _labelView.backgroundColor = [UIColor whiteColor];
+    
+    [self addSubview:_labelView];
+    
+    _labelName = [[UILabel alloc] init];
+    _labelName.text = _data.nome;
+    _labelName.textColor = [UIColor darkTextColor];
+    
+    [_labelView addSubview:_labelName];
+    
+    [self.layer setBorderColor:[UIColor lightGrayColor].CGColor];
+    [self.layer setBorderWidth:1.0f];
     self.layer.cornerRadius = 8;
     self.layer.shadowOffset = CGSizeMake(7, 7);
     self.layer.shadowRadius = 5;
@@ -115,10 +131,19 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     _imageView.clipsToBounds = YES;
-    _imageView.backgroundColor = [UIColor redColor];
-    _imageView.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
+    _imageView.backgroundColor = [UIColor lightGrayColor];
+    _imageView.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.width);
     _imageView.autoresizesSubviews = YES;
     _imageView.contentMode = UIViewContentModeScaleAspectFill;
+    
+    _labelView.clipsToBounds = YES;
+    _labelView.frame = CGRectMake(0, self.frame.size.width, self.frame.size.width, self.frame.size.height*0.20);
+    
+    _labelName.frame = CGRectMake(_labelView.superview.frame.size.width  *0.1,
+                                  _labelView.superview.frame.size.height *0.4,
+                                  _labelView.superview.frame.size.width  *0.9,
+                                  _labelView.superview.frame.size.height *0.6);
+    
 }
 - (void)dealloc {
 }
