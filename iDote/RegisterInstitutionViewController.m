@@ -29,7 +29,7 @@ Institution *institution;
 }
 
 - (IBAction)setFirstImage:(id)sender {
-    
+    _addInstPic = sender;
     UIImagePickerController *imagePickerControllerMain = [[UIImagePickerController alloc] init];
     imagePickerControllerMain.modalPresentationStyle = UIModalPresentationFullScreen;
     imagePickerControllerMain.delegate = self;
@@ -80,6 +80,7 @@ Institution *institution;
     institution.institutionResponsible = _txtFieldInstitutionResponsible.text;
     institution.institutionAddress = _txtFieldInstitutionAddress.text;
     institution.institutionDescription = _txtViewInstitutionDescription.text;
+    institution.mainImage = [_addInstPic backgroundImageForState:UIControlStateNormal];
     
 }
 

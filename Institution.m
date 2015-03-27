@@ -47,14 +47,27 @@
     object[@"descricao"] = _institutionDescription;
     object[@"ativo"] = [NSNumber numberWithBool:false]; //sempre será inserido falso porque dependerá de aprovação
     
-    [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (!error) {
-            _object = object;
-            PFRelation *relation = [object relationForKey:@"nome"]; // VERIFICAR SE É O NOME MESMO
-            [relation addObject:[PFUser currentUser]];
-            [object saveInBackground];
+    NSData *imageData = UIImageJPEGRepresentation(_mainImage, 0.7f);
+    PFFile *imageFile = [PFFile fileWithName:@"Profileimage.png" data:imageData];
+    
+    [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error){
+        if(!error){
+            if (succeeded){
+                object[@"foto"] = imageFile;
+                [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                    if (!error) {
+                        _object = object;
+                        PFRelation *relation = [object relationForKey:@"nome"]; // VERIFICAR SE É O NOME MESMO
+                        [relation addObject:[PFUser currentUser]];
+                        [object saveInBackground];
+                    }
+                }];
+                
+            }
         }
     }];
+    
+   
     
 }
 
