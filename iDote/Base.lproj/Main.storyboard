@@ -277,6 +277,9 @@
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <action selector="touchDownBackground:" destination="pXW-7c-6Fq" eventType="touchDown" id="vRo-CL-CcJ"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Animais para Adoção" id="Kty-jo-mGg">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="CXK-K0-bnx">
