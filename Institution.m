@@ -23,6 +23,11 @@
         Institution *inst = [[Institution alloc] init];
         inst.object = obj;
         inst.institutionName = [obj valueForKey:@"nome"];
+        inst.institutionPhone = [obj valueForKey:@"telefone"];
+        inst.institutionEmail = [obj valueForKey:@"email"];
+        inst.institutionResponsible = [obj valueForKey:@"responsavel"];
+        inst.institutionAddress = [obj valueForKey:@"endereco"];
+        inst.institutionDescription = [obj valueForKey:@"descricao"];
         inst.ativo = [(NSNumber *)[obj valueForKey:@"ativo"] boolValue];
         
         [list addObject:inst];

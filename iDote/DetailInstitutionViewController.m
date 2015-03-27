@@ -19,7 +19,12 @@
     
     _nameDetail.text = _inst.institutionName;
     _phoneDetail.text = _inst.institutionPhone;
-    _emailDetail.text = @"dsd";
+    _emailDetail.text = _inst.institutionEmail;
+    _responsibleDetail.text = _inst.institutionResponsible;
+    _addressDetail.text = _inst.institutionAddress;
+    _descriptionDetail.text = _inst.institutionDescription;
+    
+    
 }
 
 
