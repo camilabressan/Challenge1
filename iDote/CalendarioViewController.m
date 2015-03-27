@@ -14,6 +14,7 @@
     NSDictionary *meses; //criando dicionario
     NSArray *tabelacalendario; //criando array
 }
+@property (weak, nonatomic) IBOutlet UITableView *tableViewEvents;
 
 
 @end
@@ -39,6 +40,7 @@
                          @"Dezembro"];
     
 }
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -82,7 +84,7 @@
 }
 
 -(IBAction)backFromRegisterEventScreen:(UIStoryboardSegue *)sender {
-    
+
 }
 
 /*

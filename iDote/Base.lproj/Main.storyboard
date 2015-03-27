@@ -919,6 +919,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="TabelaCalendario" destination="d5c-eK-gA1" id="jUq-tG-zuM"/>
+                        <outlet property="tableViewEvents" destination="d5c-eK-gA1" id="dHm-pE-mZz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jFp-pr-uO7" userLabel="First Responder" sceneMemberID="firstResponder"/>

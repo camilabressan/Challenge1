@@ -94,9 +94,9 @@
          [self passwordsDoMatch] == YES)
     {
         _user = [PFUser user];
-        _user.username = _txtFieldEmail.text;
+        _user.username = [_txtFieldEmail.text lowercaseString];
         _user.password = _txtFieldPassword.text;
-        _user.email = _txtFieldEmail.text;
+        _user.email= [_txtFieldEmail.text lowercaseString];
         _user[@"Name"] = _txtFieldName.text;
         
         [_user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {

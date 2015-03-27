@@ -43,7 +43,7 @@
   
   
   _usuario = [[User alloc] init];
-  _usuario.email = _emailTextField.text;
+  _usuario.email = [_emailTextField.text lowercaseString];
   _usuario.password = _senhaTextField.text;
   [PFUser logInWithUsernameInBackground:_usuario.email password:_usuario.password
             block:^(PFUser *user, NSError *error) {
