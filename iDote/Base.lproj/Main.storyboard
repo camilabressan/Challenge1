@@ -720,6 +720,9 @@
                         </connections>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Cadastro da Instituição" id="nnP-VU-GxJ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="giJ-D2-Yhc"/>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addInstPic" destination="bPc-vD-mIi" id="R0G-PD-XmE"/>
