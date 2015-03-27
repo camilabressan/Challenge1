@@ -15,12 +15,14 @@
 
 Institution *institution;
 
+
 - (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
     UIImage *image = [info valueForKey:UIImagePickerControllerOriginalImage];
+   
     [_addInstPic setBackgroundImage:image forState:UIControlStateNormal];
     [_addInstPic setTitle:@"" forState:nil];
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -29,7 +31,7 @@ Institution *institution;
 - (IBAction)setFirstImage:(id)sender {
     
     UIImagePickerController *imagePickerControllerMain = [[UIImagePickerController alloc] init];
-    imagePickerControllerMain.modalPresentationStyle = UIModalPresentationCurrentContext;
+    imagePickerControllerMain.modalPresentationStyle = UIModalPresentationFullScreen;
     imagePickerControllerMain.delegate = self;
     
     [self presentViewController:imagePickerControllerMain animated:NO completion:nil];
@@ -56,7 +58,7 @@ Institution *institution;
         [_txtFieldInstitutionPhone.text length] == 0 ||
         [_txtFieldInstitutionEmail.text length] == 0 ||
         [_txtFieldInstitutionResponsible.text length] == 0 ||
-        [_txtFieldInstitutionAddress.text length] == 0 ||
+        //[_txtFieldInstitutionAddress.text length] == 0 || linha não utilizada pois campo não é obrigatório;
         [_txtViewInstitutionDescription.text length] == 0)
     {
         UIAlertView *alertEmptyFields = [[UIAlertView alloc] initWithTitle:@"Campos incompletos" message:@"Por favor, preencha todos os campos." delegate: self cancelButtonTitle:@"OK"otherButtonTitles: nil];
@@ -83,28 +85,34 @@ Institution *institution;
 
 - (IBAction)emailButtonPushed:(id)sender {
     
-    if ([self validateEmail: _txtFieldInstitutionEmail.text] == YES &&
-        [self emptyTextFieldExistent] == NO){
+    [self cadastrarInst];
+    institution.save;
+    
+    
+    if ([self emptyTextFieldExistent] == NO  &&
+        [self validateEmail: _txtFieldInstitutionEmail.text] == YES){
     
     NSString *email = [NSString stringWithFormat:@"Nome: %@\nTelefone: %@\nEmail: %@\nResponsável: %@\nEndereço: %@\nDescrição: %@", _txtFieldInstitutionName.text, _txtFieldInstitutionPhone.text, _txtFieldInstitutionEmail.text,_txtFieldInstitutionResponsible.text, _txtFieldInstitutionAddress.text, _txtViewInstitutionDescription.text];
 
     NSLog(@"%@", email);
-    if([MFMailComposeViewController canSendMail]) {
-        MFMailComposeViewController *mailCont = [[MFMailComposeViewController alloc] init];
-        mailCont.mailComposeDelegate = self;
-        [mailCont setSubject:@"Cadastro de Instituições"];
-        [mailCont setToRecipients:[NSArray arrayWithObject:@"idoteteam@gmail.com"]];
+        if([MFMailComposeViewController canSendMail]) {
+            MFMailComposeViewController *mailCont = [[MFMailComposeViewController alloc] init];
+            mailCont.mailComposeDelegate = self;
+            [mailCont setSubject:@"Cadastro de Instituições"];
+            [mailCont setToRecipients:[NSArray arrayWithObject:@"idoteteam@gmail.com"]];
     
        
-        [mailCont setMessageBody:[NSString stringWithFormat:@"Verifique seu cadastro antes de enviar!\n\n %@ \n\nPor favor, aguarde até 48h úteis para receber um retorno da nossa equipe.\niDote Team agradece o seu interesse!", email]  isHTML:NO];
-        [self presentViewController:mailCont animated:YES completion:nil];
-    
-        
-    }
+            [mailCont setMessageBody:[NSString stringWithFormat:@"Verifique seu cadastro antes de enviar!\n\n %@ \n\nPor favor, aguarde até 48h úteis para receber um retorno da nossa equipe.\niDote Team agradece o seu interesse!", email]  isHTML:NO];
+            [self presentViewController:mailCont animated:YES completion:nil];
+        }
         
         
     }
 
+}
+
+- (IBAction)clickOnBackground:(id)sender {
+    [self.view endEditing:YES];
 }
 
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
