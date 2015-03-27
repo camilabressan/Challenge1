@@ -12,6 +12,9 @@
 @property UIImageView *imageView;
 @property UIView *labelView;
 @property UILabel *labelName;
+
+
+@property UITapGestureRecognizer *tapRecognizer;
 @end
 
 
@@ -23,6 +26,10 @@
     self = [super init];
     if (!self) return nil;
     
+    _tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                             action:@selector(tapHandler:)];
+    
+
     animationTime = 0.2;
     _data = data;
     self.backgroundColor = [UIColor greenColor];
@@ -31,8 +38,19 @@
     self.contentMode = UIViewContentModeScaleAspectFill;
     [self loadImageAndStyle];
     
+    [self addGestureRecognizer:_tapRecognizer];
     
     return self;
+}
+
+- (void) tapHandler:(UITapGestureRecognizer *)gesture {
+    if (_position == SwipeCardPositionCenter) {
+        [[NSNotificationCenter defaultCenter]
+         postNotificationName:@"TapCenter"
+         object:_data];
+    }
+
+
 }
 
 - (void)loadImageAndStyle

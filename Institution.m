@@ -42,7 +42,6 @@
     object[@"nome"] = _institutionName;
     object[@"telefone"] = _institutionPhone;
     object[@"email"] = _institutionEmail;
-    object[@"responsavel"] = _institutionResponsible;
     object[@"endereco"] = _institutionAddress;
     object[@"descricao"] = _institutionDescription;
     object[@"ativo"] = [NSNumber numberWithBool:false]; //sempre será inserido falso porque dependerá de aprovação
@@ -50,7 +49,7 @@
     [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
             _object = object;
-            PFRelation *relation = [object relationForKey:@"nome"]; // VERIFICAR SE É O NOME MESMO
+            PFRelation *relation = [object relationForKey:@"responsavel"]; // VERIFICAR SE É O NOME MESMO
             [relation addObject:[PFUser currentUser]];
             [object saveInBackground];
         }
