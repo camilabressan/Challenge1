@@ -716,12 +716,15 @@
                         </variation>
                         <connections>
                             <action selector="clickOnBackground:" destination="5H3-lK-ob0" eventType="touchDown" id="WLZ-dR-YnJ"/>
-                            <outletCollection property="gestureRecognizers" destination="8E0-6z-ivY" appends="YES" id="zqo-U3-SiS"/>
                         </connections>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Cadastro da Instituição" id="nnP-VU-GxJ">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="giJ-D2-Yhc"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="giJ-D2-Yhc">
+                            <connections>
+                                <action selector="emailButtonPushed:" destination="5H3-lK-ob0" id="xsP-cb-mrd"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
