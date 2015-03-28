@@ -7,6 +7,7 @@
 //
 
 #import "AnimalsShowViewController.h"
+#import "AnimalDetailsViewController.h"
 #import "CardView.h"
 
 @interface AnimalsShowViewController () <UITextFieldDelegate>
@@ -58,7 +59,8 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"ShowAnimalSegue"]) {
-        
+        AnimalDetailsViewController *dvc = (AnimalDetailsViewController *)segue.destinationViewController;
+        dvc.animal = (Animal *)sender;
     }
 
 }

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Animal.h"
 @interface AnimalDetailsViewController : UIViewController
+@property Animal *animal;
 
 @end
