@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Evento.h"
 
 @interface eventTableViewCell : UITableViewCell
+
+@property Evento *event;
 
 @property (weak, nonatomic) IBOutlet UILabel *labelEventDay;
 @property (weak, nonatomic) IBOutlet UILabel *labelEventName;

@@ -1224,12 +1224,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOU-2s-emD">
-                                <rect key="frame" x="16" y="170" width="231" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="horario" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNB-mV-coU">
                                 <rect key="frame" x="16" y="193" width="231" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1242,9 +1236,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOU-2s-emD">
+                                <rect key="frame" x="16" y="170" width="231" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="detailAddress" destination="z3E-co-Wvx" id="PyM-aa-aUR"/>
+                        <outlet property="detailDate" destination="qOU-2s-emD" id="sbu-id-dWa"/>
+                        <outlet property="detailDescription" destination="0fQ-mZ-Avo" id="Klp-LK-Oob"/>
+                        <outlet property="detailHour" destination="VNB-mV-coU" id="VeP-wU-OzP"/>
+                        <outlet property="detailNameEvent" destination="E2X-Gi-FCy" id="Xam-Su-oXe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6L6-tS-9aI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

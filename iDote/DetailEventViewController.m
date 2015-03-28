@@ -16,12 +16,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
+    
+    _detailNameEvent.text = _event.nomeEvento;
+    _detailAddress.text = _event.endereco;
+    _detailDate.text = _event.date;
+    _detailHour.text = _event.horario;
+    _detailDescription.text = _event.descricao;
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
