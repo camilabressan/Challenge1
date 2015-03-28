@@ -23,6 +23,7 @@
 		A06184C61AB8A3E900363539 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184C51AB8A3E900363539 /* FacebookSDK.framework */; };
 		A06184C81AB8A40400363539 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184C71AB8A40400363539 /* FBAudienceNetwork.framework */; };
 		A06B93C41ABCA0BE00B3F59E /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = A06B93C31ABCA0BE00B3F59E /* Animal.m */; };
+		A0E5B2F81AC63BC900A9E99C /* DetailEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E5B2F71AC63BC900A9E99C /* DetailEventViewController.m */; };
 		AB1781361AC090EE007621F0 /* RegisterAnimalPhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB1781351AC090EE007621F0 /* RegisterAnimalPhotoController.m */; };
 		AB17813F1AC0A32B007621F0 /* FXForms.m in Sources */ = {isa = PBXBuildFile; fileRef = AB17813E1AC0A32B007621F0 /* FXForms.m */; };
 		AB4F88301AB89D59006DA324 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4F882F1AB89D59006DA324 /* AudioToolbox.framework */; };
@@ -92,6 +93,8 @@
 		A06184C71AB8A40400363539 /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
 		A06B93C21ABCA0BE00B3F59E /* Animal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Animal.h; path = iDote/Animal.h; sourceTree = "<group>"; };
 		A06B93C31ABCA0BE00B3F59E /* Animal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Animal.m; path = iDote/Animal.m; sourceTree = "<group>"; };
+		A0E5B2F61AC63BC900A9E99C /* DetailEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailEventViewController.h; sourceTree = "<group>"; };
+		A0E5B2F71AC63BC900A9E99C /* DetailEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailEventViewController.m; sourceTree = "<group>"; };
 		AB1781341AC090EE007621F0 /* RegisterAnimalPhotoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterAnimalPhotoController.h; sourceTree = "<group>"; };
 		AB1781351AC090EE007621F0 /* RegisterAnimalPhotoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterAnimalPhotoController.m; sourceTree = "<group>"; };
 		AB17813D1AC0A32B007621F0 /* FXForms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXForms.h; sourceTree = "<group>"; };
@@ -339,6 +342,8 @@
 				B98486B31AC5EDE3008F0BD1 /* AnimalDetailsViewController.m */,
 				AB50C4691AC5E32A00DC6EC6 /* eventTableViewCell.h */,
 				AB50C46A1AC5E32A00DC6EC6 /* eventTableViewCell.m */,
+				A0E5B2F61AC63BC900A9E99C /* DetailEventViewController.h */,
+				A0E5B2F71AC63BC900A9E99C /* DetailEventViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -489,6 +494,7 @@
 				B96024941AB89729008C211C /* main.m in Sources */,
 				B937CC191AC339A500B8C1E1 /* CardView.m in Sources */,
 				90727EE21AC2F6B800D48518 /* Evento.m in Sources */,
+				A0E5B2F81AC63BC900A9E99C /* DetailEventViewController.m in Sources */,
 				B98486B41AC5EDE3008F0BD1 /* AnimalDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

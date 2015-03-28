@@ -939,7 +939,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCell" rowHeight="51" id="g3u-HQ-Ri0" customClass="eventTableViewCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="eventCell" rowHeight="51" id="g3u-HQ-Ri0" customClass="eventTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g3u-HQ-Ri0" id="Oha-lo-fyH">
@@ -969,6 +969,7 @@
                                             <outlet property="labelEventDay" destination="6sZ-dr-JN5" id="9NT-dW-BR8"/>
                                             <outlet property="labelEventName" destination="Nhr-e8-DYV" id="pbH-ym-Mco"/>
                                             <outlet property="labelEventWeekDay" destination="5dW-WN-UMf" id="bFl-A1-7Fa"/>
+                                            <segue destination="mwh-Dc-rnj" kind="show" identifier="segueDetailEvent" id="4ZZ-qi-Njx"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -983,7 +984,7 @@
                     <navigationItem key="navigationItem" title="Eventos" id="QZn-L7-vIV">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="NcE-Z3-96k">
                             <connections>
-                                <segue destination="Q08-sF-rpb" kind="show" id="syy-QY-2M9"/>
+                                <segue destination="Q08-sF-rpb" kind="show" identifier="" id="syy-QY-2M9"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -994,7 +995,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jFp-pr-uO7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-834" y="2347.5"/>
+            <point key="canvasLocation" x="-1498" y="2385"/>
         </scene>
         <!--Novo Evento-->
         <scene sceneID="xK2-Sf-Tgx">
@@ -1075,7 +1076,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wfg-va-XQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="aiF-kU-ACf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-829" y="3180"/>
+            <point key="canvasLocation" x="-829" y="3166"/>
         </scene>
         <!--Pessoal-->
         <scene sceneID="i4c-v9-dSA">
@@ -1198,6 +1199,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CbI-rq-32m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-829" y="1617"/>
+        </scene>
+        <!--Detail Event View Controller-->
+        <scene sceneID="Dvp-2A-cJy">
+            <objects>
+                <viewController id="mwh-Dc-rnj" customClass="DetailEventViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z2f-3U-XzT"/>
+                        <viewControllerLayoutGuide type="bottom" id="gtP-Ug-ewL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n27-pk-nB4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6L6-tS-9aI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-668" y="2385"/>
         </scene>
         <!--Instituições-->
         <scene sceneID="XZj-zO-LIs">

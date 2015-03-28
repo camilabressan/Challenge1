@@ -20,7 +20,6 @@
 @property NSString *descricao;
 
 + (NSMutableArray *) loadEvents;
-
 - (void) save;
 
 @end
