@@ -92,7 +92,7 @@
 - (IBAction)emailButtonPushed:(id)sender {
     
     [self cadastrarInst];
-    institution.save;
+    [institution save];
     
     
     if ([self emptyTextFieldExistent] == NO  &&
