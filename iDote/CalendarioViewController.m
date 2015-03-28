@@ -16,8 +16,9 @@
     
     NSMutableArray *monthArray;
 }
-@property (weak, nonatomic) IBOutlet UITableView *tableViewEvents;
+//@property (weak, nonatomic) IBOutlet UITableView *tableViewEvents;
 
+@property NSMutableArray *list;
 
 @end
 
@@ -29,6 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //_list = [Evento loadEvents];
 
     
     self.navigationItem.backBarButtonItem.tintColor = [UIColor whiteColor];
@@ -79,6 +81,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [monthArray[section] count];
+    //return _list.count;
 }
 
 
@@ -124,15 +127,12 @@
 
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(eventTableViewCell *)sender{
+    if ([segue.identifier isEqualToString:@"segueDetailEvent"]) {
+        DetailEventViewController *detail = (DetailEventViewController *)segue.destinationViewController;
+        
+        detail.event = sender.event;
+    }
 }
-*/
-
 
 @end

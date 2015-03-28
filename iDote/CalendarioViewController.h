@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CalendarioViewController.h"
+#import "DetailEventViewController.h"
 #import "Evento.h"
 #import "eventTableViewCell.h"
 

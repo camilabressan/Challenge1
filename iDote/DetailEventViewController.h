@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Evento.h"
 
 @interface DetailEventViewController : UIViewController
+
+@property Evento *event;
+
+@property (weak, nonatomic) IBOutlet UILabel *detailNameEvent;
+@property (weak, nonatomic) IBOutlet UILabel *detailAddress;
+@property (weak, nonatomic) IBOutlet UILabel *detailDate;
+@property (weak, nonatomic) IBOutlet UILabel *detailHour;
+@property (weak, nonatomic) IBOutlet UITextView *detailDescription;
 
 @end
