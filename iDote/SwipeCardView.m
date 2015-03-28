@@ -12,6 +12,9 @@
 @property UIImageView *imageView;
 @property UIView *labelView;
 @property UILabel *labelName;
+@property UIView *informationView;
+@property UILabel *informationLabel;
+
 
 
 @property UITapGestureRecognizer *tapRecognizer;
@@ -80,12 +83,23 @@
     
     [_labelView addSubview:_labelName];
     
+    _informationView =[[UIView alloc] init];
+    _informationView.backgroundColor = [UIColor whiteColor];
+    
+    [self addSubview:_informationView];
+    
+    _informationLabel = [[UILabel alloc] init];
+    _informationLabel.text = @"Informações";
+    _informationLabel.textColor = [UIColor darkTextColor];
+    _informationLabel.font = [UIFont systemFontOfSize:14];
+    
+    [_informationView addSubview:_informationLabel];
+    
+    [_informationView.layer setBorderColor:[UIColor lightGrayColor].CGColor];
+    [_informationView.layer setBorderWidth:0.5f];
     [self.layer setBorderColor:[UIColor lightGrayColor].CGColor];
     [self.layer setBorderWidth:0.5f];
-    self.layer.cornerRadius = 0.5;
-    self.layer.shadowOffset = CGSizeMake(7, 7);
-    self.layer.shadowRadius = 5;
-    self.layer.shadowOpacity = 0.5;
+    self.layer.cornerRadius = 5;
 }
 
 - (void) moveLeft {
@@ -156,10 +170,16 @@
     _imageView.contentMode = UIViewContentModeScaleAspectFill;
     
     _labelView.clipsToBounds = YES;
-    _labelView.frame = CGRectMake(0, self.frame.size.width, self.frame.size.width, self.frame.size.height*0.20);
+    _labelView.frame = CGRectMake(0, self.frame.size.width, self.frame.size.width, self.frame.size.height*0.085);
+    
+    
+    _informationView.clipsToBounds = true;
+    _informationView.frame = CGRectMake(0,
+                                        _labelView.frame.origin.y + _labelView.frame.size.height,
+                                        self.frame.size.width,
+                                        self.frame.size.height*0.085);
     
     NSDictionary *fontAtrtibutes = @{NSFontAttributeName: [UIFont systemFontOfSize:14]};
-
     CGRect rect = [_labelName.text
                    boundingRectWithSize:CGSizeMake(_labelView.superview.frame.size.width*0.8, CGFLOAT_MAX)
                    options:NSStringDrawingUsesLineFragmentOrigin
@@ -171,8 +191,23 @@
                                   rect.size.width,
                                   rect.size.height);
     
+    
+    
     _labelName.center = CGPointMake(_labelName.superview.center.x, _labelName.center.y);
-   // _labelName.center = _label
+    
+    
+    rect = [_informationLabel.text
+            boundingRectWithSize:CGSizeMake(_informationView.superview.frame.size.width*0.8, CGFLOAT_MAX)
+            options:NSStringDrawingUsesLineFragmentOrigin
+            attributes:fontAtrtibutes
+            context:nil];
+    
+    _informationLabel.frame = CGRectMake(_informationLabel.superview.frame.size.width * 0.05,
+                                         _informationLabel.superview.frame.size.height *0.1,
+                                         rect.size.width,
+                                         rect.size.height);
+    
+    _informationLabel.center = CGPointMake(_informationLabel.superview.center.x, _informationLabel.center.y);
     
 }
 - (void)dealloc {

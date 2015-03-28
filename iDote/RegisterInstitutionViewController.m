@@ -7,13 +7,17 @@
 //
 
 #import "RegisterInstitutionViewController.h"
+#import "UIImage+Resize.h"
+
+
 @interface RegisterInstitutionViewController() <MFMailComposeViewControllerDelegate>
 
 @end
 
-@implementation RegisterInstitutionViewController
+@implementation RegisterInstitutionViewController {
+    Institution *institution;
+}
 
-Institution *institution;
 
 
 - (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker{
@@ -21,10 +25,10 @@ Institution *institution;
 }
 
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
-    UIImage *image = [info valueForKey:UIImagePickerControllerOriginalImage];
+    UIImage *image = [UIImage cropImageWithInfo:info];//[info valueForKey:UIImagePickerControllerOriginalImage];
    
     [_addInstPic setBackgroundImage:image forState:UIControlStateNormal];
-    [_addInstPic setTitle:@"" forState:nil];
+    [_addInstPic setTitle:@"" forState:UIControlStateNormal];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -33,6 +37,7 @@ Institution *institution;
     UIImagePickerController *imagePickerControllerMain = [[UIImagePickerController alloc] init];
     imagePickerControllerMain.modalPresentationStyle = UIModalPresentationFullScreen;
     imagePickerControllerMain.delegate = self;
+    imagePickerControllerMain.allowsEditing = YES;
     
     [self presentViewController:imagePickerControllerMain animated:NO completion:nil];
 }

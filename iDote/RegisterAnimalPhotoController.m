@@ -103,14 +103,19 @@
     _animal = formQueVoltou.formController.form;
     
     if ([self emptyTextFieldExistent] == NO){
-        [_navController dismissViewControllerAnimated:YES completion:^{
-            _animal.mainImage = [_mainImage backgroundImageForState:UIControlStateNormal];
-            [_animal save];
+        [_navController dismissViewControllerAnimated:NO completion:^{
+            [self performSegueWithIdentifier:@"segueReturnFromRegisterAnimal" sender:sender];
         }];
-        [self performSegueWithIdentifier:@"segueReturnFromRegisterAnimal" sender:sender];
     }
-    
-    
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"segueReturnFromRegisterAnimal"] && _animal != nil) {
+        _animal.mainImage = [_mainImage backgroundImageForState:UIControlStateNormal];
+        [_animal save];
+    }
+
+
 }
 
 @end
