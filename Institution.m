@@ -29,7 +29,7 @@
         inst.institutionAddress = [obj valueForKey:@"endereco"];
         inst.institutionDescription = [obj valueForKey:@"descricao"];
         inst.ativo = [(NSNumber *)[obj valueForKey:@"ativo"] boolValue];
-        
+
         [list addObject:inst];
     }
     
@@ -56,7 +56,7 @@
                 [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                     if (!error) {
                         _object = object;
-                        PFRelation *relation = [object relationForKey:@"nome"]; // VERIFICAR SE É O NOME MESMO
+                        PFRelation *relation = [object relationForKey:@"responsavel"];
                         [relation addObject:[PFUser currentUser]];
                         [object saveInBackground];
                     }

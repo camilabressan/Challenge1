@@ -7,6 +7,7 @@
 //
 
 #import "ShowInstitutionViewController.h"
+#import <Parse/Parse.h>
 
 @interface ShowInstitutionViewController ()
 
@@ -33,6 +34,26 @@
     cell.nameInstitution.text = [(Institution *)_list[indexPath.row] institutionName];
     cell.phoneInstitution.text = [(Institution *)_list[indexPath.row] institutionPhone];
     
+    
+    if ([(Institution *)_list[indexPath.row] mainImage] != nil) {
+        cell.imageInstitution.image = [(Institution *)_list[indexPath.row] mainImage];
+    } else {
+        PFFile *photo = [[(Institution *)_list[indexPath.row] object] valueForKey:@"foto"];
+        if (photo != nil) {
+            cell.imageInstitution.image = [UIImage imageNamed:@"300"];
+            NSURL *imageURL = [[NSURL alloc] initWithString:[photo url]];
+            dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
+            dispatch_async(queue, ^{
+                NSData *data = [NSData dataWithContentsOfURL:imageURL];
+                UIImage *image = [UIImage imageWithData:data];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [(Institution *)_list[indexPath.row] setMainImage:image];
+                    cell.imageInstitution.image = image;
+                });
+            });
+        }
+    }
+
     cell.institution = _list[indexPath.row];
     
     return cell;
