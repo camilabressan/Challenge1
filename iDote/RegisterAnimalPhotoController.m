@@ -29,16 +29,16 @@
 }
 
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
-    UIImage *image = info[@"UIImagePickerControllerOriginalImage"]; //[UIImage cropImageWithInfo:info];
+    UIImage *image = [UIImage cropImageWithInfo:info];
     [_imageHolder setBackgroundImage:image forState:UIControlStateNormal];
-    [_imageHolder setTitle:@"" forState:nil];
+    [_imageHolder setTitle:@"" forState:UIControlStateNormal];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)setFirstImage:(UIButton *)sender {
     _imageHolder = sender;
     UIImagePickerController *imagePickerControllerMain = [[UIImagePickerController alloc] init];
-    //imagePickerControllerMain.allowsEditing = YES;
+    imagePickerControllerMain.allowsEditing = YES;
     [imagePickerControllerMain.editButtonItem setTitle:@"Teste"];
     
     imagePickerControllerMain.modalPresentationStyle = UIModalPresentationFullScreen;
@@ -48,7 +48,7 @@
 
 - (BOOL) mainPhotoDoesExist
 {
-     if ([_mainImage backgroundImageForState:UIControlStateNormal] == nil)
+    if ([_mainImage backgroundImageForState:UIControlStateNormal] == nil)
          return NO;
     else
         return YES;
