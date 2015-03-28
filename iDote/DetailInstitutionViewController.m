@@ -23,6 +23,7 @@
     _responsibleDetail.text = _inst.institutionResponsible;
     _addressDetail.text = _inst.institutionAddress;
     _descriptionDetail.text = _inst.institutionDescription;
+    _descriptionDetail.editable = NO;
     
     
 }

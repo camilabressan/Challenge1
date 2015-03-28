@@ -22,6 +22,7 @@
     _detailDate.text = _ev.date;
     _detailHour.text = _ev.horario;
     _detailDescription.text = _ev.descricao;
+    _detailDescription.editable = NO;
 
 }
 
