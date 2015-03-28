@@ -11,7 +11,7 @@
 
 @interface DetailEventViewController : UIViewController
 
-@property Evento *event;
+@property Evento *ev;
 
 @property (weak, nonatomic) IBOutlet UILabel *detailNameEvent;
 @property (weak, nonatomic) IBOutlet UILabel *detailAddress;

@@ -17,11 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _detailNameEvent.text = _event.nomeEvento;
-    _detailAddress.text = _event.endereco;
-    _detailDate.text = _event.date;
-    _detailHour.text = _event.horario;
-    _detailDescription.text = _event.descricao;
+    _detailNameEvent.text = _ev.nomeEvento;
+    _detailAddress.text = _ev.endereco;
+    _detailDate.text = _ev.date;
+    _detailHour.text = _ev.horario;
+    _detailDescription.text = _ev.descricao;
 
 }
 

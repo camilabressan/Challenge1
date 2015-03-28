@@ -16,7 +16,7 @@
     
     NSMutableArray *monthArray;
 }
-//@property (weak, nonatomic) IBOutlet UITableView *tableViewEvents;
+@property (weak, nonatomic) IBOutlet UITableView *tableViewEvents;
 
 @property NSMutableArray *list;
 
@@ -30,7 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //_list = [Evento loadEvents];
+    _list = [Evento loadEvents];
 
     
     self.navigationItem.backBarButtonItem.tintColor = [UIColor whiteColor];
@@ -87,14 +87,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
-    static NSString *simpleTableIdentifier = @"eventCell";
     
-    eventTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    eventTableViewCell *cell = (eventTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"Cell"];
     
-    if (cell == nil) {
-        cell = [[eventTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
-    }
+    //if (cell == nil) {
+    //    cell = [[eventTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    //}
     
     Evento *e = [monthArray[indexPath.section] objectAtIndex:indexPath.row];
     //cell.textLabel.text = e.nomeEvento;
@@ -113,6 +111,9 @@
     cell.labelEventWeekDay.text = eventWeekDay;
     
     //[tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
+    
+    cell.event = _list[indexPath.row];
+    
     return cell;
 }
 
@@ -130,8 +131,8 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(eventTableViewCell *)sender{
     if ([segue.identifier isEqualToString:@"segueDetailEvent"]) {
         DetailEventViewController *detail = (DetailEventViewController *)segue.destinationViewController;
-        
-        detail.event = sender.event;
+
+        detail.ev = sender.event;
     }
 }
 

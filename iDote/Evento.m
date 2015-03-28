@@ -39,10 +39,11 @@
         event.object = obj;
         
         event.nomeEvento = [obj valueForKey:@"nome"];
+        event.endereco = [obj valueForKey:@"endereco"];
         event.date = [obj valueForKey: @"date"];
         event.horario = [obj valueForKey:@"horario"];
         event.descricao = [obj valueForKey:@"descricao"];
-        event.endereco = [obj valueForKey:@"endereco"];
+        
         
         [list addObject:event];
     }
