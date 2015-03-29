@@ -32,9 +32,21 @@
     [_swipeRightRecognizer setDirection:UISwipeGestureRecognizerDirectionRight];
     [self.view addGestureRecognizer:_swipeRightRecognizer];
     
+    _cardView = [[CardView alloc] init];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(tapCenter:)
                                                  name:@"TapCenter"
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(swipeLeftHandler:)
+                                                 name:@"TapLeft"
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(swipeRightHandler:)
+                                                 name:@"TapRight"
                                                object:nil];
 }
 
@@ -49,11 +61,9 @@
 
 
 - (void) swipeLeftHandler:(UISwipeGestureRecognizer *)gesture {
-    NSLog(@"Swipe Left");
     [_cardView swipeLeft];
 }
 - (void) swipeRightHandler:(UISwipeGestureRecognizer *)gesture {
-    NSLog(@"Swipe Right");
     [_cardView swipeRight];
 }
 
@@ -67,7 +77,6 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    _cardView = [[CardView alloc] init];
     _cardView.frame = self.view.frame;
     [self.view addSubview:_cardView];
     

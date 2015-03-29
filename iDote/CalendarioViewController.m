@@ -48,6 +48,12 @@
                          @"Novembro",
                          @"Dezembro"];
     
+
+    [self loadEvents];
+}
+
+
+- (void) loadEvents {
     monthArray = [[NSMutableArray alloc] init];
     for (int i = 0; i< tabelacalendario.count; i++) {
         [monthArray addObject:[[NSMutableArray alloc] init]];
@@ -60,12 +66,11 @@
     for (Evento *event in allEvents) {
         NSDateComponents* components = [calendar components:NSCalendarUnitMonth fromDate:event.date]; // Get necessary date components
         
-
+        
         [monthArray[[components month]-1] addObject:event];
     }
-    
-}
 
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -125,7 +130,8 @@
 }
 
 -(IBAction)backFromRegisterEventScreen:(UIStoryboardSegue *)sender {
-
+    [self loadEvents];
+    [_TabelaCalendario reloadData];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(eventTableViewCell *)sender{
