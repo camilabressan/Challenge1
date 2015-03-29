@@ -19,6 +19,6 @@
 
 + (User *) loadCurrentUser;
 
-- (NSMutableArray *) login;
+- (void) login;
 - (void) cadastrar;
 @end
