@@ -16,7 +16,7 @@
     object[@"endereco"] = _endereco;
     object[@"descricao"] = _descricao;
     object[@"date"] = _date;
-    object[@"horario"] = _horario;
+
     [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
             _object = object;
@@ -41,7 +41,6 @@
         event.nomeEvento = [obj valueForKey:@"nome"];
         event.endereco = [obj valueForKey:@"endereco"];
         event.date = [obj valueForKey: @"date"];
-        event.horario = [obj valueForKey:@"horario"];
         event.descricao = [obj valueForKey:@"descricao"];
         
         
