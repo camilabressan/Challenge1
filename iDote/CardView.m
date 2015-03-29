@@ -88,7 +88,7 @@
                 [card moveLeft];
             }
             
-            if (i >= 1) {
+            if (i > 0) {
                 _swipeCardsArray[i-1] = card;
                 if (i == _swipeCardsArray.count - 1 && _currentIndex < [_data count] -2) {
                     SwipeCardView *newCard = [[SwipeCardView alloc] initWithData:_data[_currentIndex+2]];
@@ -111,7 +111,7 @@
                 [card moveRight];
             }
             
-            if (i <= _swipeCardsArray.count - 2) {
+            if (i < _swipeCardsArray.count - 1) {
                 _swipeCardsArray[i+1] = card;
                 if (i == 0 && _currentIndex > 1) {
                     SwipeCardView *newCard = [[SwipeCardView alloc] initWithData:_data[_currentIndex-2]];
