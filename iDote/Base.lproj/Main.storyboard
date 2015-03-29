@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -1367,7 +1367,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUk-yO-Zop">
-                                <rect key="frame" x="299" y="451.5" width="243" height="20.5"/>
+                                <rect key="frame" x="299" y="451" width="243" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="243" id="VYG-yD-TIb"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="21" id="feO-zb-bX5"/>
@@ -1381,16 +1381,6 @@
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="243" id="XQF-uO-pMt"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="21" id="e0J-Af-aRT"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sexo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbE-bx-72I">
-                                <rect key="frame" x="299" y="136.5" width="243" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="243" id="fjh-xh-7MW"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="21" id="hdR-i0-xFF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1437,15 +1427,26 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sexo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbE-bx-72I">
+                                <rect key="frame" x="299" y="136.5" width="243" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="243" id="fjh-xh-7MW"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="21" id="hdR-i0-xFF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="k5o-eq-zL7" firstAttribute="leading" secondItem="mIw-Zj-UBP" secondAttribute="leadingMargin" constant="50" id="0SR-7f-hhz"/>
+                            <constraint firstItem="k5o-eq-zL7" firstAttribute="leading" relation="lessThanOrEqual" secondItem="mIw-Zj-UBP" secondAttribute="leadingMargin" constant="50" id="0SR-7f-hhz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rbE-bx-72I" secondAttribute="trailing" constant="42" id="0Wz-Mb-JW5"/>
                             <constraint firstItem="sbP-1Y-Tfq" firstAttribute="leading" secondItem="i6M-KX-iiv" secondAttribute="trailing" constant="70" id="0mq-yL-2y6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Wj8-B3-Nvx" secondAttribute="trailing" constant="37" id="1Bw-mo-tvr"/>
                             <constraint firstItem="k5o-eq-zL7" firstAttribute="top" secondItem="hR7-jH-EWc" secondAttribute="bottom" constant="13" id="2Qq-bv-1NG"/>
                             <constraint firstItem="5IQ-Wr-Tnh" firstAttribute="top" secondItem="rbE-bx-72I" secondAttribute="bottom" constant="20" id="3hE-RW-otb"/>
+                            <constraint firstAttribute="width" secondItem="k5o-eq-zL7" secondAttribute="height" multiplier="15:2" id="5XZ-cN-thy"/>
                             <constraint firstItem="tZB-iw-nZi" firstAttribute="top" secondItem="i6M-KX-iiv" secondAttribute="bottom" constant="14" id="6A1-tR-9aW"/>
                             <constraint firstItem="Wj8-B3-Nvx" firstAttribute="top" secondItem="DGW-ud-Cz3" secondAttribute="bottom" constant="28" id="6Sl-Hy-raV"/>
                             <constraint firstItem="i6M-KX-iiv" firstAttribute="top" secondItem="k5o-eq-zL7" secondAttribute="bottom" constant="25" id="6gR-NA-kFG"/>
@@ -1457,10 +1458,10 @@
                             <constraint firstItem="k5o-eq-zL7" firstAttribute="top" secondItem="SKc-Ce-tPH" secondAttribute="bottom" constant="27" id="J1Q-L6-AGZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DGW-ud-Cz3" secondAttribute="trailing" constant="37" id="PGb-fa-rU8"/>
                             <constraint firstAttribute="centerY" secondItem="DGW-ud-Cz3" secondAttribute="centerY" constant="-67.5" id="QGq-JV-HFa"/>
-                            <constraint firstItem="hR7-jH-EWc" firstAttribute="leading" secondItem="mIw-Zj-UBP" secondAttribute="leadingMargin" constant="50" id="S4X-iX-Jf5"/>
+                            <constraint firstItem="hR7-jH-EWc" firstAttribute="leading" relation="lessThanOrEqual" secondItem="mIw-Zj-UBP" secondAttribute="leadingMargin" constant="50" id="S4X-iX-Jf5"/>
                             <constraint firstItem="rbE-bx-72I" firstAttribute="leading" secondItem="hR7-jH-EWc" secondAttribute="trailing" constant="70" id="SSm-AL-RlT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KFH-1X-0mv" secondAttribute="trailing" constant="42" id="Tmz-tZ-ICq"/>
-                            <constraint firstItem="i6M-KX-iiv" firstAttribute="leading" secondItem="mIw-Zj-UBP" secondAttribute="leadingMargin" constant="50" id="V3z-8I-iOT"/>
+                            <constraint firstItem="i6M-KX-iiv" firstAttribute="leading" relation="lessThanOrEqual" secondItem="mIw-Zj-UBP" secondAttribute="leadingMargin" constant="50" id="V3z-8I-iOT"/>
                             <constraint firstItem="DGW-ud-Cz3" firstAttribute="top" secondItem="k5o-eq-zL7" secondAttribute="bottom" constant="8" id="aDl-iM-yrA"/>
                             <constraint firstItem="RUk-yO-Zop" firstAttribute="leading" secondItem="i6M-KX-iiv" secondAttribute="trailing" constant="70" id="cPh-Og-KBO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="k5o-eq-zL7" secondAttribute="trailing" constant="9" id="dVO-GX-8P8"/>
@@ -1479,15 +1480,14 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="5XZ-cN-thy"/>
                                 <exclude reference="PGb-fa-rU8"/>
                                 <exclude reference="QGq-JV-HFa"/>
                                 <exclude reference="qzB-k2-fcT"/>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="xx8-Od-Ziy">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="tWj-Wx-y0j"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="xx8-Od-Ziy"/>
                     <connections>
                         <outlet property="ownerEmail" destination="RUk-yO-Zop" id="3r3-qs-c6V"/>
                         <outlet property="ownerImage" destination="i6M-KX-iiv" id="V9V-v6-uSg"/>
