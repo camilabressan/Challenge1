@@ -17,6 +17,8 @@
 @property NSString *password;
 @property NSString *name;
 
++ (User *) loadCurrentUser;
+
 - (NSMutableArray *) login;
 - (void) cadastrar;
 @end

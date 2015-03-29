@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [_user login];
+    _user = [User loadCurrentUser];
     
     [self showData];
 }
