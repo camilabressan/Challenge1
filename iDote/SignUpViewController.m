@@ -132,8 +132,7 @@
         [_txtFieldConfirmPassword becomeFirstResponder];
     else if ([textField isEqual:_txtFieldConfirmPassword])
         [self registerUser];
-    
-    return YES;
+        return YES;
 }
 
 - (IBAction) returnKeyboard:(id)sender

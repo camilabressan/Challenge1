@@ -14,10 +14,10 @@
 
 @end
 
-@implementation RegisterInstitutionViewController {
+@implementation RegisterInstitutionViewController{
     Institution *institution;
+    
 }
-
 
 
 - (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker{
@@ -56,6 +56,7 @@
         return NO;
     }
 }
+
 
 -(BOOL) emptyTextFieldExistent
 {
@@ -117,6 +118,23 @@
 
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    if([textField isEqual: _txtFieldInstitutionName])
+        [_txtFieldInstitutionResponsible becomeFirstResponder];
+    else if([textField isEqual: _txtFieldInstitutionResponsible])
+        [_txtFieldInstitutionPhone becomeFirstResponder];
+    else if([textField isEqual: _txtFieldInstitutionPhone])
+        [_txtFieldInstitutionEmail becomeFirstResponder];
+    else if([textField isEqual: _txtFieldInstitutionEmail])
+        [_txtFieldInstitutionAddress becomeFirstResponder];
+    else if([textField isEqual: _txtFieldInstitutionAddress])
+        [_txtViewInstitutionDescription becomeFirstResponder];
+    else if ([textField isEqual: _txtViewInstitutionDescription])
+        [self cadastrarInst];
+        return YES;
+}
+
 - (IBAction)clickOnBackground:(id)sender {
     [self.view endEditing:YES];
 }
@@ -124,8 +142,8 @@
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
     //handle any error
     [controller dismissViewControllerAnimated:YES completion:nil];
-}
 
+}
 
 
 /*
