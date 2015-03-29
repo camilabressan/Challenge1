@@ -47,9 +47,23 @@
 }
 
 - (void) tapHandler:(UITapGestureRecognizer *)gesture {
+    NSString *notification;
+    switch (_position) {
+        case SwipeCardPositionLeft:
+            notification = @"TapLeft";
+            break;
+        case SwipeCardPositionRight:
+            notification = @"TapRight";
+            break;
+            
+        default:
+            notification = @"TapCenter";
+            break;
+    }
+    
     if (_position == SwipeCardPositionCenter) {
         [[NSNotificationCenter defaultCenter]
-         postNotificationName:@"TapCenter"
+         postNotificationName:notification
          object:_data];
     }
 
@@ -131,7 +145,7 @@
             break;
         }
         case SwipeCardPositionLeft: {
-            //[self removeFromSuperview];
+            [self removeFromSuperview];
             NSLog(@"REmove");
             break;
         }
