@@ -1210,7 +1210,7 @@
         <!--Pessoal-->
         <scene sceneID="i4c-v9-dSA">
             <objects>
-                <viewController title="Pessoal" id="X5C-4G-xhf" sceneMemberID="viewController">
+                <viewController title="Pessoal" id="X5C-4G-xhf" customClass="PessoalViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KmQ-n8-k6y"/>
                         <viewControllerLayoutGuide type="bottom" id="oXl-3s-ccf"/>
@@ -1302,7 +1302,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do Responsável" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bby-9O-9My">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome Completo" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bby-9O-9My">
                                 <rect key="frame" x="184" y="105" width="416" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="BuD-16-zL4"/>
@@ -1341,6 +1341,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Pessoal" id="bps-5j-ztP"/>
+                    <connections>
+                        <outlet property="pessoalEmail" destination="1Ta-rS-WOf" id="V7N-cx-7NZ"/>
+                        <outlet property="pessoalName" destination="bby-9O-9My" id="7z0-1T-1wa"/>
+                        <outlet property="pessoalPhone" destination="Gsc-bH-2No" id="kFE-FD-Cg5"/>
+                        <outlet property="pessoalPhoto" destination="WUi-fp-HDL" id="Np2-5B-h4p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tg7-Fp-brn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

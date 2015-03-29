@@ -14,6 +14,7 @@
 		A0435D061AC48DBA00822BC1 /* DetailInstitutionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0435D051AC48DBA00822BC1 /* DetailInstitutionViewController.m */; };
 		A0435D091AC48DCE00822BC1 /* InstitutionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0435D081AC48DCE00822BC1 /* InstitutionTableViewCell.m */; };
 		A0435D0C1AC48DE000822BC1 /* ShowInstitutionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0435D0B1AC48DE000822BC1 /* ShowInstitutionViewController.m */; };
+		A045A9391AC77E56004B00BF /* PessoalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A045A9381AC77E56004B00BF /* PessoalViewController.m */; };
 		A05773AD1ABB45B70069D5CB /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = A05773AC1ABB45B70069D5CB /* User.m */; };
 		A06184C01AB8A08D00363539 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184BB1AB8A08D00363539 /* Bolts.framework */; };
 		A06184C11AB8A08D00363539 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184BC1AB8A08D00363539 /* Parse.framework */; };
@@ -82,6 +83,8 @@
 		A0435D081AC48DCE00822BC1 /* InstitutionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstitutionTableViewCell.m; sourceTree = "<group>"; };
 		A0435D0A1AC48DE000822BC1 /* ShowInstitutionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowInstitutionViewController.h; sourceTree = "<group>"; };
 		A0435D0B1AC48DE000822BC1 /* ShowInstitutionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowInstitutionViewController.m; sourceTree = "<group>"; };
+		A045A9371AC77E56004B00BF /* PessoalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PessoalViewController.h; sourceTree = "<group>"; };
+		A045A9381AC77E56004B00BF /* PessoalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PessoalViewController.m; sourceTree = "<group>"; };
 		A05773AB1ABB45B70069D5CB /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = iDote/User.h; sourceTree = "<group>"; };
 		A05773AC1ABB45B70069D5CB /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = iDote/User.m; sourceTree = "<group>"; };
 		A06184BB1AB8A08D00363539 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Frameworks/Bolts.framework; sourceTree = "<group>"; };
@@ -316,6 +319,8 @@
 		B96024B71ABB58B7008C211C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A045A9371AC77E56004B00BF /* PessoalViewController.h */,
+				A045A9381AC77E56004B00BF /* PessoalViewController.m */,
 				B96024981AB89729008C211C /* LoginViewController.h */,
 				B96024991AB89729008C211C /* LoginViewController.m */,
 				ABCDBA6D1ABC939C00BF49C1 /* SignUpViewController.h */,
@@ -477,6 +482,7 @@
 				90727EDF1AC1F7D300D48518 /* TabBarViewController.m in Sources */,
 				A0435D061AC48DBA00822BC1 /* DetailInstitutionViewController.m in Sources */,
 				90B232051AC32E23000B58CD /* EventoViewController.m in Sources */,
+				A045A9391AC77E56004B00BF /* PessoalViewController.m in Sources */,
 				AB17813F1AC0A32B007621F0 /* FXForms.m in Sources */,
 				A0435D091AC48DCE00822BC1 /* InstitutionTableViewCell.m in Sources */,
 				ABCDBA6F1ABC939C00BF49C1 /* SignUpViewController.m in Sources */,

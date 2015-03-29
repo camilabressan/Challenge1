@@ -24,9 +24,62 @@
     }];
 }
 
-- (void) login {
+/*
+ +(NSMutableArray *)loadInstitution{
+ 
+ NSMutableArray *list = [[NSMutableArray alloc] init];
+ PFQuery *query = [PFQuery queryWithClassName:@"Institution"];
+ 
+ [query whereKey:@"ativo" equalTo:[NSNumber numberWithBool:true]];
+ 
+ NSMutableArray *queryResult = [NSMutableArray arrayWithArray:[query findObjects]];
+ 
+ for (PFObject *obj in queryResult) {
+ Institution *inst = [[Institution alloc] init];
+ inst.object = obj;
+ inst.institutionName = [obj valueForKey:@"nome"];
+ inst.institutionPhone = [obj valueForKey:@"telefone"];
+ inst.institutionEmail = [obj valueForKey:@"email"];
+ inst.institutionResponsible = [obj valueForKey:@"responsavel"];
+ inst.institutionAddress = [obj valueForKey:@"endereco"];
+ inst.institutionDescription = [obj valueForKey:@"descricao"];
+ inst.ativo = [(NSNumber *)[obj valueForKey:@"ativo"] boolValue];
+ 
+ [list addObject:inst];
+ }
+ 
+ return list;
+ }*/
 
+- (NSMutableArray *) login {
+    NSMutableArray *list = [[NSMutableArray alloc] init];
+    PFQuery *query = [PFQuery queryWithClassName:@"User"];
+    
+    [query whereKey:@"email" equalTo:_email];
+    
+    NSMutableArray *queryResult = [NSMutableArray arrayWithArray:[query findObjects]];
+    
+    for (PFObject *obj in queryResult) {
+        User *usuario = [[User alloc] init];
+        
+        usuario.object = obj;
+        usuario.name = [obj valueForKey:@"Name"];
+        usuario.email = [obj valueForKey:@"email"];
+        
+    }
+
+    
+    return list;
 
 }
+
+
+
+
+
+
+
+
+
 
 @end

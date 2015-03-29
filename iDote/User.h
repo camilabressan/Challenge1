@@ -17,6 +17,6 @@
 @property NSString *password;
 @property NSString *name;
 
-- (void) login;
+- (NSMutableArray *) login;
 - (void) cadastrar;
 @end
