@@ -58,16 +58,22 @@
 
 - (void)loadImageAndStyle
 {
-    NSURL *imageURL = [[NSURL alloc] initWithString:_data.mainImageURL];
-    _imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"300"]];
-    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
-    dispatch_async(queue, ^{
-        NSData *data = [NSData dataWithContentsOfURL:imageURL];
-        UIImage *image = [UIImage imageWithData:data];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            _imageView.image = image;
+    if (_data.mainImage == nil) {
+        NSURL *imageURL = [[NSURL alloc] initWithString:_data.mainImageURL];
+        _imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"300"]];
+        dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
+        dispatch_async(queue, ^{
+            NSData *data = [NSData dataWithContentsOfURL:imageURL];
+            UIImage *image = [UIImage imageWithData:data];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                _imageView.image = image;
+                _data.mainImage = image;
+            });
         });
-    });
+    } else {
+        _imageView = [[UIImageView alloc] initWithImage:_data.mainImage];
+    }
+
     
     [self addSubview:_imageView];
     
@@ -125,7 +131,7 @@
             break;
         }
         case SwipeCardPositionLeft: {
-            [self removeFromSuperview];
+            //[self removeFromSuperview];
             NSLog(@"REmove");
             break;
         }
