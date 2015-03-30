@@ -22,7 +22,7 @@
 @property NSString *phone;
 
 + (User *) loadCurrentUser;
-+ (User *) loadUserFromRelation:(PFRelation *)relation;
++ (User *) loadUserFromObject:(PFObject *)object;
 
 - (void) login;
 - (void) cadastrar;
