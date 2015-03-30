@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "User.h"
+#import "Animal.h"
+#import "PessoalCellTableViewCell.h"
 
-@interface PessoalViewController : UIViewController
+@interface PessoalViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property User *user;
 
@@ -17,6 +19,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *pessoalName;
 @property (weak, nonatomic) IBOutlet UITextField *pessoalEmail;
 @property (weak, nonatomic) IBOutlet UITextField *pessoalPhone;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
+
 
 -(void) showData;
 

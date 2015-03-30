@@ -16,6 +16,7 @@
 		A0435D0C1AC48DE000822BC1 /* ShowInstitutionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0435D0B1AC48DE000822BC1 /* ShowInstitutionViewController.m */; };
 		A045A9391AC77E56004B00BF /* PessoalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A045A9381AC77E56004B00BF /* PessoalViewController.m */; };
 		A05773AD1ABB45B70069D5CB /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = A05773AC1ABB45B70069D5CB /* User.m */; };
+		A05B0B401AC9B13F0021550A /* PessoalCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A05B0B3F1AC9B13F0021550A /* PessoalCellTableViewCell.m */; };
 		A06184C01AB8A08D00363539 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184BB1AB8A08D00363539 /* Bolts.framework */; };
 		A06184C11AB8A08D00363539 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184BC1AB8A08D00363539 /* Parse.framework */; };
 		A06184C21AB8A08D00363539 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184BD1AB8A08D00363539 /* ParseCrashReporting.framework */; };
@@ -87,6 +88,8 @@
 		A045A9381AC77E56004B00BF /* PessoalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PessoalViewController.m; sourceTree = "<group>"; };
 		A05773AB1ABB45B70069D5CB /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = iDote/User.h; sourceTree = "<group>"; };
 		A05773AC1ABB45B70069D5CB /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = iDote/User.m; sourceTree = "<group>"; };
+		A05B0B3E1AC9B13F0021550A /* PessoalCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PessoalCellTableViewCell.h; sourceTree = "<group>"; };
+		A05B0B3F1AC9B13F0021550A /* PessoalCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PessoalCellTableViewCell.m; sourceTree = "<group>"; };
 		A06184BB1AB8A08D00363539 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Frameworks/Bolts.framework; sourceTree = "<group>"; };
 		A06184BC1AB8A08D00363539 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Frameworks/Parse.framework; sourceTree = "<group>"; };
 		A06184BD1AB8A08D00363539 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = Frameworks/ParseCrashReporting.framework; sourceTree = "<group>"; };
@@ -319,8 +322,6 @@
 		B96024B71ABB58B7008C211C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A045A9371AC77E56004B00BF /* PessoalViewController.h */,
-				A045A9381AC77E56004B00BF /* PessoalViewController.m */,
 				B96024981AB89729008C211C /* LoginViewController.h */,
 				B96024991AB89729008C211C /* LoginViewController.m */,
 				ABCDBA6D1ABC939C00BF49C1 /* SignUpViewController.h */,
@@ -349,6 +350,10 @@
 				AB50C46A1AC5E32A00DC6EC6 /* eventTableViewCell.m */,
 				A0E5B2F61AC63BC900A9E99C /* DetailEventViewController.h */,
 				A0E5B2F71AC63BC900A9E99C /* DetailEventViewController.m */,
+				A045A9371AC77E56004B00BF /* PessoalViewController.h */,
+				A045A9381AC77E56004B00BF /* PessoalViewController.m */,
+				A05B0B3E1AC9B13F0021550A /* PessoalCellTableViewCell.h */,
+				A05B0B3F1AC9B13F0021550A /* PessoalCellTableViewCell.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -416,7 +421,7 @@
 				TargetAttributes = {
 					B960248D1AB89728008C211C = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 9468LRW88W;
+						DevelopmentTeam = P2V4W6VMHY;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 0;
@@ -425,7 +430,7 @@
 					};
 					B96024A61AB89729008C211C = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 9468LRW88W;
+						DevelopmentTeam = P2V4W6VMHY;
 						TestTargetID = B960248D1AB89728008C211C;
 					};
 				};
@@ -486,6 +491,7 @@
 				AB17813F1AC0A32B007621F0 /* FXForms.m in Sources */,
 				A0435D091AC48DCE00822BC1 /* InstitutionTableViewCell.m in Sources */,
 				ABCDBA6F1ABC939C00BF49C1 /* SignUpViewController.m in Sources */,
+				A05B0B401AC9B13F0021550A /* PessoalCellTableViewCell.m in Sources */,
 				B937CC141AC32C2800B8C1E1 /* UIImage+Extension.m in Sources */,
 				ABE82B101AC47B9D00F26A09 /* VMaskTextField.m in Sources */,
 				B960249A1AB89729008C211C /* LoginViewController.m in Sources */,
