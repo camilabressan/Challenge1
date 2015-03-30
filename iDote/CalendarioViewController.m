@@ -117,7 +117,7 @@
     
     //[tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
     
-    cell.event = _list[indexPath.row];
+    cell.event = [monthArray[indexPath.section] objectAtIndex:indexPath.row];
     
     return cell;
 }
