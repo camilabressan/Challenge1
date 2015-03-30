@@ -65,5 +65,22 @@
 }
 
 
+- (IBAction)profileDataChanged:(id)sender {
+    _buttonSave.enabled = YES;
+}
+
+- (IBAction)saveClick:(id)sender {
+    
+    _user.name = _pessoalName.text;
+    _user.username = _pessoalEmail.text;
+    _user.email = _pessoalEmail.text;
+    _user.phone = _pessoalPhone.text;
+    [_user updateData];
+    
+    UIAlertView *alertSaveSuccess = [[UIAlertView alloc] initWithTitle:@"Perfil salvo" message:@"As mudanças em seu perfil foram salvas com sucesso." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alertSaveSuccess show];
+    _buttonSave.enabled = NO;
+    
+}
 
 @end

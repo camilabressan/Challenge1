@@ -19,6 +19,7 @@
         user.name = user.object[@"Name"];
         user.email = user.object[@"email"];
         user.username = user.object[@"username"];
+        user.password = user.object[@"password"];
         user.phone = user.object[@"phone"];
         user.mainImageURL = [(PFFile *)user.object[@"mainPhoto"] url];
         
@@ -41,6 +42,14 @@
         return user;
     }
     return nil;
+}
+
+- (void) updateData {
+    _object.username = _email;
+    _object.email = _email;
+    _object[@"Name"] = _name;
+    _object[@"phone"] = _phone;
+    [_object saveInBackground];
 }
 
 - (void) cadastrar {

@@ -26,4 +26,5 @@
 
 - (void) login;
 - (void) cadastrar;
+- (void) updateData;
 @end
