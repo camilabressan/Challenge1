@@ -9,10 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <Parse/Parse.h>
 #import "FXForms.h"
+#import "User.h"
 
 @interface Animal : NSObject <FXForm>
 
 @property PFObject *object;
+@property User* dono;
 
 @property NSString *mainImageURL;
 @property UIImage *mainImage;

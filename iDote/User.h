@@ -18,6 +18,7 @@
 @property NSString *name;
 
 + (User *) loadCurrentUser;
++ (User *) loadUserFromRelation:(PFRelation *)relation;
 
 - (void) login;
 - (void) cadastrar;

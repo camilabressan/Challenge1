@@ -24,6 +24,22 @@
     return nil;
 }
 
++ (User *)loadUserFromRelation:(PFRelation *)relation {
+    if (relation != nil) {
+        User *user = [[User alloc] init];
+        user = [User loadCurrentUser];
+        /*
+        user.object = object;
+        
+        user.name = user.object[@"Name"];
+        user.email = user.object[@"email"];
+        user.username = user.object[@"username"];
+        */
+        return user;
+    }
+    return nil;
+}
+
 - (void) cadastrar {
     _object = [[PFUser alloc] init];
     _object.username = _email;

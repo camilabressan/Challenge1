@@ -45,9 +45,16 @@
     for (PFObject *obj in queryResult) {
         Animal *animal = [[Animal alloc] init];
         animal.object = obj;
+        animal.dono = [User loadUserFromRelation:[obj objectForKey:@"user"]];
         
         animal.nome = [obj objectForKey:@"name"];
         animal.mainImageURL = [(PFFile *)[obj objectForKey:@"mainPhoto"] url];
+        
+        animal.genero = [obj objectForKey:@"gender"];
+        animal.idade =  [(NSNumber *)[obj objectForKey:@"age"] intValue];
+        animal.tipo = [obj objectForKey:@"type"];
+        animal.porte = [obj objectForKey:@"size"];
+        animal.descricao = [obj objectForKey:@"description"];
         
         [list addObject:animal];
     }
@@ -61,6 +68,9 @@
     object[@"name"] = _nome;
     object[@"gender"] = _genero;
     object[@"age"] = [NSNumber numberWithInt:(int)_idade];
+    object[@"type"] = _tipo;
+    object[@"size"] = _porte;
+    object[@"desciption"] = _descricao;
     
     NSData *imageData = UIImageJPEGRepresentation(_mainImage, 0.7f);
     PFFile *imageFile = [PFFile fileWithName:@"Profileimage.png" data:imageData];
