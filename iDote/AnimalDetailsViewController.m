@@ -37,13 +37,26 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 _petImage.image = image;
                 _animal.mainImage = image;
+                
+                _ownerImage.image = image;
             });
         });
     } else {
         _petImage.image = _animal.mainImage;
+        _ownerImage.image = _animal.mainImage;
     }
+    
+    
     _petName.text = _animal.nome;
     _petGender.text = _animal.genero;
+    _petSize.text = _animal.porte;
+    _petDescription.text = _animal.descricao;
+    _petAge.text = @"1 - 3 anos";
+    
+    _ownerName.text = _animal.dono.name;
+    _ownerEmail.text = _animal.dono.email;
+    _ownerPhone.text = @"(51) 9999-9999";
+    
     // Do any additional setup after loading the view.
 }
 
