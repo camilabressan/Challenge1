@@ -52,6 +52,15 @@
     [self loadEvents];
 }
 
+- (void) sortEventsByDay {
+    NSSortDescriptor *sortDescriptor;
+    sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date"
+                                                 ascending:YES];
+    NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+    allEvents = [allEvents sortedArrayUsingDescriptors:sortDescriptors];
+    
+    
+}
 
 - (void) loadEvents {
     monthArray = [[NSMutableArray alloc] init];
@@ -60,7 +69,7 @@
     }
     
     allEvents = [Evento loadEvents];
-    
+    [self sortEventsByDay];
     
     NSCalendar* calendar = [NSCalendar currentCalendar];
     for (Evento *event in allEvents) {
