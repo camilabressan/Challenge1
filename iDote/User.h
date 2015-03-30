@@ -12,6 +12,9 @@
 @interface User : NSObject
 @property PFUser *object;
 
+@property NSString *mainImageURL;
+
+@property UIImage *mainImage;
 @property NSString *username;
 @property NSString *email;
 @property NSString *password;
