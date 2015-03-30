@@ -713,6 +713,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="5H3-lK-ob0" id="JU2-rA-j9b"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do Responsável" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LA2-rj-t5Q">
                                 <rect key="frame" x="0.0" y="277" width="600" height="30"/>
@@ -722,8 +725,11 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="5H3-lK-ob0" id="8fr-eR-G1I"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefone" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S9y-TN-PgK">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefone" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S9y-TN-PgK" customClass="VMaskTextField">
                                 <rect key="frame" x="0.0" y="315" width="600" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="SNi-QU-dBG"/>
@@ -731,6 +737,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="5H3-lK-ob0" id="VFh-TF-qIm"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aXs-YZ-zvl">
                                 <rect key="frame" x="0.0" y="353" width="600" height="30"/>
@@ -740,6 +749,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="5H3-lK-ob0" id="WSj-qQ-hEY"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Endereço" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gYy-Ad-Xmj">
                                 <rect key="frame" x="0.0" y="391" width="600" height="30"/>
@@ -749,6 +761,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="5H3-lK-ob0" id="8yg-kZ-wst"/>
+                                </connections>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Descrição" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="E7F-NL-Iwn">
                                 <rect key="frame" x="0.0" y="440" width="600" height="111"/>
@@ -759,6 +774,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="go"/>
+                                <connections>
+                                    <outlet property="delegate" destination="5H3-lK-ob0" id="fbx-Nt-WWv"/>
+                                </connections>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPc-vD-mIi">
                                 <rect key="frame" x="229" y="97" width="142" height="105"/>
@@ -825,6 +843,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addInstPic" destination="bPc-vD-mIi" id="R0G-PD-XmE"/>
+                        <outlet property="maskInstitutionPhone" destination="S9y-TN-PgK" id="Ik4-Yc-UEC"/>
                         <outlet property="txtFieldInstitutionAddress" destination="gYy-Ad-Xmj" id="H5y-VE-07a"/>
                         <outlet property="txtFieldInstitutionEmail" destination="aXs-YZ-zvl" id="eNH-L0-7zd"/>
                         <outlet property="txtFieldInstitutionName" destination="97J-VA-otQ" id="kho-2h-4YL"/>
@@ -1258,16 +1277,30 @@
                                     <segment title="Meus Eventos"/>
                                 </segments>
                                 <color key="tintColor" red="0.91764705882352937" green="0.59215686274509804" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="checkSegmented:" destination="X5C-4G-xhf" eventType="valueChanged" id="7hb-sW-ol1"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="lxn-Oy-ymg">
                                 <rect key="frame" x="0.0" y="272" width="600" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="viM-eG-7Z9">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="viM-eG-7Z9" customClass="PessoalCellTableViewCell">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="viM-eG-7Z9" id="oYE-5A-hy8">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NomeDoPet" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jx-fL-RCu">
+                                                    <rect key="frame" x="8" y="11" width="347" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellName" destination="3jx-fL-RCu" id="6Ju-uS-7Mv"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="FW6-nD-TIN">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -1283,6 +1316,10 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="X5C-4G-xhf" id="qmZ-kF-I2l"/>
+                                    <outlet property="delegate" destination="X5C-4G-xhf" id="87B-pB-thn"/>
+                                </connections>
                             </tableView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Ta-rS-WOf">
                                 <rect key="frame" x="184" y="138" width="408" height="30"/>
@@ -1342,6 +1379,8 @@
                         <outlet property="pessoalName" destination="bby-9O-9My" id="7z0-1T-1wa"/>
                         <outlet property="pessoalPhone" destination="Gsc-bH-2No" id="kFE-FD-Cg5"/>
                         <outlet property="pessoalPhoto" destination="WUi-fp-HDL" id="Np2-5B-h4p"/>
+                        <outlet property="segmentedControl" destination="JWY-mB-Uer" id="zYR-ka-823"/>
+                        <outlet property="tableView" destination="lxn-Oy-ymg" id="aDR-AV-rao"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tg7-Fp-brn" userLabel="First Responder" sceneMemberID="firstResponder"/>

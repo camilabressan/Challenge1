@@ -62,6 +62,34 @@
     return list;
 }
 
++ (NSMutableArray *)loadAnimalsFromUser {
+    NSMutableArray *list = [[NSMutableArray alloc] init];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Animal"];
+    [query whereKey:@"user" equalTo:[PFUser currentUser]];
+    
+    NSMutableArray *queryResult = [NSMutableArray arrayWithArray:[query findObjects]];
+    
+    for (PFObject *obj in queryResult) {
+        Animal *animal = [[Animal alloc] init];
+        animal.object = obj;
+        animal.dono = [User loadUserFromRelation:[obj objectForKey:@"user"]];
+        
+        animal.nome = [obj objectForKey:@"name"];
+        animal.mainImageURL = [(PFFile *)[obj objectForKey:@"mainPhoto"] url];
+        
+        animal.genero = [obj objectForKey:@"gender"];
+        animal.idade =  [(NSNumber *)[obj objectForKey:@"age"] intValue];
+        animal.tipo = [obj objectForKey:@"type"];
+        animal.porte = [obj objectForKey:@"size"];
+        animal.descricao = [obj objectForKey:@"description"];
+        
+        [list addObject:animal];
+    }
+    
+    return list;
+}
+
 -(void)save {
     PFObject *object = [PFObject objectWithClassName:@"Animal"];
     

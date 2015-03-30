@@ -8,10 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import <Parse/Parse.h>
+#import "User.h"
 
 @interface Evento : NSObject
 
 @property PFObject *object;
+@property User *dono;
 
 @property NSString *nomeEvento;
 @property NSString *endereco;
@@ -20,6 +22,8 @@
 @property NSString *descricao;
 
 + (NSMutableArray *) loadEvents;
++ (NSMutableArray *) loadEventsFromUser;
+
 - (void) save;
 
 @end

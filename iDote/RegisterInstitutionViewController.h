@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Institution.h"
+#import "VMaskTextField.h"
 
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
@@ -22,8 +23,6 @@
 @property (nonatomic, weak) NSString *email;
 
 @property (weak, nonatomic) IBOutlet UIButton *addInstPic;
-
-
-
+@property (weak, nonatomic) IBOutlet VMaskTextField *maskInstitutionPhone;
 
 @end
