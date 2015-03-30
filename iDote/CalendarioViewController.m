@@ -37,7 +37,7 @@
     
     tabelacalendario = @[@"Janeiro", //implementando array
                          @"Fevereiro",
-                         @"Marco",
+                         @"Março",
                          @"Abril",
                          @"Maio",
                          @"Junho",
