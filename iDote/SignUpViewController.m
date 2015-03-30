@@ -7,6 +7,7 @@
 //
 
 #import "SignUpViewController.h"
+#import "UIImage+Resize.h"
 
 @interface SignUpViewController() <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldName;
@@ -91,27 +92,44 @@
 {
     if ([self validateEmail: _txtFieldEmail.text] == YES &&
         [self emptyTextFieldExistent] == NO &&
-         [self passwordsDoMatch] == YES)
+        [self passwordsDoMatch] == YES &&
+        [self mainPhotoDoesExist])
     {
-        _user = [PFUser user];
-        _user.username = [_txtFieldEmail.text lowercaseString];
-        _user.password = _txtFieldPassword.text;
-        _user.email= [_txtFieldEmail.text lowercaseString];
-        _user[@"Name"] = _txtFieldName.text;
+
         
-        [_user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-            if (error) {
-                UIAlertView *alertSignUpError = [[UIAlertView alloc] initWithTitle:@"Sign up error" message:@"An unexpected error ocurred.\nPlease, check your internet connection or try a different username." delegate: self cancelButtonTitle:@"Dismiss"otherButtonTitles: nil];
-                [alertSignUpError show];
-                return;
-            }
-            
-            if (succeeded) {
-                // usuário registrado! falta criar a segue para mudar de tela
-                [self performSegueWithIdentifier:@"registerNewUserSegue" sender:nil];
-                return;
-            }
+        NSData *imageData = UIImageJPEGRepresentation([_mainImage backgroundImageForState:UIControlStateNormal], 0.7f);
+        PFFile *imageFile = [PFFile fileWithName:@"Profileimage.png" data:imageData];
+        [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if (!error) {
+                if (succeeded) {
+                    _user = [PFUser user];
+                    _user.username = [_txtFieldEmail.text lowercaseString];
+                    _user.password = _txtFieldPassword.text;
+                    _user.email= [_txtFieldEmail.text lowercaseString];
+                    _user[@"Name"] = _txtFieldName.text;
+                    _user[@"phone"] = _txtFieldPhoneNumber.text;
+                    _user[@"mainPhoto"] = imageFile;
+                    
+                    [_user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                        if (error) {
+                            UIAlertView *alertSignUpError = [[UIAlertView alloc] initWithTitle:@"Sign up error" message:@"An unexpected error ocurred.\nPlease, check your internet connection or try a different username." delegate: self cancelButtonTitle:@"Dismiss"otherButtonTitles: nil];
+                            [alertSignUpError show];
+                            return;
+                        }
+                        
+                        if (succeeded) {
+                            // usuário registrado! falta criar a segue para mudar de tela
+                            [self performSegueWithIdentifier:@"registerNewUserSegue" sender:nil];
+                            return;
+                        }
+                    }];
+                }
+            } else {
+                // Handle error
+            }        
         }];
+        
+
 
     }
     
@@ -133,6 +151,31 @@
     else if ([textField isEqual:_txtFieldConfirmPassword])
         [self registerUser];
         return YES;
+}
+
+- (BOOL) mainPhotoDoesExist
+{
+    if ([_mainImage backgroundImageForState:UIControlStateNormal] == nil)
+        return NO;
+    else
+        return YES;
+}
+
+- (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    UIImage *image = [UIImage cropImageWithInfo:info];
+    [_mainImage setBackgroundImage:image forState:UIControlStateNormal];
+    [_mainImage setTitle:@"" forState:UIControlStateNormal];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction) setImage:(UIButton *)sender {
+    UIImagePickerController *imagePickerControllerMain = [[UIImagePickerController alloc] init];
+    imagePickerControllerMain.allowsEditing = YES;
+    [imagePickerControllerMain.editButtonItem setTitle:@"Teste"];
+    
+    imagePickerControllerMain.modalPresentationStyle = UIModalPresentationFullScreen;
+    imagePickerControllerMain.delegate = self;
+    [self presentViewController:imagePickerControllerMain animated:NO completion:nil];
 }
 
 - (IBAction) returnKeyboard:(id)sender

@@ -19,6 +19,7 @@
         user.name = user.object[@"Name"];
         user.email = user.object[@"email"];
         user.username = user.object[@"username"];
+        user.phone = user.object[@"phone"];
         return user;
     }
     return nil;
@@ -43,8 +44,11 @@
 - (void) cadastrar {
     _object = [[PFUser alloc] init];
     _object.username = _email;
+    _object.email = _email;
     _object.password = _password;
     _object[@"Name"] = _name;
+    _object[@"phone"] = _phone;
+    
     [_object signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             
