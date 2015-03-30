@@ -75,6 +75,16 @@
     return NO;
 }
 
+- (BOOL) phoneIsValid{
+    if ([_txtFieldPhoneNumber.text length] < 10)
+    {
+        UIAlertView *alertPhoneInvalid = [[UIAlertView alloc] initWithTitle:@"Telefone inválido" message:@"Por favor, um número de telefone válido." delegate: self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alertPhoneInvalid show];
+        return NO;
+    }
+    return YES;
+}
+
 - (BOOL) passwordsDoMatch
 {
     if ([_txtFieldPassword.text isEqual: _txtFieldConfirmPassword.text])
@@ -93,6 +103,7 @@
     if ([self validateEmail: _txtFieldEmail.text] == YES &&
         [self emptyTextFieldExistent] == NO &&
         [self passwordsDoMatch] == YES &&
+        [self phoneIsValid] == YES &&
         [self mainPhotoDoesExist])
     {
 
