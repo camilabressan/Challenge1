@@ -13,19 +13,29 @@
 @interface RegisterInstitutionViewController() <MFMailComposeViewControllerDelegate>
 
 @end
-
-@implementation RegisterInstitutionViewController{
+@implementation RegisterInstitutionViewController
     Institution *institution;
     
+
+- (void)viewDidLoad{
+    //telephone with area code
+    self.maskInstitutionPhone.mask = @"(##) ####-#####";
 }
 
+//method for replacing the telephone field with mask;
+-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    if([textField isEqual: _txtFieldInstitutionPhone]){
+        return [_maskInstitutionPhone shouldChangeCharactersInRange: range replacementString:string];}
+    return YES;
+}
 
+//pick an image for registering
 - (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
-    UIImage *image = [UIImage cropImageWithInfo:info];//[info valueForKey:UIImagePickerControllerOriginalImage];
+    UIImage *image = [UIImage cropImageWithInfo:info];
    
     [_addInstPic setBackgroundImage:image forState:UIControlStateNormal];
     [_addInstPic setTitle:@"" forState:UIControlStateNormal];
@@ -42,7 +52,6 @@
     [self presentViewController:imagePickerControllerMain animated:NO completion:nil];
 }
     
-    
 - (BOOL) validateEmail: (NSString *) candidate {
     NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
@@ -57,14 +66,13 @@
     }
 }
 
-
 -(BOOL) emptyTextFieldExistent
 {
     if ([_txtFieldInstitutionName.text length] == 0 ||
         [_txtFieldInstitutionPhone.text length] == 0 ||
         [_txtFieldInstitutionEmail.text length] == 0 ||
         [_txtFieldInstitutionResponsible.text length] == 0 ||
-        //[_txtFieldInstitutionAddress.text length] == 0 || linha não utilizada pois campo não é obrigatório;
+        //[_txtFieldInstitutionAddress.text length] == 0 || not being used because this field is not mandatory right now
         [_txtViewInstitutionDescription.text length] == 0)
     {
         UIAlertView *alertEmptyFields = [[UIAlertView alloc] initWithTitle:@"Campos incompletos" message:@"Por favor, preencha todos os campos." delegate: self cancelButtonTitle:@"OK"otherButtonTitles: nil];
@@ -78,11 +86,10 @@
 - (void) cadastrarInst {
     
      institution = [[Institution alloc] init];
-
     
     institution.institutionName = _txtFieldInstitutionName.text;
     institution.institutionPhone = _txtFieldInstitutionPhone.text;
-    institution.institutionEmail = _txtFieldInstitutionEmail.text;
+    institution.institutionEmail = [_txtFieldInstitutionEmail.text lowercaseString];
     institution.institutionResponsible = _txtFieldInstitutionResponsible.text;
     institution.institutionAddress = _txtFieldInstitutionAddress.text;
     institution.institutionDescription = _txtViewInstitutionDescription.text;
@@ -94,7 +101,6 @@
     
     [self cadastrarInst];
     [institution save];
-    
     
     if ([self emptyTextFieldExistent] == NO  &&
         [self validateEmail: _txtFieldInstitutionEmail.text] == YES){
@@ -112,10 +118,7 @@
             [mailCont setMessageBody:[NSString stringWithFormat:@"Verifique seu cadastro antes de enviar!\n\n %@ \n\nPor favor, aguarde até 48h úteis para receber um retorno da nossa equipe.\niDote Team agradece o seu interesse!", email]  isHTML:NO];
             [self presentViewController:mailCont animated:YES completion:nil];
         }
-        
-        
     }
-
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
