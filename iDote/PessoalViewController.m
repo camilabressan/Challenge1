@@ -22,7 +22,7 @@
     _user = [User loadCurrentUser];
     _listAnimals = [Animal loadAnimalsFromUser];
     _listEvents = [Evento loadEventsFromUser];
-    
+    _tableView.allowsSelection = NO;
     [self showData];
 }
 

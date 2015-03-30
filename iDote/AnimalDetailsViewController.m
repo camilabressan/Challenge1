@@ -37,25 +37,46 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 _petImage.image = image;
                 _animal.mainImage = image;
-                
-                _ownerImage.image = image;
             });
         });
     } else {
         _petImage.image = _animal.mainImage;
-        _ownerImage.image = _animal.mainImage;
     }
     
+    if (_animal.dono.mainImage == nil) {
+        NSURL *imageURL = [[NSURL alloc] initWithString:_animal.dono.mainImageURL];
+        dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
+        dispatch_async(queue, ^{
+            NSData *data = [NSData dataWithContentsOfURL:imageURL];
+            UIImage *image = [UIImage imageWithData:data];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                _animal.dono.mainImage = image;
+                _ownerImage.image = image;
+            });
+        });
+    } else {
+        _ownerImage.image = _animal.dono.mainImage;
+    }
     
     _petName.text = _animal.nome;
     _petGender.text = _animal.genero;
     _petSize.text = _animal.porte;
     _petDescription.text = _animal.descricao;
-    _petAge.text = @"1 - 3 anos";
+    
+    NSString *ageRange;
+    if ( _animal.idade <= 3) {
+        ageRange = @"0 - 3 anos";
+    } else if (_animal.idade <= 7) {
+        ageRange = @"4 - 7 anos";
+    } else {
+        ageRange = @"8 ou mais anos";
+    }
+    
+    _petAge.text = ageRange;
     
     _ownerName.text = _animal.dono.name;
     _ownerEmail.text = _animal.dono.email;
-    _ownerPhone.text = @"(51) 9999-9999";
+    _ownerPhone.text = _animal.dono.phone;
     
     // Do any additional setup after loading the view.
 }

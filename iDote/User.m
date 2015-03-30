@@ -20,6 +20,8 @@
         user.email = user.object[@"email"];
         user.username = user.object[@"username"];
         user.phone = user.object[@"phone"];
+        user.mainImageURL = [(PFFile *)user.object[@"mainPhoto"] url];
+        
         return user;
     }
     return nil;
