@@ -14,6 +14,7 @@
 @interface PessoalViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property User *user;
+@property UIRefreshControl *refreshControl;
 
 @property (weak, nonatomic) IBOutlet UIButton *pessoalPhoto;
 @property (weak, nonatomic) IBOutlet UITextField *pessoalName;

@@ -22,7 +22,14 @@
     _user = [User loadCurrentUser];
     _listAnimals = [Animal loadAnimalsFromUser];
     _listEvents = [Evento loadEventsFromUser];
+    
     _tableView.allowsSelection = NO;
+    
+    _refreshControl = [[UIRefreshControl alloc] init];
+    [_refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
+
+    [self.tableView addSubview:_refreshControl];
+    
     [self showData];
 }
 
@@ -62,6 +69,13 @@
 
 - (IBAction)checkSegmented:(id)sender {
     [_tableView reloadData];
+}
+
+-(void) refresh{
+    _listAnimals = [Animal loadAnimalsFromUser];
+    _listEvents = [Evento loadEventsFromUser];
+    [_tableView reloadData];
+    [_refreshControl endRefreshing];
 }
 
 
