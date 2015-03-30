@@ -10,7 +10,8 @@
 #import <Parse/Parse.h>
 #import "VMaskTextField.h"
 
-@interface SignUpViewController : UIViewController <UITextFieldDelegate>
+@interface SignUpViewController : UIViewController <UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property PFUser *user;
+@property (weak, nonatomic) IBOutlet UIButton *mainImage;
 
 @end

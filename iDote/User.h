@@ -16,6 +16,7 @@
 @property NSString *email;
 @property NSString *password;
 @property NSString *name;
+@property NSString *phone;
 
 + (User *) loadCurrentUser;
 + (User *) loadUserFromRelation:(PFRelation *)relation;
