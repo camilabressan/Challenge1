@@ -27,6 +27,7 @@
 @property NSString *descricao;
 
 + (NSMutableArray *) loadAnimals;
++ (NSMutableArray *) loadAnimalsFromUser;
 
 - (void) save;
 
