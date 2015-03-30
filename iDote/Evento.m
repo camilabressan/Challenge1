@@ -50,4 +50,29 @@
     return list;
 }
 
++ (NSMutableArray *)loadEventsFromUser {
+    NSMutableArray *list = [[NSMutableArray alloc] init];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Event"];
+    [query whereKey:@"user" equalTo:[PFUser currentUser]];
+    
+    NSMutableArray *queryResult = [NSMutableArray arrayWithArray:[query findObjects]];
+    
+    for (PFObject *obj in queryResult) {
+        Evento *event = [[Evento alloc] init];
+        event.object = obj;
+        event.dono = [User loadUserFromRelation:[obj objectForKey:@"user"]];
+        
+        event.nomeEvento = [obj objectForKey:@"nome"];
+        event.endereco = [obj objectForKey:@"endereco"];
+        event.date =  [obj objectForKey:@"date"];
+        event.horario = [obj objectForKey:@"horario"];
+        event.descricao = [obj objectForKey:@"descricao"];
+        
+        [list addObject:event];
+    }
+    
+    return list;
+}
+
 @end
