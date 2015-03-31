@@ -26,5 +26,6 @@
 + (NSMutableArray *) loadEventsFromUser;
 
 - (void) save;
+- (void)deleteEvent;
 
 @end

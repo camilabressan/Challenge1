@@ -91,4 +91,8 @@
     return list;
 }
 
+- (void)deleteEvent {
+    [_object deleteInBackground];
+}
+
 @end
