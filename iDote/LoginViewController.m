@@ -21,7 +21,7 @@
     
 }
 
-static CGFloat keyboardHeightOffset = 15.0f;
+static CGFloat keyboardHeightOffset = 15.0f; //Camila
 
 - (void)viewDidLoad {
   [super viewDidLoad];

@@ -12,6 +12,7 @@
 @interface User : NSObject
 @property PFUser *object;
 
+
 @property NSString *mainImageURL;
 
 @property UIImage *mainImage;
