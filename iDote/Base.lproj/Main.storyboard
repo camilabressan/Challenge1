@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -78,30 +78,6 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="imm-59-Pox"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i4z-zo-3Bf">
-                                <rect key="frame" x="0.0" y="423" width="600" height="60"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="AiF-38-JGf"/>
-                                    <constraint firstAttribute="width" constant="600" id="Iuw-gS-u0s"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="600" id="LBA-80-kSu"/>
-                                    <constraint firstAttribute="height" constant="60" id="Mzy-3q-Rx5"/>
-                                    <constraint firstAttribute="height" constant="60" id="jIk-WL-7RK"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="AiF-38-JGf"/>
-                                        <exclude reference="Iuw-gS-u0s"/>
-                                        <exclude reference="LBA-80-kSu"/>
-                                        <exclude reference="Mzy-3q-Rx5"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Axj-Dq-dxV"/>
-                                </connections>
-                            </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconeTela" translatesAutoresizingMaskIntoConstraints="NO" id="UXw-zI-4sk">
                                 <rect key="frame" x="144.5" y="39" width="311" height="315"/>
                                 <constraints>
@@ -146,6 +122,30 @@
                                     <action selector="checkData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jGj-Ff-wM2"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i4z-zo-3Bf">
+                                <rect key="frame" x="0.0" y="423" width="600" height="60"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="AiF-38-JGf"/>
+                                    <constraint firstAttribute="width" constant="600" id="Iuw-gS-u0s"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="600" id="LBA-80-kSu"/>
+                                    <constraint firstAttribute="height" constant="60" id="Mzy-3q-Rx5"/>
+                                    <constraint firstAttribute="height" constant="60" id="jIk-WL-7RK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="AiF-38-JGf"/>
+                                        <exclude reference="Iuw-gS-u0s"/>
+                                        <exclude reference="LBA-80-kSu"/>
+                                        <exclude reference="Mzy-3q-Rx5"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Axj-Dq-dxV"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.22352941176470587" green="0.094117647058823528" blue="0.20784313725490194" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -172,7 +172,7 @@
                             <constraint firstItem="QFf-4W-31g" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="pV7-6c-kV6"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="UXw-zI-4sk" secondAttribute="trailing" constant="119" id="qzz-lU-8OJ"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="UXw-zI-4sk" secondAttribute="trailing" constant="8" id="ue8-yc-8SI"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aPm-ca-nST" secondAttribute="bottom" constant="61" id="xw7-WO-0QI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="aPm-ca-nST" secondAttribute="bottom" constant="61" id="xw7-WO-0QI"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -188,6 +188,7 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="constraintBottom" destination="xw7-WO-0QI" id="fw6-w2-RBa"/>
                         <outlet property="emailTextField" destination="QFf-4W-31g" id="MZK-We-bCb"/>
                         <outlet property="senhaTextField" destination="i4z-zo-3Bf" id="i1c-G0-PTi"/>
                         <outlet property="txtFieldEmail" destination="QFf-4W-31g" id="dgD-cR-oJj"/>
@@ -1775,6 +1776,6 @@
         <image name="pata" width="24" height="21"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ezp-H1-gUI"/>
+        <segue reference="1QQ-Is-dCN"/>
     </inferredMetricsTieBreakers>
 </document>
