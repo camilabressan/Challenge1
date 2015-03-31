@@ -80,6 +80,23 @@
     }
 }
 
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        if(_segmentedControl.selectedSegmentIndex == 0){
+            Animal *animal = [_listAnimals objectAtIndex:indexPath.row];
+            [_listAnimals removeObjectAtIndex:indexPath.row];
+            [animal deleteAnimal];
+            [_tableView reloadData];
+        }
+        if(_segmentedControl.selectedSegmentIndex == 1){
+            Evento *event = [_listEvents objectAtIndex:indexPath.row];
+            [_listEvents removeObjectAtIndex:indexPath.row];
+            [event deleteEvent];
+            [_tableView reloadData];
+        }
+    }
+}
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     PessoalCellTableViewCell *cell = (PessoalCellTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"Cell"];
     

@@ -30,6 +30,6 @@
 + (NSMutableArray *) loadAnimalsFromUser;
 
 - (void) save;
-
+- (void) deleteAnimal;
 
 @end
