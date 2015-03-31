@@ -10,6 +10,22 @@
 
 @implementation Evento
 
+- (NSArray *)fields
+{
+    return @[@{FXFormFieldKey: @"nomeEvento",
+               FXFormFieldTitle: @"Nome do Evento",
+               FXFormFieldHeader: @"DADOS"},
+             @{FXFormFieldKey: @"endereco",
+               FXFormFieldTitle: @"Endereço"},
+             @{FXFormFieldKey: @"date",
+               FXFormFieldTitle: @"Data",
+               FXFormFieldType: FXFormFieldTypeDateTime},
+             @{FXFormFieldTitle: @"Descrição",
+               FXFormFieldKey: @"descricao",
+               FXFormFieldType: FXFormFieldTypeLongText,
+               FXFormFieldPlaceholder: @"Insira aqui descrições gerais do animal..."}];
+}
+
 - (void)save {
     PFObject *object = [PFObject objectWithClassName:@"Event"];
     object[@"nome"] = _nomeEvento;
