@@ -9,8 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <Parse/Parse.h>
 #import "User.h"
+#import "FXForms.h"
 
-@interface Evento : NSObject
+@interface Evento : NSObject <FXForm>
 
 @property PFObject *object;
 @property User *dono;

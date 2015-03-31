@@ -79,7 +79,7 @@
                                 </connections>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconeTela" translatesAutoresizingMaskIntoConstraints="NO" id="UXw-zI-4sk">
-                                <rect key="frame" x="144.5" y="39" width="311" height="315"/>
+                                <rect key="frame" x="145" y="39" width="311" height="315"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="344" id="08d-6c-h6C"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="348" id="7dh-0p-nDR"/>
@@ -1053,7 +1053,7 @@
                     <navigationItem key="navigationItem" title="Eventos" id="QZn-L7-vIV">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="NcE-Z3-96k">
                             <connections>
-                                <segue destination="Q08-sF-rpb" kind="show" identifier="" id="syy-QY-2M9"/>
+                                <action selector="clickAddButton:" destination="X7G-FL-hRh" id="mJ0-ey-Vh9"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1242,7 +1242,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="profileDataChanged:" destination="X5C-4G-xhf" eventType="editingDidEnd" id="6es-0d-DRY"/>
+                                    <action selector="profileDataChanged:" destination="X5C-4G-xhf" eventType="editingChanged" id="E8f-ZV-YpD"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefone" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gsc-bH-2No">
@@ -1254,7 +1254,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="profileDataChanged:" destination="X5C-4G-xhf" eventType="editingDidEnd" id="HDU-nE-Imp"/>
+                                    <action selector="profileDataChanged:" destination="X5C-4G-xhf" eventType="editingChanged" id="M5q-O2-gaD"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome Completo" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bby-9O-9My">

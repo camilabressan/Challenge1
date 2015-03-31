@@ -24,7 +24,9 @@
 
 @implementation CalendarioViewController{
     NSArray *allEvents;
-    
+    UIDatePicker *datePicker;
+    UINavigationController *_navController;
+    Evento *_event;
 }
 
 - (void)viewDidLoad {
@@ -149,6 +151,48 @@
 
         detail.ev = sender.event;
     }
+}
+
+- (IBAction)clickAddButton:(id)sender {
+    FXFormViewController *controller = [[FXFormViewController alloc] init];
+    controller.formController.form = [[Evento alloc] init];
+    
+    _navController = [[UINavigationController alloc] initWithRootViewController:controller];
+    
+    controller.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Voltar" style:UIBarButtonItemStylePlain target:self action:@selector(dismiss:)];
+    controller.navigationItem.title = @"Dados do Evento";
+    controller.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Salvar" style:UIBarButtonItemStyleDone target:self action:@selector(save:)];
+    
+    [self presentViewController:_navController animated:YES completion:nil];
+}
+
+- (void)dismiss:(id)sender {
+    [_navController dismissViewControllerAnimated:YES completion:^{
+    }];
+}
+
+- (void)save:(id)sender {
+    FXFormViewController *formQueVoltou = (FXFormViewController*)_navController.topViewController;
+    _event = formQueVoltou.formController.form;
+    
+    if ([self emptyFieldDoesExist] == NO){
+        [_event save];
+        [_navController dismissViewControllerAnimated:NO completion:^{
+        }];
+    }
+}
+
+- (BOOL) emptyFieldDoesExist{
+    if (_event.nomeEvento == nil ||
+        _event.endereco == nil ||
+        _event.date == nil ||
+        _event.descricao == nil)
+    {
+        UIAlertView *alertEmptyFields = [[UIAlertView alloc] initWithTitle:@"Campos incompletos" message:@"Por favor, preencha todos os campos." delegate: self cancelButtonTitle:@"OK"otherButtonTitles: nil];
+        [alertEmptyFields show];
+        return YES;
+    }
+    return NO;
 }
 
 @end
