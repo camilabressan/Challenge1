@@ -23,6 +23,13 @@
     _listAnimals = [Animal loadAnimalsFromUser];
     _listEvents = [Evento loadEventsFromUser];
     
+    _tableView.allowsSelection = NO;
+    
+    _refreshControl = [[UIRefreshControl alloc] init];
+    [_refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
+
+    [self.tableView addSubview:_refreshControl];
+    
     [self showData];
 }
 
@@ -64,6 +71,30 @@
     [_tableView reloadData];
 }
 
+-(void) refresh{
+    _listAnimals = [Animal loadAnimalsFromUser];
+    _listEvents = [Evento loadEventsFromUser];
+    [_tableView reloadData];
+    [_refreshControl endRefreshing];
+}
 
+
+- (IBAction)profileDataChanged:(id)sender {
+    _buttonSave.enabled = YES;
+}
+
+- (IBAction)saveClick:(id)sender {
+    
+    _user.name = _pessoalName.text;
+    _user.username = _pessoalEmail.text;
+    _user.email = _pessoalEmail.text;
+    _user.phone = _pessoalPhone.text;
+    [_user updateData];
+    
+    UIAlertView *alertSaveSuccess = [[UIAlertView alloc] initWithTitle:@"Perfil salvo" message:@"As mudanças em seu perfil foram salvas com sucesso." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alertSaveSuccess show];
+    _buttonSave.enabled = NO;
+    
+}
 
 @end
