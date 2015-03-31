@@ -61,7 +61,8 @@ static CGFloat _keyboardHeightOffset = 15.0f;
     
     [self presentViewController:imagePickerControllerMain animated:NO completion:nil];
 }
-    
+
+
 - (BOOL) validateEmail: (NSString *) candidate {
     NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
@@ -76,6 +77,14 @@ static CGFloat _keyboardHeightOffset = 15.0f;
     }
 }
 
+- (BOOL) institutionPhotoDoesExist
+{
+    if ([_addInstPic backgroundImageForState:UIControlStateNormal] == nil)
+        return NO;
+    else
+        return YES;
+}
+
 -(BOOL) emptyTextFieldExistent
 {
     if ([_txtFieldInstitutionName.text length] == 0 ||
@@ -83,37 +92,24 @@ static CGFloat _keyboardHeightOffset = 15.0f;
         [_txtFieldInstitutionEmail.text length] == 0 ||
         [_txtFieldInstitutionResponsible.text length] == 0 ||
         //[_txtFieldInstitutionAddress.text length] == 0 || not being used because this field is not mandatory right now
-        [_txtViewInstitutionDescription.text length] == 0)
-    {
-        UIAlertView *alertEmptyFields = [[UIAlertView alloc] initWithTitle:@"Campos incompletos" message:@"Por favor, preencha todos os campos." delegate: self cancelButtonTitle:@"OK"otherButtonTitles: nil];
+        [_txtViewInstitutionDescription.text length] == 0 ||
+        ![self institutionPhotoDoesExist ]){
+        UIAlertView *alertEmptyFields = [[UIAlertView alloc] initWithTitle:@"Campos incompletos" message:@"Por favor, preencha todos os campos e/ou a imagem." delegate: self cancelButtonTitle:@"OK"otherButtonTitles: nil];
         [alertEmptyFields show];
         return YES;
     }
     return NO;
 }
 
-
-- (void) cadastrarInst {
-    
-     institution = [[Institution alloc] init];
-    
-    institution.institutionName = _txtFieldInstitutionName.text;
-    institution.institutionPhone = _txtFieldInstitutionPhone.text;
-    institution.institutionEmail = [_txtFieldInstitutionEmail.text lowercaseString];
-    institution.institutionResponsible = _txtFieldInstitutionResponsible.text;
-    institution.institutionAddress = _txtFieldInstitutionAddress.text;
-    institution.institutionDescription = _txtViewInstitutionDescription.text;
-    institution.mainImage = [_addInstPic backgroundImageForState:UIControlStateNormal];
-    
-}
-
 - (IBAction)emailButtonPushed:(id)sender {
-    
-    [self cadastrarInst];
-    [institution save];
+
     
     if ([self emptyTextFieldExistent] == NO  &&
         [self validateEmail: _txtFieldInstitutionEmail.text] == YES){
+        
+        
+        [self cadastrarInst];
+        [institution save];
     
     NSString *email = [NSString stringWithFormat:@"Nome: %@\nTelefone: %@\nEmail: %@\nResponsável: %@\nEndereço: %@\nDescrição: %@", _txtFieldInstitutionName.text, _txtFieldInstitutionPhone.text, _txtFieldInstitutionEmail.text,_txtFieldInstitutionResponsible.text, _txtFieldInstitutionAddress.text, _txtViewInstitutionDescription.text];
 
@@ -123,16 +119,14 @@ static CGFloat _keyboardHeightOffset = 15.0f;
             mailCont.mailComposeDelegate = self;
             [mailCont setSubject:@"Cadastro de Instituições"];
             [mailCont setToRecipients:[NSArray arrayWithObject:@"idoteteam@gmail.com"]];
-    
-       
             [mailCont setMessageBody:[NSString stringWithFormat:@"Verifique seu cadastro antes de enviar!\n\n %@ \n\nPor favor, aguarde até 48h úteis para receber um retorno da nossa equipe.\niDote Team agradece o seu interesse!", email]  isHTML:NO];
             [self presentViewController:mailCont animated:YES completion:nil];
         }
     }
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+
     if([textField isEqual: _txtFieldInstitutionName])
         [_txtFieldInstitutionResponsible becomeFirstResponder];
     else if([textField isEqual: _txtFieldInstitutionResponsible])
@@ -146,6 +140,21 @@ static CGFloat _keyboardHeightOffset = 15.0f;
     else if ([textField isEqual: _txtViewInstitutionDescription])
         [self cadastrarInst];
         return YES;
+}
+
+
+- (void) cadastrarInst {
+    
+    institution = [[Institution alloc] init];
+    
+    institution.institutionName = _txtFieldInstitutionName.text;
+    institution.institutionPhone = _txtFieldInstitutionPhone.text;
+    institution.institutionEmail = [_txtFieldInstitutionEmail.text lowercaseString];
+    institution.institutionResponsible = _txtFieldInstitutionResponsible.text;
+    institution.institutionAddress = _txtFieldInstitutionAddress.text;
+    institution.institutionDescription = _txtViewInstitutionDescription.text;
+    institution.mainImage = [_addInstPic backgroundImageForState:UIControlStateNormal];
+    
 }
 
 - (IBAction)dismissKeyboard {
