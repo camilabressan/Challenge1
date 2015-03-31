@@ -616,7 +616,7 @@
                     <navigationItem key="navigationItem" title="Instituiçōes" id="01I-VN-tpX">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="fOZ-9M-uSS">
                             <connections>
-                                <segue destination="5H3-lK-ob0" kind="show" id="wWP-Wb-jlq"/>
+                                <action selector="clickAddButton:" destination="rlH-IA-5lt" id="dNZ-Uw-oem"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
