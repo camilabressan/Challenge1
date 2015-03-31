@@ -250,10 +250,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m5r-4I-3S7">
-                                <rect key="frame" x="54" y="318" width="546" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="REt-KJ-spq">
+                                <rect key="frame" x="241" y="72" width="117" height="117"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="LTf-kW-37G"/>
+                                    <constraint firstAttribute="width" secondItem="REt-KJ-spq" secondAttribute="height" multiplier="1:1" id="78r-lJ-j9d"/>
+                                </constraints>
+                                <state key="normal" title="Adicionar Foto">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="setImage:" destination="INb-Vz-wMu" eventType="touchUpInside" id="6rs-1M-y4z"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m5r-4I-3S7">
+                                <rect key="frame" x="54" y="259" width="522" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4yA-Cc-LP5"/>
                                     <constraint firstAttribute="width" constant="546" id="NPj-1x-1PZ"/>
                                     <constraint firstAttribute="width" constant="600" id="d41-6o-uJb"/>
                                 </constraints>
@@ -261,6 +274,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="NPj-1x-1PZ"/>
                                         <exclude reference="d41-6o-uJb"/>
                                     </mask>
                                 </variation>
@@ -268,30 +282,29 @@
                                     <outlet property="delegate" destination="INb-Vz-wMu" id="WxO-bn-My0"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefone" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ggb-y8-FQW" customClass="VMaskTextField">
-                                <rect key="frame" x="54" y="363" width="546" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefone" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ggb-y8-FQW" customClass="VMaskTextField">
+                                <rect key="frame" x="54" y="300" width="522" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="600" id="Lyd-hW-6Qf"/>
                                     <constraint firstAttribute="width" constant="546" id="cDP-25-Njd"/>
-                                    <constraint firstAttribute="height" constant="30" id="qvl-da-LUF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="Lyd-hW-6Qf"/>
+                                        <exclude reference="cDP-25-Njd"/>
                                     </mask>
                                 </variation>
                                 <connections>
                                     <outlet property="delegate" destination="INb-Vz-wMu" id="Rdd-Mg-Jl5"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmar Senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="epX-0T-sB5">
-                                <rect key="frame" x="54" y="453" width="546" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmar Senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="epX-0T-sB5">
+                                <rect key="frame" x="44" y="543" width="522" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="600" id="661-bF-2i3"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="Qhz-UR-apU"/>
-                                    <constraint firstAttribute="height" constant="30" id="Wx4-wk-1Ix"/>
                                     <constraint firstAttribute="width" constant="546" id="jCZ-R9-AwY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
@@ -300,20 +313,25 @@
                                     <mask key="constraints">
                                         <exclude reference="661-bF-2i3"/>
                                         <exclude reference="Qhz-UR-apU"/>
+                                        <exclude reference="jCZ-R9-AwY"/>
                                     </mask>
                                 </variation>
                                 <connections>
                                     <outlet property="delegate" destination="INb-Vz-wMu" id="t0Q-uR-FtH"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GRB-bz-CNc">
-                                <rect key="frame" x="54" y="408" width="546" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GRB-bz-CNc">
+                                <rect key="frame" x="55" y="379" width="522" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="546" id="wcH-nd-YtE"/>
-                                    <constraint firstAttribute="height" constant="30" id="yI5-wD-5Nl"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="wcH-nd-YtE"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <outlet property="delegate" destination="INb-Vz-wMu" id="eZn-Px-ZOD"/>
                                 </connections>
@@ -333,70 +351,67 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome Completo" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="01F-cy-G5t">
-                                <rect key="frame" x="54" y="273" width="546" height="30"/>
+                                <rect key="frame" x="54" y="221" width="522" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="gTs-ag-7VQ"/>
                                     <constraint firstAttribute="width" constant="600" id="hO3-P9-wKs"/>
                                     <constraint firstAttribute="width" constant="546" id="nnQ-R0-pMb"/>
+                                    <constraint firstAttribute="height" constant="30" id="tmY-a1-4ai"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="hO3-P9-wKs"/>
+                                        <exclude reference="nnQ-R0-pMb"/>
                                     </mask>
                                 </variation>
                                 <connections>
                                     <outlet property="delegate" destination="INb-Vz-wMu" id="b76-L3-e2p"/>
                                 </connections>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconPeople" translatesAutoresizingMaskIntoConstraints="NO" id="wEa-3f-Hab">
-                                <rect key="frame" x="13" y="273" width="29" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="5V3-DC-sDC"/>
-                                    <constraint firstAttribute="width" constant="29" id="Q6W-bT-D8p"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Fill 97" translatesAutoresizingMaskIntoConstraints="NO" id="HXE-8w-rlE">
+                                <rect key="frame" x="345" y="449" width="30" height="30"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconLetter" translatesAutoresizingMaskIntoConstraints="NO" id="yne-In-H2P">
-                                <rect key="frame" x="12" y="321" width="33" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="33" id="CcC-He-i8L"/>
-                                    <constraint firstAttribute="height" constant="24" id="qTx-rD-eZx"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Fill 96" translatesAutoresizingMaskIntoConstraints="NO" id="tmq-78-jRM">
+                                <rect key="frame" x="285" y="350" width="30" height="30"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fill 97" translatesAutoresizingMaskIntoConstraints="NO" id="HXE-8w-rlE">
-                                <rect key="frame" x="12" y="408" width="30" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Rectangle 86" translatesAutoresizingMaskIntoConstraints="NO" id="USC-uH-TGT">
+                                <rect key="frame" x="32" y="406" width="568" height="16"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="wvq-GY-is1"/>
-                                    <constraint firstAttribute="width" constant="30" id="zzT-b4-TNe"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fill 96" translatesAutoresizingMaskIntoConstraints="NO" id="tmq-78-jRM">
-                                <rect key="frame" x="12" y="453" width="30" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="Hq8-YU-KIp"/>
-                                    <constraint firstAttribute="height" constant="30" id="KZg-mF-eKa"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 86" translatesAutoresizingMaskIntoConstraints="NO" id="USC-uH-TGT">
-                                <rect key="frame" x="0.0" y="244" width="600" height="16"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="16" id="9DX-Mf-rRX"/>
                                     <constraint firstAttribute="width" constant="600" id="Mr8-RX-xx5"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Mr8-RX-xx5"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 86" translatesAutoresizingMaskIntoConstraints="NO" id="Pjk-oI-km1">
-                                <rect key="frame" x="0.0" y="496" width="600" height="16"/>
+                                <rect key="frame" x="24" y="197" width="552" height="16"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="16" id="6Ok-jc-KBu"/>
+                                    <constraint firstAttribute="height" constant="16" id="F7j-mW-F4g"/>
                                     <constraint firstAttribute="width" constant="600" id="TUW-zq-S1a"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="TUW-zq-S1a"/>
+                                    </mask>
+                                </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fill 199" translatesAutoresizingMaskIntoConstraints="NO" id="1Fa-UQ-OX4">
-                                <rect key="frame" x="12" y="359" width="30" height="37"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Fill 199" translatesAutoresizingMaskIntoConstraints="NO" id="1Fa-UQ-OX4">
+                                <rect key="frame" x="16" y="293" width="30" height="37"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="IconLetter" translatesAutoresizingMaskIntoConstraints="NO" id="yne-In-H2P">
+                                <rect key="frame" x="24" y="262" width="25" height="18"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="kln-hU-mpD"/>
-                                    <constraint firstAttribute="height" constant="37" id="nPC-wC-z2J"/>
+                                    <constraint firstAttribute="width" secondItem="yne-In-H2P" secondAttribute="height" multiplier="11:8" id="myD-YN-a83"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconPeople" translatesAutoresizingMaskIntoConstraints="NO" id="wEa-3f-Hab">
+                                <rect key="frame" x="25" y="221" width="24" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="dJT-ru-4zG"/>
+                                    <constraint firstAttribute="width" secondItem="wEa-3f-Hab" secondAttribute="height" multiplier="29:30" id="yJt-IW-P1i"/>
                                 </constraints>
                             </imageView>
                         </subviews>
