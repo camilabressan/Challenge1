@@ -1106,6 +1106,96 @@
             </objects>
             <point key="canvasLocation" x="-1488" y="2381"/>
         </scene>
+        <!--Novo Evento-->
+        <scene sceneID="xK2-Sf-Tgx">
+            <objects>
+                <viewController id="Q08-sF-rpb" userLabel="Novo Evento" customClass="EventoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Q5b-uU-jUU"/>
+                        <viewControllerLayoutGuide type="bottom" id="1kM-ZA-p02"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZDF-7A-lMk" customClass="UIControl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do Evento" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nfr-Pj-XLm">
+                                <rect key="frame" x="24" y="126" width="552" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Q08-sF-rpb" id="dy0-GB-0ZQ"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Endereço" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pbT-fw-OfT">
+                                <rect key="frame" x="24" y="173" width="552" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Q08-sF-rpb" id="3lA-Tt-ls8"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Data" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XEc-J1-Tg5">
+                                <rect key="frame" x="24" y="220" width="552" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Q08-sF-rpb" id="0uD-iy-Uun"/>
+                                </connections>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Descrição" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WuW-hj-UC5">
+                                <rect key="frame" x="24" y="258" width="552" height="290"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Q08-sF-rpb" id="pCw-Hc-psV"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WuW-hj-UC5" firstAttribute="top" secondItem="XEc-J1-Tg5" secondAttribute="bottom" constant="8" id="Jmw-rJ-HYg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Nfr-Pj-XLm" secondAttribute="trailing" constant="8" id="Ojx-HB-gTy"/>
+                            <constraint firstItem="Nfr-Pj-XLm" firstAttribute="leading" secondItem="ZDF-7A-lMk" secondAttribute="leadingMargin" constant="8" id="Pdr-HF-ijc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XEc-J1-Tg5" secondAttribute="trailing" constant="8" id="UR6-cf-jlz"/>
+                            <constraint firstItem="XEc-J1-Tg5" firstAttribute="top" secondItem="pbT-fw-OfT" secondAttribute="bottom" constant="17" id="WgN-i3-45w"/>
+                            <constraint firstItem="1kM-ZA-p02" firstAttribute="top" secondItem="WuW-hj-UC5" secondAttribute="bottom" constant="8" id="Xvs-t9-Z6n"/>
+                            <constraint firstItem="WuW-hj-UC5" firstAttribute="leading" secondItem="ZDF-7A-lMk" secondAttribute="leadingMargin" constant="8" id="Z7G-qv-sHK"/>
+                            <constraint firstItem="Nfr-Pj-XLm" firstAttribute="top" secondItem="Q5b-uU-jUU" secondAttribute="bottom" constant="62" id="bs3-0K-BgS"/>
+                            <constraint firstItem="pbT-fw-OfT" firstAttribute="leading" secondItem="ZDF-7A-lMk" secondAttribute="leadingMargin" constant="8" id="dpZ-8O-6nr"/>
+                            <constraint firstItem="pbT-fw-OfT" firstAttribute="top" secondItem="Nfr-Pj-XLm" secondAttribute="bottom" constant="17" id="jPI-OP-oym"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pbT-fw-OfT" secondAttribute="trailing" constant="8" id="o6M-cS-3fk"/>
+                            <constraint firstItem="XEc-J1-Tg5" firstAttribute="leading" secondItem="ZDF-7A-lMk" secondAttribute="leadingMargin" constant="8" id="t6P-35-ZFP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WuW-hj-UC5" secondAttribute="trailing" constant="8" id="wg3-nM-jjb"/>
+                        </constraints>
+                        <connections>
+                            <action selector="clickOnBackground:" destination="Q08-sF-rpb" eventType="touchDown" id="BeD-8V-Q9i"/>
+                        </connections>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Novo Evento" id="lPm-6o-KRN" userLabel="NovoEvento">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Gq3-3M-Hmd">
+                            <connections>
+                                <action selector="save:" destination="Q08-sF-rpb" id="Ndd-Z1-j38"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                    <connections>
+                        <outlet property="detalhes" destination="WuW-hj-UC5" id="6o6-f8-XHg"/>
+                        <outlet property="endereco" destination="pbT-fw-OfT" id="RZu-ro-DiK"/>
+                        <outlet property="nomeEvento" destination="Nfr-Pj-XLm" id="FX9-Ru-F07"/>
+                        <outlet property="txtFieldEventDate" destination="XEc-J1-Tg5" id="7iF-rd-YjP"/>
+                        <outlet property="txtViewDescription" destination="WuW-hj-UC5" id="wTf-bM-pNV"/>
+                        <segue destination="aiF-kU-ACf" kind="unwind" identifier="segueBackFromRegisterEvent" unwindAction="backFromRegisterEventScreen:" id="X7G-DN-s8B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wfg-va-XQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="aiF-kU-ACf" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-829" y="3166"/>
+        </scene>
         <!--Pessoal-->
         <scene sceneID="i4c-v9-dSA">
             <objects>
@@ -1606,8 +1696,8 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horário" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNB-mV-coU">
-                                <rect key="frame" x="272" y="236" width="57" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Horário" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNB-mV-coU">
+                                <rect key="frame" x="273" y="236" width="57" height="20"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1615,15 +1705,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hAD-cz-EEj">
                                 <rect key="frame" x="24" y="103" width="552" height="167"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Endereço" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z3E-co-Wvx">
-                                        <rect key="frame" x="240" y="62" width="73" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Endereço" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z3E-co-Wvx">
+                                        <rect key="frame" x="8" y="72" width="536" height="20"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome do Evento" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2X-Gi-FCy">
-                                        <rect key="frame" x="201" y="20" width="151" height="24"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Nome do Evento" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2X-Gi-FCy">
+                                        <rect key="frame" x="8" y="21" width="536" height="24"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
                                         <color key="textColor" red="1" green="0.55843160719999996" blue="0.2373278573" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
