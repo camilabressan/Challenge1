@@ -28,6 +28,7 @@
 
 + (NSMutableArray *) loadAnimals;
 + (NSMutableArray *) loadAnimalsFromUser;
++ (NSMutableArray *)loadNewAnimals:(Animal *)animal;
 
 - (void) save;
 

@@ -124,7 +124,6 @@
 
 - (void) moveLeft {
     switch (_position) {
-            
         case SwipeCardPositionCenter: {
             _position = SwipeCardPositionLeft;
             [UIView animateWithDuration:animationTime
@@ -135,6 +134,14 @@
             
             break;
         }
+            
+        case SwipeCardPositionLeft: {
+            [self removeFromSuperview];
+            NSLog(@"REmove");
+            break;
+        }
+            
+
         case SwipeCardPositionRight: {
             _position = SwipeCardPositionCenter;
             [UIView animateWithDuration:animationTime
@@ -144,11 +151,7 @@
             
             break;
         }
-        case SwipeCardPositionLeft: {
-            [self removeFromSuperview];
-            NSLog(@"REmove");
-            break;
-        }
+
     }
     
 }
@@ -164,6 +167,14 @@
                              }];
             break;
         }
+            
+        case SwipeCardPositionRight: {
+            NSLog(@"REmove");
+            [self removeFromSuperview];
+            break;
+        }
+            
+
         case SwipeCardPositionLeft: {
             _position = SwipeCardPositionCenter;
             [UIView animateWithDuration:animationTime
@@ -173,11 +184,7 @@
             break;
         }
             
-        case SwipeCardPositionRight: {
-            NSLog(@"REmove");
-            [self removeFromSuperview];
-            break;
-        }
+
     }
 }
 
@@ -199,11 +206,11 @@
                                         self.frame.size.width,
                                         self.frame.size.height*0.085);
     
-    NSDictionary *fontAtrtibutes = @{NSFontAttributeName: [UIFont systemFontOfSize:14]};
+    NSDictionary *fontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize:14]};
     CGRect rect = [_labelName.text
                    boundingRectWithSize:CGSizeMake(_labelView.superview.frame.size.width*0.8, CGFLOAT_MAX)
                    options:NSStringDrawingUsesLineFragmentOrigin
-                   attributes:fontAtrtibutes
+                   attributes:fontAttributes
                    context:nil];
     
     _labelName.frame = CGRectMake(_labelName.superview.frame.size.width * 0.05,
@@ -219,7 +226,7 @@
     rect = [_informationLabel.text
             boundingRectWithSize:CGSizeMake(_informationView.superview.frame.size.width*0.8, CGFLOAT_MAX)
             options:NSStringDrawingUsesLineFragmentOrigin
-            attributes:fontAtrtibutes
+            attributes:fontAttributes
             context:nil];
     
     _informationLabel.frame = CGRectMake(_informationLabel.superview.frame.size.width * 0.05,

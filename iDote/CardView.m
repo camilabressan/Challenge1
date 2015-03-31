@@ -27,6 +27,11 @@
     _swipeCardsArray = [[NSMutableArray alloc] initWithCapacity:3];
     _data = [Animal loadAnimals];
     
+    //NSMutableArray *newData = [Animal loadNewAnimals:_data[_data.count -1]];
+    //[_data addObjectsFromArray:newData];
+    
+    NSLog(@"%lu", _data.count);
+    
     for (int i = 0; i < 3; i++) {
         [_swipeCardsArray addObject:[NSNull null]];
     }
@@ -47,7 +52,7 @@
         [self addSubview:_swipeCardsArray[1]];
     
     }
-    if (_data.count > 0) {
+    if (_data.count > 1) {
         [_swipeCardsArray insertObject:[[SwipeCardView alloc] initWithData:_data[1]] atIndex:2];
         ((SwipeCardView *)_swipeCardsArray[2]).position = SwipeCardPositionRight;
         [self addSubview:_swipeCardsArray[2]];
@@ -88,6 +93,7 @@
 
 - (void)swipeLeft {
     if (_currentIndex < [_data count] - 1) {
+        _currentIndex++;
         for (int i = 0; i < _swipeCardsArray.count; i++) {
             SwipeCardView *card = _swipeCardsArray[i];
             if ([card respondsToSelector:@selector(moveLeft)]) {
@@ -104,13 +110,14 @@
                 }
             }
         }
-        _currentIndex++;
+        
     }
     
 }
 
 - (void)swipeRight {
     if (_currentIndex > 0) {
+        _currentIndex--;
         for (int i = (int)_swipeCardsArray.count -1; i >= 0; i--) {
             SwipeCardView *card = _swipeCardsArray[i];
             if ([card respondsToSelector:@selector(moveRight)]) {
@@ -128,7 +135,7 @@
             
             }
         }
-        _currentIndex--;
+        
     }
     
 }
