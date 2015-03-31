@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -529,12 +529,13 @@
                         <outlet property="txtFieldPassword" destination="GRB-bz-CNc" id="k1i-hR-88k"/>
                         <outlet property="txtFieldPhoneNumber" destination="Ggb-y8-FQW" id="diU-JM-I3h"/>
                         <segue destination="oxU-Bf-4sZ" kind="unwind" identifier="registerNewUserSegue" unwindAction="saveFromRegisterScreen:" id="gPr-5u-Nvt"/>
+                        <segue destination="oy0-qS-wYj" kind="presentation" identifier="LoginFromRegisterSegue" id="ezp-H1-gUI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Km7-uA-MD5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="oxU-Bf-4sZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1704" y="-816"/>
+            <point key="canvasLocation" x="1703" y="-816"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Jc2-Ec-MJj">
@@ -1854,4 +1855,7 @@
         <image name="iDote-1" width="521" height="213"/>
         <image name="pata" width="24" height="21"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ezp-H1-gUI"/>
+    </inferredMetricsTieBreakers>
 </document>
