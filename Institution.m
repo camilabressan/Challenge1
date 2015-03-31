@@ -36,13 +36,39 @@
     return list;
 }
 
+- (NSArray *)fields
+{
+    return @[@{FXFormFieldKey: @"mainImage",
+               FXFormFieldTitle: @"Imagem",
+               FXFormFieldHeader: @"DADOS",
+               FXFormFieldType: FXFormFieldTypeImage},
+             @{FXFormFieldKey: @"institutionName",
+               FXFormFieldTitle: @"Nome da Instituição"},
+             @{FXFormFieldKey: @"institutionResponsible",
+               FXFormFieldTitle: @"Responsável"},
+             @{FXFormFieldKey: @"institutionPhone",
+               FXFormFieldTitle: @"Telefone",
+               FXFormFieldType: FXFormFieldTypePhone},
+             @{FXFormFieldKey: @"institutionEmail",
+               FXFormFieldTitle: @"E-mail",
+               FXFormFieldType: FXFormFieldTypeEmail},
+             @{FXFormFieldKey: @"institutionAddress",
+               FXFormFieldTitle: @"Endereço",
+               FXFormFieldPlaceholder: @"endereço opcional"},
+             @{FXFormFieldTitle: @"Descrição",
+               FXFormFieldKey: @"institutionDescription",
+               FXFormFieldType: FXFormFieldTypeLongText,
+               FXFormFieldPlaceholder: @"Insira aqui descrições gerais da instituição..."}];
+}
+
 -(void)save{
     PFObject *object = [PFObject objectWithClassName:@"Institution"];
     //strings são as colunas da tabela do parse
     object[@"nome"] = _institutionName;
     object[@"telefone"] = _institutionPhone;
     object[@"email"] = _institutionEmail;
-    object[@"endereco"] = _institutionAddress;
+    if (_institutionAddress != nil) // campo não obrigatório
+        object[@"endereco"] = _institutionAddress;
     object[@"descricao"] = _institutionDescription;
     object[@"responsavel"] = _institutionResponsible;
     object[@"ativo"] = [NSNumber numberWithBool:false]; //sempre será inserido falso porque dependerá de aprovação

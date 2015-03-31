@@ -10,7 +10,6 @@
 		9032E0F21AC0C54D001E11DF /* CalendarioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9032E0F11AC0C54D001E11DF /* CalendarioViewController.m */; };
 		90727EDF1AC1F7D300D48518 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90727EDE1AC1F7D300D48518 /* TabBarViewController.m */; };
 		90727EE21AC2F6B800D48518 /* Evento.m in Sources */ = {isa = PBXBuildFile; fileRef = 90727EE11AC2F6B800D48518 /* Evento.m */; };
-		90B232051AC32E23000B58CD /* EventoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B232041AC32E23000B58CD /* EventoViewController.m */; };
 		A0435D061AC48DBA00822BC1 /* DetailInstitutionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0435D051AC48DBA00822BC1 /* DetailInstitutionViewController.m */; };
 		A0435D091AC48DCE00822BC1 /* InstitutionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0435D081AC48DCE00822BC1 /* InstitutionTableViewCell.m */; };
 		A0435D0C1AC48DE000822BC1 /* ShowInstitutionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0435D0B1AC48DE000822BC1 /* ShowInstitutionViewController.m */; };
@@ -76,8 +75,6 @@
 		90727EDE1AC1F7D300D48518 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		90727EE01AC2F6B800D48518 /* Evento.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Evento.h; path = iDote/Evento.h; sourceTree = "<group>"; };
 		90727EE11AC2F6B800D48518 /* Evento.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Evento.m; path = iDote/Evento.m; sourceTree = "<group>"; };
-		90B232031AC32E23000B58CD /* EventoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventoViewController.h; sourceTree = "<group>"; };
-		90B232041AC32E23000B58CD /* EventoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventoViewController.m; sourceTree = "<group>"; };
 		A0435D041AC48D8800822BC1 /* DetailInstitutionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailInstitutionViewController.h; sourceTree = "<group>"; };
 		A0435D051AC48DBA00822BC1 /* DetailInstitutionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailInstitutionViewController.m; sourceTree = "<group>"; };
 		A0435D071AC48DCE00822BC1 /* InstitutionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstitutionTableViewCell.h; sourceTree = "<group>"; };
@@ -342,8 +339,6 @@
 				9032E0F11AC0C54D001E11DF /* CalendarioViewController.m */,
 				90727EDD1AC1F7D300D48518 /* TabBarViewController.h */,
 				90727EDE1AC1F7D300D48518 /* TabBarViewController.m */,
-				90B232031AC32E23000B58CD /* EventoViewController.h */,
-				90B232041AC32E23000B58CD /* EventoViewController.m */,
 				B98486B21AC5EDE3008F0BD1 /* AnimalDetailsViewController.h */,
 				B98486B31AC5EDE3008F0BD1 /* AnimalDetailsViewController.m */,
 				AB50C4691AC5E32A00DC6EC6 /* eventTableViewCell.h */,
@@ -486,7 +481,6 @@
 				E3B9C1CB1ABF2E960083A0F6 /* Institution.m in Sources */,
 				90727EDF1AC1F7D300D48518 /* TabBarViewController.m in Sources */,
 				A0435D061AC48DBA00822BC1 /* DetailInstitutionViewController.m in Sources */,
-				90B232051AC32E23000B58CD /* EventoViewController.m in Sources */,
 				A045A9391AC77E56004B00BF /* PessoalViewController.m in Sources */,
 				AB17813F1AC0A32B007621F0 /* FXForms.m in Sources */,
 				A0435D091AC48DCE00822BC1 /* InstitutionTableViewCell.m in Sources */,

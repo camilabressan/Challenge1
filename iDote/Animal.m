@@ -157,5 +157,8 @@
 
 }
 
+- (void)deleteAnimal {
+    [_object deleteInBackground];
+}
 @end
 

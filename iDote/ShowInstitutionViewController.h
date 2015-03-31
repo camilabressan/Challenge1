@@ -12,6 +12,8 @@
 #import "DetailInstitutionViewController.h"
 
 @interface ShowInstitutionViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property UIRefreshControl *refreshControl;
 
 @end

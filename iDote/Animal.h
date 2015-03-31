@@ -31,6 +31,6 @@
 + (NSMutableArray *)loadNewAnimals:(Animal *)animal;
 
 - (void) save;
-
+- (void) deleteAnimal;
 
 @end

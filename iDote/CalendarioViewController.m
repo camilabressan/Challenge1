@@ -24,14 +24,25 @@
 
 @implementation CalendarioViewController{
     NSArray *allEvents;
+    UIDatePicker *datePicker;
+    UINavigationController *_navController;
+    Evento *_event;
+}
+
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     
+    [_TabelaCalendario deselectRowAtIndexPath:self.TabelaCalendario.indexPathForSelectedRow animated:YES];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     _list = [Evento loadEvents];
-
+    
+    _refreshControl = [[UIRefreshControl alloc] init];
+    [_refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
+    [self.TabelaCalendario addSubview:_refreshControl];
     
     self.navigationItem.backBarButtonItem.tintColor = [UIColor whiteColor];
     
@@ -50,6 +61,13 @@
     
 
     [self loadEvents];
+}
+
+-(void) refresh{
+    _list = [Evento loadEvents];
+    [self loadEvents];
+    [_TabelaCalendario reloadData];
+    [_refreshControl endRefreshing];
 }
 
 - (void) sortEventsByDay {
@@ -89,6 +107,8 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
+    if ([monthArray[section] count] == 0)
+        return nil;
     return [tabelacalendario objectAtIndex:section]; //imprimir titulo no cabeçalho
 }
 
@@ -131,7 +151,20 @@
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    if ([monthArray[section] count] == 0)
+        return 0.01f;
+    return UITableViewAutomaticDimension;
+}
 
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 0.01f;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    return nil;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -149,6 +182,48 @@
 
         detail.ev = sender.event;
     }
+}
+
+- (IBAction)clickAddButton:(id)sender {
+    FXFormViewController *controller = [[FXFormViewController alloc] init];
+    controller.formController.form = [[Evento alloc] init];
+    
+    _navController = [[UINavigationController alloc] initWithRootViewController:controller];
+    
+    controller.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Voltar" style:UIBarButtonItemStylePlain target:self action:@selector(dismiss:)];
+    controller.navigationItem.title = @"Dados do Evento";
+    controller.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Salvar" style:UIBarButtonItemStyleDone target:self action:@selector(save:)];
+    
+    [self presentViewController:_navController animated:YES completion:nil];
+}
+
+- (void)dismiss:(id)sender {
+    [_navController dismissViewControllerAnimated:YES completion:^{
+    }];
+}
+
+- (void)save:(id)sender {
+    FXFormViewController *formQueVoltou = (FXFormViewController*)_navController.topViewController;
+    _event = formQueVoltou.formController.form;
+    
+    if ([self emptyFieldDoesExist] == NO){
+        [_event save];
+        [_navController dismissViewControllerAnimated:NO completion:^{
+        }];
+    }
+}
+
+- (BOOL) emptyFieldDoesExist{
+    if (_event.nomeEvento == nil ||
+        _event.endereco == nil ||
+        _event.date == nil ||
+        _event.descricao == nil)
+    {
+        UIAlertView *alertEmptyFields = [[UIAlertView alloc] initWithTitle:@"Campos incompletos" message:@"Por favor, preencha todos os campos." delegate: self cancelButtonTitle:@"OK"otherButtonTitles: nil];
+        [alertEmptyFields show];
+        return YES;
+    }
+    return NO;
 }
 
 @end
