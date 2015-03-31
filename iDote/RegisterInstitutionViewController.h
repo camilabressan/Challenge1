@@ -25,4 +25,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *addInstPic;
 @property (weak, nonatomic) IBOutlet VMaskTextField *maskInstitutionPhone;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintBottom;
+
+
+
 @end
