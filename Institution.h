@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <Parse/Parse.h>
+#import "FXForms.h"
 
-@interface Institution : NSObject
+@interface Institution : NSObject <FXForm>
 
 @property PFObject *object;
 
@@ -20,7 +21,7 @@
 @property NSString *institutionAddress;
 @property NSString *institutionDescription;
 @property UIImage *mainImage;
-@property BOOL *ativo;
+@property BOOL ativo;
 
 -(void) save;
 +(NSMutableArray* ) loadInstitution;

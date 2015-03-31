@@ -23,7 +23,7 @@
              @{FXFormFieldTitle: @"Descrição",
                FXFormFieldKey: @"descricao",
                FXFormFieldType: FXFormFieldTypeLongText,
-               FXFormFieldPlaceholder: @"Insira aqui descrições gerais do animal..."}];
+               FXFormFieldPlaceholder: @"Insira aqui descrições gerais do evento..."}];
 }
 
 - (void)save {
