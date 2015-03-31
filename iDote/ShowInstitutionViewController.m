@@ -20,9 +20,26 @@
     Institution *_institution;
 }
 
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    [_tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow animated:YES];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     _list = [Institution loadInstitution];
+    
+    _refreshControl = [[UIRefreshControl alloc] init];
+    [_refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
+    
+    [self.tableView addSubview:_refreshControl];
+}
+
+-(void) refresh{
+    _list = [Institution loadInstitution];
+    [_tableView reloadData];
+    [_refreshControl endRefreshing];
 }
 
 - (void)didReceiveMemoryWarning {

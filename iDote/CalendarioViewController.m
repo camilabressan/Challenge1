@@ -29,11 +29,20 @@
     Evento *_event;
 }
 
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    [_TabelaCalendario deselectRowAtIndexPath:self.TabelaCalendario.indexPathForSelectedRow animated:YES];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     _list = [Evento loadEvents];
-
+    
+    _refreshControl = [[UIRefreshControl alloc] init];
+    [_refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
+    [self.TabelaCalendario addSubview:_refreshControl];
     
     self.navigationItem.backBarButtonItem.tintColor = [UIColor whiteColor];
     
@@ -52,6 +61,13 @@
     
 
     [self loadEvents];
+}
+
+-(void) refresh{
+    _list = [Evento loadEvents];
+    [self loadEvents];
+    [_TabelaCalendario reloadData];
+    [_refreshControl endRefreshing];
 }
 
 - (void) sortEventsByDay {
