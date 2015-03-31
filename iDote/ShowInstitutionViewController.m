@@ -121,7 +121,7 @@
     
     if ([self emptyTextFieldExistent] == NO){
         [_institution save];
-        [_navController dismissViewControllerAnimated:NO completion:^{
+        [_navController dismissViewControllerAnimated:YES completion:^{
         }];
     }
 }

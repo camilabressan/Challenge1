@@ -51,7 +51,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="Eyo-GR-Rra" kind="show" id="PqZ-kW-LTg"/>
+                                    <action selector="clickRegisterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dAQ-hi-qPX"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QFf-4W-31g">
@@ -568,7 +568,7 @@
                     <navigationItem key="navigationItem" title="Instituiçōes" id="01I-VN-tpX">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="fOZ-9M-uSS">
                             <connections>
-                                <segue destination="5H3-lK-ob0" kind="show" id="wWP-Wb-jlq"/>
+                                <action selector="clickAddButton:" destination="rlH-IA-5lt" id="KFs-Z6-e5V"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1014,7 +1014,7 @@
                     <navigationItem key="navigationItem" title="Eventos" id="QZn-L7-vIV">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="NcE-Z3-96k">
                             <connections>
-                                <segue destination="Q08-sF-rpb" kind="show" identifier="" id="syy-QY-2M9"/>
+                                <action selector="clickAddButton:" destination="X7G-FL-hRh" id="0ei-XF-oOM"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1755,6 +1755,6 @@
         <image name="pata" width="24" height="21"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ezp-H1-gUI"/>
+        <segue reference="1QQ-Is-dCN"/>
     </inferredMetricsTieBreakers>
 </document>

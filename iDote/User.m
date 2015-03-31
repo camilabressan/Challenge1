@@ -11,6 +11,29 @@
 
 @implementation User
 
+- (NSArray *)fields
+{
+    return @[@{FXFormFieldKey: @"mainImage",
+               FXFormFieldTitle: @"Foto",
+               FXFormFieldHeader: @"DADOS DO USUÁRIO",
+               FXFormFieldType: FXFormFieldTypeImage},  
+             @{FXFormFieldKey: @"name",
+               FXFormFieldTitle: @"Nome"},
+             @{FXFormFieldKey: @"email",
+               FXFormFieldTitle: @"E-mail",
+               FXFormFieldType: FXFormFieldTypeEmail},
+             @{FXFormFieldKey: @"phone",
+               FXFormFieldTitle: @"Telefone",
+               FXFormFieldType: FXFormFieldTypePhone},
+             @{FXFormFieldKey: @"password",
+               FXFormFieldTitle: @"Senha",
+               FXFormFieldType: FXFormFieldTypePassword},
+             @{FXFormFieldKey: @"confirmPassword",
+               FXFormFieldTitle: @"Confirmar senha",
+               FXFormFieldType: FXFormFieldTypePassword},
+         ];
+}
+
 + (User *)loadCurrentUser {
     if ([PFUser currentUser] != nil) {
         User *user = [[User alloc] init];
@@ -84,6 +107,44 @@
     
 
 }
+
+-(void)save{
+   // PFUser *user = [PFUser objectWithClassName:@"User"];
+    PFUser *user;
+    user = [PFUser user];
+    //strings são as colunas da tabela do parse
+    user.username = [_email lowercaseString];
+    user.password = _password;
+    user.email= [_email lowercaseString];
+    user[@"Name"] = _name;
+    user[@"phone"] = _phone;
+    
+    NSData *imageData = UIImageJPEGRepresentation(_mainImage, 0.7f);
+    PFFile *imageFile = [PFFile fileWithName:@"Profileimage.png" data:imageData];
+    [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!error) {
+            if (succeeded) {
+                user[@"mainPhoto"] = imageFile;
+                [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                    if (error) {
+                        UIAlertView *alertSignUpError = [[UIAlertView alloc] initWithTitle:@"Sign up error" message:@"An unexpected error ocurred.\nPlease, check your internet connection or try a different username." delegate: self cancelButtonTitle:@"Dismiss"otherButtonTitles: nil];
+                        [alertSignUpError show];
+                        return;
+                    }
+                    
+                    if (succeeded) {
+                        _object = user;
+                    }
+                }];
+                
+            }
+        }
+    }];
+    
+    
+    
+}
+
 
 
 
