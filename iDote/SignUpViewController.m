@@ -76,7 +76,7 @@
 }
 
 - (BOOL) phoneIsValid{
-    if ([_txtFieldPhoneNumber.text length] < 10)
+    if ([_txtFieldPhoneNumber.text length] < 14)
     {
         UIAlertView *alertPhoneInvalid = [[UIAlertView alloc] initWithTitle:@"Telefone inválido" message:@"Por favor, um número de telefone válido." delegate: self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alertPhoneInvalid show];

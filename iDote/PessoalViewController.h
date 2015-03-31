@@ -10,8 +10,9 @@
 #import "User.h"
 #import "Animal.h"
 #import "PessoalCellTableViewCell.h"
+#import "VMaskTextField.h"
 
-@interface PessoalViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface PessoalViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 
 @property User *user;
 @property UIRefreshControl *refreshControl;

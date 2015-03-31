@@ -15,11 +15,31 @@
 
 @end
 
-@implementation ShowInstitutionViewController
+@implementation ShowInstitutionViewController{
+    UINavigationController *_navController;
+    Institution *_institution;
+}
+
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    [_tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow animated:YES];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     _list = [Institution loadInstitution];
+    
+    _refreshControl = [[UIRefreshControl alloc] init];
+    [_refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
+    
+    [self.tableView addSubview:_refreshControl];
+}
+
+-(void) refresh{
+    _list = [Institution loadInstitution];
+    [_tableView reloadData];
+    [_refreshControl endRefreshing];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -71,6 +91,54 @@
         detail.inst = sender.institution;
     }
 
+}
+
+- (IBAction)clickAddButton:(id)sender {
+    [self ShowRegisterInstitutionForm];
+}
+
+- (void) ShowRegisterInstitutionForm {
+    FXFormViewController *controller = [[FXFormViewController alloc] init];
+    controller.formController.form = [[Institution alloc] init];
+    
+    _navController = [[UINavigationController alloc] initWithRootViewController:controller];
+    
+    controller.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Voltar" style:UIBarButtonItemStylePlain target:self action:@selector(dismiss:)];
+    controller.navigationItem.title = @"Dados da Instituição";
+    controller.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Salvar" style:UIBarButtonItemStyleDone target:self action:@selector(save:)];
+    
+    [self presentViewController:_navController animated:YES completion:nil];
+}
+
+- (void)dismiss:(id)sender {
+    [_navController dismissViewControllerAnimated:YES completion:^{
+    }];
+}
+
+- (void)save:(id)sender {
+    FXFormViewController *formQueVoltou = (FXFormViewController*)_navController.topViewController;
+    _institution = formQueVoltou.formController.form;
+    
+    if ([self emptyTextFieldExistent] == NO){
+        [_institution save];
+        [_navController dismissViewControllerAnimated:NO completion:^{
+        }];
+    }
+}
+
+-(BOOL) emptyTextFieldExistent
+{
+    if (_institution.institutionName == nil ||
+        _institution.institutionPhone == nil ||
+        _institution.institutionEmail == nil ||
+        _institution.institutionResponsible == nil ||
+        _institution.institutionDescription == nil)
+    {
+        UIAlertView *alertEmptyFields = [[UIAlertView alloc] initWithTitle:@"Campos incompletos" message:@"Por favor, preencha todos os campos obrigatórios." delegate: self cancelButtonTitle:@"OK"otherButtonTitles: nil];
+        [alertEmptyFields show];
+        return YES;
+    }
+    return NO;
 }
 
 @end

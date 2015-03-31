@@ -17,6 +17,7 @@
 @implementation EventoViewController{
     NSDateFormatter *dateFormat;
     UIDatePicker *datePicker;
+    UINavigationController *_navController;
 }
 
 -(void)updateTextField:(id)sender
@@ -51,6 +52,7 @@
     [self.txtFieldEventDate setInputView:datePicker];
     
     [self setBordersToDescriptiomTextView];
+    
 }
 
 - (void)didReceiveMemoryWarning {
