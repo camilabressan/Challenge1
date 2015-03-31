@@ -13,7 +13,7 @@
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
 
-@interface RegisterInstitutionViewController : UIViewController <MFMailComposeViewControllerDelegate>
+@interface RegisterInstitutionViewController : UIViewController <UINavigationControllerDelegate,UIImagePickerControllerDelegate, MFMailComposeViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldInstitutionName;
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldInstitutionPhone;
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldInstitutionEmail;

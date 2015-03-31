@@ -44,6 +44,7 @@
     object[@"email"] = _institutionEmail;
     object[@"endereco"] = _institutionAddress;
     object[@"descricao"] = _institutionDescription;
+    object[@"responsavel"] = _institutionResponsible;
     object[@"ativo"] = [NSNumber numberWithBool:false]; //sempre será inserido falso porque dependerá de aprovação
     
     NSData *imageData = UIImageJPEGRepresentation(_mainImage, 0.7f);
@@ -56,9 +57,11 @@
                 [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                     if (!error) {
                         _object = object;
+                        /*
                         PFRelation *relation = [object relationForKey:@"responsavel"];
                         [relation addObject:[PFUser currentUser]];
                         [object saveInBackground];
+                        */
                     }
                 }];
                 

@@ -45,10 +45,10 @@
                                             // forState:UIControlStateNormal];
     
     // generate a tinted unselected image based on image passed via the storyboard
-    for(UITabBarItem *item in self.tabBar.items) {
+    //for(UITabBarItem *item in self.tabBar.items) {
         // use the UIImage category code for the imageWithColor: method
         // item.image = [[item.selectedImage [UIImage imageWithColor:unselectedColor]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    }
+    //}
 }
 
 - (void)didReceiveMemoryWarning {

@@ -11,20 +11,74 @@
 @interface LoginViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldEmail;
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldPassword;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintBottom;
 
 @end
 
 @implementation LoginViewController {
-
+ 
+    CGFloat _initialConstant; //CODIGO CAMILA
+    
 }
+
+static CGFloat keyboardHeightOffset = 15.0f;
 
 - (void)viewDidLoad {
   [super viewDidLoad];
   // Do any additional setup after loading the view, typically from a nib.
-  if ([PFUser currentUser] != nil) {
-    //TODO: Login Automatico
-  }
     
+    //CODIGO CAMILA
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+}
+
+//CODIGO CAMILA
+- (IBAction)dismissKeyboard {
+    
+    // This method will resign all responders, dropping the keyboard.
+    [self.view endEditing:YES];
+    
+}
+
+- (void)keyboardWillShow:(NSNotification*)notification {
+    
+    // Getting the keyboard frame and animation duration.
+    CGRect keyboardFrame = [notification.userInfo[UIKeyboardFrameBeginUserInfoKey] CGRectValue];
+    NSTimeInterval keyboardAnimationDuration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    
+    if (!_initialConstant) {
+        _initialConstant = _constraintBottom.constant;
+    }
+    
+    // If screen can fit everything, leave the constant untouched.
+    _constraintBottom.constant = MAX(keyboardFrame.size.height + keyboardHeightOffset, _initialConstant);
+    [UIView animateWithDuration:keyboardAnimationDuration animations:^{
+        // This method will automatically animate all views to satisfy new constants.
+        [self.view layoutIfNeeded];
+    }];
+    
+}
+
+- (void)keyboardWillHide:(NSNotification*)notification {
+    
+    // Getting the keyboard frame and animation duration.
+    NSTimeInterval keyboardAnimationDuration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    
+    // Putting everything back to place.
+    _constraintBottom.constant = _initialConstant;
+    [UIView animateWithDuration:keyboardAnimationDuration animations:^{
+        [self.view layoutIfNeeded];
+    }];
+    
+} //fim codigo camila
+
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    if ([PFUser currentUser] != nil) {
+        [self performSegueWithIdentifier:@"MainSegue" sender:nil];
+    }
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -64,7 +118,8 @@
 }
 
 -(IBAction)backFromRegisterScreen:(UIStoryboardSegue *)sender {
-    
+    _txtFieldEmail.text = @"";
+    _txtFieldPassword.text = @"";
 }
 
 -(IBAction)saveFromRegisterScreen:(UIStoryboardSegue *)sender {
@@ -80,5 +135,6 @@
         
     return YES;
 }
+
 
 @end
