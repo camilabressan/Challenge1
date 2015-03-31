@@ -17,6 +17,12 @@
 
 @implementation ShowInstitutionViewController
 
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    [_tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow animated:YES];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     _list = [Institution loadInstitution];

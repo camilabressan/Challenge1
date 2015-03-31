@@ -16,6 +16,6 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *TabelaCalendario;
 @property(nonatomic, retain) UIColor *tintColor;
-
+@property UIRefreshControl *refreshControl;
 
 @end
