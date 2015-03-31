@@ -39,7 +39,6 @@
     _imageHolder = sender;
     UIImagePickerController *imagePickerControllerMain = [[UIImagePickerController alloc] init];
     imagePickerControllerMain.allowsEditing = YES;
-    [imagePickerControllerMain.editButtonItem setTitle:@"Teste"];
     
     imagePickerControllerMain.modalPresentationStyle = UIModalPresentationFullScreen;
     imagePickerControllerMain.delegate = self;

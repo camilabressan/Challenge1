@@ -41,14 +41,20 @@
 
 - (void)loadCustomView
 {
+    if (_data.count > 0) {
+        [_swipeCardsArray insertObject:[[SwipeCardView alloc] initWithData:_data[0]] atIndex:1];
+        ((SwipeCardView *)_swipeCardsArray[1]).position = SwipeCardPositionCenter;
+        [self addSubview:_swipeCardsArray[1]];
     
-    [_swipeCardsArray insertObject:[[SwipeCardView alloc] initWithData:_data[0]] atIndex:1];
-    ((SwipeCardView *)_swipeCardsArray[1]).position = SwipeCardPositionCenter;
-    [self addSubview:_swipeCardsArray[1]];
+    }
+    if (_data.count > 0) {
+        [_swipeCardsArray insertObject:[[SwipeCardView alloc] initWithData:_data[1]] atIndex:2];
+        ((SwipeCardView *)_swipeCardsArray[2]).position = SwipeCardPositionRight;
+        [self addSubview:_swipeCardsArray[2]];
     
-    [_swipeCardsArray insertObject:[[SwipeCardView alloc] initWithData:_data[1]] atIndex:2];
-    ((SwipeCardView *)_swipeCardsArray[2]).position = SwipeCardPositionRight;
-    [self addSubview:_swipeCardsArray[2]];
+    }
+    
+
 }
 
 
