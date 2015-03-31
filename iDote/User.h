@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <Parse/Parse.h>
+#import "FXForms.h"
 
-@interface User : NSObject
+@interface User : NSObject <FXForm>
 @property PFUser *object;
-
 
 @property NSString *mainImageURL;
 
@@ -19,6 +19,7 @@
 @property NSString *username;
 @property NSString *email;
 @property NSString *password;
+@property NSString *confirmPassword;
 @property NSString *name;
 @property NSString *phone;
 
@@ -28,4 +29,5 @@
 - (void) login;
 - (void) cadastrar;
 - (void) updateData;
+- (void) save;
 @end
