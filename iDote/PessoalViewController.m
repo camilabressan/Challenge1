@@ -37,6 +37,24 @@
     _pessoalName.text = _user.name;
     _pessoalEmail.text = _user.email;
     _pessoalPhone.text = _user.phone;
+    
+    
+    if (_user.mainImage == nil) {
+        NSURL *imageURL = [[NSURL alloc] initWithString:_user.mainImageURL];
+        dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
+        dispatch_async(queue, ^{
+            NSData *data = [NSData dataWithContentsOfURL:imageURL];
+            UIImage *image = [UIImage imageWithData:data];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [_pessoalPhoto setBackgroundImage:image forState:UIControlStateNormal];
+                [_pessoalPhoto setTitle:@"" forState:UIControlStateNormal];
+                _user.mainImage = image;
+            });
+        });
+    } else {
+        [_pessoalPhoto setBackgroundImage:_user.mainImage forState:UIControlStateNormal];
+        [_pessoalPhoto setTitle:@"" forState:UIControlStateNormal];
+    }
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -97,4 +115,10 @@
     
 }
 
+- (IBAction)logout:(id)sender {
+    [PFUser logOut];
+    [self performSegueWithIdentifier:@"LogoutSegue" sender:sender];
+    
+    
+}
 @end

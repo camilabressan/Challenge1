@@ -28,10 +28,13 @@
     return nil;
 }
 
-+ (User *)loadUserFromRelation:(PFRelation *)relation {
-    if (relation != nil) {
++ (User *)loadUserFromObject:(PFObject *)object {
+    if (object != nil) {
         User *user = [[User alloc] init];
+
         user = [User loadCurrentUser];
+        
+        
         /*
         user.object = object;
         

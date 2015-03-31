@@ -130,7 +130,7 @@
                         
                         if (succeeded) {
                             // usuário registrado! falta criar a segue para mudar de tela
-                            [self performSegueWithIdentifier:@"registerNewUserSegue" sender:nil];
+                            [self performSegueWithIdentifier:@"LoginFromRegisterSegue" sender:nil];
                             return;
                         }
                     }];

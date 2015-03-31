@@ -21,10 +21,15 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   // Do any additional setup after loading the view, typically from a nib.
-  if ([PFUser currentUser] != nil) {
-    //TODO: Login Automatico
-  }
     
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    if ([PFUser currentUser] != nil) {
+        [self performSegueWithIdentifier:@"MainSegue" sender:nil];
+    }
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -64,7 +69,8 @@
 }
 
 -(IBAction)backFromRegisterScreen:(UIStoryboardSegue *)sender {
-    
+    _txtFieldEmail.text = @"";
+    _txtFieldPassword.text = @"";
 }
 
 -(IBAction)saveFromRegisterScreen:(UIStoryboardSegue *)sender {

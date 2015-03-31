@@ -45,7 +45,7 @@
     for (PFObject *obj in queryResult) {
         Animal *animal = [[Animal alloc] init];
         animal.object = obj;
-        animal.dono = [User loadUserFromRelation:[obj objectForKey:@"user"]];
+        animal.dono = [User loadUserFromObject:obj];
         
         animal.nome = [obj objectForKey:@"name"];
         animal.mainImageURL = [(PFFile *)[obj objectForKey:@"mainPhoto"] url];
@@ -73,7 +73,7 @@
     for (PFObject *obj in queryResult) {
         Animal *animal = [[Animal alloc] init];
         animal.object = obj;
-        animal.dono = [User loadUserFromRelation:[obj objectForKey:@"user"]];
+        animal.dono = [User loadUserFromObject:obj];
         
         animal.nome = [obj objectForKey:@"name"];
         animal.mainImageURL = [(PFFile *)[obj objectForKey:@"mainPhoto"] url];

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -495,65 +495,13 @@
                         <outlet property="txtFieldPassword" destination="GRB-bz-CNc" id="k1i-hR-88k"/>
                         <outlet property="txtFieldPhoneNumber" destination="Ggb-y8-FQW" id="diU-JM-I3h"/>
                         <segue destination="oxU-Bf-4sZ" kind="unwind" identifier="registerNewUserSegue" unwindAction="saveFromRegisterScreen:" id="gPr-5u-Nvt"/>
+                        <segue destination="oy0-qS-wYj" kind="presentation" identifier="LoginFromRegisterSegue" id="ezp-H1-gUI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Km7-uA-MD5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="oxU-Bf-4sZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1704" y="-816"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Jc2-Ec-MJj">
-            <objects>
-                <viewController id="Yxf-sr-PeD" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ww2-lM-YKD"/>
-                        <viewControllerLayoutGuide type="bottom" id="cgh-uS-O7o"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="L1q-ZU-7zm">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="vyB-TP-CoQ">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xSM-YL-gzV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3695" y="648"/>
-        </scene>
-        <!--CadastroAnimal-->
-        <scene sceneID="1n7-5i-R8n">
-            <objects>
-                <viewController title="CadastroAnimal" id="VBf-wy-7od" customClass="RegisterAnimalDataController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="lH1-Wf-68k"/>
-                        <viewControllerLayoutGuide type="bottom" id="htp-ku-PUX"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="4rZ-y9-DIy" customClass="UIControl">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
-                        <connections>
-                            <action selector="clickBackground:" destination="VBf-wy-7od" eventType="touchDown" id="edW-3T-CNC"/>
-                        </connections>
-                    </view>
-                    <navigationItem key="navigationItem" title="Cadastro Pets" id="ysS-xb-pLm">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="VTY-iJ-B3e">
-                            <connections>
-                                <segue destination="vdH-0r-evX" kind="unwind" unwindAction="backFromRegisterAnimalData:" id="LTh-UC-baT"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XDb-bX-kMA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="vdH-0r-evX" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="2923" y="1312"/>
+            <point key="canvasLocation" x="1703" y="-816"/>
         </scene>
         <!--Instituiçōes-->
         <scene sceneID="xDH-Jj-Emi">
@@ -1349,6 +1297,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Pessoal" id="bps-5j-ztP">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="x5B-uS-Yzy">
+                            <connections>
+                                <action selector="logout:" destination="X5C-4G-xhf" id="XdC-bV-eWS"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="save" id="CkG-dh-Ezv">
                             <connections>
                                 <action selector="saveClick:" destination="X5C-4G-xhf" id="HVD-vi-Tkv"/>
@@ -1363,9 +1316,11 @@
                         <outlet property="pessoalPhoto" destination="WUi-fp-HDL" id="Np2-5B-h4p"/>
                         <outlet property="segmentedControl" destination="JWY-mB-Uer" id="zYR-ka-823"/>
                         <outlet property="tableView" destination="lxn-Oy-ymg" id="aDR-AV-rao"/>
+                        <segue destination="rfL-mU-9ic" kind="unwind" identifier="LogoutSegue" unwindAction="backFromRegisterScreen:" id="NgU-p4-hpW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tg7-Fp-brn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="rfL-mU-9ic" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="204" y="2385"/>
         </scene>
@@ -1819,4 +1774,7 @@
         <image name="Rectangle 86" width="750" height="28"/>
         <image name="pata" width="24" height="21"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ezp-H1-gUI"/>
+    </inferredMetricsTieBreakers>
 </document>
