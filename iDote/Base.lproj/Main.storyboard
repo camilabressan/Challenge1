@@ -621,7 +621,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome da Instituição" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="97J-VA-otQ">
-                                <rect key="frame" x="24" y="239" width="552" height="30"/>
+                                <rect key="frame" x="24" y="201" width="552" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="6oi-DA-YoX"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="600" id="pfJ-jn-2rU"/>
@@ -633,7 +633,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefone" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S9y-TN-PgK" customClass="VMaskTextField">
-                                <rect key="frame" x="24" y="315" width="552" height="30"/>
+                                <rect key="frame" x="24" y="277" width="552" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="SNi-QU-dBG"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="600" id="Ygr-hv-RfA"/>
@@ -645,7 +645,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aXs-YZ-zvl">
-                                <rect key="frame" x="24" y="353" width="552" height="30"/>
+                                <rect key="frame" x="24" y="315" width="552" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="HNI-vx-Jsh"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="600" id="Xnb-4P-5qp"/>
@@ -657,7 +657,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Endereço" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gYy-Ad-Xmj">
-                                <rect key="frame" x="24" y="391" width="552" height="30"/>
+                                <rect key="frame" x="24" y="353" width="552" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="600" id="TBv-CH-7Dq"/>
                                     <constraint firstAttribute="height" constant="30" id="u7e-K3-rI6"/>
@@ -669,10 +669,9 @@
                                 </connections>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Descrição" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="E7F-NL-Iwn">
-                                <rect key="frame" x="24" y="440" width="552" height="111"/>
+                                <rect key="frame" x="24" y="402" width="552" height="186"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="600" id="Fd0-9J-z2G"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="111" id="cge-w3-8lH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -682,10 +681,10 @@
                                 </connections>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPc-vD-mIi">
-                                <rect key="frame" x="229" y="97" width="142" height="105"/>
+                                <rect key="frame" x="229" y="134" width="142" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="142" id="Z5w-pv-Vzh"/>
-                                    <constraint firstAttribute="height" constant="105" id="ulp-z7-2QY"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="105" id="ulp-z7-2QY"/>
                                 </constraints>
                                 <state key="normal" title="Adicionar Foto">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -695,7 +694,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do Responsável" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LA2-rj-t5Q">
-                                <rect key="frame" x="24" y="277" width="552" height="30"/>
+                                <rect key="frame" x="24" y="239" width="552" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="600" id="RpI-ea-Ut7"/>
                                     <constraint firstAttribute="height" constant="30" id="arV-gy-R8I"/>
@@ -718,6 +717,7 @@
                             <constraint firstItem="E7F-NL-Iwn" firstAttribute="top" secondItem="gYy-Ad-Xmj" secondAttribute="bottom" constant="19" id="EXy-Qd-KYg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aXs-YZ-zvl" secondAttribute="trailing" constant="8" id="Fcv-yE-zMw"/>
                             <constraint firstItem="aXs-YZ-zvl" firstAttribute="top" secondItem="S9y-TN-PgK" secondAttribute="bottom" constant="8" id="H3m-Vg-P7z"/>
+                            <constraint firstItem="mDk-j1-oGU" firstAttribute="top" secondItem="E7F-NL-Iwn" secondAttribute="bottom" constant="-32" id="HRK-HW-zce"/>
                             <constraint firstAttribute="centerY" secondItem="bPc-vD-mIi" secondAttribute="centerY" constant="150.5" id="Ihh-1U-ZWl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gYy-Ad-Xmj" secondAttribute="trailing" constant="8" id="Ncc-jj-0hF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="E7F-NL-Iwn" secondAttribute="trailing" constant="8" id="NeJ-Vj-aZE"/>
