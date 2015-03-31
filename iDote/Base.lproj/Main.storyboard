@@ -1507,7 +1507,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Descrição" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="g2z-tf-luN">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Descrição" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2z-tf-luN">
                                 <rect key="frame" x="24" y="341" width="552" height="202"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
@@ -1572,6 +1572,7 @@
                         <outlet property="ownerName" destination="Wj8-B3-Nvx" id="AEw-TQ-5to"/>
                         <outlet property="ownerPhone" destination="sbP-1Y-Tfq" id="q3p-rR-qJX"/>
                         <outlet property="petAge" destination="5IQ-Wr-Tnh" id="T7d-Q6-Tr2"/>
+                        <outlet property="petDescription" destination="g2z-tf-luN" id="Ye5-HJ-Hgv"/>
                         <outlet property="petGender" destination="rbE-bx-72I" id="Ojk-3k-fXd"/>
                         <outlet property="petImage" destination="hR7-jH-EWc" id="JAa-Q5-dUV"/>
                         <outlet property="petName" destination="KFH-1X-0mv" id="1AE-RN-tKV"/>

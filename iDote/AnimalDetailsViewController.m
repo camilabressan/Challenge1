@@ -14,7 +14,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *petGender;
 @property (weak, nonatomic) IBOutlet UILabel *petAge;
 @property (weak, nonatomic) IBOutlet UILabel *petSize;
-@property (weak, nonatomic) IBOutlet UILabel *petDescription;
+@property (weak, nonatomic) IBOutlet UITextView *petDescription;
+
 
 @property (weak, nonatomic) IBOutlet UIImageView *ownerImage;
 @property (weak, nonatomic) IBOutlet UILabel *ownerName;
@@ -27,6 +28,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     
     if (_animal.mainImage == nil) {
         NSURL *imageURL = [[NSURL alloc] initWithString:_animal.mainImageURL];

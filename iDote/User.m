@@ -34,14 +34,20 @@
 
         user = [User loadCurrentUser];
         
+        PFRelation *relation = [object relationForKey:@"user"];
+        PFQuery *query = [relation query];
         
-        /*
-        user.object = object;
-        
-        user.name = user.object[@"Name"];
-        user.email = user.object[@"email"];
-        user.username = user.object[@"username"];
-        */
+        [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+            if (!error) {
+                user.object = (PFUser *)object;
+                user.name = user.object[@"Name"];
+                user.email = user.object[@"email"];
+                user.username = user.object[@"username"];
+                user.password = user.object[@"password"];
+                user.phone = user.object[@"phone"];
+                user.mainImageURL = [(PFFile *)user.object[@"mainPhoto"] url];
+            }
+        }];
         return user;
     }
     return nil;

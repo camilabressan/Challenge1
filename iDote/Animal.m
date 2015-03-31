@@ -98,7 +98,7 @@
     object[@"age"] = [NSNumber numberWithInt:(int)_idade];
     object[@"type"] = _tipo;
     object[@"size"] = _porte;
-    object[@"desciption"] = _descricao;
+    object[@"description"] = _descricao;
     
     NSData *imageData = UIImageJPEGRepresentation(_mainImage, 0.7f);
     PFFile *imageFile = [PFFile fileWithName:@"Profileimage.png" data:imageData];

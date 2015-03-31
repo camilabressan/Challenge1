@@ -61,7 +61,7 @@
     for (PFObject *obj in queryResult) {
         Evento *event = [[Evento alloc] init];
         event.object = obj;
-        //event.dono = [User loadUserFromObject:<#(PFObject *)#>:[obj objectForKey:@"user"]];
+        event.dono = [User loadUserFromObject:obj];
         
         event.nomeEvento = [obj objectForKey:@"nome"];
         event.endereco = [obj objectForKey:@"endereco"];
