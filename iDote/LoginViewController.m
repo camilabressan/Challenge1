@@ -76,7 +76,7 @@ static CGFloat keyboardHeightOffset = 15.0f;
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     if ([PFUser currentUser] != nil) {
-        [self performSegueWithIdentifier:@"MainSegue" sender:nil];
+        //[self performSegueWithIdentifier:@"MainSegue" sender:nil];
     }
 
 }
