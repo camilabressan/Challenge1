@@ -120,8 +120,27 @@
             
 
         }
+
         _currentIndex++;
+        if (_currentIndex >= _data.count -1) { //Load New Data async
+            dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
+            dispatch_async(queue, ^{
+                NSMutableArray *newData = [Animal loadNewAnimals:_data[_data.count-1]];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [_data addObjectsFromArray:newData];
+                    if (_swipeCardsArray[2] == [NSNull null] && newData.count > 0) {
+                        SwipeCardView *newCard = [[SwipeCardView alloc] initWithData:_data[_currentIndex+1]];
+                        _swipeCardsArray[2] = newCard;
+                        newCard.position = SwipeCardPositionRight;
+                        [self addSubview:newCard];
+                    }
+                });
+            });
+        }
         
+        if (_currentIndex >= 5) {
+            ((Animal *)_data[_currentIndex-5]).mainImage = nil;
+        }
     }
     
 }
