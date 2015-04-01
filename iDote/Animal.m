@@ -39,7 +39,7 @@
     NSMutableArray *list = [[NSMutableArray alloc] init];
     
     PFQuery *query = [PFQuery queryWithClassName:@"Animal"];
-//    query.limit = 1;
+    query.limit = 3;
     [query orderByAscending:@"createdAt"];
     
     NSMutableArray *queryResult = [NSMutableArray arrayWithArray:[query findObjects]];

@@ -133,7 +133,7 @@
                                     <constraint firstAttribute="height" constant="60" id="jIk-WL-7RK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="join" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="AiF-38-JGf"/>
@@ -1137,7 +1137,7 @@
                         <viewControllerLayoutGuide type="top" id="KmQ-n8-k6y"/>
                         <viewControllerLayoutGuide type="bottom" id="oXl-3s-ccf"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ziS-yq-Gzc">
+                    <view key="view" contentMode="scaleToFill" id="ziS-yq-Gzc" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -1224,9 +1224,10 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Ta-rS-WOf">
                                 <rect key="frame" x="184" y="138" width="408" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
-                                    <action selector="profileDataChanged:" destination="X5C-4G-xhf" eventType="editingDidEnd" id="6es-0d-DRY"/>
+                                    <action selector="profileDataChanged:" destination="X5C-4G-xhf" eventType="editingChanged" id="aaZ-4w-cQB"/>
+                                    <outlet property="delegate" destination="X5C-4G-xhf" id="pkM-24-z3i"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefone" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gsc-bH-2No">
@@ -1236,9 +1237,9 @@
                                     <constraint firstAttribute="width" constant="408" id="guZ-Aq-nqF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
-                                    <action selector="profileDataChanged:" destination="X5C-4G-xhf" eventType="editingDidEnd" id="HDU-nE-Imp"/>
+                                    <action selector="profileDataChanged:" destination="X5C-4G-xhf" eventType="editingChanged" id="SkC-xg-aXa"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome Completo" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bby-9O-9My">
@@ -1248,9 +1249,10 @@
                                     <constraint firstAttribute="width" constant="408" id="ICI-Sq-wt5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
                                     <action selector="profileDataChanged:" destination="X5C-4G-xhf" eventType="editingChanged" id="aB7-L3-Lpl"/>
+                                    <outlet property="delegate" destination="X5C-4G-xhf" id="6ca-9Q-3f8"/>
                                 </connections>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fill 199" translatesAutoresizingMaskIntoConstraints="NO" id="uQA-n5-KM7">
@@ -1288,6 +1290,9 @@
                             <constraint firstItem="Tgj-ad-9CS" firstAttribute="top" secondItem="KmQ-n8-k6y" secondAttribute="bottom" constant="43" id="qdP-nz-cUv"/>
                             <constraint firstItem="lxn-Oy-ymg" firstAttribute="top" secondItem="JWY-mB-Uer" secondAttribute="bottom" constant="1" id="wym-by-fNh"/>
                         </constraints>
+                        <connections>
+                            <action selector="clickViewBackground:" destination="X5C-4G-xhf" eventType="touchDown" id="IKh-Xe-zuU"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Pessoal" id="bps-5j-ztP">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="x5B-uS-Yzy">
