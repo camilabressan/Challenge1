@@ -162,11 +162,12 @@ static CGFloat keyboardHeightOffset = 15.0f; //Camila
     if ([self emptyTextFieldExistent] == NO &&
         [self validateEmail: _user.email] == YES &&
         [self passwordsDoMatch] == YES &&
-        [self phoneIsValid] == YES &&
-        _user.phone != nil){
-        
+        [self phoneIsValid] == YES)
+    {
         [_user save];
         [_navController dismissViewControllerAnimated:YES completion:^{
+            UIAlertView *alertUserCreated = [[UIAlertView alloc] initWithTitle:@"Usuário criado" message:@"Novo usuário criado com sucesso!" delegate: self cancelButtonTitle:@"OK"otherButtonTitles: nil];
+            [alertUserCreated show];
         }];
     }
 }
@@ -191,7 +192,8 @@ static CGFloat keyboardHeightOffset = 15.0f; //Camila
         _user.email == nil ||
         _user.phone == nil ||
         _user.password == nil ||
-        _user.confirmPassword == nil)
+        _user.confirmPassword == nil||
+        _user.mainImage != nil)
     {
         UIAlertView *alertEmptyFields = [[UIAlertView alloc] initWithTitle:@"Campos incompletos" message:@"Por favor, preencha todos os campos." delegate: self cancelButtonTitle:@"OK"otherButtonTitles: nil];
         [alertEmptyFields show];
@@ -215,7 +217,7 @@ static CGFloat keyboardHeightOffset = 15.0f; //Camila
 - (BOOL) phoneIsValid{
     if ([_user.phone length] < 10)
     {
-        UIAlertView *alertPhoneInvalid = [[UIAlertView alloc] initWithTitle:@"Telefone inválido" message:@"Por favor, um número de telefone válido (com prefixo)." delegate: self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        UIAlertView *alertPhoneInvalid = [[UIAlertView alloc] initWithTitle:@"Telefone inválido" message:@"Por favor, insira um número de telefone válido (com prefixo)." delegate: self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alertPhoneInvalid show];
         return NO;
     }

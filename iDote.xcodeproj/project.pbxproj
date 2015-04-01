@@ -425,7 +425,7 @@
 					};
 					B96024A61AB89729008C211C = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = M7SM6673Q8;
+						DevelopmentTeam = P2V4W6VMHY;
 						TestTargetID = B960248D1AB89728008C211C;
 					};
 				};

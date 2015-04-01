@@ -167,7 +167,8 @@
     else if ([self validateEmail: _pessoalEmail.text] == NO){
         return NO;
     }
-    else if([_pessoalPhone.text length] < 14)
+    else if([_pessoalPhone.text length] < 14 &&
+            [_pessoalPhone.text length] > 17)
     {
         UIAlertView *alertPhoneInvalid = [[UIAlertView alloc] initWithTitle:@"Telefone inváido" message:@"Por favor, preencha um número válido de telefone." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alertPhoneInvalid show];
@@ -177,8 +178,7 @@
     return YES;
 }
 
-- (IBAction)saveClick:(id)sender {
-    
+- (void) saveProfileChanges{
     if([self formIsValid] == YES){
         _user.name = _pessoalName.text;
         _user.username = _pessoalEmail.text;
@@ -192,13 +192,25 @@
     }
 }
 
+- (IBAction)saveClick:(id)sender {
+    [self saveProfileChanges];
+}
+
 - (IBAction)logout:(id)sender {
     [PFUser logOut];
     [self performSegueWithIdentifier:@"LogoutSegue" sender:sender];
-    
-    
 }
+
 - (IBAction)clickViewBackground:(id)sender {
     [self.view endEditing:YES];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    if ([textField isEqual: _pessoalName])
+        [_pessoalEmail becomeFirstResponder];
+    else if ([textField isEqual: _pessoalEmail])
+        [_pessoalPhone becomeFirstResponder];
+        
+    return YES;
 }
 @end

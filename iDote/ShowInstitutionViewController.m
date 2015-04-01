@@ -122,6 +122,8 @@
     if ([self emptyTextFieldExistent] == NO){
         [_institution save];
         [_navController dismissViewControllerAnimated:YES completion:^{
+            UIAlertView *alertInstitutionCreated = [[UIAlertView alloc] initWithTitle:@"Nova instituição criada" message:@"Instituição inserida com sucesso!\n Tornaremos ela visível assim que validarmos a aprovação desta." delegate: self cancelButtonTitle:@"OK"otherButtonTitles: nil];
+            [alertInstitutionCreated show];
         }];
     }
 }
@@ -132,7 +134,8 @@
         _institution.institutionPhone == nil ||
         _institution.institutionEmail == nil ||
         _institution.institutionResponsible == nil ||
-        _institution.institutionDescription == nil)
+        _institution.institutionDescription == nil ||
+        _institution.mainImage == nil)
     {
         UIAlertView *alertEmptyFields = [[UIAlertView alloc] initWithTitle:@"Campos incompletos" message:@"Por favor, preencha todos os campos obrigatórios." delegate: self cancelButtonTitle:@"OK"otherButtonTitles: nil];
         [alertEmptyFields show];

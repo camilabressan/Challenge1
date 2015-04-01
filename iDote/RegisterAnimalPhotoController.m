@@ -104,6 +104,8 @@
     if ([self emptyTextFieldExistent] == NO){
         [_navController dismissViewControllerAnimated:NO completion:^{
             [self performSegueWithIdentifier:@"segueReturnFromRegisterAnimal" sender:sender];
+            UIAlertView *alertAnimalInserted = [[UIAlertView alloc] initWithTitle:@"Novo animal" message:@"Animal inserido com sucesso!" delegate: self cancelButtonTitle:@"OK"otherButtonTitles: nil];
+            [alertAnimalInserted show];
         }];
     }
 }

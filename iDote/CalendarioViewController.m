@@ -202,6 +202,8 @@
     if ([self emptyFieldDoesExist] == NO){
         [_event save];
         [_navController dismissViewControllerAnimated:NO completion:^{
+            UIAlertView *alertEventCreated = [[UIAlertView alloc] initWithTitle:@"Evento criado" message:@"Novo evento criado com sucesso!" delegate: self cancelButtonTitle:@"OK"otherButtonTitles: nil];
+            [alertEventCreated show];
         }];
     }
 }
