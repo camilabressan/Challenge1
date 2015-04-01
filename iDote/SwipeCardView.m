@@ -136,7 +136,7 @@
         }
             
         case SwipeCardPositionLeft: {
-            [self removeFromSuperview];
+            //[self removeFromSuperview];
             NSLog(@"REmove");
             break;
         }
@@ -170,7 +170,7 @@
             
         case SwipeCardPositionRight: {
             NSLog(@"REmove");
-            [self removeFromSuperview];
+            //[self removeFromSuperview];
             break;
         }
             
