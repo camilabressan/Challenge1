@@ -416,7 +416,6 @@
 				TargetAttributes = {
 					B960248D1AB89728008C211C = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 9468LRW88W;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 0;
@@ -425,7 +424,7 @@
 					};
 					B96024A61AB89729008C211C = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 9468LRW88W;
+						DevelopmentTeam = M7SM6673Q8;
 						TestTargetID = B960248D1AB89728008C211C;
 					};
 				};

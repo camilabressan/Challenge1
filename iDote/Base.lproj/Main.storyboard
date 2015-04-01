@@ -864,11 +864,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ruq-Wf-jc8">
-                                <rect key="frame" x="137" y="169" width="351" height="287"/>
+                                <rect key="frame" x="120" y="108" width="361" height="361"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="287" id="im9-nG-Te4"/>
-                                    <constraint firstAttribute="width" constant="351" id="joT-8M-hnb"/>
+                                    <constraint firstAttribute="width" secondItem="Ruq-Wf-jc8" secondAttribute="height" multiplier="1:1" id="FOa-xU-WdU"/>
+                                    <constraint firstAttribute="width" constant="361" id="squ-cx-jbg"/>
                                 </constraints>
                                 <state key="normal" title="Adicionar foto do Animal">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -880,8 +880,8 @@
                         </subviews>
                         <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="Ruq-Wf-jc8" secondAttribute="centerY" constant="-12.5" id="Xr0-VF-669"/>
-                            <constraint firstAttribute="centerX" secondItem="Ruq-Wf-jc8" secondAttribute="centerX" constant="-12.5" id="z17-94-djV"/>
+                            <constraint firstAttribute="centerX" secondItem="Ruq-Wf-jc8" secondAttribute="centerX" constant="-0.5" id="YDN-Br-Kat"/>
+                            <constraint firstItem="Ruq-Wf-jc8" firstAttribute="top" secondItem="wzZ-db-Aws" secondAttribute="bottom" constant="44" id="kgn-YG-Uqx"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Cadastro Pets" id="HWo-du-gXO">
@@ -899,7 +899,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gx0-cJ-CmY" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Ync-gB-zL1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1056" y="3160"/>
+            <point key="canvasLocation" x="1056" y="3256"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="eiW-pa-9sj">
