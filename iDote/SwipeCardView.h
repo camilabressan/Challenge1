@@ -27,5 +27,4 @@ typedef NS_ENUM(NSInteger, SwipeCardPosition) {
 
 - (void) moveLeft;
 - (void) moveRight;
-
 @end
