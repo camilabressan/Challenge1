@@ -27,6 +27,11 @@ static CGFloat keyboardHeightOffset = 15.0f; //Camila
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+    
+    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:(255.0/255.0) green:(255.0/255.0) blue:(255.0/255.0) alpha:1]];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    //MUDANDO A COR DO BOTAO PADRAO DA NAVIGATION
+    
   // Do any additional setup after loading the view, typically from a nib.
     
     //CODIGO CAMILA
@@ -193,7 +198,7 @@ static CGFloat keyboardHeightOffset = 15.0f; //Camila
         _user.phone == nil ||
         _user.password == nil ||
         _user.confirmPassword == nil||
-        _user.mainImage != nil)
+        _user.mainImage == nil)
     {
         UIAlertView *alertEmptyFields = [[UIAlertView alloc] initWithTitle:@"Campos incompletos" message:@"Por favor, preencha todos os campos." delegate: self cancelButtonTitle:@"OK"otherButtonTitles: nil];
         [alertEmptyFields show];
