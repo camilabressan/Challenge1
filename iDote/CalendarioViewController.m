@@ -17,9 +17,6 @@
     NSMutableArray *monthArray;
 }
 @property (weak, nonatomic) IBOutlet UITableView *tableViewEvents;
-
-@property NSMutableArray *list;
-
 @end
 
 @implementation CalendarioViewController{
@@ -37,8 +34,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    _list = [Evento loadEvents];
     
     _refreshControl = [[UIRefreshControl alloc] init];
     [_refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
@@ -64,7 +59,6 @@
 }
 
 -(void) refresh{
-    _list = [Evento loadEvents];
     [self loadEvents];
     [_TabelaCalendario reloadData];
     [_refreshControl endRefreshing];
@@ -115,7 +109,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [monthArray[section] count];
-    //return _list.count;
 }
 
 
