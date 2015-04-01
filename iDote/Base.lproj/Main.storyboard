@@ -1814,11 +1814,11 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="3fx-o6-cFR"/>
-                                <exclude reference="OX9-gx-X86"/>
                                 <exclude reference="64V-DG-3aD"/>
                                 <exclude reference="frX-Ba-aIv"/>
                                 <exclude reference="E8n-R2-yaH"/>
+                                <exclude reference="3fx-o6-cFR"/>
+                                <exclude reference="OX9-gx-X86"/>
                             </mask>
                         </variation>
                     </view>

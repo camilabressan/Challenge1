@@ -144,7 +144,7 @@ static CGFloat keyboardHeightOffset = 15.0f; //Camila
     _navController = [[UINavigationController alloc] initWithRootViewController:controller];
     
     controller.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Voltar" style:UIBarButtonItemStylePlain target:self action:@selector(dismiss:)];
-    controller.navigationItem.title = @"Dados do Evento";
+    controller.navigationItem.title = @"Dados do Usuário";
     controller.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Salvar" style:UIBarButtonItemStyleDone target:self action:@selector(save:)];
     
     [self presentViewController:_navController animated:YES completion:nil];
