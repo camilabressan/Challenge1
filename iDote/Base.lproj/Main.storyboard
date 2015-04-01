@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -864,11 +864,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ruq-Wf-jc8">
-                                <rect key="frame" x="137" y="169" width="351" height="287"/>
+                                <rect key="frame" x="120" y="108" width="361" height="361"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="287" id="im9-nG-Te4"/>
-                                    <constraint firstAttribute="width" constant="351" id="joT-8M-hnb"/>
+                                    <constraint firstAttribute="width" secondItem="Ruq-Wf-jc8" secondAttribute="height" multiplier="1:1" id="FOa-xU-WdU"/>
+                                    <constraint firstAttribute="width" constant="361" id="squ-cx-jbg"/>
                                 </constraints>
                                 <state key="normal" title="Adicionar foto do Animal">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -880,8 +880,8 @@
                         </subviews>
                         <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="Ruq-Wf-jc8" secondAttribute="centerY" constant="-12.5" id="Xr0-VF-669"/>
-                            <constraint firstAttribute="centerX" secondItem="Ruq-Wf-jc8" secondAttribute="centerX" constant="-12.5" id="z17-94-djV"/>
+                            <constraint firstAttribute="centerX" secondItem="Ruq-Wf-jc8" secondAttribute="centerX" constant="-0.5" id="YDN-Br-Kat"/>
+                            <constraint firstItem="Ruq-Wf-jc8" firstAttribute="top" secondItem="wzZ-db-Aws" secondAttribute="bottom" constant="44" id="kgn-YG-Uqx"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Cadastro Pets" id="HWo-du-gXO">
@@ -899,7 +899,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gx0-cJ-CmY" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Ync-gB-zL1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1056" y="3160"/>
+            <point key="canvasLocation" x="1056" y="3256"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="eiW-pa-9sj">
@@ -1039,7 +1039,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do Evento" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nfr-Pj-XLm">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do Evento" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nfr-Pj-XLm">
                                 <rect key="frame" x="24" y="126" width="552" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
@@ -1047,7 +1047,7 @@
                                     <outlet property="delegate" destination="Q08-sF-rpb" id="dy0-GB-0ZQ"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Endereço" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pbT-fw-OfT">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Endereço" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pbT-fw-OfT">
                                 <rect key="frame" x="24" y="173" width="552" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
@@ -1055,7 +1055,7 @@
                                     <outlet property="delegate" destination="Q08-sF-rpb" id="3lA-Tt-ls8"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Data" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XEc-J1-Tg5">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Data" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XEc-J1-Tg5">
                                 <rect key="frame" x="24" y="220" width="552" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
@@ -1063,7 +1063,7 @@
                                     <outlet property="delegate" destination="Q08-sF-rpb" id="0uD-iy-Uun"/>
                                 </connections>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Descrição" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WuW-hj-UC5">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Descrição" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WuW-hj-UC5">
                                 <rect key="frame" x="24" y="258" width="552" height="290"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>

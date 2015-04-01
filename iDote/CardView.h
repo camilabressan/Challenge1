@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "Animal.h"
+#import "SwipeCardView.h"
 
 @interface CardView : UIView
+@property (nonatomic, strong) SwipeCardView *swipeView;
+
 
 - (void) swipeLeft;
 - (void) swipeRight;
