@@ -168,7 +168,7 @@
         return NO;
     }
     else if([_pessoalPhone.text length] < 14 &&
-            [_pessoalPhone.text length] > 17)
+            [_pessoalPhone.text length] > 15)
     {
         UIAlertView *alertPhoneInvalid = [[UIAlertView alloc] initWithTitle:@"Telefone inváido" message:@"Por favor, preencha um número válido de telefone." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alertPhoneInvalid show];
