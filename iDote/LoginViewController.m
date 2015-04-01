@@ -213,14 +213,13 @@ static CGFloat keyboardHeightOffset = 15.0f; //Camila
 }
 
 - (BOOL) phoneIsValid{
-    if ([_user.phone length] < 14)
+    if ([_user.phone length] < 10)
     {
-        UIAlertView *alertPhoneInvalid = [[UIAlertView alloc] initWithTitle:@"Telefone inválido" message:@"Por favor, um número de telefone válido." delegate: self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        UIAlertView *alertPhoneInvalid = [[UIAlertView alloc] initWithTitle:@"Telefone inválido" message:@"Por favor, um número de telefone válido (com prefixo)." delegate: self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alertPhoneInvalid show];
         return NO;
     }
     return YES;
 }
-
 
 @end
