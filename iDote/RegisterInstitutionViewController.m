@@ -27,9 +27,7 @@ static CGFloat _keyboardHeightOffset = 15.0f;
     [super viewDidLoad];
     //telephone with area code
     self.maskInstitutionPhone.mask = @"(##) ####-#####";
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+
 }
 
 //method for replacing the telephone field with mask;
@@ -154,45 +152,6 @@ static CGFloat _keyboardHeightOffset = 15.0f;
     institution.institutionAddress = _txtFieldInstitutionAddress.text;
     institution.institutionDescription = _txtViewInstitutionDescription.text;
     institution.mainImage = [_addInstPic backgroundImageForState:UIControlStateNormal];
-    
-}
-
-- (IBAction)dismissKeyboard {
-    
-    // This method will resign all responders, dropping the keyboard.
-    [self.view endEditing:YES];
-    
-}
-
-- (void)keyboardWillShow:(NSNotification*)notification {
-    
-    // Getting the keyboard frame and animation duration.
-    CGRect keyboardFrame = [notification.userInfo[UIKeyboardFrameBeginUserInfoKey] CGRectValue];
-    NSTimeInterval keyboardAnimationDuration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-    
-    if (!_initialConstant) {
-        _initialConstant = _constraintBottom.constant;
-    }
-    
-    // If screen can fit everything, leave the constant untouched.
-    _constraintBottom.constant = MAX(keyboardFrame.size.height + _keyboardHeightOffset, _initialConstant);
-    [UIView animateWithDuration:keyboardAnimationDuration animations:^{
-        // This method will automatically animate all views to satisfy new constants.
-        [self.view layoutIfNeeded];
-    }];
-    
-}
-
-- (void)keyboardWillHide:(NSNotification*)notification {
-    
-    // Getting the keyboard frame and animation duration.
-    NSTimeInterval keyboardAnimationDuration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-    
-    // Putting everything back to place.
-    _constraintBottom.constant = _initialConstant;
-    [UIView animateWithDuration:keyboardAnimationDuration animations:^{
-        [self.view layoutIfNeeded];
-    }];
     
 }
 

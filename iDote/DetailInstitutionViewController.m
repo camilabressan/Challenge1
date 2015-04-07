@@ -25,9 +25,7 @@
     _descriptionDetail.text = _inst.institutionDescription;
     _descriptionDetail.editable = NO;
     
-    
 }
-
 
 
 @end

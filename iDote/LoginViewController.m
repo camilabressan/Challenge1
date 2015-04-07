@@ -39,14 +39,6 @@ static CGFloat keyboardHeightOffset = 15.0f; //Camila
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 }
 
-//CODIGO CAMILA
-- (IBAction)dismissKeyboard {
-    
-    // This method will resign all responders, dropping the keyboard.
-    [self.view endEditing:YES];
-    
-}
-
 - (void)keyboardWillShow:(NSNotification*)notification {
     
     // Getting the keyboard frame and animation duration.
@@ -144,6 +136,7 @@ static CGFloat keyboardHeightOffset = 15.0f; //Camila
     [self.view endEditing:YES];
 }
 
+/*
 -(IBAction)backFromRegisterScreen:(UIStoryboardSegue *)sender {
     _txtFieldEmail.text = @"";
     _txtFieldPassword.text = @"";
@@ -152,6 +145,7 @@ static CGFloat keyboardHeightOffset = 15.0f; //Camila
 -(IBAction)saveFromRegisterScreen:(UIStoryboardSegue *)sender {
     
 }
+*/
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
