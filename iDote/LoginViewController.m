@@ -80,12 +80,31 @@ static CGFloat keyboardHeightOffset = 15.0f; //Camila
 } //fim codigo camila
 
 
--(void)viewDidAppear:(BOOL)animated {
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self performSelector:@selector(fadeAnimation) withObject:nil afterDelay:1.0];
+}
+
+-(void)fadeAnimation
+{
+    [UIView transitionWithView:self.logo duration:1.0 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+        
+        [self.logo setImage:[UIImage imageNamed:@""]];
+        
+    } completion:^(BOOL finished) {
+        
+        [self performSelector:@selector(fadeAnimation) withObject:nil afterDelay:1.0];
+        
+    }];
+}
+
+/*
+ //Animaçao da tela inicial
+ -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     if ([PFUser currentUser] != nil) {
         //[self performSegueWithIdentifier:@"MainSegue" sender:nil];
     }
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -98,6 +117,8 @@ static CGFloat keyboardHeightOffset = 15.0f; //Camila
     //TODO: Enviar Usuario Para Lista
   }
 }
+*/
+
 
 //pega os dados inseridos pelo usuario na tela de login e verifica os mesmos
 - (IBAction)checkData:(id)sender {
