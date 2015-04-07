@@ -74,7 +74,8 @@ static CGFloat keyboardHeightOffset = 15.0f; //Camila
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    [self performSelector:@selector(fadeAnimation) withObject:nil afterDelay:1.0];
+    [super viewDidAppear:animated];
+    //[self performSelector:@selector(fadeAnimation) withObject:nil afterDelay:1.0];
 }
 
 -(void)fadeAnimation
