@@ -28,18 +28,32 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _list = [Institution loadInstitution];
     
+    
+    [self loadData];
     _refreshControl = [[UIRefreshControl alloc] init];
-    [_refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
+    [_refreshControl addTarget:self
+                        action:@selector(loadData)
+              forControlEvents:UIControlEventValueChanged];
+    
+    
     
     [self.tableView addSubview:_refreshControl];
 }
 
--(void) refresh{
-    _list = [Institution loadInstitution];
-    [_tableView reloadData];
-    [_refreshControl endRefreshing];
+-(void) loadData{
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
+    dispatch_async(queue, ^{
+        _list = [Institution loadInstitution];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [_tableView reloadData];
+            if (_refreshControl != nil) {
+                [_refreshControl endRefreshing];
+            }
+        });
+    });
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

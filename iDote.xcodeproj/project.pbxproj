@@ -259,8 +259,8 @@
 		B96024851AB89728008C211C = {
 			isa = PBXGroup;
 			children = (
-				AB4F88241AB89CB2006DA324 /* Frameworks */,
 				B96024901AB89729008C211C /* iDote */,
+				AB4F88241AB89CB2006DA324 /* Frameworks */,
 				B96024AA1AB89729008C211C /* iDoteTests */,
 				B960248F1AB89729008C211C /* Products */,
 			);

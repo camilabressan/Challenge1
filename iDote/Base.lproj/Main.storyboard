@@ -190,6 +190,7 @@
                     <connections>
                         <outlet property="constraintBottom" destination="xw7-WO-0QI" id="fw6-w2-RBa"/>
                         <outlet property="emailTextField" destination="QFf-4W-31g" id="MZK-We-bCb"/>
+                        <outlet property="logo" destination="UXw-zI-4sk" id="sFG-0r-jJR"/>
                         <outlet property="senhaTextField" destination="i4z-zo-3Bf" id="i1c-G0-PTi"/>
                         <outlet property="txtFieldEmail" destination="QFf-4W-31g" id="dgD-cR-oJj"/>
                         <outlet property="txtFieldPassword" destination="i4z-zo-3Bf" id="0ee-fQ-Mx2"/>

@@ -10,17 +10,20 @@
 #import "UIImage+Resize.h"
 
 @interface SignUpViewController() <UITextFieldDelegate>
+
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldName;
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldEmail;
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldPhoneNumber;
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldPassword;
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldConfirmPassword;
-
 @property (weak, nonatomic) IBOutlet VMaskTextField *maskTextFieldTelephone;
+
 
 @end
 
+
 @implementation SignUpViewController
+
 
 -(void)viewDidLoad{
     
@@ -38,6 +41,7 @@
     //MUDANDO A COR DO BOTAO PADRAO DA NAVIGATION
     
 }
+
 
 
 - (BOOL) validateEmail: (NSString *) candidate {

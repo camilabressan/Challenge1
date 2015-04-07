@@ -25,23 +25,41 @@
     if (!self) return nil;
     _currentIndex = 0;
     _swipeCardsArray = [[NSMutableArray alloc] init];
-    _data = [Animal loadAnimals];
+    
     
     //NSMutableArray *newData = [Animal loadNewAnimals:_data[_data.count -1]];
     //[_data addObjectsFromArray:newData];
-    
-    NSLog(@"%lu", _data.count);
-    
+
+    _data = [[NSMutableArray alloc] init];
     for (int i = 0; i < 3; i++) {
         [_swipeCardsArray addObject:[NSNull null]];
     }
-    
+    [self loadData];
     
     self.backgroundColor = [UIColor whiteColor];
     self.contentMode = UIViewContentModeCenter;
-    [self loadCustomView];
+    
     
     return self;
+}
+
+- (void)loadData {
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
+    dispatch_async(queue, ^{
+        _data = [Animal loadAnimals];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (_data.count > 0) {
+                [self loadCustomView];
+            } else {
+                [self performSelector:@selector(loadData)
+                           withObject:nil
+                           afterDelay:5.0];
+            
+            }
+            
+            
+        });
+    });
 }
 
 - (void)loadCustomView
