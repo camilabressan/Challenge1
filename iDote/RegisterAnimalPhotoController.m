@@ -53,7 +53,7 @@
         return YES;
 }
 
-- (IBAction)clickButtonNext:(id)sender {
+- (IBAction)clickButtonNext:(id)sender {    
     
     if ([self mainPhotoDoesExist] == YES)
     {
@@ -86,7 +86,8 @@
         _animal.descricao == nil ||
         _animal.tipo == nil ||
         _animal.genero == nil ||
-        _animal.porte == nil
+        _animal.porte == nil ||
+        _animal.cidade == nil
         )
     {
         UIAlertView *alertEmptyFields = [[UIAlertView alloc] initWithTitle:@"Campos incompletos" message:@"Por favor, preencha todos os campos." delegate: self cancelButtonTitle:@"OK"otherButtonTitles: nil];

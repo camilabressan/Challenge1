@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -170,16 +170,16 @@
                                 <state key="normal" image="LoginFacebook"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="WSz-dE-oyf"/>
                                         <exclude reference="4s3-YU-nYk"/>
                                         <exclude reference="OzJ-FE-amK"/>
-                                        <exclude reference="ied-UG-3ju"/>
-                                        <exclude reference="aWr-Z4-J9n"/>
                                         <exclude reference="UaT-Mz-hlC"/>
+                                        <exclude reference="WSz-dE-oyf"/>
+                                        <exclude reference="Zac-BI-4fn"/>
+                                        <exclude reference="aWr-Z4-J9n"/>
                                         <exclude reference="edU-Jg-qXT"/>
+                                        <exclude reference="ied-UG-3ju"/>
                                         <exclude reference="jbK-gM-Ag1"/>
                                         <exclude reference="oW4-BQ-n0e"/>
-                                        <exclude reference="Zac-BI-4fn"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -305,6 +305,11 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Animais para Adoção" id="Kty-jo-mGg">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="cWm-Hq-b9Y">
+                            <connections>
+                                <segue destination="3Yo-7M-6kS" kind="show" id="oQi-4P-H2w"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="CXK-K0-bnx">
                             <connections>
                                 <segue destination="5yw-tI-rVJ" kind="show" id="lvf-6M-XfT"/>
@@ -1052,6 +1057,31 @@
                 <exit id="Ync-gB-zL1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1056" y="3256"/>
+        </scene>
+        <!--Filtros-->
+        <scene sceneID="5s5-mm-U9r">
+            <objects>
+                <viewController id="3Yo-7M-6kS" customClass="FilterViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="x9G-Cf-ewv"/>
+                        <viewControllerLayoutGuide type="bottom" id="IdW-8I-Bg5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Ud-Za-bDi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Filtros" id="gzb-co-pHn">
+                        <barButtonItem key="rightBarButtonItem" title="Filtrar" id="Yj2-4N-jid">
+                            <connections>
+                                <action selector="clickButtonFilter:" destination="3Yo-7M-6kS" id="5Oc-FX-Taf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="84R-7o-3sZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1056" y="3940"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="eiW-pa-9sj">
