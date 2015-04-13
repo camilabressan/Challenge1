@@ -10,6 +10,7 @@
 		9032E0F21AC0C54D001E11DF /* CalendarioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9032E0F11AC0C54D001E11DF /* CalendarioViewController.m */; };
 		90727EDF1AC1F7D300D48518 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90727EDE1AC1F7D300D48518 /* TabBarViewController.m */; };
 		90727EE21AC2F6B800D48518 /* Evento.m in Sources */ = {isa = PBXBuildFile; fileRef = 90727EE11AC2F6B800D48518 /* Evento.m */; };
+		A02559D21ADC36EE00D4EB68 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A02559D11ADC36EE00D4EB68 /* FBSDKShareKit.framework */; };
 		A0435D061AC48DBA00822BC1 /* DetailInstitutionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0435D051AC48DBA00822BC1 /* DetailInstitutionViewController.m */; };
 		A0435D091AC48DCE00822BC1 /* InstitutionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0435D081AC48DCE00822BC1 /* InstitutionTableViewCell.m */; };
 		A0435D0C1AC48DE000822BC1 /* ShowInstitutionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0435D0B1AC48DE000822BC1 /* ShowInstitutionViewController.m */; };
@@ -76,6 +77,7 @@
 		90727EDE1AC1F7D300D48518 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		90727EE01AC2F6B800D48518 /* Evento.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Evento.h; path = iDote/Evento.h; sourceTree = "<group>"; };
 		90727EE11AC2F6B800D48518 /* Evento.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Evento.m; path = iDote/Evento.m; sourceTree = "<group>"; };
+		A02559D11ADC36EE00D4EB68 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		A0435D041AC48D8800822BC1 /* DetailInstitutionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailInstitutionViewController.h; sourceTree = "<group>"; };
 		A0435D051AC48DBA00822BC1 /* DetailInstitutionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailInstitutionViewController.m; sourceTree = "<group>"; };
 		A0435D071AC48DCE00822BC1 /* InstitutionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstitutionTableViewCell.h; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A02559D21ADC36EE00D4EB68 /* FBSDKShareKit.framework in Frameworks */,
 				AB4F88441AB89DA8006DA324 /* libsqlite3.dylib in Frameworks */,
 				AB4F88421AB89D97006DA324 /* libz.dylib in Frameworks */,
 				AB4F88401AB89D8B006DA324 /* SystemConfiguration.framework in Frameworks */,
@@ -216,6 +219,7 @@
 		AB4F88241AB89CB2006DA324 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A02559D11ADC36EE00D4EB68 /* FBSDKShareKit.framework */,
 				ABE82B111AC47B9F00F26A09 /* VMaskTextField */,
 				AB1781401AC0A330007621F0 /* FXForms */,
 				AB4F88431AB89DA8006DA324 /* libsqlite3.dylib */,
@@ -637,6 +641,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Frameworks",
+					/Users/Eduardo/Desktop/FacebookSDK,
+					/Users/Eduardo/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = iDote/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -655,6 +661,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Frameworks",
+					/Users/Eduardo/Desktop/FacebookSDK,
+					/Users/Eduardo/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = iDote/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
