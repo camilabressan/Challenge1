@@ -13,7 +13,7 @@
 @property (nonatomic) NSInteger currentIndex;
 @property (nonatomic) NSMutableArray *swipeCardsArray;
 @property (nonatomic) NSMutableArray *data;
-
+@property float blurAmount;
 
 @end
 
@@ -25,11 +25,13 @@
     if (!self) return nil;
     _currentIndex = 0;
     _swipeCardsArray = [[NSMutableArray alloc] init];
-    
-    
-    //NSMutableArray *newData = [Animal loadNewAnimals:_data[_data.count -1]];
-    //[_data addObjectsFromArray:newData];
 
+    _blurAmount = 0.5;
+    
+    _blurImage = [[UIImageView alloc] init];
+    _blurImage.contentMode = UIViewContentModeScaleAspectFill;
+    [self addSubview:_blurImage];
+    
     _data = [[NSMutableArray alloc] init];
     for (int i = 0; i < 3; i++) {
         [_swipeCardsArray addObject:[NSNull null]];
@@ -68,6 +70,21 @@
         _swipeCardsArray[1] = [[SwipeCardView alloc] initWithData:_data[0]];
         ((SwipeCardView *)_swipeCardsArray[1]).position = SwipeCardPositionCenter;
         [self addSubview:_swipeCardsArray[1]];
+        if (((Animal *)_data[0]).mainImage == nil) {
+            dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
+            dispatch_async(queue, ^{
+                NSURL *urlImage = [[NSURL alloc] initWithString:((Animal *)_data[0]).mainImageURL];
+                NSData *data = [NSData dataWithContentsOfURL: urlImage];
+                UIImage *image = [[UIImage imageWithData:data] blurredImage:_blurAmount] ;
+                dispatch_async(dispatch_get_main_queue(), ^{
+                  _blurImage.image = image;
+                });
+            });
+        } else {
+            UIImage *image = [((Animal *)_data[0]).mainImage blurredImage:_blurAmount] ;
+            _blurImage.image = image;
+        }
+
     
     }
     if (_data.count > 1) {
@@ -84,6 +101,8 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
+    _blurImage.frame = self.frame;
+    
     for (SwipeCardView *card in _swipeCardsArray) {
         if ([card respondsToSelector:@selector(moveLeft)]) {
             card.frame = CGRectMake(0,
@@ -116,7 +135,23 @@
             SwipeCardView *card = _swipeCardsArray[i];
             if ([card respondsToSelector:@selector(moveLeft)]) {
                 [card moveLeft];
-                
+                if (card.position == SwipeCardPositionCenter) {
+                    if (card.data.mainImage == nil) {
+                        dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
+                        dispatch_async(queue, ^{
+                            NSURL *urlImage = [[NSURL alloc] initWithString:(card.data).mainImageURL];
+                            NSData *data = [NSData dataWithContentsOfURL: urlImage];
+                            UIImage *image = [[UIImage imageWithData:data] blurredImage:_blurAmount] ;
+                            dispatch_async(dispatch_get_main_queue(), ^{
+                                _blurImage.image = image;
+                            });
+                        });
+                    } else {
+                        UIImage *image = [card.data.mainImage blurredImage:_blurAmount] ;
+                        _blurImage.image = image;
+                    }
+
+                }
 
                 if (i == 0) {
                     [(SwipeCardView *)_swipeCardsArray[i] removeFromSuperview];
@@ -170,7 +205,23 @@
             SwipeCardView *card = _swipeCardsArray[i];
             if ([card respondsToSelector:@selector(moveRight)]) {
                 [card moveRight];
-                
+                if (card.position == SwipeCardPositionCenter) {
+                    if (card.data.mainImage == nil) {
+                        dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
+                        dispatch_async(queue, ^{
+                            NSURL *urlImage = [[NSURL alloc] initWithString:(card.data).mainImageURL];
+                            NSData *data = [NSData dataWithContentsOfURL: urlImage];
+                            UIImage *image = [[UIImage imageWithData:data] blurredImage:_blurAmount] ;
+                            dispatch_async(dispatch_get_main_queue(), ^{
+                                _blurImage.image = image;
+                            });
+                        });
+                    } else {
+                        UIImage *image = [card.data.mainImage blurredImage:_blurAmount] ;
+                        _blurImage.image = image;
+                    }
+                    
+                }
 
                 if (i == _swipeCardsArray.count - 1) {
                     [(SwipeCardView *)_swipeCardsArray[i] removeFromSuperview];

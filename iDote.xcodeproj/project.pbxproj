@@ -51,6 +51,7 @@
 		B960249F1AB89729008C211C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B960249E1AB89729008C211C /* Images.xcassets */; };
 		B96024A21AB89729008C211C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B96024A01AB89729008C211C /* LaunchScreen.xib */; };
 		B96024AE1AB89729008C211C /* iDoteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B96024AD1AB89729008C211C /* iDoteTests.m */; };
+		B97B07491ADC30CB009E1886 /* UIImage+Blur.m in Sources */ = {isa = PBXBuildFile; fileRef = B97B07481ADC30CB009E1886 /* UIImage+Blur.m */; };
 		B98486B41AC5EDE3008F0BD1 /* AnimalDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B98486B31AC5EDE3008F0BD1 /* AnimalDetailsViewController.m */; };
 		B9FBEE301AC5A1B300279EFD /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = B9FBEE2F1AC5A1B300279EFD /* UIImage+Resize.m */; };
 		E32C9EE91AC07C8500439C9B /* RegisterInstitutionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E32C9EE81AC07C8500439C9B /* RegisterInstitutionViewController.m */; };
@@ -139,6 +140,8 @@
 		B96024A71AB89729008C211C /* iDoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iDoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B96024AC1AB89729008C211C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B96024AD1AB89729008C211C /* iDoteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iDoteTests.m; sourceTree = "<group>"; };
+		B97B07471ADC30CB009E1886 /* UIImage+Blur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Blur.h"; sourceTree = "<group>"; };
+		B97B07481ADC30CB009E1886 /* UIImage+Blur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Blur.m"; sourceTree = "<group>"; };
 		B98486B21AC5EDE3008F0BD1 /* AnimalDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimalDetailsViewController.h; sourceTree = "<group>"; };
 		B98486B31AC5EDE3008F0BD1 /* AnimalDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimalDetailsViewController.m; sourceTree = "<group>"; };
 		B9FBEE2E1AC5A1B300279EFD /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
@@ -248,6 +251,8 @@
 		B937CC111AC32B6D00B8C1E1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B97B07471ADC30CB009E1886 /* UIImage+Blur.h */,
+				B97B07481ADC30CB009E1886 /* UIImage+Blur.m */,
 				B937CC121AC32C2800B8C1E1 /* UIImage+Extension.h */,
 				B937CC131AC32C2800B8C1E1 /* UIImage+Extension.m */,
 				B9FBEE2E1AC5A1B300279EFD /* UIImage+Resize.h */,
@@ -497,6 +502,7 @@
 				B96024971AB89729008C211C /* AppDelegate.m in Sources */,
 				A0435D0C1AC48DE000822BC1 /* ShowInstitutionViewController.m in Sources */,
 				AB50C46B1AC5E32A00DC6EC6 /* eventTableViewCell.m in Sources */,
+				B97B07491ADC30CB009E1886 /* UIImage+Blur.m in Sources */,
 				B96024941AB89729008C211C /* main.m in Sources */,
 				B937CC191AC339A500B8C1E1 /* CardView.m in Sources */,
 				90727EE21AC2F6B800D48518 /* Evento.m in Sources */,

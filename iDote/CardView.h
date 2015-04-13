@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "Animal.h"
 #import "SwipeCardView.h"
+#import "UIImage+Blur.h"
 
 @interface CardView : UIView
 @property (nonatomic, strong) SwipeCardView *swipeView;
-
+@property UIImageView *blurImage;
 
 - (void) swipeLeft;
 - (void) swipeRight;
