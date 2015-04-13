@@ -170,20 +170,21 @@
                                 <state key="normal" image="LoginFacebook"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="WSz-dE-oyf"/>
                                         <exclude reference="4s3-YU-nYk"/>
                                         <exclude reference="OzJ-FE-amK"/>
-                                        <exclude reference="ied-UG-3ju"/>
-                                        <exclude reference="aWr-Z4-J9n"/>
                                         <exclude reference="UaT-Mz-hlC"/>
+                                        <exclude reference="WSz-dE-oyf"/>
+                                        <exclude reference="Zac-BI-4fn"/>
+                                        <exclude reference="aWr-Z4-J9n"/>
                                         <exclude reference="edU-Jg-qXT"/>
+                                        <exclude reference="ied-UG-3ju"/>
                                         <exclude reference="jbK-gM-Ag1"/>
                                         <exclude reference="oW4-BQ-n0e"/>
-                                        <exclude reference="Zac-BI-4fn"/>
                                     </mask>
                                 </variation>
                                 <connections>
                                     <action selector="clickRegisterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zTB-kk-5lN"/>
+                                    <action selector="loginFacebook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DPA-Ie-OVL"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i4z-zo-3Bf">
@@ -1108,7 +1109,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhr-e8-DYV">
                                                     <rect key="frame" x="66" y="13" width="485" height="21"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dW-WN-UMf">
