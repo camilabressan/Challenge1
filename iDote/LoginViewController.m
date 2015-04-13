@@ -119,7 +119,7 @@ static CGFloat keyboardHeightOffset = 15.0f; //Camila
     NSArray *permissionsArray = @[ @"user_about_me" ];
     
     // Login PFUser using Facebook
-    [PFFacebookUtils logInInBackgroundWithReadPermissions:@[] block:^(PFUser *user, NSError *error) {
+    [PFFacebookUtils logInInBackgroundWithReadPermissions:permissionsArray block:^(PFUser *user, NSError *error) {
         if (!user) {
             NSLog(@"Uh oh. The user cancelled the Facebook login.");
         } else if (user.isNew) {

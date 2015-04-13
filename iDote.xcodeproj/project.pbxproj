@@ -677,8 +677,6 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Frameworks",
-					/Users/Eduardo/Desktop/FacebookSDK,
-					/Users/Eduardo/Documents/FacebookSDK,
 					"$(PROJECT_DIR)/Frameworks/Facebook",
 				);
 				INFOPLIST_FILE = iDote/Info.plist;
@@ -698,8 +696,6 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Frameworks",
-					/Users/Eduardo/Desktop/FacebookSDK,
-					/Users/Eduardo/Documents/FacebookSDK,
 					"$(PROJECT_DIR)/Frameworks/Facebook",
 				);
 				INFOPLIST_FILE = iDote/Info.plist;
