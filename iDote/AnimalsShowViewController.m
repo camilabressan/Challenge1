@@ -55,7 +55,7 @@
 }
 
 -(IBAction)backFromFilters:(UIStoryboardSegue *)sender {
-    
+    [_cardView loadData];
     
 }
 
