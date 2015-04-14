@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import <ParseFacebookUtilsV4/PFFacebookUtils.h>
 
 @interface LoginViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldEmail;
@@ -91,6 +92,7 @@ static CGFloat keyboardHeightOffset = 15.0f; //Camila
     }];
 }
 
+
 /*
  //Animaçao da tela inicial
  -(void)viewDidAppear:(BOOL)animated {
@@ -112,6 +114,21 @@ static CGFloat keyboardHeightOffset = 15.0f; //Camila
 }
 */
 
+- (IBAction)loginFacebook:(id)sender {
+    // Set permissions required from the facebook user account
+    NSArray *permissionsArray = @[ @"user_about_me" ];
+    
+    // Login PFUser using Facebook
+    [PFFacebookUtils logInInBackgroundWithReadPermissions:permissionsArray block:^(PFUser *user, NSError *error) {
+        if (!user) {
+            NSLog(@"Uh oh. The user cancelled the Facebook login.");
+        } else if (user.isNew) {
+            NSLog(@"User signed up and logged in through Facebook!");
+        } else {
+            NSLog(@"User logged in through Facebook!");
+        }
+    }];
+}
 
 //pega os dados inseridos pelo usuario na tela de login e verifica os mesmos
 - (IBAction)checkData:(id)sender {

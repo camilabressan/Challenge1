@@ -14,6 +14,7 @@
 {
     return @[@{FXFormFieldKey: @"nome", FXFormFieldHeader: @"DADOS"},
              @{FXFormFieldKey: @"idade", FXFormFieldCell: [FXFormStepperCell class]},
+             @{FXFormFieldKey: @"cidade"},
              @{FXFormFieldTitle: @"Descrição",
                FXFormFieldKey: @"descricao",
                FXFormFieldType: FXFormFieldTypeLongText,
@@ -57,6 +58,7 @@
         animal.tipo = [obj objectForKey:@"type"];
         animal.porte = [obj objectForKey:@"size"];
         animal.descricao = [obj objectForKey:@"description"];
+        animal.cidade = [obj objectForKey:@"city"];
         
         [list addObject:animal];
     }
@@ -88,6 +90,7 @@
         animal.tipo = [obj objectForKey:@"type"];
         animal.porte = [obj objectForKey:@"size"];
         animal.descricao = [obj objectForKey:@"description"];
+        animal.cidade = [obj objectForKey:@"city"];
         
         [list addObject:animal];
     }
@@ -117,6 +120,7 @@
         animal.tipo = [obj objectForKey:@"type"];
         animal.porte = [obj objectForKey:@"size"];
         animal.descricao = [obj objectForKey:@"description"];
+        animal.cidade = [obj objectForKey:@"city"];
         
         [list addObject:animal];
     }
@@ -133,6 +137,7 @@
     object[@"type"] = _tipo;
     object[@"size"] = _porte;
     object[@"description"] = _descricao;
+    object[@"city"] = _cidade;
     
     NSData *imageData = UIImageJPEGRepresentation(_mainImage, 0.7f);
     PFFile *imageFile = [PFFile fileWithName:@"Profileimage.png" data:imageData];

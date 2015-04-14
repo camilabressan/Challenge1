@@ -25,6 +25,7 @@
 @property NSString *porte;
 @property NSString *genero;
 @property NSString *descricao;
+@property NSString *cidade;
 
 + (NSMutableArray *) loadAnimals;
 + (NSMutableArray *) loadAnimalsFromUser;
