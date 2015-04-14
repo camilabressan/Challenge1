@@ -36,6 +36,8 @@
                FXFormFieldCell: [FXFormOptionSegmentsCell class]}];
 }
 
+
+
 + (NSMutableArray *)loadAnimals {
     NSMutableArray *list = [[NSMutableArray alloc] init];
     
@@ -43,6 +45,33 @@
     query.limit = 3;
     [query orderByAscending:@"createdAt"];
     
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    if ([userDefaults objectForKey:@"animalCity"] != nil &&
+        ![[userDefaults objectForKey:@"animalCity"] isEqualToString: @""]) {
+        [query whereKey:@"city" equalTo:[userDefaults objectForKey:@"animalCity"]];
+    
+    }
+    
+    if ([userDefaults objectForKey:@"animalGender"] != nil &&
+        ![[userDefaults objectForKey:@"animalGender"] isEqualToString:@"Todos"] ) {
+        [query whereKey:@"gender" equalTo:[userDefaults objectForKey:@"animalGender"]];
+        
+    }
+    
+    if ([userDefaults objectForKey:@"animalSize"] != nil &&
+        ![[userDefaults objectForKey:@"animalSize"] isEqualToString:@"Todos"] ) {
+        [query whereKey:@"gender" equalTo:[userDefaults objectForKey:@"animalSize"]];
+        
+    }
+    if ([userDefaults objectForKey:@"animalType"] != nil &&
+        ![[userDefaults objectForKey:@"animalType"] isEqualToString:@"Todos"] ) {
+        [query whereKey:@"type" equalTo:[userDefaults objectForKey:@"animalType"]];
+        
+    }
+
+
     NSMutableArray *queryResult = [NSMutableArray arrayWithArray:[query findObjects]];
     
     for (PFObject *obj in queryResult) {

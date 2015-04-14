@@ -9,6 +9,7 @@
 #import "AnimalDetailsViewController.h"
 
 @interface AnimalDetailsViewController ()
+
 @property (weak, nonatomic) IBOutlet UIImageView *petImage;
 @property (weak, nonatomic) IBOutlet UILabel *petName;
 @property (weak, nonatomic) IBOutlet UILabel *petGender;
@@ -21,6 +22,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *ownerName;
 @property (weak, nonatomic) IBOutlet UILabel *ownerEmail;
 @property (weak, nonatomic) IBOutlet UILabel *ownerPhone;
+
+@property FBSDKShareLinkContent *content;
+@property FBSDKShareButton *shareButton;
 
 @end
 
@@ -80,8 +84,34 @@
     _ownerEmail.text = _animal.dono.email;
     _ownerPhone.text = _animal.dono.phone;
     
-    // Do any additional setup after loading the view.
+    
 }
+
+- (IBAction)shareAnimal:(id)sender {
+    [self initShareButton];
+}
+
+- (void) initShareButton{
+    NSURL *url = [[NSURL alloc] initWithString:_animal.mainImageURL];
+    
+    _content = [[FBSDKShareLinkContent alloc] init];
+    _content.contentTitle = _animal.nome;
+    _content.imageURL = url;
+    _content.contentDescription = _animal.descricao;
+    
+    _shareButton = [[FBSDKShareButton alloc] init];
+    _shareButton.shareContent = _content;
+    
+    //open share dialog
+    [FBSDKShareDialog showFromViewController:self withContent:_content delegate:nil];
+    
+    //return to app
+    [FBSDKMessageDialog showWithContent:_content delegate:nil];
+    
+    
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -48,9 +48,17 @@
                                              selector:@selector(swipeRightHandler:)
                                                  name:@"TapRight"
                                                object:nil];
+   
+    
+   
 }
 
 -(IBAction)backFromRegisterAnimal:(UIStoryboardSegue *)sender {
+    
+}
+
+-(IBAction)backFromFilters:(UIStoryboardSegue *)sender {
+    [_cardView loadData];
     
 }
 

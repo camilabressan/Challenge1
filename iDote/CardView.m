@@ -46,6 +46,14 @@
 }
 
 - (void)loadData {
+    _currentIndex = 0;
+    _blurImage.image = nil;
+    for (UIView *view in [self subviews]) {
+        if (view != _blurImage) {
+            [view removeFromSuperview];
+        }
+        
+    }
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
     dispatch_async(queue, ^{
         _data = [Animal loadAnimals];
@@ -129,8 +137,7 @@
 }
 
 - (void)swipeLeft {
-    if (_currentIndex < [_data count] - 1) {
-        
+    if (_currentIndex < ((long) [_data count]) - 1 ) {
         for (int i = 0; i < _swipeCardsArray.count; i++) {
             SwipeCardView *card = _swipeCardsArray[i];
             if ([card respondsToSelector:@selector(moveLeft)]) {

@@ -54,7 +54,6 @@
 }
 
 - (IBAction)clickButtonNext:(id)sender {    
-    
     if ([self mainPhotoDoesExist] == YES)
     {
         FXFormViewController *controller = [[FXFormViewController alloc] init];

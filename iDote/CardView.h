@@ -15,6 +15,8 @@
 @property (nonatomic, strong) SwipeCardView *swipeView;
 @property UIImageView *blurImage;
 
+
+- (void) loadData;
 - (void) swipeLeft;
 - (void) swipeRight;
 
