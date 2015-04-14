@@ -37,10 +37,10 @@
     
     [PFFacebookUtils initializeFacebookWithApplicationLaunchOptions:launchOptions];
     
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Arial" size:19.0],NSForegroundColorAttributeName:[UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1.0]}]; //MUDANDO COR E FONTE DO TITULO DA NAVIGATION
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Arial" size:19.0],NSForegroundColorAttributeName:[UIColor colorWithRed:234/255.0 green:158/255.0 blue:63/255.0 alpha:1]}]; //MUDANDO COR E FONTE DO TITULO DA NAVIGATION
 
     
-    [[UINavigationBar appearance] setBarTintColor: [UIColor colorWithRed:57/255.0 green:24/255.0 blue:53/255.0 alpha:1]]; // MUDA A COR DA NAVIGATION
+    [[UINavigationBar appearance] setBarTintColor: [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1]]; // MUDA A COR DA NAVIGATION
     
     return YES;
 }

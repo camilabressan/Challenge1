@@ -19,36 +19,18 @@
     
     [super viewDidLoad];
     
-    // Do any additional setup after loading the view.
     
     [[UITabBar appearance] setTintColor: [UIColor colorWithRed:240/255.0 green:167/255.0 blue:59/255.0 alpha:1]];
     //MUDANDO A COR DO ICONE DA TAB BAR PRESSIONADO
     
-    [[UIBarButtonItem appearance] setTintColor: [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1]]; //MUDA A COR DOS ICONES DA NAVIGATION
-    
-    [[UITabBar appearance] setBarTintColor: [UIColor colorWithRed:57/255.0 green:24/255.0 blue:53/255.0 alpha:1]]; // MUDA A COR DA TAB BAR
-    
-    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:(255.0/255.0) green:(255.0/255.0) blue:(255.0/255.0) alpha:1]];
+    [[UIBarButtonItem appearance] setTintColor: [UIColor colorWithRed:234/255.0 green:158/255.0 blue:63/255.0 alpha:1]]; //MUDA A COR DOS ICONES DA NAVIGATION
+
+    [[UITabBar appearance] setBarTintColor: [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1]]; // MUDA A COR DA TAB BAR
+//
+    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:234/255.0 green:158/255.0 blue:63/255.0 alpha:1]];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-    //MUDANDO A COR DO BOTAO PADRAO DA NAVIGATION
-    
-    
-    // Colocando cor nos textos do item da tab bar
-    [self.tabBar setTintColor:[UIColor whiteColor]];
-    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIColor whiteColor], NSForegroundColorAttributeName, nil] forState:UIControlStateSelected];
-    
-    
-    //UIColor * unselectedColor = [UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:1];
-    
-    
-    //[[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:unselectedColor, NSForegroundColorAttributeName, nil]
-                                            // forState:UIControlStateNormal];
-    
-    // generate a tinted unselected image based on image passed via the storyboard
-    //for(UITabBarItem *item in self.tabBar.items) {
-        // use the UIImage category code for the imageWithColor: method
-        // item.image = [[item.selectedImage [UIImage imageWithColor:unselectedColor]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    //}
+//    //MUDANDO A COR DO BOTAO PADRAO DA NAVIGATION
+
 }
 
 - (void)didReceiveMemoryWarning {
