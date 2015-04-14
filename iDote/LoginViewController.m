@@ -8,6 +8,8 @@
 
 #import "LoginViewController.h"
 #import <ParseFacebookUtilsV4/PFFacebookUtils.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
 
 @interface LoginViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *txtFieldEmail;
@@ -116,16 +118,48 @@ static CGFloat keyboardHeightOffset = 15.0f; //Camila
 
 - (IBAction)loginFacebook:(id)sender {
     // Set permissions required from the facebook user account
-    NSArray *permissionsArray = @[ @"user_about_me" ];
+    NSArray *permissionsArray = @[ @"user_about_me", @"email"];
     
-    // Login PFUser using Facebook
-    [PFFacebookUtils logInInBackgroundWithReadPermissions:permissionsArray block:^(PFUser *user, NSError *error) {
-        if (!user) {
-            NSLog(@"Uh oh. The user cancelled the Facebook login.");
-        } else if (user.isNew) {
-            NSLog(@"User signed up and logged in through Facebook!");
+    
+    FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
+    [login logInWithReadPermissions:permissionsArray handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
+        if (error) {
+            // Process error
+        } else if (result.isCancelled) {
+            // Handle cancellations
         } else {
-            NSLog(@"User logged in through Facebook!");
+            // If you ask for multiple permissions at once, you
+            // should check if specific permissions missing
+            if ([result.grantedPermissions containsObject:@"email"]) {
+                PFQuery *query = [PFUser query];
+                if ([FBSDKAccessToken currentAccessToken]) {
+                    [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me" parameters:nil]
+                     startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
+                         if (!error) {
+                             [query whereKey:@"email" equalTo:result[@"email"]];
+                             PFUser *fbUser = (PFUser *)[query getFirstObject];
+                             if(fbUser != nil) {
+                                 [PFFacebookUtils linkUserInBackground:fbUser withAccessToken:[FBSDKAccessToken currentAccessToken] ];
+                                 [PFFacebookUtils logInInBackgroundWithAccessToken:[FBSDKAccessToken currentAccessToken]
+                                    block:^(PFUser *user, NSError *error) {
+                                         if (!user) {
+                                             NSLog(@"Uh oh. The user cancelled the Facebook login.");
+                                         } else if (user.isNew) {
+                                             NSLog(@"User signed up and logged in through Facebook!");
+                                         } else {
+                                             NSLog(@"User logged in through Facebook!");
+                                         }
+                                 }];
+                             }
+                            
+                             
+                         }
+                     }];
+                }
+                
+                
+                
+            }
         }
     }];
 }
