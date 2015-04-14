@@ -22,6 +22,12 @@
     
     [userDefaults setObject: filters.animalCity
                      forKey:@"animalCity"];
+    [userDefaults setObject: filters.animalGender
+                     forKey:@"animalGender"];
+    [userDefaults setObject: filters.animalSize
+                     forKey:@"animalSize"];
+    [userDefaults setObject: filters.animalType
+                     forKey:@"animalType"];
 
     [userDefaults synchronize];}
 

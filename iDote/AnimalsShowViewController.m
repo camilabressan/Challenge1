@@ -54,6 +54,11 @@
     
 }
 
+-(IBAction)backFromFilters:(UIStoryboardSegue *)sender {
+    
+    
+}
+
 - (void) tapCenter:(NSNotification *) notification {
     Animal *animal = (Animal *)notification.object;
     [self performSegueWithIdentifier:@"ShowAnimalSegue" sender:animal];
