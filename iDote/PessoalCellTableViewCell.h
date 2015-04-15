@@ -13,7 +13,6 @@
 @interface PessoalCellTableViewCell : UITableViewCell
 
 @property Animal *animal;
-@property Evento *event;
 
 @property (weak, nonatomic) IBOutlet UILabel *cellName;
 
