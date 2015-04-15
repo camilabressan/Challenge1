@@ -47,6 +47,10 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Pet&apos;s Bay would like to use your location.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Pet&apos;s Bay would like to use your location.</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

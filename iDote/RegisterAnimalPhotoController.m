@@ -8,6 +8,10 @@
 
 #import "RegisterAnimalPhotoController.h"
 #import "UIImage+Resize.h"
+#import <CoreLocation/CoreLocation.h>
+#import <AddressBook/AddressBook.h>
+
+#define IS_OS_8_OR_LATER ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
 
 @interface RegisterAnimalPhotoController ()
 
@@ -115,8 +119,7 @@
         _animal.mainImage = [_mainImage backgroundImageForState:UIControlStateNormal];
         [_animal save];
     }
-
-
 }
+
 
 @end

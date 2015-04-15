@@ -10,7 +10,8 @@
 #import "Animal.h"
 
 
-@interface RegisterAnimalPhotoController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface RegisterAnimalPhotoController : UIViewController <UIImagePickerControllerDelegate, UIWebViewDelegate,  CLLocationManagerDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *mainImage;
+@property(nonatomic, retain) CLLocationManager *locationManager;
 
 @end

@@ -39,6 +39,8 @@
 		ABAED8541AC1ECD4008322FF /* AnimalsShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAED8531AC1ECD4008322FF /* AnimalsShowViewController.m */; };
 		ABB144061ADC4EB000DACEE7 /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB144051ADC4EB000DACEE7 /* FilterViewController.m */; };
 		ABB144091ADC511500DACEE7 /* Filter.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB144081ADC511500DACEE7 /* Filter.m */; };
+		ABB1440C1ADDA77E00DACEE7 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB1440B1ADDA77E00DACEE7 /* MapViewController.m */; };
+		ABB1440F1ADEEAA400DACEE7 /* RegisterAnimalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB1440E1ADEEAA400DACEE7 /* RegisterAnimalViewController.m */; };
 		ABCDBA6F1ABC939C00BF49C1 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCDBA6E1ABC939C00BF49C1 /* SignUpViewController.m */; };
 		ABE82B101AC47B9D00F26A09 /* VMaskTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE82B0F1AC47B9D00F26A09 /* VMaskTextField.m */; };
 		B937CC141AC32C2800B8C1E1 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = B937CC131AC32C2800B8C1E1 /* UIImage+Extension.m */; };
@@ -126,6 +128,10 @@
 		ABB144051ADC4EB000DACEE7 /* FilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterViewController.m; sourceTree = "<group>"; };
 		ABB144071ADC511500DACEE7 /* Filter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Filter.h; sourceTree = "<group>"; };
 		ABB144081ADC511500DACEE7 /* Filter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Filter.m; sourceTree = "<group>"; };
+		ABB1440A1ADDA77E00DACEE7 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		ABB1440B1ADDA77E00DACEE7 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		ABB1440D1ADEEAA400DACEE7 /* RegisterAnimalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterAnimalViewController.h; sourceTree = "<group>"; };
+		ABB1440E1ADEEAA400DACEE7 /* RegisterAnimalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterAnimalViewController.m; sourceTree = "<group>"; };
 		ABCDBA6D1ABC939C00BF49C1 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		ABCDBA6E1ABC939C00BF49C1 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		ABE82B0E1AC47B9D00F26A09 /* VMaskTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMaskTextField.h; sourceTree = "<group>"; };
@@ -379,6 +385,10 @@
 				A05B0B3F1AC9B13F0021550A /* PessoalCellTableViewCell.m */,
 				ABB144041ADC4EB000DACEE7 /* FilterViewController.h */,
 				ABB144051ADC4EB000DACEE7 /* FilterViewController.m */,
+				ABB1440A1ADDA77E00DACEE7 /* MapViewController.h */,
+				ABB1440B1ADDA77E00DACEE7 /* MapViewController.m */,
+				ABB1440D1ADEEAA400DACEE7 /* RegisterAnimalViewController.h */,
+				ABB1440E1ADEEAA400DACEE7 /* RegisterAnimalViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -458,7 +468,6 @@
 				TargetAttributes = {
 					B960248D1AB89728008C211C = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 9468LRW88W;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 0;
@@ -528,12 +537,14 @@
 				AB17813F1AC0A32B007621F0 /* FXForms.m in Sources */,
 				A0435D091AC48DCE00822BC1 /* InstitutionTableViewCell.m in Sources */,
 				ABCDBA6F1ABC939C00BF49C1 /* SignUpViewController.m in Sources */,
+				ABB1440C1ADDA77E00DACEE7 /* MapViewController.m in Sources */,
 				A05B0B401AC9B13F0021550A /* PessoalCellTableViewCell.m in Sources */,
 				B937CC141AC32C2800B8C1E1 /* UIImage+Extension.m in Sources */,
 				ABE82B101AC47B9D00F26A09 /* VMaskTextField.m in Sources */,
 				B960249A1AB89729008C211C /* LoginViewController.m in Sources */,
 				E32C9EE91AC07C8500439C9B /* RegisterInstitutionViewController.m in Sources */,
 				A06B93C41ABCA0BE00B3F59E /* Animal.m in Sources */,
+				ABB1440F1ADEEAA400DACEE7 /* RegisterAnimalViewController.m in Sources */,
 				ABB144061ADC4EB000DACEE7 /* FilterViewController.m in Sources */,
 				AB1781361AC090EE007621F0 /* RegisterAnimalPhotoController.m in Sources */,
 				B9FBEE301AC5A1B300279EFD /* UIImage+Resize.m in Sources */,
