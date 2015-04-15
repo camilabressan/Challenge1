@@ -23,8 +23,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *ownerEmail;
 @property (weak, nonatomic) IBOutlet UILabel *ownerPhone;
 
-@property FBSDKShareLinkContent *content;
-@property FBSDKShareButton *shareButton;
 
 @end
 
@@ -88,30 +86,14 @@
 }
 
 - (IBAction)shareAnimal:(id)sender {
-    [self initShareButton];
-}
-
-- (void) initShareButton{
     NSURL *url = [[NSURL alloc] initWithString:_animal.mainImageURL];
     
-    _content = [[FBSDKShareLinkContent alloc] init];
-    _content.contentTitle = _animal.nome;
-    _content.imageURL = url;
-    _content.contentDescription = _animal.descricao;
+    NSArray *itemsToShare = @[_animal.nome, url, _animal.descricao];
     
-    _shareButton = [[FBSDKShareButton alloc] init];
-    _shareButton.shareContent = _content;
-    
-    //open share dialog
-    [FBSDKShareDialog showFromViewController:self withContent:_content delegate:nil];
-    
-    //return to app
-    [FBSDKMessageDialog showWithContent:_content delegate:nil];
-    
-    
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:itemsToShare applicationActivities:nil];
+    activityVC.excludedActivityTypes = @[];
+    [self presentViewController:activityVC animated:YES completion:nil];
 }
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "Animal.h"
-#import <FBSDKShareKit/FBSDKShareKit.h>
-#import <FBSDKShareKit/FBSDKShareLinkContent.h>
 
 @interface AnimalDetailsViewController : UIViewController
 @property Animal *animal;

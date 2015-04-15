@@ -1134,7 +1134,6 @@
                     <connections>
                         <segue destination="brb-JW-A0O" kind="relationship" relationship="viewControllers" id="Xmd-UB-xm9"/>
                         <segue destination="dle-Ms-LDm" kind="relationship" relationship="viewControllers" id="aln-9e-C0H"/>
-                        <segue destination="vdk-RY-xDp" kind="relationship" relationship="viewControllers" id="TSV-FB-cCU"/>
                         <segue destination="NTh-fL-O6f" kind="relationship" relationship="viewControllers" id="Qw7-JR-LT5"/>
                     </connections>
                 </tabBarController>
@@ -1500,9 +1499,6 @@
                                         <exclude reference="hrv-4e-bzg"/>
                                     </mask>
                                 </variation>
-                                <connections>
-                                    <action selector="checkSegmented:" destination="X5C-4G-xhf" eventType="valueChanged" id="7hb-sW-ol1"/>
-                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1559,7 +1555,6 @@
                         <outlet property="pessoalName" destination="bby-9O-9My" id="7z0-1T-1wa"/>
                         <outlet property="pessoalPhone" destination="Gsc-bH-2No" id="kFE-FD-Cg5"/>
                         <outlet property="pessoalPhoto" destination="WUi-fp-HDL" id="Np2-5B-h4p"/>
-                        <outlet property="segmentedControl" destination="JWY-mB-Uer" id="zYR-ka-823"/>
                         <outlet property="tableView" destination="lxn-Oy-ymg" id="aDR-AV-rao"/>
                         <segue destination="rfL-mU-9ic" kind="unwind" identifier="LogoutSegue" unwindAction="backFromRegisterScreen:" id="NgU-p4-hpW"/>
                     </connections>
