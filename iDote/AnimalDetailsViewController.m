@@ -9,6 +9,7 @@
 #import "AnimalDetailsViewController.h"
 
 @interface AnimalDetailsViewController ()
+
 @property (weak, nonatomic) IBOutlet UIImageView *petImage;
 @property (weak, nonatomic) IBOutlet UILabel *petName;
 @property (weak, nonatomic) IBOutlet UILabel *petGender;
@@ -21,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *ownerName;
 @property (weak, nonatomic) IBOutlet UILabel *ownerEmail;
 @property (weak, nonatomic) IBOutlet UILabel *ownerPhone;
+
 
 @end
 
@@ -80,7 +82,17 @@
     _ownerEmail.text = _animal.dono.email;
     _ownerPhone.text = _animal.dono.phone;
     
-    // Do any additional setup after loading the view.
+    
+}
+
+- (IBAction)shareAnimal:(id)sender {
+    NSURL *url = [[NSURL alloc] initWithString:_animal.mainImageURL];
+    
+    NSArray *itemsToShare = @[_animal.nome, url, _animal.descricao];
+    
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:itemsToShare applicationActivities:nil];
+    activityVC.excludedActivityTypes = @[];
+    [self presentViewController:activityVC animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -88,14 +100,24 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)call:(id)sender {
+    //TODO limpar caracteres especiais da string
+    NSString *phoneNumber = [@"tel:" stringByAppendingString:@""];
+    
+    NSCharacterSet *charSet = [NSCharacterSet characterSetWithCharactersInString:@"0123456789"];
+    NSString *finalString = [[finalString componentsSeparatedByCharactersInSet:charSet] componentsJoinedByString:@"*"];
+    
+    NSURL *phoneURL = [NSURL URLWithString:[NSString stringWithFormat:phoneNumber]];
+    
+    
+    if ([[UIApplication sharedApplication] canOpenURL:phoneURL]) {
+        [[UIApplication sharedApplication] openURL:phoneURL];
+    }else
+    {
+        UIAlertView *calert = [[UIAlertView alloc]initWithTitle:@"Alert" message:@"Call facility is not available!!!" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
+        [calert show];
+    }
 }
-*/
+
 
 @end

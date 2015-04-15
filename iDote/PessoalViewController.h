@@ -22,7 +22,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *pessoalEmail;
 @property (weak, nonatomic) IBOutlet UITextField *pessoalPhone;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *buttonSave;
 
 

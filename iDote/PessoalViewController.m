@@ -11,7 +11,6 @@
 @interface PessoalViewController () <UITextFieldDelegate>
 
 @property NSMutableArray *listAnimals;
-@property NSMutableArray *listEvents;
 @property (weak, nonatomic) IBOutlet VMaskTextField *maskTextFieldTelephone;
 
 
@@ -32,7 +31,6 @@
     
     _user = [User loadCurrentUser];
     _listAnimals = [Animal loadAnimalsFromUser];
-    _listEvents = [Evento loadEventsFromUser];
     
     _tableView.allowsSelection = NO;
     
@@ -40,7 +38,7 @@
     [_refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
 
     [self.tableView addSubview:_refreshControl];
-    
+    [_tableView reloadData];
     [self showData];
 }
 
@@ -55,6 +53,8 @@
     
 }
 
+- (IBAction)linkFacebookAccount:(id)sender {
+}
 
 -(void)showData{
     _pessoalName.text = _user.name;
@@ -82,56 +82,31 @@
 
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        if(_segmentedControl.selectedSegmentIndex == 0){
-            Animal *animal = [_listAnimals objectAtIndex:indexPath.row];
-            [_listAnimals removeObjectAtIndex:indexPath.row];
-            [animal deleteAnimal];
-            [_tableView reloadData];
-        }
-        if(_segmentedControl.selectedSegmentIndex == 1){
-            Evento *event = [_listEvents objectAtIndex:indexPath.row];
-            [_listEvents removeObjectAtIndex:indexPath.row];
-            [event deleteEvent];
-            [_tableView reloadData];
-        }
+        Animal *animal = [_listAnimals objectAtIndex:indexPath.row];
+        [_listAnimals removeObjectAtIndex:indexPath.row];
+        [animal deleteAnimal];
+        [_tableView reloadData];
+
     }
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     PessoalCellTableViewCell *cell = (PessoalCellTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"Cell"];
     
-    if (_segmentedControl.selectedSegmentIndex == 0) {
-        cell.cellName.text = [(Animal *)_listAnimals[indexPath.row] nome];
-        
-        cell.animal = _listAnimals[indexPath.row];
-    }
-    
-    if (_segmentedControl.selectedSegmentIndex == 1) {
-        cell.cellName.text = [(Evento *)_listEvents[indexPath.row] nomeEvento];
-        
-        cell.event = _listEvents[indexPath.row];
-    }
+    cell.cellName.text = [(Animal *)_listAnimals[indexPath.row] nome];
+    cell.animal = _listAnimals[indexPath.row];
     
     return cell;
     
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    if (_segmentedControl.selectedSegmentIndex == 0) {
-        return _listAnimals.count;
-    }
-    
-    return  _listEvents.count;
-    
+    return _listAnimals.count;
 }
 
-- (IBAction)checkSegmented:(id)sender {
-    [_tableView reloadData];
-}
 
 -(void) refresh{
     _listAnimals = [Animal loadAnimalsFromUser];
-    _listEvents = [Evento loadEventsFromUser];
     [_tableView reloadData];
     [_refreshControl endRefreshing];
 }
