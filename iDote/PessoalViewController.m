@@ -53,6 +53,8 @@
     
 }
 
+- (IBAction)linkFacebookAccount:(id)sender {
+}
 
 -(void)showData{
     _pessoalName.text = _user.name;
