@@ -100,14 +100,24 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)call:(id)sender {
+    //TODO limpar caracteres especiais da string
+    NSString *phoneNumber = [@"tel:" stringByAppendingString:@""];
+    
+    NSCharacterSet *charSet = [NSCharacterSet characterSetWithCharactersInString:@"0123456789"];
+    NSString *finalString = [[finalString componentsSeparatedByCharactersInSet:charSet] componentsJoinedByString:@"*"];
+    
+    NSURL *phoneURL = [NSURL URLWithString:[NSString stringWithFormat:phoneNumber]];
+    
+    
+    if ([[UIApplication sharedApplication] canOpenURL:phoneURL]) {
+        [[UIApplication sharedApplication] openURL:phoneURL];
+    }else
+    {
+        UIAlertView *calert = [[UIAlertView alloc]initWithTitle:@"Alert" message:@"Call facility is not available!!!" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
+        [calert show];
+    }
 }
-*/
+
 
 @end
