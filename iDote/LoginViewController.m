@@ -31,7 +31,7 @@ static CGFloat keyboardHeightOffset = 15.0f; //Camila
 - (void)viewDidLoad {
   [super viewDidLoad];
     
-    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:234/255.0 green:158/255.0 blue:63/255.0 alpha:1]];
+    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1]];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     //MUDANDO A COR DO BOTAO PADRAO DA NAVIGATION
     

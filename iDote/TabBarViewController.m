@@ -20,14 +20,14 @@
     [super viewDidLoad];
     
     
-    [[UITabBar appearance] setTintColor: [UIColor colorWithRed:240/255.0 green:167/255.0 blue:59/255.0 alpha:1]];
+    [[UITabBar appearance] setTintColor: [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1]];
     //MUDANDO A COR DO ICONE DA TAB BAR PRESSIONADO
     
-    [[UIBarButtonItem appearance] setTintColor: [UIColor colorWithRed:234/255.0 green:158/255.0 blue:63/255.0 alpha:1]]; //MUDA A COR DOS ICONES DA NAVIGATION
+    [[UIBarButtonItem appearance] setTintColor: [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1]]; //MUDA A COR DOS ICONES DA NAVIGATION
 
-    [[UITabBar appearance] setBarTintColor: [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1]]; // MUDA A COR DA TAB BAR
+    [[UITabBar appearance] setBarTintColor: [UIColor colorWithRed:42/255.0 green:17/255.0 blue:40/255.0 alpha:1]]; // MUDA A COR DA TAB BAR
 //
-    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:234/255.0 green:158/255.0 blue:63/255.0 alpha:1]];
+    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1]];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 //    //MUDANDO A COR DO BOTAO PADRAO DA NAVIGATION
 
