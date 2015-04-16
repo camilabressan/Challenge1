@@ -52,7 +52,6 @@
 		B960249D1AB89729008C211C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B960249B1AB89729008C211C /* Main.storyboard */; };
 		B960249F1AB89729008C211C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B960249E1AB89729008C211C /* Images.xcassets */; };
 		B96024A21AB89729008C211C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B96024A01AB89729008C211C /* LaunchScreen.xib */; };
-		B96024AE1AB89729008C211C /* iDoteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B96024AD1AB89729008C211C /* iDoteTests.m */; };
 		B97AF0911ADC771C0004C96C /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B97AF0901ADC771C0004C96C /* ParseFacebookUtilsV4.framework */; };
 		B97B07491ADC30CB009E1886 /* UIImage+Blur.m in Sources */ = {isa = PBXBuildFile; fileRef = B97B07481ADC30CB009E1886 /* UIImage+Blur.m */; };
 		B98486B41AC5EDE3008F0BD1 /* AnimalDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B98486B31AC5EDE3008F0BD1 /* AnimalDetailsViewController.m */; };
@@ -67,16 +66,6 @@
 		E32C9EEB1AC095BC00439C9B /* teste.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E32C9EEA1AC095BC00439C9B /* teste.storyboard */; };
 		E3B9C1CB1ABF2E960083A0F6 /* Institution.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B9C1CA1ABF2E960083A0F6 /* Institution.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		B96024A81AB89729008C211C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B96024861AB89728008C211C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B960248D1AB89728008C211C;
-			remoteInfo = iDote;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		9032E0F01AC0C54D001E11DF /* CalendarioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarioViewController.h; sourceTree = "<group>"; };
@@ -152,7 +141,6 @@
 		B960249C1AB89729008C211C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B960249E1AB89729008C211C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B96024A11AB89729008C211C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		B96024A71AB89729008C211C /* iDoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iDoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B96024AC1AB89729008C211C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B96024AD1AB89729008C211C /* iDoteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iDoteTests.m; sourceTree = "<group>"; };
 		B97AF0901ADC771C0004C96C /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
@@ -201,13 +189,6 @@
 				AB4F88341AB89D67006DA324 /* CoreGraphics.framework in Frameworks */,
 				AB4F88321AB89D5E006DA324 /* CFNetwork.framework in Frameworks */,
 				AB4F88301AB89D59006DA324 /* AudioToolbox.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B96024A41AB89729008C211C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,7 +284,6 @@
 			isa = PBXGroup;
 			children = (
 				B960248E1AB89729008C211C /* iDote.app */,
-				B96024A71AB89729008C211C /* iDoteTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -439,24 +419,6 @@
 			productReference = B960248E1AB89729008C211C /* iDote.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B96024A61AB89729008C211C /* iDoteTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B96024B41AB89729008C211C /* Build configuration list for PBXNativeTarget "iDoteTests" */;
-			buildPhases = (
-				B96024A31AB89729008C211C /* Sources */,
-				B96024A41AB89729008C211C /* Frameworks */,
-				B96024A51AB89729008C211C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B96024A91AB89729008C211C /* PBXTargetDependency */,
-			);
-			name = iDoteTests;
-			productName = iDoteTests;
-			productReference = B96024A71AB89729008C211C /* iDoteTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -468,16 +430,12 @@
 				TargetAttributes = {
 					B960248D1AB89728008C211C = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = P2V4W6VMHY;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 0;
 							};
 						};
-					};
-					B96024A61AB89729008C211C = {
-						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 9468LRW88W;
-						TestTargetID = B960248D1AB89728008C211C;
 					};
 				};
 			};
@@ -495,7 +453,6 @@
 			projectRoot = "";
 			targets = (
 				B960248D1AB89728008C211C /* iDote */,
-				B96024A61AB89729008C211C /* iDoteTests */,
 			);
 		};
 /* End PBXProject section */
@@ -509,13 +466,6 @@
 				B960249D1AB89729008C211C /* Main.storyboard in Resources */,
 				B96024A21AB89729008C211C /* LaunchScreen.xib in Resources */,
 				B960249F1AB89729008C211C /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B96024A51AB89729008C211C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,23 +512,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B96024A31AB89729008C211C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B96024AE1AB89729008C211C /* iDoteTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B96024A91AB89729008C211C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B960248D1AB89728008C211C /* iDote */;
-			targetProxy = B96024A81AB89729008C211C /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B960249B1AB89729008C211C /* Main.storyboard */ = {
@@ -698,7 +632,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b08455f8-563d-47f1-b6be-2237cd5d5a9d";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -718,41 +652,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b08455f8-563d-47f1-b6be-2237cd5d5a9d";
-			};
-			name = Release;
-		};
-		B96024B51AB89729008C211C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = iDoteTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iDote.app/iDote";
-			};
-			name = Debug;
-		};
-		B96024B61AB89729008C211C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = iDoteTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iDote.app/iDote";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -773,15 +673,6 @@
 			buildConfigurations = (
 				B96024B21AB89729008C211C /* Debug */,
 				B96024B31AB89729008C211C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B96024B41AB89729008C211C /* Build configuration list for PBXNativeTarget "iDoteTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B96024B51AB89729008C211C /* Debug */,
-				B96024B61AB89729008C211C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
