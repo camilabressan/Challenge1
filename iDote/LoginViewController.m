@@ -121,80 +121,96 @@ static CGFloat keyboardHeightOffset = 15.0f; //Camila
     
     
     FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
-    [login logInWithReadPermissions:permissionsArray handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
-        if (error) {
-            // Process error
-        } else if (result.isCancelled) {
-            // Handle cancellations
-        } else {
-            // If you ask for multiple permissions at once, you
-            // should check if specific permissions missing
-            if ([result.grantedPermissions containsObject:@"email"]) {
-                PFQuery *query = [PFUser query];
-                if ([FBSDKAccessToken currentAccessToken]) {
-                    [FBSDKProfile enableUpdatesOnAccessTokenChange:true];
-                    [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me" parameters:nil]
-                     startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
-                         if (!error) {
-                             [query whereKey:@"email" equalTo:result[@"email"]];
-                             [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-                                 if (!error) {
-                                     if (objects.count > 0) { //Usuario com o email já cadastrado
-                                        NSLog(@"Usuario já cadastrado!");
-                                         [PFFacebookUtils logInInBackgroundWithAccessToken:[FBSDKAccessToken currentAccessToken]
-                                             block:^(PFUser *user, NSError *error) {
-                                                 if (!user) {
-                                                     NSLog(@"Uh oh. The user cancelled the Facebook login.");
-                                                 } else if (user.isNew) { //Outro Usuario com email
-                                                     [user deleteInBackground];
-                                                 } else {
-                                                     [self performSegueWithIdentifier:@"MainSegue" sender:sender];
-                                                 }
-                                             }];
-                                     } else {
-                                         [PFFacebookUtils logInInBackgroundWithAccessToken:[FBSDKAccessToken currentAccessToken]
-                                             block:^(PFUser *user, NSError *error) {
-                                                 if (!user) {
-                                                     NSLog(@"Uh oh. The user cancelled the Facebook login.");
-                                                 } else if (user.isNew) {
-                                                     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
-                                                     dispatch_async(queue, ^{
-                                                         NSString *imageString = @"https://graph.facebook.com/userId/picture?width=300&height=300";
-                                                         imageString = [imageString stringByReplacingOccurrencesOfString:@"userId"
-                                                                                                              withString:result[@"id"]];
-                                                         NSURL *imageURL = [[NSURL alloc] initWithString:imageString];
-                                                         NSData *imageData = [NSData dataWithContentsOfURL: imageURL];
-                                                         PFFile *imageFile = [PFFile fileWithName:@"Profileimage.png" data:imageData];
-                                                         dispatch_async(dispatch_get_main_queue(), ^{
-                                                             [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-                                                                 if (!error) {
-                                                                     if (succeeded) {
-                                                                         user[@"mainPhoto"] = imageFile;
-                                                                         user.username = result[@"email"];
-                                                                         user.email = result[@"email"];
-                                                                         user[@"Name"] = result[@"name"];
-                                                                         [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-                                                                             if (succeeded) {
-                                                                                 [self performSegueWithIdentifier:@"MainSegue" sender:sender];
-                                                                             }
-                                                                         }];
-                                                                         
+    
+    if ([FBSDKAccessToken currentAccessToken]) {
+        [PFFacebookUtils logInInBackgroundWithAccessToken:[FBSDKAccessToken currentAccessToken]
+            block:^(PFUser *user, NSError *error) {
+                if (!user) {
+                    NSLog(@"Uh oh. The user cancelled the Facebook login.");
+                } else if (user.isNew) { //Outro Usuario com email
+                    [user deleteInBackground];
+                    [PFUser logOut];
+                } else {
+                    [self performSegueWithIdentifier:@"MainSegue" sender:sender];
+                }
+            }];
+    
+    } else {
+        [login logInWithReadPermissions:permissionsArray handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
+            if (error) {
+                // Process error
+            } else if (result.isCancelled) {
+                // Handle cancellations
+            } else {
+                // If you ask for multiple permissions at once, you
+                // should check if specific permissions missing
+                if ([result.grantedPermissions containsObject:@"email"]) {
+                    PFQuery *query = [PFUser query];
+                    if ([FBSDKAccessToken currentAccessToken]) {
+                        [FBSDKProfile enableUpdatesOnAccessTokenChange:true];
+                        [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me" parameters:nil]
+                         startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
+                             if (!error) {
+                                 [query whereKey:@"email" equalTo:result[@"email"]];
+                                 [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+                                     if (!error) {
+                                         if (objects.count > 0) { //Usuario com o email já cadastrado
+                                            NSLog(@"Usuario já cadastrado!");
+                                             [PFFacebookUtils logInInBackgroundWithAccessToken:[FBSDKAccessToken currentAccessToken]
+                                                 block:^(PFUser *user, NSError *error) {
+                                                     if (!user) {
+                                                         NSLog(@"Uh oh. The user cancelled the Facebook login.");
+                                                     } else if (user.isNew) { //Outro Usuario com email
+                                                         [user deleteInBackground];
+                                                     } else {
+                                                         [self performSegueWithIdentifier:@"MainSegue" sender:sender];
+                                                     }
+                                                 }];
+                                         } else {
+                                             [PFFacebookUtils logInInBackgroundWithAccessToken:[FBSDKAccessToken currentAccessToken]
+                                                 block:^(PFUser *user, NSError *error) {
+                                                     if (!user) {
+                                                         NSLog(@"Uh oh. The user cancelled the Facebook login.");
+                                                     } else if (user.isNew) {
+                                                         dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
+                                                         dispatch_async(queue, ^{
+                                                             NSString *imageString = @"https://graph.facebook.com/userId/picture?width=300&height=300";
+                                                             imageString = [imageString stringByReplacingOccurrencesOfString:@"userId"
+                                                                                                                  withString:result[@"id"]];
+                                                             NSURL *imageURL = [[NSURL alloc] initWithString:imageString];
+                                                             NSData *imageData = [NSData dataWithContentsOfURL: imageURL];
+                                                             PFFile *imageFile = [PFFile fileWithName:@"Profileimage.png" data:imageData];
+                                                             dispatch_async(dispatch_get_main_queue(), ^{
+                                                                 [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                                                                     if (!error) {
+                                                                         if (succeeded) {
+                                                                             user[@"mainPhoto"] = imageFile;
+                                                                             user.username = result[@"email"];
+                                                                             user.email = result[@"email"];
+                                                                             user[@"Name"] = result[@"name"];
+                                                                             [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                                                                                 if (succeeded) {
+                                                                                     [self performSegueWithIdentifier:@"MainSegue" sender:sender];
+                                                                                 }
+                                                                             }];
+                                                                             
+                                                                         }
                                                                      }
-                                                                 }
-                                                             }];
+                                                                 }];
+                                                             });
                                                          });
-                                                     });
-                                                 }
-                                             }];
+                                                     }
+                                                 }];
+                                         }
                                      }
-                                 }
-                             }];
-                         }
-                     }];
+                                 }];
+                             }
+                         }];
+                    }
                 }
             }
-        }
-    }];
+        }];
+    }
 }
 
 //pega os dados inseridos pelo usuario na tela de login e verifica os mesmos
