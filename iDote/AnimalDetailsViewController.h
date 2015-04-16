@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "Animal.h"
+#import <MessageUI/MessageUI.h>
+#import <MessageUI/MFMailComposeViewController.h>
 
 @interface AnimalDetailsViewController : UIViewController
 @property Animal *animal;
