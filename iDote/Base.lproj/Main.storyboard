@@ -324,7 +324,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Bdd-VU-vKN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bjj-TT-VXu" customClass="UIControl">
-                        <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <connections>
@@ -1059,7 +1059,7 @@
             <objects>
                 <tableViewController id="pXa-Ur-prB" customClass="RegisterAnimalViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="zR1-KE-AtU">
-                        <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -1296,7 +1296,7 @@
                         <viewControllerLayoutGuide type="bottom" id="IdW-8I-Bg5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3Ud-Za-bDi">
-                        <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1776,7 +1776,7 @@
                         <viewControllerLayoutGuide type="bottom" id="tZB-iw-nZi"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mIw-Zj-UBP">
-                        <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 91" translatesAutoresizingMaskIntoConstraints="NO" id="tUG-68-51u">
