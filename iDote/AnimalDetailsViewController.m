@@ -132,7 +132,6 @@
 
 - (IBAction)emailButtonPushed:(id)sender {
     
-    
     if ([self validateEmail: _animal.dono.email] == YES){
         NSString *mail = _animal.dono.email;
         
