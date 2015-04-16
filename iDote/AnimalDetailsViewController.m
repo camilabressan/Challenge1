@@ -8,7 +8,7 @@
 
 #import "AnimalDetailsViewController.h"
 
-@interface AnimalDetailsViewController ()
+@interface AnimalDetailsViewController () <MFMailComposeViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *petImage;
 @property (weak, nonatomic) IBOutlet UILabel *petName;
@@ -101,23 +101,61 @@
 }
 
 - (IBAction)call:(id)sender {
-    //TODO limpar caracteres especiais da string
-    NSString *phoneNumber = [@"tel:" stringByAppendingString:@""];
-    
-    NSCharacterSet *charSet = [NSCharacterSet characterSetWithCharactersInString:@"0123456789"];
-    NSString *finalString = [[finalString componentsSeparatedByCharactersInSet:charSet] componentsJoinedByString:@"*"];
-    
+    NSString *str = [[_animal.dono.phone componentsSeparatedByCharactersInSet:
+                            [[NSCharacterSet decimalDigitCharacterSet] invertedSet]]
+                           componentsJoinedByString:@""];
+    NSString *phoneNumber = [@"tel:" stringByAppendingString:str];
     NSURL *phoneURL = [NSURL URLWithString:[NSString stringWithFormat:phoneNumber]];
-    
     
     if ([[UIApplication sharedApplication] canOpenURL:phoneURL]) {
         [[UIApplication sharedApplication] openURL:phoneURL];
     }else
     {
-        UIAlertView *calert = [[UIAlertView alloc]initWithTitle:@"Alert" message:@"Call facility is not available!!!" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
+        UIAlertView *calert = [[UIAlertView alloc]initWithTitle:@"" message:@"Não é possível fazer a ligação" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
         [calert show];
     }
 }
+
+- (BOOL) validateEmail: (NSString *) candidate {
+    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    
+    if ([emailTest evaluateWithObject:candidate] == YES)
+        return YES;
+    else
+    {
+        UIAlertView *alertIncorrectEmail = [[UIAlertView alloc] initWithTitle:@"Email incorreto" message:@"Por favor, insira um e-mail válido." delegate: self cancelButtonTitle:@"OK"otherButtonTitles: nil];
+        [alertIncorrectEmail show];
+        return NO;
+    }
+}
+
+- (IBAction)emailButtonPushed:(id)sender {
+    
+    
+    if ([self validateEmail: _animal.dono.email] == YES){
+        NSString *mail = _animal.dono.email;
+        
+        if([MFMailComposeViewController canSendMail]) {
+            MFMailComposeViewController *mailCont = [[MFMailComposeViewController alloc] init];
+            mailCont.mailComposeDelegate = self;
+            [mailCont setSubject:@""];
+            [mailCont setToRecipients:[NSArray arrayWithObject:mail]];
+            [mailCont setMessageBody:[NSString stringWithFormat:@"", ""]  isHTML:NO];
+            [self presentViewController:mailCont animated:YES completion:nil];
+            
+        }
+    }
+    
+}
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
+    //handle any error
+    [controller dismissViewControllerAnimated:YES completion:nil];
+    
+}
+
+
 
 
 @end
