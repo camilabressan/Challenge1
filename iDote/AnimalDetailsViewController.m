@@ -8,7 +8,7 @@
 
 #import "AnimalDetailsViewController.h"
 
-@interface AnimalDetailsViewController ()
+@interface AnimalDetailsViewController () <MFMailComposeViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *petImage;
 @property (weak, nonatomic) IBOutlet UILabel *petName;
@@ -115,6 +115,46 @@
         [calert show];
     }
 }
+
+- (BOOL) validateEmail: (NSString *) candidate {
+    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    
+    if ([emailTest evaluateWithObject:candidate] == YES)
+        return YES;
+    else
+    {
+        UIAlertView *alertIncorrectEmail = [[UIAlertView alloc] initWithTitle:@"Email incorreto" message:@"Por favor, insira um e-mail válido." delegate: self cancelButtonTitle:@"OK"otherButtonTitles: nil];
+        [alertIncorrectEmail show];
+        return NO;
+    }
+}
+
+- (IBAction)emailButtonPushed:(id)sender {
+    
+    if ([self validateEmail: _animal.dono.email] == YES){
+        NSString *mail = _animal.dono.email;
+        
+        if([MFMailComposeViewController canSendMail]) {
+            MFMailComposeViewController *mailCont = [[MFMailComposeViewController alloc] init];
+            mailCont.mailComposeDelegate = self;
+            [mailCont setSubject:@""];
+            [mailCont setToRecipients:[NSArray arrayWithObject:mail]];
+            [mailCont setMessageBody:[NSString stringWithFormat:@"", ""]  isHTML:NO];
+            [self presentViewController:mailCont animated:YES completion:nil];
+            
+        }
+    }
+    
+}
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
+    //handle any error
+    [controller dismissViewControllerAnimated:YES completion:nil];
+    
+}
+
+
 
 
 @end

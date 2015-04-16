@@ -28,8 +28,8 @@
 #ifdef __IPHONE_8_0
     if(IS_OS_8_OR_LATER) {
         // Use one or the other, not both. Depending on what you put in info.plist
-        //[self.locationManager requestWhenInUseAuthorization];
-        [self.locationManager requestAlwaysAuthorization];
+        [self.locationManager requestWhenInUseAuthorization];
+        //[self.locationManager requestAlwaysAuthorization];
     }
 #endif
     [self.locationManager startUpdatingLocation];
