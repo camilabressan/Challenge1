@@ -7,6 +7,9 @@
 //
 
 #import "PessoalViewController.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <ParseFacebookUtilsV4/PFFacebookUtils.h>
 
 @interface PessoalViewController () <UITextFieldDelegate>
 
@@ -54,6 +57,11 @@
 }
 
 - (IBAction)linkFacebookAccount:(id)sender {
+    NSArray *permissionsArray = @[ @"user_about_me", @"email"];
+    if (![PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
+        [PFFacebookUtils linkUserInBackground:[PFUser currentUser] withReadPermissions:permissionsArray];
+    }
+    
 }
 
 -(void)showData{

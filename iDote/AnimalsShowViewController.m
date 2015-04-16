@@ -87,7 +87,7 @@
     [super viewWillAppear:animated];
     _cardView.frame = CGRectMake(0, 0,
                                  self.view.frame.size.width,
-                                 self.view.frame.size.height + self.view.frame.origin.y);
+                                 self.view.frame.size.height);
     //_cardView.frame = self.view.frame;
     [self.view addSubview:_cardView];
     
