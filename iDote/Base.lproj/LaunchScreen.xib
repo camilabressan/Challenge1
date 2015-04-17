@@ -11,15 +11,11 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="UFk-1b-1ze">
-                    <rect key="frame" x="91" y="215" width="299" height="207"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="299" id="M17-Ee-o85"/>
-                        <constraint firstAttribute="height" constant="207" id="fmy-aX-n7Q"/>
-                    </constraints>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagedog3" translatesAutoresizingMaskIntoConstraints="NO" id="UFk-1b-1ze">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pet's Bay" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOT-Fa-rRW">
-                    <rect key="frame" x="82" y="72" width="316" height="106"/>
+                    <rect key="frame" x="82" y="166" width="316" height="106"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="106" id="Ydr-dk-Myn"/>
                         <constraint firstAttribute="width" secondItem="rOT-Fa-rRW" secondAttribute="height" multiplier="158:53" id="uUi-ZJ-STm"/>
@@ -29,12 +25,13 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="0.22352941179999999" green="0.094117647060000004" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="UFk-1b-1ze" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="2HO-kP-3kZ"/>
+                <constraint firstAttribute="bottom" secondItem="UFk-1b-1ze" secondAttribute="bottom" id="JWm-1h-UY2"/>
                 <constraint firstAttribute="centerX" secondItem="rOT-Fa-rRW" secondAttribute="centerX" id="LkH-NP-Y33"/>
-                <constraint firstAttribute="centerX" secondItem="UFk-1b-1ze" secondAttribute="centerX" constant="-0.5" id="TV4-XK-TRG"/>
-                <constraint firstAttribute="centerY" secondItem="UFk-1b-1ze" secondAttribute="centerY" constant="-78.5" id="bKE-TB-pDH"/>
-                <constraint firstItem="rOT-Fa-rRW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="72" id="zA7-Rs-RJv"/>
+                <constraint firstAttribute="trailing" secondItem="UFk-1b-1ze" secondAttribute="trailing" id="raa-95-2JG"/>
+                <constraint firstItem="UFk-1b-1ze" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="sc6-aX-POp"/>
+                <constraint firstItem="rOT-Fa-rRW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="166" id="zA7-Rs-RJv"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -42,6 +39,6 @@
         </view>
     </objects>
     <resources>
-        <image name="ImageIcon" width="714" height="504"/>
+        <image name="imagedog3" width="1242" height="2208"/>
     </resources>
 </document>
