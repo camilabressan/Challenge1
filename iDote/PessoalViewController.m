@@ -21,12 +21,6 @@
 
 @implementation PessoalViewController
 
--(void) viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    
-    [_tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow animated:YES];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -43,8 +37,21 @@
     [self.tableView addSubview:_refreshControl];
     [_tableView reloadData];
     [self showData];
+    [self setConfigImage];
 }
 
+-(void) setConfigImage{
+    _pessoalPhoto.layer.borderWidth = 2;
+    _pessoalPhoto.layer.borderColor = [[UIColor orangeColor]CGColor];
+    _pessoalPhoto.layer.cornerRadius = _pessoalPhoto.frame.size.height/2;
+    _pessoalPhoto.layer.masksToBounds = YES;
+}
+
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    [_tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow animated:YES];
+}
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
     if ([textField isEqual: _pessoalPhone])

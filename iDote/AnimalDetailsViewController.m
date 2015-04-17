@@ -82,7 +82,19 @@
     _ownerEmail.text = _animal.dono.email;
     _ownerPhone.text = _animal.dono.phone;
     
+    [self setConfigImage];
+}
+
+-(void) setConfigImage{
+    _petImage.layer.borderWidth = 1;
+    _petImage.layer.borderColor = [[UIColor orangeColor]CGColor];
+    _petImage.layer.cornerRadius = _petImage.frame.size.height/2;
+    _petImage.layer.masksToBounds = YES;
     
+    _ownerImage.layer.borderWidth = 1;
+    _ownerImage.layer.borderColor = [[UIColor orangeColor]CGColor];
+    _ownerImage.layer.cornerRadius = _ownerImage.frame.size.height/2;
+    _ownerImage.layer.masksToBounds = YES;
 }
 
 - (IBAction)shareAnimal:(id)sender {
