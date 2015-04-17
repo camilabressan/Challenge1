@@ -58,7 +58,7 @@
         animal.porte = [_sizeSegControl titleForSegmentAtIndex:_sizeSegControl.selectedSegmentIndex];
         
         [animal save];
-        
+        [self performSegueWithIdentifier:@"RegisterAnimalSegue" sender:nil];
     }
 }
 

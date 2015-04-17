@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -1048,6 +1048,8 @@
                                 <exclude reference="xJ5-on-vSu"/>
                                 <exclude reference="NV3-Dj-4Vs"/>
                                 <exclude reference="tPE-os-Vom"/>
+                                <exclude reference="UCp-xM-Wmh"/>
+                                <exclude reference="t32-Fb-xdm"/>
                                 <exclude reference="Dtt-2j-Lax"/>
                                 <exclude reference="Ler-9i-f08"/>
                                 <exclude reference="M21-Ni-VS4"/>
@@ -1058,8 +1060,6 @@
                                 <exclude reference="SaF-nP-NRa"/>
                                 <exclude reference="qyn-wt-5FD"/>
                                 <exclude reference="vP9-RX-dfV"/>
-                                <exclude reference="UCp-xM-Wmh"/>
-                                <exclude reference="t32-Fb-xdm"/>
                                 <exclude reference="V3X-8o-WWe"/>
                                 <exclude reference="suY-fZ-6wc"/>
                                 <exclude reference="Nla-9y-k8o"/>
@@ -1516,9 +1516,11 @@
                         <outlet property="nameTextFielld" destination="gVp-vO-QDk" id="giW-w8-NWi"/>
                         <outlet property="sizeSegControl" destination="EQF-kl-ALu" id="Udw-bs-o5R"/>
                         <outlet property="typeSegControl" destination="odp-bK-tXT" id="gVT-n1-bIQ"/>
+                        <segue destination="GWU-tE-FBA" kind="unwind" identifier="RegisterAnimalSegue" unwindAction="backFromRegisterAnimal:" id="ybS-6O-rp4"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BGg-D7-x00" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="GWU-tE-FBA" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1213" y="3212"/>
         </scene>
