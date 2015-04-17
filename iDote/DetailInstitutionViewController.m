@@ -41,6 +41,13 @@
        [_photoDetail setBackgroundImage:_inst.mainImage forState:UIControlStateNormal];
     }
     
+    [self setConfigImage];
+}
+
+-(void) setConfigImage{
+    _photoDetail.layer.borderWidth = 2;
+    _photoDetail.layer.borderColor = [[UIColor orangeColor]CGColor];
+    
 }
 
 - (IBAction)call:(id)sender {
