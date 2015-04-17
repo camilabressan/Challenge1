@@ -925,6 +925,9 @@
                                         <state key="normal" image="Email-1">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="emailButtonPushed:" destination="FKU-dO-8rU" eventType="touchUpInside" id="B4O-v7-ha8"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -962,6 +965,9 @@
                                         <state key="normal" image="Telefone">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="call:" destination="FKU-dO-8rU" eventType="touchUpInside" id="EO5-8u-1bU"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

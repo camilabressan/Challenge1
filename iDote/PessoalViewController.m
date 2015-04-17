@@ -21,30 +21,37 @@
 
 @implementation PessoalViewController
 
--(void) viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    
-    [_tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow animated:YES];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.maskTextFieldTelephone.mask = @"(##) ####-#####";
     
     _user = [User loadCurrentUser];
-    _listAnimals = [Animal loadAnimalsFromUser];
+    [self loadData];
     
     _tableView.allowsSelection = NO;
     
     _refreshControl = [[UIRefreshControl alloc] init];
-    [_refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
+    [_refreshControl addTarget:self action:@selector(loadData) forControlEvents:UIControlEventValueChanged];
 
     [self.tableView addSubview:_refreshControl];
     [_tableView reloadData];
     [self showData];
+    [self setConfigImage];
 }
 
+-(void) setConfigImage{
+    _pessoalPhoto.layer.borderWidth = 2;
+    _pessoalPhoto.layer.borderColor = [[UIColor orangeColor]CGColor];
+    _pessoalPhoto.layer.cornerRadius = _pessoalPhoto.frame.size.height/2;
+    _pessoalPhoto.layer.masksToBounds = YES;
+}
+
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    [_tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow animated:YES];
+}
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
     if ([textField isEqual: _pessoalPhone])
@@ -119,6 +126,20 @@
     [_refreshControl endRefreshing];
 }
 
+
+-(void) loadData{
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
+    dispatch_async(queue, ^{
+        _listAnimals = [Animal loadAnimalsFromUser];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [_tableView reloadData];
+            if (_refreshControl != nil) {
+                [_refreshControl endRefreshing];
+            }
+        });
+    });
+    
+}
 
 - (IBAction)profileDataChanged:(id)sender {
     _buttonSave.enabled = YES;

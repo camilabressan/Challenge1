@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "Institution.h"
+#import <MessageUI/MessageUI.h>
+#import <MessageUI/MFMailComposeViewController.h>
 
 @interface DetailInstitutionViewController : UIViewController
 
