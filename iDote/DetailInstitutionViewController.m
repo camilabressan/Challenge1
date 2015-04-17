@@ -47,8 +47,7 @@
 -(void) setConfigImage{
     _photoDetail.layer.borderWidth = 2;
     _photoDetail.layer.borderColor = [[UIColor orangeColor]CGColor];
-    _photoDetail.layer.cornerRadius = _photoDetail.frame.size.height/2;
-    _photoDetail.layer.masksToBounds = YES;
+    
 }
 
 - (IBAction)call:(id)sender {
