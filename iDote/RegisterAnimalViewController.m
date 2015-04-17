@@ -34,6 +34,11 @@
 #endif
     [self.locationManager startUpdatingLocation];
     
+    
+    self.tableView.estimatedRowHeight = 44;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
+    
     _mapView.showsUserLocation = YES;
     [_mapView setMapType:MKMapTypeStandard];
     [_mapView setZoomEnabled:YES];
