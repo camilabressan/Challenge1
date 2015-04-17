@@ -128,6 +128,7 @@
 {
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 800, 800);
     [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
+    
 }
 
 - (NSString *)deviceLocation {
@@ -156,7 +157,7 @@
             self.locationManager = [[CLLocationManager alloc] init];
         
         self.locationManager.delegate = self;
-        [self.locationManager startMonitoringSignificantLocationChanges];
+        [self.locationManager startUpdatingLocation];
     }
 }
 
