@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.clipsToBounds = YES;
+    
     _nameDetail.text = _inst.institutionName;
     _phoneDetail.text = _inst.institutionPhone;
     _emailDetail.text = _inst.institutionEmail;

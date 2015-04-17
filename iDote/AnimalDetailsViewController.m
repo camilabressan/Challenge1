@@ -31,6 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.clipsToBounds = YES;
     
     if (_animal.mainImage == nil) {
         NSURL *imageURL = [[NSURL alloc] initWithString:_animal.mainImageURL];

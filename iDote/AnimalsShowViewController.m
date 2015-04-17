@@ -20,7 +20,9 @@
 @implementation AnimalsShowViewController
 
 -(void)viewDidLoad {
-    [super viewDidLoad];    
+    [super viewDidLoad];
+    
+    self.view.clipsToBounds = YES;
     
     _swipeLeftRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self
                                                                      action:@selector(swipeLeftHandler:)];
