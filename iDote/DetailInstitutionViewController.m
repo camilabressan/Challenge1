@@ -25,6 +25,22 @@
     _descriptionDetail.text = _inst.institutionDescription;
     _descriptionDetail.editable = NO;
     
+    if (_inst.mainImage == nil) {
+        PFFile *photo = [_inst.object valueForKey:@"foto"];
+        NSURL *imageURL = [[NSURL alloc] initWithString:[photo url]];
+        dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
+        dispatch_async(queue, ^{
+            NSData *data = [NSData dataWithContentsOfURL:imageURL];
+            UIImage *image = [UIImage imageWithData:data];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [_photoDetail setBackgroundImage:image forState:UIControlStateNormal];
+                _inst.mainImage = image;
+            });
+        });
+    } else {
+       [_photoDetail setBackgroundImage:_inst.mainImage forState:UIControlStateNormal];
+    }
+    
 }
 
 - (IBAction)call:(id)sender {
