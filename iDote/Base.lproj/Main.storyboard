@@ -1064,6 +1064,7 @@
                         <outlet property="addressDetail" destination="n1g-14-qm8" id="2nz-k1-Fmb"/>
                         <outlet property="descriptionDetail" destination="oW1-m9-fdq" id="8NK-5W-o2i"/>
                         <outlet property="nameDetail" destination="4cX-RC-oGe" id="FNg-bj-kAj"/>
+                        <outlet property="photoDetail" destination="I6c-zE-y8p" id="OJv-25-LEt"/>
                         <outlet property="responsibleDetail" destination="O2r-e1-QLP" id="5o3-5m-YyW"/>
                     </connections>
                 </viewController>

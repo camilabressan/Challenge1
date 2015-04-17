@@ -15,6 +15,7 @@
 
 @property Institution *inst;
 
+@property (weak, nonatomic) IBOutlet UIButton *photoDetail;
 @property (weak, nonatomic) IBOutlet UILabel *nameDetail;
 @property (weak, nonatomic) IBOutlet UILabel *phoneDetail;
 @property (weak, nonatomic) IBOutlet UILabel *emailDetail;
