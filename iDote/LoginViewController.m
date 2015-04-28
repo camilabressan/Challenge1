@@ -73,6 +73,10 @@ static CGFloat keyboardHeightOffset = 15.0f; //Camila
     
 } //fim codigo camila
 
+- (IBAction)dismissKeyboard:(id)sender {
+    
+    [self.view endEditing:YES];
+}
 
 -(void)viewWillAppear:(BOOL)animated
 {

@@ -26,6 +26,7 @@
     _addressDetail.text = _inst.institutionAddress;
     _descriptionDetail.text = _inst.institutionDescription;
     _descriptionDetail.editable = NO;
+    [_descriptionDetail scrollRangeToVisible:NSMakeRange(0, 0)];
     
     if (_inst.mainImage == nil) {
         PFFile *photo = [_inst.object valueForKey:@"foto"];
