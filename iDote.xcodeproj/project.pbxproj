@@ -130,7 +130,7 @@
 		B937CC161AC339A500B8C1E1 /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
 		B937CC171AC339A500B8C1E1 /* SwipeCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeCardView.h; sourceTree = "<group>"; };
 		B937CC181AC339A500B8C1E1 /* SwipeCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeCardView.m; sourceTree = "<group>"; };
-		B960248E1AB89729008C211C /* iDote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B960248E1AB89729008C211C /* Pet's Bay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pet's Bay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B96024921AB89729008C211C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B96024931AB89729008C211C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B96024951AB89729008C211C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -281,7 +281,7 @@
 		B960248F1AB89729008C211C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B960248E1AB89729008C211C /* iDote.app */,
+				B960248E1AB89729008C211C /* Pet's Bay.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -399,9 +399,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B960248D1AB89728008C211C /* iDote */ = {
+		B960248D1AB89728008C211C /* Pet's Bay */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B96024B11AB89729008C211C /* Build configuration list for PBXNativeTarget "iDote" */;
+			buildConfigurationList = B96024B11AB89729008C211C /* Build configuration list for PBXNativeTarget "Pet's Bay" */;
 			buildPhases = (
 				B960248A1AB89728008C211C /* Sources */,
 				B960248B1AB89728008C211C /* Frameworks */,
@@ -411,9 +411,9 @@
 			);
 			dependencies = (
 			);
-			name = iDote;
+			name = "Pet's Bay";
 			productName = iDote;
-			productReference = B960248E1AB89729008C211C /* iDote.app */;
+			productReference = B960248E1AB89729008C211C /* Pet's Bay.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -427,7 +427,7 @@
 				TargetAttributes = {
 					B960248D1AB89728008C211C = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 6W5C2N8Y53;
+						DevelopmentTeam = 9KS6X927VF;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 0;
@@ -449,7 +449,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B960248D1AB89728008C211C /* iDote */,
+				B960248D1AB89728008C211C /* Pet's Bay */,
 			);
 		};
 /* End PBXProject section */
@@ -664,7 +664,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B96024B11AB89729008C211C /* Build configuration list for PBXNativeTarget "iDote" */ = {
+		B96024B11AB89729008C211C /* Build configuration list for PBXNativeTarget "Pet's Bay" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B96024B21AB89729008C211C /* Debug */,
