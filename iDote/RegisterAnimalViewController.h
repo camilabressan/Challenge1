@@ -16,8 +16,7 @@
 
 #define IS_OS_8_OR_LATER ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
 
-@interface RegisterAnimalViewController : UITableViewController <UIImagePickerControllerDelegate, UIWebViewDelegate,  CLLocationManagerDelegate, MKMapViewDelegate,  CLLocationManagerDelegate>
-@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@interface RegisterAnimalViewController : UITableViewController <UIImagePickerControllerDelegate, UIWebViewDelegate,  CLLocationManagerDelegate,  CLLocationManagerDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *mainImage;
 @property(nonatomic, retain) CLLocationManager *locationManager;
 @property (weak, nonatomic) IBOutlet UITextField *cityTextField;

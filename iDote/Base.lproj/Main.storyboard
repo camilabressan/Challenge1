@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -327,17 +328,17 @@
                                 <exclude reference="yms-fw-PB1"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Cfo-La-zhh"/>
-                                <exclude reference="GJF-W7-S4X"/>
-                                <exclude reference="VxO-v2-eW1"/>
-                                <exclude reference="gwM-Ak-2cQ"/>
-                                <exclude reference="qzz-lU-8OJ"/>
                                 <exclude reference="xA2-BU-mUO"/>
                                 <exclude reference="TdV-FN-G3O"/>
                                 <exclude reference="aoR-yP-TWg"/>
                                 <exclude reference="go2-hJ-aHt"/>
                                 <exclude reference="GzV-bc-Xjw"/>
                                 <exclude reference="ti8-WX-a2H"/>
+                                <exclude reference="Cfo-La-zhh"/>
+                                <exclude reference="GJF-W7-S4X"/>
+                                <exclude reference="VxO-v2-eW1"/>
+                                <exclude reference="gwM-Ak-2cQ"/>
+                                <exclude reference="qzz-lU-8OJ"/>
                                 <exclude reference="9Ld-QM-aeC"/>
                                 <exclude reference="EA7-nI-lLk"/>
                                 <exclude reference="Msw-Bo-EOV"/>
@@ -1419,36 +1420,6 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="219" id="HCY-UB-HWS">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HCY-UB-HWS" id="vDd-BY-zMX">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="R1w-jp-j3W">
-                                                    <rect key="frame" x="-8" y="-12" width="608" height="231"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="231" id="hSK-DO-ZQs"/>
-                                                    </constraints>
-                                                </mapView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="R1w-jp-j3W" firstAttribute="top" secondItem="vDd-BY-zMX" secondAttribute="topMargin" id="8Qp-1e-ZwJ"/>
-                                                <constraint firstItem="R1w-jp-j3W" firstAttribute="top" secondItem="vDd-BY-zMX" secondAttribute="top" id="Ec2-II-n4j"/>
-                                                <constraint firstAttribute="bottom" secondItem="R1w-jp-j3W" secondAttribute="bottom" id="OIR-ax-UKA"/>
-                                                <constraint firstItem="R1w-jp-j3W" firstAttribute="top" secondItem="vDd-BY-zMX" secondAttribute="topMargin" constant="-21" id="QJ8-Sg-Roc"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="R1w-jp-j3W" secondAttribute="bottom" id="Qjf-mx-8WJ"/>
-                                                <constraint firstItem="R1w-jp-j3W" firstAttribute="leading" secondItem="vDd-BY-zMX" secondAttribute="leading" id="Wxg-6g-DIv"/>
-                                                <constraint firstAttribute="trailing" secondItem="R1w-jp-j3W" secondAttribute="trailing" id="Yvn-IR-cbS"/>
-                                            </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="8Qp-1e-ZwJ"/>
-                                                    <exclude reference="QJ8-Sg-Roc"/>
-                                                    <exclude reference="Qjf-mx-8WJ"/>
-                                                </mask>
-                                            </variation>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="129" id="yNb-Kd-m0h">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
@@ -1644,7 +1615,6 @@
                         <outlet property="descriptionTextView" destination="pqS-Uc-z8c" id="cF3-iu-amO"/>
                         <outlet property="genderSegControl" destination="CLf-Zi-Inm" id="q08-eG-ypK"/>
                         <outlet property="mainImage" destination="46d-ui-v5q" id="SfG-eU-srH"/>
-                        <outlet property="mapView" destination="R1w-jp-j3W" id="jIl-KK-2ol"/>
                         <outlet property="nameTextFielld" destination="gVp-vO-QDk" id="giW-w8-NWi"/>
                         <outlet property="sizeSegControl" destination="EQF-kl-ALu" id="Udw-bs-o5R"/>
                         <outlet property="typeSegControl" destination="odp-bK-tXT" id="gVT-n1-bIQ"/>
