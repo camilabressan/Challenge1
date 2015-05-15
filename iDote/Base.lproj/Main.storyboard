@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -323,21 +324,20 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="UXw-zI-4sk"/>
                                 <exclude reference="yms-fw-PB1"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Cfo-La-zhh"/>
-                                <exclude reference="GJF-W7-S4X"/>
-                                <exclude reference="VxO-v2-eW1"/>
-                                <exclude reference="gwM-Ak-2cQ"/>
-                                <exclude reference="qzz-lU-8OJ"/>
                                 <exclude reference="xA2-BU-mUO"/>
                                 <exclude reference="TdV-FN-G3O"/>
                                 <exclude reference="aoR-yP-TWg"/>
                                 <exclude reference="go2-hJ-aHt"/>
                                 <exclude reference="GzV-bc-Xjw"/>
                                 <exclude reference="ti8-WX-a2H"/>
+                                <exclude reference="Cfo-La-zhh"/>
+                                <exclude reference="GJF-W7-S4X"/>
+                                <exclude reference="VxO-v2-eW1"/>
+                                <exclude reference="gwM-Ak-2cQ"/>
+                                <exclude reference="qzz-lU-8OJ"/>
                                 <exclude reference="9Ld-QM-aeC"/>
                                 <exclude reference="EA7-nI-lLk"/>
                                 <exclude reference="Msw-Bo-EOV"/>
