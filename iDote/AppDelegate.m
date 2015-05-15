@@ -37,12 +37,14 @@
     
     [PFFacebookUtils initializeFacebookWithApplicationLaunchOptions:launchOptions];
     
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Arial" size:19.0],NSForegroundColorAttributeName:[UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1]}]; //MUDANDO COR E FONTE DO TITULO DA NAVIGATION
 
     
     
     
-   [[UINavigationBar appearance] setBarTintColor: [UIColor colorWithRed:42/255.0 green:17/255.0 blue:40/255.0 alpha:1]]; // MUDA A COR DA NAVIGATION
+    [[UINavigationBar appearance] setBarTintColor: [UIColor colorWithRed:42/255.0 green:17/255.0 blue:40/255.0 alpha:1]]; // MUDA A COR DA NAVIGATION
     
     return YES;
 }
