@@ -175,7 +175,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="clickRegisterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dAQ-hi-qPX"/>
+                                    <segue destination="Eyo-GR-Rra" kind="presentation" modalPresentationStyle="overFullScreen" id="CGF-em-awp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLH-3b-p6U">
@@ -369,7 +369,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="120" y="4"/>
+            <point key="canvasLocation" x="96" y="-88"/>
         </scene>
         <!--Animais para Adoção-->
         <scene sceneID="Mj4-Vq-gQv">
@@ -590,7 +590,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Ggb-y8-FQW" firstAttribute="top" secondItem="m5r-4I-3S7" secondAttribute="bottom" constant="7" id="2Pg-tM-C7t"/>
                             <constraint firstItem="Pjk-oI-km1" firstAttribute="top" secondItem="REt-KJ-spq" secondAttribute="bottom" constant="10" id="4k6-4b-gfW"/>
@@ -2817,6 +2817,6 @@
         <image name="share" width="43" height="43"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1QQ-Is-dCN"/>
+        <segue reference="ezp-H1-gUI"/>
     </inferredMetricsTieBreakers>
 </document>
