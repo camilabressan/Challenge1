@@ -7,9 +7,11 @@
 //
 
 #import "GlanceController.h"
+//#import <Parse/Parse.h>
 
 
 @interface GlanceController()
+@property (weak, nonatomic) IBOutlet WKInterfaceLabel *animalNameLabel;
 
 @end
 
@@ -25,6 +27,8 @@
 - (void)willActivate {
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
+    
+    [self.animalNameLabel setText:@"Caralho"];
 }
 
 - (void)didDeactivate {
