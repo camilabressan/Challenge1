@@ -74,6 +74,12 @@
 		B97AF0911ADC771C0004C96C /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B97AF0901ADC771C0004C96C /* ParseFacebookUtilsV4.framework */; };
 		B97B07491ADC30CB009E1886 /* UIImage+Blur.m in Sources */ = {isa = PBXBuildFile; fileRef = B97B07481ADC30CB009E1886 /* UIImage+Blur.m */; };
 		B98486B41AC5EDE3008F0BD1 /* AnimalDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B98486B31AC5EDE3008F0BD1 /* AnimalDetailsViewController.m */; };
+		B9AF8C0D1B0FA7450091EB8C /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184BB1AB8A08D00363539 /* Bolts.framework */; };
+		B9AF8C0E1B0FA7450091EB8C /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184BC1AB8A08D00363539 /* Parse.framework */; };
+		B9AF8C0F1B0FA7450091EB8C /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184BD1AB8A08D00363539 /* ParseCrashReporting.framework */; };
+		B9AF8C101B0FA7450091EB8C /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184BE1AB8A08D00363539 /* ParseFacebookUtils.framework */; };
+		B9AF8C111B0FA7450091EB8C /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B97AF0901ADC771C0004C96C /* ParseFacebookUtilsV4.framework */; };
+		B9AF8C121B0FA7450091EB8C /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06184BF1AB8A08D00363539 /* ParseUI.framework */; };
 		B9FBEE301AC5A1B300279EFD /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = B9FBEE2F1AC5A1B300279EFD /* UIImage+Resize.m */; };
 		B9FD72531ADC51FF00C5B940 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9FD724E1ADC51FF00C5B940 /* FBAudienceNetwork.framework */; };
 		B9FD72541ADC51FF00C5B940 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9FD724F1ADC51FF00C5B940 /* FBSDKCoreKit.framework */; };
@@ -231,6 +237,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9AF8C0D1B0FA7450091EB8C /* Bolts.framework in Frameworks */,
+				B9AF8C0E1B0FA7450091EB8C /* Parse.framework in Frameworks */,
+				B9AF8C0F1B0FA7450091EB8C /* ParseCrashReporting.framework in Frameworks */,
+				B9AF8C101B0FA7450091EB8C /* ParseFacebookUtils.framework in Frameworks */,
+				B9AF8C111B0FA7450091EB8C /* ParseFacebookUtilsV4.framework in Frameworks */,
+				B9AF8C121B0FA7450091EB8C /* ParseUI.framework in Frameworks */,
 				ABFADD3B1B0FA13900A45E18 /* StoreKit.framework in Frameworks */,
 				ABFADD381B0FA13900A45E18 /* Security.framework in Frameworks */,
 				ABFADD391B0FA13900A45E18 /* SystemConfiguration.framework in Frameworks */,
@@ -596,6 +608,7 @@
 					};
 					ABFADD191B0E69EB00A45E18 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = P2V4W6VMHY;
 					};
 					B960248D1AB89728008C211C = {
 						CreatedOnToolsVersion = 6.2;
@@ -759,6 +772,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
+				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -778,6 +796,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
+				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Pet's Bay WatchKit Extension/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
@@ -791,6 +814,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -811,6 +835,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
 				IBSC_MODULE = Pet_s_Bay_WatchKit_Extension;
@@ -955,6 +980,7 @@
 				ABFADD2C1B0E69EC00A45E18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ABFADD2E1B0E69EC00A45E18 /* Build configuration list for PBXNativeTarget "Pet's Bay WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -963,6 +989,7 @@
 				ABFADD2A1B0E69EC00A45E18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B96024891AB89728008C211C /* Build configuration list for PBXProject "iDote" */ = {
 			isa = XCConfigurationList;
