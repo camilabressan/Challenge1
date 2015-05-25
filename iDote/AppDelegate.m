@@ -68,6 +68,10 @@
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
     [PFPush handlePush:userInfo];
+    
+    if (application.applicationState == UIApplicationStateInactive){
+        [PFAnalytics trackAppOpenedWithRemoteNotificationPayload:userInfo];
+    }
 }
 
 - (void) application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
@@ -77,9 +81,14 @@
 - (void) application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
     NSLog(@"falhou obtencao de token %@", error);
 }
+
 - (void)applicationWillResignActive:(UIApplication *)application {
-  // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-  // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    if (currentInstallation.badge != 0) {
+        currentInstallation.badge = 0;
+        [currentInstallation saveEventually];
+    }
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
@@ -103,7 +112,9 @@
   // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     
     // Logs 'install' and 'app activate' App Events.
+    
     [FBSDKAppEvents activateApp];
+   
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
