@@ -167,6 +167,16 @@
     
 }
 
+- (void)restoreUserActivityState:(NSUserActivity *)activity{
+    NSDictionary *userInfo = activity.userInfo;
+   // self.animal =
+    
+    //let userInfo = activity.userInfo
+    //lblHandoff.text =  userInfo!["xablau"] as? String
+    
+    //super.restoreUserActivityState(activity)
+}
+
 
 
 

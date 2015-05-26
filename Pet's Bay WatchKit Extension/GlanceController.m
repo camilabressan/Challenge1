@@ -8,10 +8,12 @@
 
 #import "GlanceController.h"
 //#import <Parse/Parse.h>
-
+#import <Parse/Parse.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface GlanceController()
 @property (weak, nonatomic) IBOutlet WKInterfaceLabel *animalNameLabel;
+@property (weak, nonatomic) IBOutlet WKInterfaceGroup *glanceGroup;
 
 @end
 
@@ -21,14 +23,42 @@
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
 
+    // Initialize Parse.
+    [Parse setApplicationId:@"RDeAF8POAUsEEwGwuXQT7MJnV3eZ78T4wMQ9zsTM"
+                  clientKey:@"NpZ235fSV6ygvZSgRq70kQxolsXPer8B3CMXoU4e"];
     // Configure interface objects here.
+    
+
 }
 
 - (void)willActivate {
     // This method is called when watch view controller is about to be visible to user
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Animal"];
+    query.limit = 1;
+    [query orderByDescending:@"createdAt"];
+    
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
+    dispatch_async(queue, ^{
+        PFObject *lastAnimal = [query getFirstObject];
+        NSURL *imgURL = [[NSURL alloc] initWithString:[(PFFile *)[lastAnimal objectForKey:@"mainPhoto"] url]];
+        NSData *data = [NSData dataWithContentsOfURL:imgURL];
+        UIImage *image = [UIImage imageWithData:data];
+        [self.glanceGroup setCornerRadius: 4.0];
+        
+        [self updateUserActivity:@"com.bepid.iDote.glance"
+                        userInfo:@{@"animalId": [lastAnimal valueForKey:@"objectId"]}
+                      webpageURL:nil];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.animalNameLabel setText:lastAnimal[@"name"]];
+            [self.glanceGroup setBackgroundImage:image];
+        });
+    });
+
+    
     [super willActivate];
     
-    [self.animalNameLabel setText:@"Caralho"];
 }
 
 - (void)didDeactivate {

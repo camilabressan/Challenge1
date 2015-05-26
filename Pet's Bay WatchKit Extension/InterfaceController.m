@@ -32,6 +32,10 @@
     [super didDeactivate];
 }
 
+- (void)handleUserActivity:(NSDictionary *)userInfo{
+    
+}
+
 @end
 
 
