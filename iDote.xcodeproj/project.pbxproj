@@ -42,6 +42,7 @@
 		ABB1440C1ADDA77E00DACEE7 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB1440B1ADDA77E00DACEE7 /* MapViewController.m */; };
 		ABB1440F1ADEEAA400DACEE7 /* RegisterAnimalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB1440E1ADEEAA400DACEE7 /* RegisterAnimalViewController.m */; };
 		ABCDBA6F1ABC939C00BF49C1 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCDBA6E1ABC939C00BF49C1 /* SignUpViewController.m */; };
+		ABCF77481B14F98B0023A000 /* AnimalDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCF77471B14F98B0023A000 /* AnimalDetailsController.m */; };
 		ABE82B101AC47B9D00F26A09 /* VMaskTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE82B0F1AC47B9D00F26A09 /* VMaskTextField.m */; };
 		ABFADD0F1B0E69EB00A45E18 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFADD0E1B0E69EB00A45E18 /* InterfaceController.m */; };
 		ABFADD121B0E69EB00A45E18 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFADD111B0E69EB00A45E18 /* NotificationController.m */; };
@@ -178,6 +179,8 @@
 		ABB1440E1ADEEAA400DACEE7 /* RegisterAnimalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterAnimalViewController.m; sourceTree = "<group>"; };
 		ABCDBA6D1ABC939C00BF49C1 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		ABCDBA6E1ABC939C00BF49C1 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		ABCF77461B14F98B0023A000 /* AnimalDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimalDetailsController.h; sourceTree = "<group>"; };
+		ABCF77471B14F98B0023A000 /* AnimalDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimalDetailsController.m; sourceTree = "<group>"; };
 		ABE82B0E1AC47B9D00F26A09 /* VMaskTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMaskTextField.h; sourceTree = "<group>"; };
 		ABE82B0F1AC47B9D00F26A09 /* VMaskTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMaskTextField.m; sourceTree = "<group>"; };
 		ABFADD081B0E69EB00A45E18 /* Pet's Bay WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Pet's Bay WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -354,6 +357,8 @@
 		ABFADD091B0E69EB00A45E18 /* Pet's Bay WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				ABCF77461B14F98B0023A000 /* AnimalDetailsController.h */,
+				ABCF77471B14F98B0023A000 /* AnimalDetailsController.m */,
 				ABFADD0D1B0E69EB00A45E18 /* InterfaceController.h */,
 				ABFADD0E1B0E69EB00A45E18 /* InterfaceController.m */,
 				ABFADD101B0E69EB00A45E18 /* NotificationController.h */,
@@ -677,6 +682,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABCF77481B14F98B0023A000 /* AnimalDetailsController.m in Sources */,
 				ABFADD121B0E69EB00A45E18 /* NotificationController.m in Sources */,
 				ABFADD0F1B0E69EB00A45E18 /* InterfaceController.m in Sources */,
 				ABFADD151B0E69EB00A45E18 /* GlanceController.m in Sources */,

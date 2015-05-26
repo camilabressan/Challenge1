@@ -8,16 +8,59 @@
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <label alignment="left" text="Label" id="ZuD-7p-vdu"/>
+                    </items>
+                    <connections>
+                        <outlet property="lblName" destination="ZuD-7p-vdu" id="vub-Xm-fNJ"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="235" y="347"/>
         </scene>
-        <!--AnimalDetailsViewController-->
+        <!--AnimalDetailScreen-->
         <scene sceneID="eYc-o0-pJl">
             <objects>
-                <controller identifier="AnimalDetailsViewController" id="0Va-NT-84b"/>
+                <controller identifier="AnimalDetailScreen" id="0Va-NT-84b" customClass="AnimalDetailsController">
+                    <items>
+                        <group width="1" height="1" alignment="left" layout="vertical" id="L41-08-yuU">
+                            <items>
+                                <label alignment="center" text=" " id="Tgj-6s-fTN">
+                                    <color key="textColor" red="0.96862745100000003" green="0.60383476618446397" blue="0.10522926367464006" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="18"/>
+                                </label>
+                                <group width="70" height="70" alignment="center" radius="1" id="BWi-wZ-CQp">
+                                    <color key="backgroundColor" red="0.13456833964646453" green="0.13456833964646453" blue="0.13456833964646453" alpha="1" colorSpace="calibratedRGB"/>
+                                </group>
+                                <label alignment="center" text=" " id="BEa-LB-YLE">
+                                    <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                </label>
+                                <label alignment="center" text=" " id="x94-rE-Bei"/>
+                                <label alignment="center" text=" " textAlignment="justified" id="UBG-Pw-drW">
+                                    <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="F2e-DP-84k">
+                            <items>
+                                <label width="1" alignment="left" text=" " textAlignment="justified" numberOfLines="0" id="qfQ-Tb-ZvO">
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </label>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="animalAgeLabel" destination="UBG-Pw-drW" id="Y9X-1S-NQu"/>
+                        <outlet property="animalDetailsLabel" destination="qfQ-Tb-ZvO" id="KWP-K4-Hay"/>
+                        <outlet property="animalGenderLabel" destination="x94-rE-Bei" id="mgp-OI-mp2"/>
+                        <outlet property="animalImageGroup" destination="BWi-wZ-CQp" id="7Pm-zn-THG"/>
+                        <outlet property="animalNameLabel" destination="Tgj-6s-fTN" id="KCC-6A-QJf"/>
+                        <outlet property="animalSizeLabel" destination="BEa-LB-YLE" id="4q9-cR-oaq"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="490" y="347"/>
+            <point key="canvasLocation" x="490" y="497"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
@@ -31,7 +74,7 @@
                                     <items>
                                         <group width="1" height="20" alignment="left" verticalAlignment="bottom" id="wrw-Dc-rnc">
                                             <items>
-                                                <label alignment="center" text="Label" id="Yz5-pg-EAB"/>
+                                                <label alignment="center" text=" " id="Yz5-pg-EAB"/>
                                             </items>
                                             <color key="backgroundColor" white="0.0" alpha="0.63" colorSpace="calibratedWhite"/>
                                         </group>

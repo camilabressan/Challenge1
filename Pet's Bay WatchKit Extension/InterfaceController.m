@@ -7,9 +7,11 @@
 //
 
 #import "InterfaceController.h"
+#import <Parse/Parse.h>
 
 
 @interface InterfaceController()
+@property (weak, nonatomic) IBOutlet WKInterfaceLabel *lblName;
 
 @end
 
@@ -18,7 +20,6 @@
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
-
     // Configure interface objects here.
 }
 
@@ -33,7 +34,19 @@
 }
 
 - (void)handleUserActivity:(NSDictionary *)userInfo{
+    NSString* objId = [userInfo valueForKey:@"animalId"];
+    PFQuery *query = [PFQuery queryWithClassName:@"Animal"];
+    [query whereKey:@"objectId" equalTo:objId];
     
+    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+        if (!error) {
+            [self pushControllerWithName:@"AnimalDetailScreen" context:object];
+            //[_lblName setText:[object objectForKey:@"name"]];
+        }
+    }];
+    
+    
+    NSLog(@"%@", objId);
 }
 
 @end
