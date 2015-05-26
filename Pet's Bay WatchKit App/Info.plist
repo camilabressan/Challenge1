@@ -5,11 +5,11 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>Pet's Bay</string>
+	<string>Pet&apos;s Bay</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.bepid.Pet-s-BayApp.watchkitapp</string>
+	<string>com.bepid.iDoteApp.watchkitapp</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -28,7 +28,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>com.bepid.Pet-s-BayApp</string>
+	<string>com.bepid.iDoteApp</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>

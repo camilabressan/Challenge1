@@ -45,13 +45,52 @@
     
     
     [[UINavigationBar appearance] setBarTintColor: [UIColor colorWithRed:42/255.0 green:17/255.0 blue:40/255.0 alpha:1]]; // MUDA A COR DA NAVIGATION
+    // Register for Push Notitications
+    
+    UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound);
+    
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes categories:nil];
+    
+    [application registerUserNotificationSettings:settings];
+    [application registerForRemoteNotifications];
     
     return YES;
+    
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    // Store the deviceToken in the current installation and save it to Parse.
+    NSLog(@"token: %@", deviceToken);
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    [currentInstallation saveInBackground];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [PFPush handlePush:userInfo];
+    
+    NSLog(@"%@", userInfo);
+    
+    if (application.applicationState == UIApplicationStateInactive){
+        [PFAnalytics trackAppOpenedWithRemoteNotificationPayload:userInfo];
+    }
+}
+
+- (void) application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
+    [application registerForRemoteNotifications];
+}
+
+- (void) application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    NSLog(@"falhou obtencao de token %@", error);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
-  // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-  // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    if (currentInstallation.badge != 0) {
+        currentInstallation.badge = 0;
+        [currentInstallation saveEventually];
+    }
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
@@ -75,7 +114,9 @@
   // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     
     // Logs 'install' and 'app activate' App Events.
+    
     [FBSDKAppEvents activateApp];
+   
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

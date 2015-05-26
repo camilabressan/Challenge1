@@ -70,7 +70,15 @@
         <!--Notification Controller-->
         <scene sceneID="KIl-fV-djm">
             <objects>
-                <controller id="gdX-wl-uQE" customClass="NotificationController"/>
+                <controller id="gdX-wl-uQE" customClass="NotificationController">
+                    <items>
+                        <label height="20" alignment="left" text="Label" id="TsL-AG-qyU"/>
+                    </items>
+                    <color key="backgroundColor" red="0.2246556818295832" green="0.4500113994254531" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="lblCity" destination="TsL-AG-qyU" id="l58-Sz-SQa"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="553" y="1001"/>
         </scene>
