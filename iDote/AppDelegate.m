@@ -81,5 +81,16 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
   // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+- (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray *))restorationHandler{
+    
+    /*
+    UIWindow *win = self.window;
+    if (win != NULL){
+        UIViewController *viewController = win.rootViewController;
+        [viewController restoreUserActivityState:(userActivity)];
+    }
+     */
+    return true;
+}
 
 @end

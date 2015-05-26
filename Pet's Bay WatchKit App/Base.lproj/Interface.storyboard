@@ -12,21 +12,40 @@
             </objects>
             <point key="canvasLocation" x="235" y="347"/>
         </scene>
+        <!--AnimalDetailsViewController-->
+        <scene sceneID="eYc-o0-pJl">
+            <objects>
+                <controller identifier="AnimalDetailsViewController" id="0Va-NT-84b"/>
+            </objects>
+            <point key="canvasLocation" x="490" y="347"/>
+        </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
             <objects>
                 <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController">
                     <items>
                         <group alignment="left" id="t8f-Gd-c4y"/>
-                        <group alignment="left" id="uCw-4Q-Ouw">
+                        <group alignment="left" layout="vertical" id="uCw-4Q-Ouw">
                             <items>
-                                <label width="1" alignment="center" text="Label" textAlignment="center" id="Ah8-jc-Gev"/>
+                                <group width="100" height="100" alignment="center" contentMode="scaleAspectFill" id="hQ1-A3-XLd">
+                                    <items>
+                                        <group width="1" height="20" alignment="left" verticalAlignment="bottom" id="wrw-Dc-rnc">
+                                            <items>
+                                                <label alignment="center" text="Label" id="Yz5-pg-EAB"/>
+                                            </items>
+                                            <color key="backgroundColor" white="0.0" alpha="0.63" colorSpace="calibratedWhite"/>
+                                        </group>
+                                    </items>
+                                    <variation key="device=watch38mm" height="100" width="100"/>
+                                    <variation key="device=watch42mm" height="110" width="115"/>
+                                </group>
                             </items>
                         </group>
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
                     <connections>
-                        <outlet property="animalNameLabel" destination="Ah8-jc-Gev" id="2I7-O7-ekP"/>
+                        <outlet property="animalNameLabel" destination="Yz5-pg-EAB" id="CqO-eu-nck"/>
+                        <outlet property="glanceGroup" destination="hQ1-A3-XLd" id="S1l-3s-iib"/>
                     </connections>
                 </glanceController>
             </objects>
