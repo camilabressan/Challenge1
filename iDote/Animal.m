@@ -194,18 +194,19 @@
     object[@"description"] = _descricao;
     object[@"city"] = _cidade;
     
-    NSData *imageData = UIImageJPEGRepresentation(_mainImage, 0.7f);
+    NSData *imageData = UIImageJPEGRepresentation(_mainImage, 0.3f);
     PFFile *imageFile = [PFFile fileWithName:@"Profileimage.png" data:imageData];
     [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
             if (succeeded) {
                 object[@"mainPhoto"] = imageFile;
+                PFRelation *relation = [object relationForKey:@"user"];
+                [relation addObject:[PFUser currentUser]];
                 [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                     if (!error) {
                         _object = object;
-                        PFRelation *relation = [object relationForKey:@"user"];
-                        [relation addObject:[PFUser currentUser]];
-                        [object saveInBackground];
+
+                        //[object saveInBackground];
                     }
                 }];
             }
