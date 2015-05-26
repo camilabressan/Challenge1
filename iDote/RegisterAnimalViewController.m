@@ -71,6 +71,8 @@
 
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
     UIImage *image = [UIImage cropImageWithInfo:info];
+    CGSize imageSize = CGSizeMake(500, 500);
+    image = [UIImage imageWithImage:image scaledToSize:imageSize];
     [_imageHolder setBackgroundImage:image forState:UIControlStateNormal];
     [_imageHolder setTitle:@"" forState:UIControlStateNormal];
     [self dismissViewControllerAnimated:YES completion:nil];

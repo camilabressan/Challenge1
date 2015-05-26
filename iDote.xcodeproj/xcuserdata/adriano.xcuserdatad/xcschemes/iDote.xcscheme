@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B960248D1AB89728008C211C"
-               BuildableName = "Pet&apos;s Bay.app"
-               BlueprintName = "Pet&apos;s Bay"
+               BuildableName = "iDote.app"
+               BlueprintName = "iDote"
                ReferencedContainer = "container:iDote.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -57,8 +57,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B960248D1AB89728008C211C"
-            BuildableName = "Pet&apos;s Bay.app"
-            BlueprintName = "Pet&apos;s Bay"
+            BuildableName = "iDote.app"
+            BlueprintName = "iDote"
             ReferencedContainer = "container:iDote.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -77,8 +77,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B960248D1AB89728008C211C"
-            BuildableName = "Pet&apos;s Bay.app"
-            BlueprintName = "Pet&apos;s Bay"
+            BuildableName = "iDote.app"
+            BlueprintName = "iDote"
             ReferencedContainer = "container:iDote.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -96,8 +96,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B960248D1AB89728008C211C"
-            BuildableName = "Pet&apos;s Bay.app"
-            BlueprintName = "Pet&apos;s Bay"
+            BuildableName = "iDote.app"
+            BlueprintName = "iDote"
             ReferencedContainer = "container:iDote.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
