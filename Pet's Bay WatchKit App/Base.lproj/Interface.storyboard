@@ -10,7 +10,11 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <label alignment="left" text="Label" id="ZuD-7p-vdu"/>
+                        <label alignment="center" text="iDote" id="ZuD-7p-vdu">
+                            <color key="textColor" red="0.94117647058823528" green="0.65490196078431373" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <imageView width="102" height="72" alignment="center" image="ImageIcon" id="cr1-6h-LWY"/>
                     </items>
                     <connections>
                         <outlet property="lblName" destination="ZuD-7p-vdu" id="vub-Xm-fNJ"/>
