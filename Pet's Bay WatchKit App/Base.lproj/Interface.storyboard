@@ -10,10 +10,8 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <label alignment="center" text="iDote" id="ZuD-7p-vdu">
-                            <color key="textColor" red="0.94117647058823528" green="0.65490196078431373" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
-                        </label>
+                        <imageView width="86" height="35" alignment="center" image="iDote" contentMode="scaleAspectFit" id="LMz-1n-7ON"/>
+                        <separator alignment="left" alpha="0.0" id="ZVd-NP-s6i"/>
                         <imageView width="112.2" height="79.200000000000003" alignment="center" verticalAlignment="center" image="ImageIcon" id="cr1-6h-LWY"/>
                     </items>
                 </controller>
