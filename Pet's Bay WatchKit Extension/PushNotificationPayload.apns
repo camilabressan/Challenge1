@@ -1,9 +1,10 @@
 {
     "aps": {
-        "alert": "Novo Animal Adicionado",
-        "category": "myCategory",
-        "city": "Porto Alegre",
-        "type": "Cachorro"
-    }
+        "alert": "Novo Pet",
+        "category": "myCategory"
+
+    },
+    "city": "Porto Alegre",
+    "type": "Cachorro"
     
 }
