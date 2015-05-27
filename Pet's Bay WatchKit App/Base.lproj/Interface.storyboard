@@ -14,7 +14,7 @@
                             <color key="textColor" red="0.94117647058823528" green="0.65490196078431373" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                         </label>
-                        <imageView width="102" height="72" alignment="center" image="ImageIcon" id="cr1-6h-LWY"/>
+                        <imageView width="112.2" height="79.200000000000003" alignment="center" verticalAlignment="center" image="ImageIcon" id="cr1-6h-LWY"/>
                     </items>
                     <connections>
                         <outlet property="lblName" destination="ZuD-7p-vdu" id="vub-Xm-fNJ"/>
@@ -28,7 +28,7 @@
             <objects>
                 <controller identifier="AnimalDetailScreen" id="0Va-NT-84b" customClass="AnimalDetailsController">
                     <items>
-                        <group width="1" height="1" alignment="left" layout="vertical" id="L41-08-yuU">
+                        <group width="1" alignment="left" layout="vertical" id="L41-08-yuU">
                             <items>
                                 <label alignment="center" text=" " id="Tgj-6s-fTN">
                                     <color key="textColor" red="0.96862745100000003" green="0.60383476618446397" blue="0.10522926367464006" alpha="1" colorSpace="calibratedRGB"/>
@@ -64,14 +64,24 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="490" y="497"/>
+            <point key="canvasLocation" x="490" y="523"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
             <objects>
                 <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController">
                     <items>
-                        <group alignment="left" id="t8f-Gd-c4y"/>
+                        <group alignment="left" id="t8f-Gd-c4y">
+                            <items>
+                                <group width="40" height="40" alignment="left" verticalAlignment="center" id="ZDJ-ge-2js"/>
+                                <label alignment="left" verticalAlignment="center" text=" " id="f4F-QT-8Hl"/>
+                                <label alignment="left" verticalAlignment="center" text=" " id="rAB-Lm-bJy">
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                </label>
+                            </items>
+                            <color key="backgroundColor" red="0.16666666666666652" green="0.16666666666666652" blue="0.16666666666666652" alpha="1" colorSpace="calibratedRGB"/>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                        </group>
                         <group alignment="left" layout="vertical" id="uCw-4Q-Ouw">
                             <items>
                                 <group width="100" height="100" alignment="center" contentMode="scaleAspectFill" id="hQ1-A3-XLd">
@@ -93,6 +103,8 @@
                     <connections>
                         <outlet property="animalNameLabel" destination="Yz5-pg-EAB" id="CqO-eu-nck"/>
                         <outlet property="glanceGroup" destination="hQ1-A3-XLd" id="S1l-3s-iib"/>
+                        <outlet property="ownerImageGroup" destination="ZDJ-ge-2js" id="jcB-ZO-ziz"/>
+                        <outlet property="ownerNameLabel" destination="rAB-Lm-bJy" id="K5Y-xz-OYA"/>
                     </connections>
                 </glanceController>
             </objects>

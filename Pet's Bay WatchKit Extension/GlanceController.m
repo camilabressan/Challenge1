@@ -14,6 +14,8 @@
 @interface GlanceController()
 @property (weak, nonatomic) IBOutlet WKInterfaceLabel *animalNameLabel;
 @property (weak, nonatomic) IBOutlet WKInterfaceGroup *glanceGroup;
+@property (weak, nonatomic) IBOutlet WKInterfaceGroup *ownerImageGroup;
+@property (weak, nonatomic) IBOutlet WKInterfaceLabel *ownerNameLabel;
 
 @end
 
@@ -42,6 +44,29 @@
     dispatch_async(queue, ^{
         PFObject *lastAnimal = [query getFirstObject];
         NSURL *imgURL = [[NSURL alloc] initWithString:[(PFFile *)[lastAnimal objectForKey:@"mainPhoto"] url]];
+       // NSURL *ownerImgURL = [[NSURL alloc] initWithString:[(PFFile *)[lastAnimal objectForKey:@"user"]]] ;
+        
+        PFRelation *relation = [lastAnimal objectForKey:@"user"];
+        PFQuery *query = [relation query];
+        
+        [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+            if (!error) {
+                PFUser *user = (PFUser *)object;
+                NSURL *ownerImgURL = [[NSURL alloc] initWithString:[(PFFile *)user[@"mainPhoto"] url]] ;
+                NSData *dataAux = [NSData dataWithContentsOfURL:ownerImgURL];
+                UIImage *ownerImage = [UIImage imageWithData:dataAux];
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.ownerImageGroup setCornerRadius:20.0];
+                    [self.ownerImageGroup setBackgroundImage:ownerImage];
+                    NSString *ownerName = user[@"Name"];
+                    NSArray *array = [ownerName componentsSeparatedByString:@" "];
+                    [self.ownerNameLabel setText:array[0]];
+                });
+
+            }
+        }];
+        
         NSData *data = [NSData dataWithContentsOfURL:imgURL];
         UIImage *image = [UIImage imageWithData:data];
         [self.glanceGroup setCornerRadius: 4.0];
@@ -67,6 +92,4 @@
 }
 
 @end
-
-
 

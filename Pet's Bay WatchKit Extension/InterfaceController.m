@@ -44,9 +44,6 @@
             //[_lblName setText:[object objectForKey:@"name"]];
         }
     }];
-    
-    
-    NSLog(@"%@", objId);
 }
 
 @end
