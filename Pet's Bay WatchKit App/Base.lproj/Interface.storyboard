@@ -119,10 +119,15 @@
             <objects>
                 <controller id="gdX-wl-uQE" customClass="NotificationController">
                     <items>
-                        <label height="20" alignment="left" text="Label" id="TsL-AG-qyU"/>
+                        <label alignment="center" text="Label" textAlignment="center" id="efC-4x-oHa"/>
+                        <imageView width="80" height="80" alignment="center" id="LaU-1D-q3z"/>
+                        <label height="20" alignment="right" text="Label" id="TsL-AG-qyU">
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                        </label>
                     </items>
-                    <color key="backgroundColor" red="0.2246556818295832" green="0.4500113994254531" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
+                        <outlet property="imgNotification" destination="LaU-1D-q3z" id="MwT-DY-cmd"/>
+                        <outlet property="lblAlert" destination="efC-4x-oHa" id="36y-9y-Dqf"/>
                         <outlet property="lblCity" destination="TsL-AG-qyU" id="l58-Sz-SQa"/>
                     </connections>
                 </controller>

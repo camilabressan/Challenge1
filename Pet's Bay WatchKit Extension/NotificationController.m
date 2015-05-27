@@ -11,6 +11,8 @@
 
 @interface NotificationController()
 @property (weak, nonatomic) IBOutlet WKInterfaceLabel *lblCity;
+@property (weak, nonatomic) IBOutlet WKInterfaceImage *imgNotification;
+@property (weak, nonatomic) IBOutlet WKInterfaceLabel *lblAlert;
 
 @end
 
@@ -30,6 +32,10 @@
 - (void)willActivate {
     
     // This method is called when watch view controller is about to be visible to user
+    [_imgNotification setImageNamed:@"idote_00"];
+    
+    NSRange range = NSMakeRange(00, 12);
+    [_imgNotification startAnimatingWithImagesInRange:range duration:0.5 repeatCount:-1];
     [super willActivate];
 }
 
@@ -58,8 +64,9 @@
     // Populate your dynamic notification interface as quickly as possible.
     //
     // After populating your dynamic notification interface call the completion block.
-    NSLog(@"%@", [[remoteNotification valueForKey:@"aps"] valueForKey:@"city"]);
-    //[_lblCity setText: [remoteNotification valueForKey:@"city"]];
+
+    [_lblAlert setText:[[remoteNotification valueForKey:@"aps"] valueForKey:@"alert"]];
+    [_lblCity setText:[remoteNotification valueForKey:@"city"]];
     completionHandler(WKUserNotificationInterfaceTypeCustom);
 }
 
